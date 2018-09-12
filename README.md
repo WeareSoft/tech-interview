@@ -72,17 +72,17 @@
 * Template
 * MVC1, MVC2
 
-## 6. Algorithm
+## 6. Algorithm :pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
 :arrow_forward: [답변 내용](/contents/designpattern.md)
 * BigO
-:pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
+
 
 ## 7. Java
 :arrow_forward: [답변 내용](/contents/java.md)
 * 객체지향이란
 * java 프로그래밍이란
 * java와 c/c++의 차이점
-* java언어의 장단점
+* java 언어의 장단점
 * java의 접근 제어자의 종류와 특징
 * OOP의 4가지 특징
 * OOP의 5대 원칙 (SOLID)
