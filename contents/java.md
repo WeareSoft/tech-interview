@@ -1,6 +1,8 @@
 # 7. Java
 
-#### :small_orange_diamond:java 프로그래밍 이란
+#### :small_orange_diamond:객체지향이란
+
+#### :small_orange_diamond:java 프로그래밍이란
 
 #### :small_orange_diamond:java와 c/c++의 차이점
 - java와 c/c++의 가장 큰 차이점은 실행 환경이다.
@@ -10,7 +12,8 @@
 
 > - []()
 
-#### :small_orange_diamond:java언어의 장단점
+#### :small_orange_diamond:java 언어의 장단점
+
 > - []()
 
 #### :small_orange_diamond:java의 접근 제어자의 종류와 특징
@@ -69,7 +72,7 @@ static 멤버
 
 > - [https://gmlwjd9405.github.io/2018/08/04/java-static.html](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
 
-#### :small_orange_diamond:java의 final 키워드
+#### :small_orange_diamond:java의 final 키워드 (final/finally/finalize)
 final 키워드
 * 개념: 변수나 메서드 또는 클래스가 '변경 불가능'하도록 만든다.
 * 원시(Primitive) 변수에 적용 시
@@ -98,7 +101,7 @@ finalize() 메서드
 
 #### :small_orange_diamond:java의 제네릭(Generic)
 
-#### :small_orange_diamond:java의 가비지 컬렉션(Garbage Collection)
+#### :small_orange_diamond:java의 가비지 컬렉션(Garbage Collection) 처리 방법
 
 #### :small_orange_diamond:객체(Object)란 무엇인가
 
@@ -142,14 +145,19 @@ public class Ambiguous extends Shape {
 
 #### :small_orange_diamond:인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
 
-#### :small_orange_diamond:프로세스와 스레드의 차이(Process vs Thread)
+#### :small_orange_diamond:JVM 구조
 
-<!-- ## 세션과 쿠키의 차이(Session vs Cookie) -->
+#### :small_orange_diamond:Java Collection Framework
 
-<!-- ## 동기화 객체의 종류
-* 뮤텍스와 세마포어의 차이 -->
+#### :small_orange_diamond:Wrapper class
 
-<!-- ## 동기화와 비동기화의 차이(Syncronous vs Asyncronous) -->
+#### :small_orange_diamond:Annotation
+
+#### :small_orange_diamond:String, StringBuilder, StringBuffer
+
+#### :small_orange_diamond:동기화와 비동기화의 차이(Syncronous vs Asyncronous)
+
+
 
 ---
 
