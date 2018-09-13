@@ -22,6 +22,7 @@
 * Tree
 * Binary Heap
 * Red-Black Tree
+* B+ Tree
 * HashTable
 * Graph
 
@@ -30,27 +31,28 @@
 * OSI 7계층
 * TCP, UDP
 * TCP 3-way-handshake, 4-way-handshake
-* HTTP
+* HTTP, HTTPS
 * GET, POST
 * 쿠키, 세션
-* HTTPS
 * DNS
 * REST, SOAP(?)
 
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
 * 프로세스와 스레드의 차이(Process vs Thread)
+* 멀티 프로세스와 멀티 스레드의 차이
 * 동기화 객체의 종류
 * 뮤텍스와 세마포어의 차이
 * 스케줄러
 * 동기, 비동기
-* 멀티스레드
 * 프로세스 동기화
 * 메모리 관리 전략
 * 가상 메모리
 * 캐시의 지역성
-* 데드락
+* 교착 상태(데드락)의 개념과 조건
 * 사용자 수준 스레드, 커널 수준 스레드
+* 외부 단편화와 내부 단편와
+* Context Switching
 
 ## 4. Database
 :arrow_forward: [답변 내용](/contents/db.md)
@@ -75,6 +77,9 @@
 ## 6. Algorithm :pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
 :arrow_forward: [답변 내용](/contents/designpattern.md)
 * BigO
+* DFS와 BFS의 차이
+* Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
+* Quick Sort
 
 
 ## 7. Java
@@ -89,7 +94,7 @@
 * 객체지향 프로그래밍과 절차지향 프로그래밍의 차이
 * java의 non-static 멤버와 static 멤버의 차이
 * java의 final 키워드 (final/finally/finalize)
-* java의 제네릭(Generic)
+* java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
 * java의 가비지 컬렉션(Garbage Collection) 처리 방법
 * 객체(Object)란 무엇인가
 * 객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
@@ -103,6 +108,8 @@
 * Annotation
 * String, StringBuilder, StringBuffer
 * 동기화와 비동기화의 차이(Syncronous vs Asyncronous)
+* java에서 '=='와 'Equals()'의 차이
+* 리플렉션 이란
 
 
 ## 8. Spring
@@ -117,7 +124,7 @@
 ## 9. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
 * TDD
-* url에 www.naver.com을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.
+* 웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명(Ex. url에 'www.naver.com' 을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.)
 * 대칭키/비대칭키
 * 컴파일러, 인터프리터
 * 분산락
@@ -130,3 +137,4 @@
 * https://github.com/jojoldu/junior-recruit-scheduler/blob/master/README.md
 * https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 * https://github.com/KimHunJin/Study-Book/tree/master/interview
+* https://trello.com/b/BWtpfywH/%EC%8B%A0%EC%9E%85-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%91
