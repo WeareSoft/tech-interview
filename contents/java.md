@@ -17,7 +17,7 @@
 > - []()
 
 #### :small_orange_diamond:java의 접근 제어자의 종류와 특징
-<!-- ![](/images/access-controller.png){: width="600" height="200"} -->
+![](./images/access-controller.png){: width="600" height="200"}
 
 
 #### :small_orange_diamond:OOP의 4가지 특징
