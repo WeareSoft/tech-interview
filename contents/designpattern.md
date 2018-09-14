@@ -35,7 +35,7 @@ GoF 디자인 패턴의 분류
 * 개념
   * 전역 변수를 사용하지 않고 **객체를 하나만 생성** 하도록 하며, 생성된 객체를 **어디에서든지 참조할 수 있도록** 하는 패턴
   * '생성(Creational) 패턴'의 하나
-* <img src="./images/singleton-example.png" width="60%" height="60%">
+* <img src="./images/singleton-example.png" width="25%" height="25%">
 * 역할이 수행하는 작업
   * Singleton
     * 하나의 인스턴스만을 생성하는 책임이 있으며 getInstance 메서드를 통해 모든 클라이언트에게 동일한 인스턴스를 반환하는 작업을 수행한다.
@@ -74,7 +74,7 @@ GoF 디자인 패턴의 분류
     * 다른 관점에서 보면 동일한 기능을 상위 클래스에서 정의하면서 확장/변화가 필요한 부분만 서브 클래스에서 구현할 수 있도록 한다.
     * 예를 들어, 전체적인 알고리즘은 상위 클래스에서 구현하면서 다른 부분은 하위 클래스에서 구현할 수 있도록 함으로써 전체적인 알고리즘 코드를 재사용하는 데 유용하도록 한다.
   * '행위(Behavioral) 패턴'의 하나
-* <img src="./images/template-method-pattern.png" width="60%" height="60%">
+* <img src="./images/template-method-pattern.png" width="40%" height="40%">
 * 역할이 수행하는 작업
   * AbstractClass
     * 템플릿 메서드를 정의하는 클래스
