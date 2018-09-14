@@ -1,6 +1,7 @@
 # 2. Network
 
 #### :small_orange_diamond:OSI 7계층
+<img src="./images/osi-7-layer.png" width="60%" height="60%">
 
 > - []()
 
