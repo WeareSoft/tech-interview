@@ -141,6 +141,69 @@ public class Ambiguous extends Shape {
 
 
 #### :small_orange_diamond:Call by Reference와 Call by Value의 차이
+* Call by Value (값에 의한 호출)
+  * 함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다.
+  * 함수 호출시 인자로 전달되는 변수의 값을 복사하여 함수의 인자로 전달한다.
+  * 복사된 인자는 함수 안에서 지역적으로 사용되는 local value의 특성을 가진다.
+  * 따라서 함수 안에서 인자의 값이 변경되어도, 외부의 변수의 값은 변경되지 않는다.
+
+* Call by Reference (참조에 의한 호출)
+  * 함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다.
+  * 함수 호출시 인자로 전달되는 변수의 레퍼런스를 전달한다. (해당 변수를 가르킨다.)
+  * 따라서 함수 안에서 인자의 값이 변경되면, 인자로 전달된 변수의 값도 함께 변경된다.
+
+* Java는 Call by Value 일까? Call by Reference 일까?
+~~~java
+class Person {
+  private String name;
+  public Person(String name) {
+    this.name = name;
+  }
+  public setName(String name) {
+    this.name = name;
+  }
+  @Override
+  public String toString() {
+    return "name is " + this.name;
+  }
+}
+~~~
+~~~java
+public class FunctionCallTest {
+  public static void assignNewPerson(Person p) {
+    p = new Person("hee");
+  }
+  public static void changeName(Person p) {
+    p.setNaem("hee");
+  }
+  public static void main(String[] args) {
+    Person p = new Person("doy");
+    
+    assignNewPerson(p);
+    System.out.println(p); // name is doy
+    
+    changeName(p);
+    System.out.println(p); // name is hee
+  }
+}
+~~~
+  * 기본자료형은 Call By Value이고, 참조자료형은 Call By Reference이다??
+  * 오해 1. 특정 메서드 내에서 전달 받은 객체의 상태를 변경 할 수 있다.
+    * `changeName` 메서드는 참조변수 p가 가리키는 [이름 속성이 "doy"인 Person 객체]를 [이름 속성이 "hee"인 새로운 Person 객체]로 변경한 것이 아니라, 단지 이름 속성만 변경했을 뿐이다.
+  * 오해 2. 참조변수는 임의의 객체에 대한 레퍼런스를 저장하므로 메서드로 전달한 값이 레퍼런스(Call by Reference)이다.
+    * 전달 된 레퍼런스는 참조변수 p 자체의 레퍼런스가 아닌 p가 저장하고 있는 값(이것도 레퍼런스)이다.
+    * 만약 Java가 Call by Reference를 지원한다면 `assignNewPerson` 메서드 실행 후에 p 참조변수가 가리키는 객체가 [이름 속성이 "hee"인 새로운 Person 객체]로 변경되어야 한다.
+    * 또한 참조변수 p 자체의 레퍼런스를 얻을 수 있는 방법이 있어야 한다. 그러나 Java는 이 방법을 지원하지 않는다.
+  * **따라서 Java는 항상 Call by Value 이다.**
+    * 여기서 value 란? 
+      * 기본자료형의 값 또는 객체에 대한 레퍼런스
+  * 기본자료형의 경우 해당하는 변수의 값을 복사해서 전달한다.
+  * 참조자료형의 경우 해당하는 변수가 가지는 값이 레퍼런스이므로 인자로 넘길 때 Call by Value에 의해 변수가 가지고 있는 레퍼런스가 복사되어 전달된다.
+
+> - [https://wayhome25.github.io/cs/2017/04/11/cs-13/](https://wayhome25.github.io/cs/2017/04/11/cs-13/)
+> - [http://wonwoo.ml/index.php/post/1679](http://wonwoo.ml/index.php/post/1679)
+> - [https://brunch.co.kr/@kd4/2](https://brunch.co.kr/@kd4/2)
+> - [http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html](http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html)
 
 #### :small_orange_diamond:인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
 
