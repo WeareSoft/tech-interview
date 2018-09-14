@@ -68,11 +68,12 @@
 
 ## 5. Design Pattern
 :arrow_forward: [답변 내용](/contents/designpattern.md)
-* Singleton
-* Strategy
-* Factory
-* Template
-* MVC1, MVC2
+* 디자인 패턴의 개념과 종류
+* Singleton 패턴
+* Strategy 패턴
+* Template Method 패턴
+* Factory Method 패턴
+* MVC1, MVC2 패턴
 
 ## 6. Algorithm :pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
 :arrow_forward: [답변 내용](/contents/designpattern.md)
