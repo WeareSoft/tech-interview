@@ -28,14 +28,14 @@
 ## 2. Network
 :arrow_forward: [답변 내용](/contents/network.md)
 * OSI 7계층
-* TCP, UDP
+* TCP와 UDP
 * TCP 3-way-handshake, 4-way-handshake
 * HTTP
 * GET, POST
 * 쿠키, 세션
 * HTTPS
 * DNS
-* REST, SOAP(?)
+* REST
 
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
