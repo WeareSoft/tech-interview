@@ -6,8 +6,8 @@
 
 #### :small_orange_diamond:TCP와 UDP
 * 네트워크 계층 중 전송 계층에서 사용하는 프로토콜
-* TCP(Transmission Control Protocol)
-    <img src="./images/tcp-virtual-circuit.png" width="70%" height="70%">
+* TCP(Transmission Control Protocol)  
+    <img src="./images/tcp-virtual-circuit.png" width="60%" height="60%">
     * 인터넷 상에서 데이터를 메세지의 형태로 보내기 위해 IP와 함께 사용하는 프로토콜이다.
     * TCP와 IP를 함께 사용하는데, IP가 데이터의 배달을 처리한다면 TCP는 패킷을 추적 및 관리한다.
     * 연결형 서비스로 가상 회선 방식을 제공한다.
@@ -29,8 +29,8 @@
         * 멀티캐스팅이나 브로드캐스팅을 지원하지 않는다.
     * 연속성보다 신뢰성있는 전송이 중요할 때에 사용된다.
 
-* UDP(User Datagram Protocol)
-    <img src="./images/udp-datagram.png" width="70%" height="70%">
+* UDP(User Datagram Protocol)  
+    <img src="./images/udp-datagram.png" width="60%" height="60%">
     * 데이터를 데이터그램 단위로 처리하는 프로토콜이다.
     * 비연결형 서비스로 데이터그램 방식을 제공한다.
         * 연결을 위해 할당되는 논리적인 경로가 없다.
