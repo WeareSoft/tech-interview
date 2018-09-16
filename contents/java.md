@@ -46,6 +46,12 @@
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-solid.html](https://gmlwjd9405.github.io/2018/07/05/oop-solid.html)
 
 #### :small_orange_diamond:객체지향 프로그래밍과 절차지향 프로그래밍의 차이
+* 절차지향 프로그래밍
+  * 실행하고자 하는 정차를 정하고, 이 절차대로 프로그래밍하는 방법
+  * 목적을 달성하기 위한 일의 흐름에 중점을 둔다.
+* 객체지향 프로그래밍
+  * 실세상의 물체를 객체로 표현하고, 이들 사이의 관계, 상호 작용을 프로그램으로 나타낸다.
+  * 객체를 추출하고 객체들의 관계를 결정하고 이들의 상호 작용에 필요한 함수(메서드)와 변수(필드)를 설계 및 구현하다.
 
 #### :small_orange_diamond:java의 non-static 멤버와 static 멤버의 차이
 non-static 멤버
@@ -167,6 +173,13 @@ java의 제네릭과 c++의 템플릿의 차이
 #### :small_orange_diamond:객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
 
 #### :small_orange_diamond:클래스와 인스턴스의 차이(Class vs Instance)
+* 클래스
+  * 객체를 만들어 내기 위한 설계 혹은 틀
+* 객체
+  * 클래스에 선언된 모양 그대로 생성된 실체
+  * 클래스의 인스턴스(instance)라고도 부른다.
+
+> - [https://www.slipp.net/questions/126](https://www.slipp.net/questions/126)
 
 #### :small_orange_diamond:오버로딩과 오버라이딩의 차이(Overloading vs Overriding)
 <!-- [](#){name=Overloading-vs-Overriding} -->
