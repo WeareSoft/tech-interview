@@ -29,7 +29,6 @@
             * 각 연결이 정확히 2개의 종단점을 가지고 있다.
         * 멀티캐스팅이나 브로드캐스팅을 지원하지 않는다.
     * 연속성보다 신뢰성있는 전송이 중요할 때에 사용된다.
-
 * UDP(User Datagram Protocol)  
     <img src="./images/udp-datagram.png" width="60%" height="60%">
     * 데이터를 데이터그램 단위로 처리하는 프로토콜이다.
