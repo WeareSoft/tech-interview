@@ -266,6 +266,10 @@ public class FunctionCallTest {
 > - [http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html](http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html)
 
 #### :small_orange_diamond:인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
+* 인터페이스(Interface)
+
+* 추상 클래스(Abstract Class)
+
 
 #### :small_orange_diamond:JVM 구조
 
@@ -279,7 +283,9 @@ public class FunctionCallTest {
 
 #### :small_orange_diamond:동기화와 비동기화의 차이(Syncronous vs Asyncronous)
 
+#### :small_orange_diamond:java에서 '=='와 'Equals()'의 차이
 
+#### :small_orange_diamond:java의 리플렉션(Reflection) 이란
 
 ---
 

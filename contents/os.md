@@ -56,6 +56,8 @@
 
 > - [http://you9010.tistory.com/136](http://you9010.tistory.com/136)
 
+#### :small_orange_diamond:Thread-safe
+
 #### :small_orange_diamond:동기화 객체의 종류
 
 #### :small_orange_diamond:뮤텍스와 세마포어의 차이
@@ -103,6 +105,7 @@
 
 #### :small_orange_diamond:Context Switching
 
+#### :small_orange_diamond:Swapping
 
 ---
 

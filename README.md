@@ -1,5 +1,9 @@
 # tech-interview
 
+**기술 면접에 대비하기 위해서 기본 개념을 정리하는 Repository 입니다.**
+> :diamonds: 내용에 오류가 있거나 추가할 내용이 있다면 Pull Request를 통해서 알려주시면 감사하겠습니다.
+> <br> :diamonds: Star나 Watching를 통한 많은 관심 부탁드립니다. :)
+
 **:book: Contents**
 1. Data Structure
 2. Network
@@ -7,7 +11,7 @@
 4. Database
 5. Design Pattern
 6. Algorithm
-7. Java
+7. JavaM
 8. Spring
 9. ETC
 
@@ -41,6 +45,7 @@
 :arrow_forward: [답변 내용](/contents/os.md)
 * 프로세스와 스레드의 차이(Process vs Thread)
 * 멀티 프로세스 대신 멀티 스레드를 사용하는 이유?
+* Thread-safe
 * 동기화 객체의 종류
 * 뮤텍스와 세마포어의 차이
 * 스케줄러
@@ -53,18 +58,21 @@
 * 사용자 수준 스레드, 커널 수준 스레드
 * 외부 단편화와 내부 단편와
 * Context Switching
+* Swapping
 
 ## 4. Database
 :arrow_forward: [답변 내용](/contents/db.md)
 * 데이터베이스 풀
 * 정규화(1~3차, BCNF)
-* 트랜잭션
+* 트랜잭션(Transaction)
 * Join
 * SQL injection
 * Index
 * Statement, PrepareStatement
 * RDBMS, NoSQL
 * 효과적인 쿼리 저장
+* Replication
+* 파티셔닝(Partitioning)
 
 ## 5. Design Pattern
 :arrow_forward: [답변 내용](/contents/designpattern.md)
@@ -110,7 +118,7 @@
 * String, StringBuilder, StringBuffer
 * 동기화와 비동기화의 차이(Syncronous vs Asyncronous)
 * java에서 '=='와 'Equals()'의 차이
-* 리플렉션 이란
+* java의 리플렉션(Reflection) 이란
 
 
 ## 8. Spring
@@ -139,3 +147,4 @@
 * https://github.com/JaeYeopHan/Interview_Question_for_Beginner
 * https://github.com/KimHunJin/Study-Book/tree/master/interview
 * https://trello.com/b/BWtpfywH/%EC%8B%A0%EC%9E%85-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%91
+* https://github.com/NESOY/Back-end-Developer-Interview-Questions

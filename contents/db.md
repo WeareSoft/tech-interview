@@ -68,7 +68,9 @@
 
 #### :small_orange_diamond:효과적인 쿼리 저장
 
+#### :small_orange_diamond:Replication
 
+#### :small_orange_diamond:파티셔닝(Partitioning)
 ---
 ## Reference
 > - []()
