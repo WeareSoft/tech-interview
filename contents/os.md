@@ -99,7 +99,7 @@
 
 #### :small_orange_diamond:사용자 수준 스레드, 커널 수준 스레드
 
-#### :small_orange_diamond:외부 단편화와 내부 단편와
+#### :small_orange_diamond:외부 단편화와 내부 단편화
 
 #### :small_orange_diamond:Context Switching
 
