@@ -29,7 +29,18 @@
     * 같은 프로세스 안에 있는 여러 스레드들은 같은 힙 공간을 공유한다. 반면에 프로세스는 다른 프로세스의 메모리에 직접 접근할 수 없다.
     * 각각의 스레드는 별도의 레지스터와 스택을 갖고 있지만, 힙 메모리는 서로 읽고 쓸 수 있다.
     * 한 스레드가 프로세스 자원을 변경하면, 다른 이웃 스레드(sibling thread)도 그 변경 결과를 즉시 볼 수 있다.
+* 자바 스레드(Java Thread) 란
+  * 일반 스레드와 거의 차이가 없으며, JVM가 운영체제의 역할을 한다.
+  * 자바에는 프로세스가 존재하지 않고 스레드만 존재하며, 자바 스레드는 JVM에 의해 스케줄되는 실행 단위 코드 블록이다.
+  * 자바에서 스레드 스케줄링은 전적으로 JVM에 의해 이루어진다.
+  * 아래와 같은 스레드와 관련된 많은 정보들도 JVM이 관리한다.
+    * 스레드가 몇 개 존재하는지
+    * 스레드로 실행되는 프로그램 코드의 메모리 위치는 어디인지
+    * 스레드의 상태는 무엇인지
+    * 스레드 우선순위는 얼마인지
+  * 즉, 개발자는 자바 스레드로 작동할 스레드 코드를 작성하고, 스레드 코드가 생명을 가지고 실행을 시작하도록 JVM에 요청하는 일 뿐이다.
 
+> - [https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html](https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)
 > - [https://brunch.co.kr/@kd4/3](https://brunch.co.kr/@kd4/3)
 > - [https://magi82.github.io/process-thread/](https://magi82.github.io/process-thread/)
 > - [https://jaybdev.net/2017/06/05/Java-3/](https://jaybdev.net/2017/06/05/Java-3/)
