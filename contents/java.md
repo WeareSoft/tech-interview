@@ -310,6 +310,7 @@ public class FunctionCallTest {
   * 클래스의 이름으로부터 인스턴스를 생성할 수 있고, 이를 이용하여 클래스의 정보를 가져올 수 있다.
   ~~~java
   public class DoHee {
+      public String name;
       public int number;
       public void setDoHee (String name, int number) {
         this.name = name;
@@ -367,7 +368,7 @@ public class FunctionCallTest {
               obj.setNumber(5);
               System.out.println("Before Number : " + field.get(obj)); // 출력 : Before Number : 5
               field.set(obj, 10);
-              System.out.println("After Number : " + field.get(obj)); // 출력 : Before Number : 10
+              System.out.println("After Number : " + field.get(obj)); // 출력 : After Number : 10
           } catch (Exception e) {
               // Exception Handling
           }
