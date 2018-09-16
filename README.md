@@ -1,8 +1,8 @@
 # tech-interview
 
-**기술 면접에 대비하기 위해서 기본 개념을 정리하는 Repository 입니다.**
-> :diamonds: 내용에 오류가 있거나 추가할 내용이 있다면 Pull Request를 통해서 알려주시면 감사하겠습니다.
-> <br> :diamonds: Star나 Watching를 통한 많은 관심 부탁드립니다. :)
+**기술 면접 대비를 위한 기본 개념을 정리하는 Repository 입니다.**
+> :star: 내용에 오류가 있거나 추가할 내용이 있다면 Pull Request를 통해서 알려주시면 감사하겠습니다.
+> <br> :star: Star나 Watching를 통한 많은 관심 부탁드립니다. :)
 
 **:book: Contents**
 1. Data Structure
@@ -56,7 +56,7 @@
 * 캐시의 지역성
 * 교착상태(데드락)의 개념과 조건
 * 사용자 수준 스레드, 커널 수준 스레드
-* 외부 단편화와 내부 단편와
+* 외부 단편화와 내부 단편화
 * Context Switching
 * Swapping
 
@@ -133,7 +133,8 @@
 ## 9. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
 * TDD
-* 웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명(Ex. url에 'www.naver.com' 을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.)
+* 웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명
+  * Ex. url에 'www.naver.com' 을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.
 * 대칭키/비대칭키
 * 컴파일러, 인터프리터
 * 분산락

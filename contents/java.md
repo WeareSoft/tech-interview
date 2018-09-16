@@ -46,66 +46,69 @@
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-solid.html](https://gmlwjd9405.github.io/2018/07/05/oop-solid.html)
 
 #### :small_orange_diamond:객체지향 프로그래밍과 절차지향 프로그래밍의 차이
+* 절차지향 프로그래밍
+  * 실행하고자 하는 정차를 정하고, 이 절차대로 프로그래밍하는 방법
+  * 목적을 달성하기 위한 일의 흐름에 중점을 둔다.
+* 객체지향 프로그래밍
+  * 실세상의 물체를 객체로 표현하고, 이들 사이의 관계, 상호 작용을 프로그램으로 나타낸다.
+  * 객체를 추출하고 객체들의 관계를 결정하고 이들의 상호 작용에 필요한 함수(메서드)와 변수(필드)를 설계 및 구현하다.
 
 #### :small_orange_diamond:java의 non-static 멤버와 static 멤버의 차이
-non-static 멤버
-* 공간적 특성: **멤버는 객체마다 별도로 존재한다.**
-  * ***인스턴스 멤버*** 라고 부른다.
-* 시간적 특성: **객체 생성 시에 멤버가 생성된다.**
-  * 객체가 생길 때 멤버도 생성된다.
-  * 객체 생성 후 멤버 사용이 가능하다.
-  * 객체가 사라지면 멤버도 사라진다.
-* 공유의 특성: **공유되지 않는다.**
-  * 멤버는 객체 내에 각각의 공간을 유지한다.
-
-static 멤버
-* 공간적 특성: **멤버는 클래스당 하나가 생성된다.**
-  * 멤버는 객체 내부가 아닌 별도의 공간에 생성된다.
-  * ***클래스 멤버*** 라고 부른다.
-* 시간적 특성: **클래스 로딩 시에 멤버가 생성된다.**
-  * 객체가 생기기 전에 이미 생성된다.
-  * 객체가 생기기 전에도 사용이 가능하다. (즉, 객체를 생성하지 않고도 사용할 수 있다.)
-  * 객체가 사라져도 멤버는 사라지지 않는다.
-  * 멤버는 프로그램이 종료될 때 사라진다.
-* 공유의 특성: **동일한 클래스의 모든 객체들에 의해 공유된다.**
+* non-static 멤버
+  * 공간적 특성: **멤버는 객체마다 별도로 존재한다.**
+    * ***인스턴스 멤버*** 라고 부른다.
+  * 시간적 특성: **객체 생성 시에 멤버가 생성된다.**
+    * 객체가 생길 때 멤버도 생성된다.
+    * 객체 생성 후 멤버 사용이 가능하다.
+    * 객체가 사라지면 멤버도 사라진다.
+  * 공유의 특성: **공유되지 않는다.**
+    * 멤버는 객체 내에 각각의 공간을 유지한다.
+* static 멤버
+  * 공간적 특성: **멤버는 클래스당 하나가 생성된다.**
+    * 멤버는 객체 내부가 아닌 별도의 공간에 생성된다.
+    * ***클래스 멤버*** 라고 부른다.
+  * 시간적 특성: **클래스 로딩 시에 멤버가 생성된다.**
+    * 객체가 생기기 전에 이미 생성된다.
+    * 객체가 생기기 전에도 사용이 가능하다. (즉, 객체를 생성하지 않고도 사용할 수 있다.)
+    * 객체가 사라져도 멤버는 사라지지 않는다.
+    * 멤버는 프로그램이 종료될 때 사라진다.
+  * 공유의 특성: **동일한 클래스의 모든 객체들에 의해 공유된다.**
 
 > - [https://gmlwjd9405.github.io/2018/08/04/java-static.html](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
 
 #### :small_orange_diamond:java의 final 키워드 (final/finally/finalize)
-final 키워드
-* 개념: 변수나 메서드 또는 클래스가 '변경 불가능'하도록 만든다.
-* 원시(Primitive) 변수에 적용 시
-  * 해당 변수의 값은 변경이 불가능하다.
-* 참조(Reference) 변수에 적용 시
-  * 참조 변수가 힙(heap) 내의 다른 객체를 가리키도록 변경할 수 없다.
-* 메서드에 적용 시
-  * 해당 메서드를 오버라이드할 수 없다.
-* 클래스에 적용 시
-  * 해당 클래스의 하위 클래스를 정의할 수 없다.
-
-finally 키워드
-* 개념: try/catch 블록이 종료될 때 항상 실행될 코드 블록을 정의하기 위해 사용한다.
-* finally는 선택적으로 try 혹은 catch 블록 뒤에 정의할 때 사용한다.
-* finally 블록은 예외가 발생하더라도 항상 실행된다.
-  * 단, JVM이 try 블록 실행 중에 종료되는 경우는 제외한다.
-* finally 블록은 종종 뒷마무리 코드를 작성하는 데 사용된다.
-* finally 블록은 try와 catch 블록 다음과, 통제권이 이전으로 다시 돌아가기 전 사이에 실행된다.
-
-finalize() 메서드
-* 개념: 쓰레기 수집기(GC, Garbage Collector)가 더 이상의 참조가 존재하지 않는 객체를 메모리에서 삭제하겠다고 결정하는 순간 호출된다.
-* Object 클래스의 finalize() 메서드를 오버라이드해서 맞춤별 GC를 정의할 수 있다.
-  * `protected void finalize() throws Throwable { // 파일 닫기, 자원 반환 등등 }`
+* final 키워드
+  * 개념: 변수나 메서드 또는 클래스가 '변경 불가능'하도록 만든다.
+  * 원시(Primitive) 변수에 적용 시
+    * 해당 변수의 값은 변경이 불가능하다.
+  * 참조(Reference) 변수에 적용 시
+    * 참조 변수가 힙(heap) 내의 다른 객체를 가리키도록 변경할 수 없다.
+  * 메서드에 적용 시
+    * 해당 메서드를 오버라이드할 수 없다.
+  * 클래스에 적용 시
+    * 해당 클래스의 하위 클래스를 정의할 수 없다.
+* finally 키워드
+  * 개념: try/catch 블록이 종료될 때 항상 실행될 코드 블록을 정의하기 위해 사용한다.
+  * finally는 선택적으로 try 혹은 catch 블록 뒤에 정의할 때 사용한다.
+  * finally 블록은 예외가 발생하더라도 항상 실행된다.
+    * 단, JVM이 try 블록 실행 중에 종료되는 경우는 제외한다.
+  * finally 블록은 종종 뒷마무리 코드를 작성하는 데 사용된다.
+  * finally 블록은 try와 catch 블록 다음과, 통제권이 이전으로 다시 돌아가기 전 사이에 실행된다.
+* finalize() 메서드
+  * 개념: 쓰레기 수집기(GC, Garbage Collector)가 더 이상의 참조가 존재하지 않는 객체를 메모리에서 삭제하겠다고 결정하는 순간 호출된다.
+  * Object 클래스의 finalize() 메서드를 오버라이드해서 맞춤별 GC를 정의할 수 있다.
+    * `protected void finalize() throws Throwable { // 파일 닫기, 자원 반환 등등 }`
 
 > - [https://gmlwjd9405.github.io/2018/08/06/java-final.html](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
 #### :small_orange_diamond:java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
-java의 제네릭(Generic)
-* 개념: 모든 종류의 타입을 다룰 수 있도록 일반화된 타입 매개 변수(generic type)로 클래스나 메서드를 선언하는 기법
-* <img src="./images/generics.png" width="60%" height="60%">
-* 처리 방법: 타입 제거(type erasure)라는 개념에 근거한다.
-  * 소스 코드를 JVM이 인식하는 바이트 코드로 변환할 때 인자로 주어진 타입을 제거하는 기술이다.
-  * 제네릭이 있다고 해서 크게 달라지는 것은 없다. 단지 코드를 좀 더 예쁘게 할 뿐이다.
-  * 그래서 java의 제네릭(Generic)은 때로는 **문법적 양념(syntactic sugar)** 이라고 부른다.
+* java의 제네릭(Generic)
+  * 개념: 모든 종류의 타입을 다룰 수 있도록 일반화된 타입 매개 변수(generic type)로 클래스나 메서드를 선언하는 기법
+  * <img src="./images/generics.png" width="60%" height="60%">
+  * 처리 방법: 타입 제거(type erasure)라는 개념에 근거한다.
+    * 소스 코드를 JVM이 인식하는 바이트 코드로 변환할 때 인자로 주어진 타입을 제거하는 기술이다.
+    * 제네릭이 있다고 해서 크게 달라지는 것은 없다. 단지 코드를 좀 더 예쁘게 할 뿐이다.
+    * 그래서 java의 제네릭(Generic)은 때로는 **문법적 양념(syntactic sugar)** 이라고 부른다.
 ~~~java
 Vector<String> vector = new Vector<String>();
 vector.add(new String("hello"));
@@ -115,14 +118,13 @@ Vector vector = new Vector();
 vector.add(new String("hello"));
 String str = (String) vector.get(0);
 ~~~
-
-c++의 템플릿(Template)
-* 개념: 템플릿은 하나의 클래스를 서로 다른 여러 타입에 재사용할 수 있도록 하는 방법
-  * 예를 들어 여러 타입의 객체를 저장할 수 있는 연결리스트와 같은 자료구조를 만들 수 있다.
-* 처리 방법: 컴파일러는 인자로 주어진 각각의 타입에 대해 별도의 템플릿 코드를 생성한다.
-  * 예를 들어 MyClass<Foo>가 MyClass<Bar>와 정적 변수(static variable)를 공유하지 않는다.
-  * 하지만 java에서 정적 변수는 제네릭(Generic) 인자로 어떤 타입을 주었는지에 관계없이 MyClass로 만든 모든 객체가 공유한다.
-  * 즉, 템플릿은 좀 더 **우아한 형태의 매크로** 다.
+* c++의 템플릿(Template)
+  * 개념: 템플릿은 하나의 클래스를 서로 다른 여러 타입에 재사용할 수 있도록 하는 방법
+    * 예를 들어 여러 타입의 객체를 저장할 수 있는 연결리스트와 같은 자료구조를 만들 수 있다.
+  * 처리 방법: 컴파일러는 인자로 주어진 각각의 타입에 대해 별도의 템플릿 코드를 생성한다.
+    * 예를 들어 MyClass<Foo>가 MyClass<Bar>와 정적 변수(static variable)를 공유하지 않는다.
+    * 하지만 java에서 정적 변수는 제네릭(Generic) 인자로 어떤 타입을 주었는지에 관계없이 MyClass로 만든 모든 객체가 공유한다.
+    * 즉, 템플릿은 좀 더 **우아한 형태의 매크로** 다.
 ~~~c
 /** MyClass.h **/
 template<class T> class MyClass {
@@ -146,17 +148,17 @@ int b1 = bar1->val; // 35
 int b2 = bar2->val; // 35
 ~~~
 
-java의 제네릭과 c++의 템플릿의 차이
-1. List<String>처럼 코드를 작성할 수 있다는 이유에서 동등한 개념으로 착각하기 쉽지만 두 언어가 이를 처리하는 방법은 아주 많이 다르다.
-2. c++의 Template에는 int와 같은 기본 타입을 인자로 넘길 수 있지만, java의 Generic에서는 Integer을 대신 사용해야 한다.
-3. c++의 Template은 인자로 주어진 타입으로부터 객체를 만들어 낼 수 있지만, java에서는 불가능하다.
-4. java에서 MyClass로 만든 모든 객체는 Generic 타입 인자가 무엇이냐에 관계없이 전부 동등한 타입이다.(실행 시간에 타입 인자 정보는 삭제된다.)
-    * c++에서는 다른 Template 타입 인자를 사용해 만든 객체는 서로 다른 타입의 객체이다.
-5. java의 경우 Generic 타입 인자를 특정한 타입이 되도록 제한할 수 있다.
-    * 예를 들어 CardDeck을 Generic 클래스로 정의할 때 CardGame의 하위 클래스만 사용되도록 제한할 수 있다.
-6. java에서 Generic 타입의 인자는 정적 메서드나 변수를 선언하는 데 사용될 수 없다.
-    * 왜냐하면 MyClass<Foo>나 MyClass<Bar>가 이 메서드와 변수를 공유하기 때문이다.
-    * c++ Template은 이 두 클래스를 다른 클래스로 처리하므로 Template 타입 인자를 정적 메서드나 변수를 선언하는 데 사용할 수 있다.
+* java의 제네릭과 c++의 템플릿의 차이
+  1. List<String>처럼 코드를 작성할 수 있다는 이유에서 동등한 개념으로 착각하기 쉽지만 두 언어가 이를 처리하는 방법은 아주 많이 다르다.
+  2. c++의 Template에는 int와 같은 기본 타입을 인자로 넘길 수 있지만, java의 Generic에서는 Integer을 대신 사용해야 한다.
+  3. c++의 Template은 인자로 주어진 타입으로부터 객체를 만들어 낼 수 있지만, java에서는 불가능하다.
+  4. java에서 MyClass로 만든 모든 객체는 Generic 타입 인자가 무엇이냐에 관계없이 전부 동등한 타입이다.(실행 시간에 타입 인자 정보는 삭제된다.)
+      * c++에서는 다른 Template 타입 인자를 사용해 만든 객체는 서로 다른 타입의 객체이다.
+  5. java의 경우 Generic 타입 인자를 특정한 타입이 되도록 제한할 수 있다.
+      * 예를 들어 CardDeck을 Generic 클래스로 정의할 때 CardGame의 하위 클래스만 사용되도록 제한할 수 있다.
+  6. java에서 Generic 타입의 인자는 정적 메서드나 변수를 선언하는 데 사용될 수 없다.
+      * 왜냐하면 MyClass<Foo>나 MyClass<Bar>가 이 메서드와 변수를 공유하기 때문이다.
+      * c++ Template은 이 두 클래스를 다른 클래스로 처리하므로 Template 타입 인자를 정적 메서드나 변수를 선언하는 데 사용할 수 있다.
 
 > - [코딩 인터뷰 완전 분석, 프로그래밍인사이트](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966263080&OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&a=A100532541&l=9999&l_cd1=0&u_id=jm0gctc7ca029ofs02yqe&l_cd2=0&tu=https%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf%3FmallGb%3DKOR%26ejkGb%3DKOR%26barcode%3D9788966263080)
 
@@ -167,6 +169,13 @@ java의 제네릭과 c++의 템플릿의 차이
 #### :small_orange_diamond:객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
 
 #### :small_orange_diamond:클래스와 인스턴스의 차이(Class vs Instance)
+* 클래스
+  * 객체를 만들어 내기 위한 설계 혹은 틀
+* 객체
+  * 클래스에 선언된 모양 그대로 생성된 실체
+  * 클래스의 인스턴스(instance)라고도 부른다.
+
+> - [https://www.slipp.net/questions/126](https://www.slipp.net/questions/126)
 
 #### :small_orange_diamond:오버로딩과 오버라이딩의 차이(Overloading vs Overriding)
 <!-- [](#){name=Overloading-vs-Overriding} -->
@@ -264,10 +273,100 @@ public class FunctionCallTest {
 > - [http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html](http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html)
 
 #### :small_orange_diamond:인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
-* 인터페이스(Interface)
-
+* 추상 메서드(Abstract Method)
+  * abstract 키워드와 함께 원형만 선언되고, 코드는 작성되지 않은 메서드
+~~~java
+public abstract String getName(); // 추상 메서드
+public abstract String fail() { return "Fail"; } // 추상 메서드 아님. 컴파일 오류 발생
+~~~
 * 추상 클래스(Abstract Class)
+  * 개념: abstract 키워드로 선언된 클래스
+    1. 추상 메서드를 최소 한 개 이상 가지고 abstract로 선언된 클래스
+        * 최소 한 개의 추상 메서드를 포함하는 경우 **반드시** 추상 클래스로 선언하여야 한다.
+    2. 추상 메서드가 없어도 abstract로 선언한 클래스
+        * 그러나 추상 메서드가 하나도 없는 경우라도 추상 클래스로 선언할 수 있다.
+  * 추상 클래스의 구현
+    * 서브 클래스에서 슈퍼 클래스의 모든 추상 메서드를 오버라이딩하여 실행가능한 코드로 구현한다.
+  * 추상 클래스의 목적
+    * 객체(인스턴스)를 생성하기 위함이 아니며, 상속을 위한 부모 클래스로 활용하기 위한 것이다.
+    * 여러 클래스들의 **공통된 부분을 추상화(추상 메서드)** 하여 상속받는 클래스에게 구현을 강제화하기 위한 것이다. (메서드의 동작을 구현하는 자식 클래스로 책임을 위임)
+    * 즉, 추상 클래스의 추상 메서드를 자식 클래스가 구체화하여 그 기능을 확장하는 데 목적이 있다.
+~~~java
+/* 개념 1번 예시 */
+abstract class Shape { // 추상 클래스
+  Shape() {...}
+  void edit() {...}
+  abstract public void draw(); // 추상 메서드
+}
+~~~
+~~~java
+/* 개념 2번 예시 */
+abstract class Shape { // 추상 클래스
+  Shape() {...}
+  void edit() {...}
+}
+~~~
+~~~java
+/* 추상 클래스의 구현 */
+class Circle extends Shape {
+  public void draw() { System.out.println("Circle"); } // 추상 메서드 (오버라이딩)
+  void show() { System.out.println("동그라미 모양"); }
+}
+~~~
+  <!-- * 추상 클래스의 특징
+    1. 추상 클래스의 인스턴스(객체)를 생성할 수 없다.
+    2. 상속받은 추상 클래스의 추상 메서드를 구현하지 않으면 자동으로 추상 클래스가 된다.
+        * `interface MobilePhone extends Phone { }` -->
+* 인터페이스(Interface)
+  * 개념: 추상 메서드와 상수만을 포함하며, interface 키워드를 사용하여 선언한다.
+  * 인터페이스의 구현
+    * 인터페이스를 상속받고, 추상 메서드를 모두 구현한 클래스를 작성한다.
+    * implements 키워드를 사용하여 구현한다.
+  * 인터페이스의 목적
+    * 상속받을 서브 클래스에게 구현할 메서드들의 원형을 모두 알려주어, 클래스가 자신의 목적에 맞게 메서드를 구현하도록 하는 것이다.
+    * **구현 객체의 같은 동작을 보장하기 위한 목적이 있다.**
+    * 즉, 서로 관련이 없는 클래스에서 공통적으로 사용하는 방식이 필요하지만 기능을 각각 구현할 필요가 있는 경우에 사용한다.
+  * 인터페이스의 특징
+    1. 인터페이스는 상수 필드와 추상 메서드만으로 구성된다.
+    2. 모든 메서드는 추상 메서드로서, abstract public 속성이며 생략 가능하다.
+    3. 상수는 public static final 속성이며, 생략하여 선언할 수 있다.
+    4. 인터페이스를 상속받아 새로운 인터페이스를 만들 수 있다.
+        * `interface MobilePhone extends Phone { }`
+~~~java
+/* 인터페이스의 개념 */
+interface Phone { // 인터페이스
+  int BUTTONS = 20; // 상수 필드 (public static final int BUTTONS = 20;과 동일)
+  void sendCall(); // 추상 메서드 (abstract public void sendCall();과 동일)
+  abstract public void receiveCall(); // 추상 메서드
+}
+~~~
+~~~java
+/* 인터페이스의 구현 */
+class FeaturePhone implements Phone {
+  // Phone의 모든 추상 메서드를 구현한다.
+  public void sendCall() {...}
+  public void receiveCall() {...}
 
+  // 추가적으로 다른 메서드를 작성할 수 있다.
+  public int getButtons() {...}
+}
+~~~
+* 추상 클래스와 인터페이스의 ***공통점***
+  * 인스턴스(객체)는 생성할 수 없다.
+  * 선언만 있고 구현 내용이 없다.
+  * 자식 클래스가 메서드의 구체적인 동작을 구현하도록 책임을 위임한다.
+* 추상 클래스와 인터페이스의 ***차이점***
+  * 서로 다른 목적을 가지고 있다.
+    * 추상 클래스는 추상 메서드를 자식 클래스가 구체화하여 그 기능을 확장하는 데 목적이 있다. (상속을 위한 부모 클래스)
+    * 인터페이스는 서로 관련이 없는 클래스에서 공통적으로 사용하는 방식이 필요하지만 기능을 각각 구현할 필요가 있는 경우에 사용한다. (구현 객체의 같은 동작을 보장)
+  * 추상 클래스는 클래스이지만 인터페이스는 클래스가 아니다.
+  * 추상 클래스는 단일 상속이지만 인터페이스는 다중 상속이 가능하다.
+  * 추상 클래스는 “is a kind of” 인터페이스는 “can do this”
+    * Ex) 추상 클래스: Appliances(Abstract Class) - TV, Refrigerator
+    * Ex) 인터페이스: Flyable(Interface) - Plane, Bird
+
+> - [http://loustler.io/languages/oop_interface_and_abstract_class/](http://loustler.io/languages/oop_interface_and_abstract_class/)
+> - [http://alecture.blogspot.com/2011/05/abstract-class-interface.html](http://alecture.blogspot.com/2011/05/abstract-class-interface.html)
 
 #### :small_orange_diamond:JVM 구조
 
@@ -333,7 +432,7 @@ public class FunctionCallTest {
           try {
               Class myClass = Class.forName("DoHee");
               Method[] methods = myClass.getDeclaredMethods();
-              
+
               /* 클래스 내 선언된 메서드의 목록 출력 */
               /* 출력 : public void DoHee.setDoHee(java.lang.String,int)
                        public void DoHee.setNumber(int)
@@ -341,7 +440,7 @@ public class FunctionCallTest {
               for (Method method : methods) {
                   System.out.println(method.toString());
               }
-  
+
               /* 메서드의 매개변수와 반환 타입 확인 */
               /* 출력 : Class Name : class DoHee
                        Method Name : setDoHee
