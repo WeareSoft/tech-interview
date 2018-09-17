@@ -64,7 +64,8 @@
 :arrow_forward: [답변 내용](/contents/db.md)
 * 데이터베이스 풀
 * 정규화(1~3차, BCNF)
-* 트랜잭션(Transaction)
+* 트랜잭션(Transaction) 이란
+* 트랜잭션 격리 수준(Transaction Isolation Level)
 * Join
 * SQL injection
 * Index
