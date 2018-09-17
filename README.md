@@ -73,6 +73,7 @@
 * 효과적인 쿼리 저장
 * Replication
 * 파티셔닝(Partitioning)
+* 샤딩(Sharding)
 
 ## 5. Design Pattern
 :arrow_forward: [답변 내용](/contents/designpattern.md)
