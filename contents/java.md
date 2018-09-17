@@ -35,24 +35,8 @@
   - **예외처리가 불편하다.**
     - 프로그래머 검사가 필요한 예외가 등장한다면 무조건 프로그래머가 선언을 해줘야 한다.
 
-- Reference
-  - http://yolojeb.tistory.com/17
-  - http://huhghiza.tistory.com/7
-
- 
-
-
-
-출처: http://yolojeb.tistory.com/17 [개발 일기]
-  - 
-참고*
-- JVM 자체는 운영체제에 독립적이다.
-- JVM이 메모리 관리를 해준다 하더라도 맹신하면 안된다.
-- 객체지향
-- 오픈소스
-
-
-> - []()
+>- [http://yolojeb.tistory.com/17](http://yolojeb.tistory.com/17)
+>- [http://huhghiza.tistory.com/7](http://huhghiza.tistory.com/7)
 
 #### :small_orange_diamond:java의 접근 제어자의 종류와 특징
 <img src="./images/access-controller.png" width="70%" height="70%">
