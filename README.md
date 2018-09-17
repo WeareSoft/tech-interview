@@ -11,7 +11,7 @@
 4. Database
 5. Design Pattern
 6. Algorithm
-7. JavaM
+7. Java
 8. Spring
 9. ETC
 
@@ -64,7 +64,8 @@
 :arrow_forward: [답변 내용](/contents/db.md)
 * 데이터베이스 풀
 * 정규화(1~3차, BCNF)
-* 트랜잭션(Transaction)
+* 트랜잭션(Transaction) 이란
+* 트랜잭션 격리 수준(Transaction Isolation Level)
 * Join
 * SQL injection
 * Index
@@ -113,7 +114,10 @@
 * Call by Reference와 Call by Value의 차이
 * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
 * JVM 구조
-* Java Collection Framework
+* Java Collections Framework
+* java Map 인터페이스 구현체의 종류
+* java Set 인터페이스 구현체의 종류
+* java List 인터페이스 구현체의 종류
 * Wrapper class
 * Annotation
 * String, StringBuilder, StringBuffer

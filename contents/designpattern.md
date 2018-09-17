@@ -1,4 +1,4 @@
-# 1. Data Structure
+# 5. Design Pattern
 
 #### :small_orange_diamond:디자인 패턴의 개념과 종류
 디자인 패턴이란
