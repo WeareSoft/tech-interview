@@ -44,20 +44,17 @@
 
 > - [http://mangkyu.tistory.com/15](http://mangkyu.tistory.com/15)
 
-#### :small_orange_diamond:TCP 3-way-handshake, 4-way-handshake
+#### :small_orange_diamond:TCP의 3-way-handshake, 4-way-handshake
 
-#### :small_orange_diamond:HTTP
+#### :small_orange_diamond:HTTP, HTTPS
 
 #### :small_orange_diamond:GET, POST
 
 #### :small_orange_diamond:쿠키, 세션
 
-#### :small_orange_diamond:HTTPS
-
 #### :small_orange_diamond:DNS
 
-#### :small_orange_diamond:REST
-
+#### :small_orange_diamond:REST와 RESTful의 개념
 
 ---
 ## Reference

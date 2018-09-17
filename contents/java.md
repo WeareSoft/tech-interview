@@ -1,7 +1,5 @@
 # 7. Java
 
-#### :small_orange_diamond:객체지향이란
-
 #### :small_orange_diamond:java 프로그래밍이란
 
 #### :small_orange_diamond:java와 c/c++의 차이점
@@ -47,11 +45,17 @@
 
 #### :small_orange_diamond:객체지향 프로그래밍과 절차지향 프로그래밍의 차이
 * 절차지향 프로그래밍
-  * 실행하고자 하는 정차를 정하고, 이 절차대로 프로그래밍하는 방법
+  * 실행하고자 하는 절차를 정하고, 이 절차대로 프로그래밍하는 방법
   * 목적을 달성하기 위한 일의 흐름에 중점을 둔다.
 * 객체지향 프로그래밍
   * 실세상의 물체를 객체로 표현하고, 이들 사이의 관계, 상호 작용을 프로그램으로 나타낸다.
   * 객체를 추출하고 객체들의 관계를 결정하고 이들의 상호 작용에 필요한 함수(메서드)와 변수(필드)를 설계 및 구현하다.
+  * 객체 지향의 행심은 연관되어 있는 변수와 메서드를 하나의 그룹으로 묶어서 그룹핑하는 것이다.
+  * 사람의 사고와 가장 비슷하게 프로그래밍을 하기 위해서 생성된 기법
+  * 하나의 클래스를 바탕으로 서로 다른 상태를 가진 인스턴스를 만들면 서로 다른 행동을 하게 된다. 즉, 하나의 클래스가 여러 개의 인스턴스가 될 수 있다는 점이 객체 지향이 제공하는 가장 기본적인 재활용성이라고 할 수 있다.
+
+#### :small_orange_diamond:객체지향(Object-Oriented)이란
+
 
 #### :small_orange_diamond:java의 non-static 멤버와 static 멤버의 차이
 * non-static 멤버
@@ -113,6 +117,7 @@
 Vector<String> vector = new Vector<String>();
 vector.add(new String("hello"));
 String str = vector.get(0);
+
 // 컴파일러가 아래와 같이 변환
 Vector vector = new Vector();
 vector.add(new String("hello"));
@@ -132,11 +137,13 @@ template<class T> class MyClass {
     static int val;
     MyClass(int v) { val = v; }
 };
+
 /** MyClass.cpp **/
 template<typename T>
 int MyClass<T>::bar;
 template class MyClass<Foo>;
 template class MyClass<Bar>;
+
 /** main.cpp **/
 MyClass<Foo> * foo1 = new MyClass<Foo>(10);
 MyClass<Foo> * foo2 = new MyClass<Foo>(15);
@@ -164,18 +171,74 @@ int b2 = bar2->val; // 35
 
 #### :small_orange_diamond:java의 가비지 컬렉션(Garbage Collection) 처리 방법
 
-#### :small_orange_diamond:객체(Object)란 무엇인가
-
 #### :small_orange_diamond:객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
 
-#### :small_orange_diamond:클래스와 인스턴스의 차이(Class vs Instance)
-* 클래스
-  * 객체를 만들어 내기 위한 설계 혹은 틀
-* 객체
+#### :small_orange_diamond:클래스, 객체, 인스턴스의 차이
+* 클래스(Class)
+  * 객체를 만들어 내기 위한 **설계도** 혹은 틀
+  * 연관되어 있는 변수와 메서드의 집합
+* 객체(Object)
+  * 소프트웨어 세계에 **구현할 대상**
   * 클래스에 선언된 모양 그대로 생성된 실체
-  * 클래스의 인스턴스(instance)라고도 부른다.
+  <!-- * 일반적으로 설계도인 클래스가 구체적인 실체인 인스턴스(인스턴스화)가 되었을 때 '객체'라고 부른다.
+    * 즉, 메모리에 할당된 실체화된 인스턴스를 '객체'라고 부른다. -->
+  * ***'클래스의 인스턴스(instance)'*** 라고도 부른다.
+  * 객체는 모든 인스턴스를 대표하는 포괄적인 의미를 갖는다.
+  * oop의 관점에서 클래스의 타입으로 선언되었을 때 '객체'라고 부른다.
+* 인스턴스(Instance)
+  * 설계도를 바탕으로 소프트웨어 세계에 **구현된 구체적인 실체**
+    * 즉, 객체를 소프트웨어에 실체화 하면 그것을 '인스턴스'라고 부른다.
+    * 실체화된 인스턴스는 메모리에 할당된다.
+  * 인스턴스는 객체에 포함된다고 볼 수 있다.
+  * oop의 관점에서 객체가 메모리에 할당되어 실제 사용될 때 '인스턴스'라고 부른다.
+  * 추상적인 개념(또는 명세)과 구체적인 객체 사이의 **관계** 에 초점을 맞출 경우에 사용한다.
+    * *'~의 인스턴스'* 의 형태로 사용된다.
+    * 객체는 클래스의 인스턴스다.
+    * 객체 간의 링크는 클래스 간의 연관 관계의 인스턴스다.
+    * 실행 프로세스는 프로그램의 인스턴스다.
+  * 즉, 인스턴스라는 용어는 반드시 클래스와 객체 사이의 관계로 한정지어서 사용할 필요는 없다.
+  * 인스턴스는 어떤 원본(추상적인 개념)으로부터 '생성된 복제본'을 의미한다.
+~~~java
+/* 클래스 */
+public class Animal {
+  ...
+}
+/* 객체와 인스턴스 */
+public class Main {
+  public static void main(String[] args) {
+    Animal cat, dog; // '객체'
+
+    // 인스턴스화
+    cat = new Animal(); // cat은 Animal 클래스의 '인스턴스'(객체를 메모리에 할당)
+    dog = new Animal(); // dog은 Animal 클래스의 '인스턴스'(객체를 메모리에 할당)
+  }
+}
+~~~
+* Q. 클래스 VS 객체
+  * 클래스는 '설계도', 객체는 '설계도로 구현한 모든 대상'을 의미한다.
+* Q. 객체 VS 인스턴스
+  * 클래스의 타입으로 선언되었을 때 객체라고 부르고, 그 객체가 메모리에 할당되어 실제 사용될 때 인스턴스라고 부른다.
+  * 객체는 현실 세계에 가깝고, 인스턴스는 소프트웨어 세계에 가깝다.
+  * 객체는 '실체', 인스턴스는 '관계'에 초점을 맞춘다.
+    * 객체를 '클래스의 인스턴스'라고도 부른다.
+  <!-- * 로직을 설계할 때 나타나는 대상을 객체라고 부르고, 구체적인 코드 상에서 나타나는 객체를 인스턴스라고 부른다. -->
+  * ***'방금 인스턴스화하여 레퍼런스를 할당한' 객체를 인스턴스라고 말하지만, 이는 원본(추상적인 개념)으로부터 생성되었다는 것에 의미를 부여하는 것일 뿐 엄격하게 객체와 인스턴스를 나누긴 어렵다.***
+* 추상화 기법
+  1. 분류(Classification)
+      * 객체 -> 클래스
+      * 실재하는 객체들을 공통적인 속성을 공유하는 범부 또는 추상적인 개념으로 묶는 것
+  2. 인스턴스화(Instantiation)
+      * 클래스 -> 인스턴스
+      * 분류의 반대 개념. 범주나 개념으로부터 실재하는 객체를 만드는 과정
+      * 구체적으로 클래스 내의 객체에 대해 특정한 변형을 정의하고, 이름을 붙인 다음, 그것을 물리적인 어떤 장소에 위치시키는 등의 작업을 통해 인스턴스를 만드는 것을 말한다.
+      * '예시(Exemplification)'라고도 부른다.
 
 > - [https://www.slipp.net/questions/126](https://www.slipp.net/questions/126)
+> - [https://opentutorials.org/course/1223/5400](https://opentutorials.org/course/1223/5400)
+> - [http://cerulean85.tistory.com/149](http://cerulean85.tistory.com/149)
+> - [https://www.ijemin.com/blog/%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4-difference-between-obect-and-instance/](https://www.ijemin.com/blog/%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4-difference-between-obect-and-instance/)
+
+#### :small_orange_diamond:객체(Object)란 무엇인가
 
 #### :small_orange_diamond:오버로딩과 오버라이딩의 차이(Overloading vs Overriding)
 <!-- [](#){name=Overloading-vs-Overriding} -->
@@ -292,7 +355,7 @@ public abstract String fail() { return "Fail"; } // 추상 메서드 아님. 컴
     * 여러 클래스들의 **공통된 부분을 추상화(추상 메서드)** 하여 상속받는 클래스에게 구현을 강제화하기 위한 것이다. (메서드의 동작을 구현하는 자식 클래스로 책임을 위임)
     * 즉, 추상 클래스의 추상 메서드를 자식 클래스가 구체화하여 그 기능을 확장하는 데 목적이 있다.
 ~~~java
-/* 개념 1번 예시 */
+/* 개념 a의 예시 */
 abstract class Shape { // 추상 클래스
   Shape() {...}
   void edit() {...}
@@ -300,7 +363,7 @@ abstract class Shape { // 추상 클래스
 }
 ~~~
 ~~~java
-/* 개념 2번 예시 */
+/* 개념 b의 예시 */
 abstract class Shape { // 추상 클래스
   Shape() {...}
   void edit() {...}

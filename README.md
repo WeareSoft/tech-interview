@@ -34,12 +34,12 @@
 :arrow_forward: [답변 내용](/contents/network.md)
 * OSI 7계층
 * TCP와 UDP
-* TCP 3-way-handshake, 4-way-handshake
+* TCP의 3-way-handshake, 4-way-handshake
 * HTTP, HTTPS
 * GET, POST
 * 쿠키, 세션
 * DNS
-* REST
+* REST와 RESTful의 개념
 
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
@@ -84,7 +84,7 @@
 * MVC1, MVC2 패턴
 
 ## 6. Algorithm :pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
-:arrow_forward: [답변 내용](/contents/designpattern.md)
+:arrow_forward: [답변 내용](/contents/algorithm.md)
 * BigO
 * DFS와 BFS의 차이
 * Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
@@ -93,7 +93,6 @@
 
 ## 7. Java
 :arrow_forward: [답변 내용](/contents/java.md)
-* 객체지향이란
 * java 프로그래밍이란
 * java와 c/c++의 차이점
 * java 언어의 장단점
@@ -101,13 +100,14 @@
 * OOP의 4가지 특징
 * OOP의 5대 원칙 (SOLID)
 * 객체지향 프로그래밍과 절차지향 프로그래밍의 차이
+* 객체지향(Object-Oriented)이란
 * java의 non-static 멤버와 static 멤버의 차이
 * java의 final 키워드 (final/finally/finalize)
 * java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
 * java의 가비지 컬렉션(Garbage Collection) 처리 방법
-* 객체(Object)란 무엇인가
 * 객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
-* 클래스와 인스턴스의 차이(Class vs Instance)
+* 클래스, 객체, 인스턴스의 차이
+* 객체(Object)란 무엇인가
 * 오버로딩과 오버라이딩의 차이(Overloading vs Overriding)
 * Call by Reference와 Call by Value의 차이
 * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
@@ -132,10 +132,10 @@
 
 ## 9. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
-* TDD
+* TDD란
 * 웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명
   * Ex. url에 'www.naver.com' 을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.
-* 대칭키/비대칭키
+* 대칭키, 비대칭키
 * 컴파일러, 인터프리터
 * 분산락
 * 프레임워크와 라이브러리의 차이
