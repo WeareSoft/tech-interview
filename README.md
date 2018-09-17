@@ -84,7 +84,7 @@
 * MVC1, MVC2 패턴
 
 ## 6. Algorithm :pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
-:arrow_forward: [답변 내용](/contents/designpattern.md)
+:arrow_forward: [답변 내용](/contents/algorithm.md)
 * BigO
 * DFS와 BFS의 차이
 * Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
