@@ -85,8 +85,8 @@
         * 따라서, 다른 사용자는 그 영역에 해당되는 데이터에 대한 수정 및 입력이 불가능하다.
     * Isolation level 조정은 동시성이 증가되는데 반해 데이터 무결성에 문제가 발생할 수 있고, 데이터의 무결성을 유지하는 데 반해 동시성이 떨어질 수 있다.
     * 레벨이 높아질수록 비용이 높아진다.
-* 낮은 단계의 Isolation Level 이용시 발생하는 현상
-<img src="./images/isolation-level.png" width="70%" height="70%">
+* 낮은 단계의 Isolation Level 이용시 발생하는 현상  
+    <img src="./images/isolation-level.png" width="70%" height="70%">
     * Dirty Read
         * 커밋되지 않은 수정 중인 데이터를 다른 트랜잭션에서 읽을 수 있도록 허용할 때 발생하는 현상
         * 어떤 트랜잭션에서 아직 실행이 끝난지 않은 다른 트랜잭션에 의한 변경 사항을 보게 되는 되는 경우
