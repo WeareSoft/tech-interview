@@ -89,12 +89,6 @@
     1. 트리는 하나의 루트 노드를 갖는다.
     2. 루트 노드는 0개 이상의 자식 노드를 갖고 있다.
     3. 그 자식 노드 또한 0개 이상의 자식 노드를 갖고 있고, 이는 반복적으로 정의된다.
-~~~java
-class Node {
-  public String name;
-  public Node[] children;
-}
-~~~
   * 노드(node)들과 노드들을 연결하는 간선(edge)들로 구성되어 있다.
     * 트리에는 사이클(cycle)이 존재할 수 없다.
     * 노드들은 특정 순서로 나열될 수도 있고 그럴 수 없을 수도 있다.
@@ -104,6 +98,12 @@ class Node {
   * 그래프의 한 종류
     * 사이클(cycle)이 없는 하나의 연결 그래프(Connected Graph)
     * 또는 DAG(Directed Acyclic Graph, 방향성이 있는 비순환 그래프)의 한 종류 이다.
+~~~java
+class Node {
+  public String name;
+  public Node[] children;
+}
+~~~
 * 트리(Tree)의 특징
   * 그래프의 한 종류이다. ‘최소 연결 트리’ 라고도 불린다.
   * 트리는 계층 모델 이다.
