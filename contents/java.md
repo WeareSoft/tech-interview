@@ -474,7 +474,7 @@ class FeaturePhone implements Phone {
     * 시간복잡도: O(logn)
 * ConCurrentHashMap
     * multiple lock
-    * update할 때만 동기 처리 
+    * update할 때만 동기 처리
     * key와 value에 null값을 허용하지 않는다.
 * HashTable
     * single lock

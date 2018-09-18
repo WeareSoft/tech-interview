@@ -56,12 +56,12 @@
 #### :small_orange_diamond:트랜잭션 격리 수준(Transaction Isolation Level)
 * Isolation Level 이란?
     * 트랜잭션에서 일관성이 없는 데이터를 허용하도록 하는 수준
-* Isolation Level 의 필요성 
-    * 데이터베이스는 ACID 같이 트랜잭션이 원자적이면서도 독립적인 수행을 하도록 한다. 
+* Isolation Level 의 필요성
+    * 데이터베이스는 ACID 같이 트랜잭션이 원자적이면서도 독립적인 수행을 하도록 한다.
     * 그래서 Locking 이라는 개념이 등장한다.
         * 트랜잭션이 DB를 다루는 동안 다른 트랜잭션이 관여하지 못하게 막는 것
     * 하지만 무조건적인 Locking으로 동시에 수행되는 많은 트랜잭션들을 순서대로 처리하는 방식으로 구현되면 DB의 성능은 떨어지게 된다.
-    * 반대로 응답성을 높이기 위해 Locking 범위를 줄인다면 잘못된 값이 처리 될 여지가 있다. 
+    * 반대로 응답성을 높이기 위해 Locking 범위를 줄인다면 잘못된 값이 처리 될 여지가 있다.
     * 그래서 최대한 효율적인 Locking 방법이 필요하다.
 * Isolation Level 의 종류
     1. Read Uncommitted (레벨 0)
@@ -96,7 +96,6 @@
         * 한 트랜잭션 안에서 일정 범위의 레코드를 두 번 이상 읽을 때, 첫 번째 쿼리에서 없던 레코드가 두 번째 쿼리에서 나타나는 현상
         * 이는 트랜잭션 도중 새로운 레코드가 삽입되는 것을 허용하기 때문에 나타난다.
 
-
 > - [http://hundredin.net/2012/07/26/isolation-level/](http://hundredin.net/2012/07/26/isolation-level/)
 > - [http://egloos.zum.com/ljlave/v/1530887](http://egloos.zum.com/ljlave/v/1530887)
 
@@ -115,7 +114,11 @@
 #### :small_orange_diamond:Replication
 
 #### :small_orange_diamond:파티셔닝(Partitioning)
+
+#### :small_orange_diamond:샤딩(Sharding)
+
 ---
+
 ## Reference
 > - []()
 
