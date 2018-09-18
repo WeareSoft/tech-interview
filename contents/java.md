@@ -11,7 +11,7 @@
 > - []()
 
 #### :small_orange_diamond:java 언어의 장단점
-- **장점**
+- 장점
   - **운영체제에 독립적이다.**
     - JVM에서 동작하기 때문에, 특정 운영체제에 종속되지 않는다.
   - **객체지향 언어이다.**
@@ -27,14 +27,14 @@
     - 자바는 스레드 생성 및 제어와 관련된 라이브러리 API를 제공하고 있기 때문에 실행되는 운영체제에 상관없이 멀티 스레드를 쉽게 구현할 수 있다.
   - **동적 로딩(Dynamic Loading)을 지원한다**
     - 애플리케이션이 실행될 때 모든 객체가 생성되지 않고, 각 객체가 필요한 시점에 클래스를 동적 로딩해서 생성한다. 또한 유지보수 시 해당 클래스만 수정하면 되기 때문에 전체 애플리케이션을 다시 컴파일할 필요가 없다. 따라서 유지보수가 쉽고 빠르다.
-- **단점**
+- 단점
   - **비교적 속도가 느리다.**
     - 자바는 한 번의 컴파일링으로 실행 가능한 기계어가 만들어지지 않고 JVM에 의해 기계어로 번역되고 실행하는 과정을 거치기 때문에 C나 C++의 컴파일 단계에서 만들어지는 완전한 기계어보다는 속도가 느리다. 그러나 하드웨어의 성능 향상과 바이트 코드를 기계어로 변환해주는 JIT 컴파일러 같은 기술 적용으로 JVM의 기능이 향상되어 속도의 격차가 많이 줄어들었다.
   - **예외처리가 불편하다.**
     - 프로그래머 검사가 필요한 예외가 등장한다면 무조건 프로그래머가 선언을 해줘야 한다.
 
->- [http://yolojeb.tistory.com/17](http://yolojeb.tistory.com/17)
->- [http://huhghiza.tistory.com/7](http://huhghiza.tistory.com/7)
+> - [http://yolojeb.tistory.com/17](http://yolojeb.tistory.com/17)
+> - [http://huhghiza.tistory.com/7](http://huhghiza.tistory.com/7)
 
 #### :small_orange_diamond:java의 접근 제어자의 종류와 특징
 <img src="./images/access-controller.png" width="70%" height="70%">
