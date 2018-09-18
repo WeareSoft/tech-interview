@@ -1,6 +1,10 @@
 # 6. Algorithm
 
 #### :small_orange_diamond:BigO
+* BigO의 개념
+* BigO의 복잡성 차트 보기
+  * <img src="./images/BigO-complexity-chart.png" width="50%" height="50%">
+  * -> [http://bigocheatsheet.com/](http://bigocheatsheet.com/)
 
 > - []()
 
@@ -94,14 +98,22 @@ void search(Node root) {
 
 > - []()
 
-#### :small_orange_diamond:Quick Sort
-
-> - []()
+#### :small_orange_diamond:정렬 알고리즘의 종류와 개념
+* [버블 정렬(Bubble Sort)](https://gmlwjd9405.github.io/2018/05/06/algorithm-bubble-sort.html)
+* [삽입 정렬(insertion sort)](https://gmlwjd9405.github.io/2018/05/06/algorithm-insertion-sort.html)
+* [선택 정렬(selection sort)](https://gmlwjd9405.github.io/2018/05/06/algorithm-selection-sort.html)
+* [합병 정렬(merge sort)](https://gmlwjd9405.github.io/2018/05/08/algorithm-merge-sort.html)
+* [퀵 정렬(quick sort)](https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html)
+* [힙 정렬(heap sort)](https://gmlwjd9405.github.io/2018/05/10/algorithm-heap-sort.html)
+* [셸 정렬(shell sort)](https://gmlwjd9405.github.io/2018/05/08/algorithm-shell-sort.html)
+* 정렬 알고리즘의 애니메이션 보기
+  * -> [https://www.toptal.com/developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 
 ---
 
 ## Reference
-> - []()
+> - [https://github.com/tayllan/awesome-algorithms](https://github.com/tayllan/awesome-algorithms)
+> - [https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
 
 ## :house: [Home](https://github.com/Do-Hee/tech-interview)
