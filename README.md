@@ -21,14 +21,15 @@
 :arrow_forward: [답변 내용](/contents/datastructure.md)
 * Array
 * LinkedList
+* HashTable
 * Stack
 * Queue
+* Graph
 * Tree
+* 그래프(Graph)와 트리(Tree)의 차이점
 * Binary Heap
 * Red-Black Tree
 * B+ Tree
-* HashTable
-* Graph
 
 ## 2. Network
 :arrow_forward: [답변 내용](/contents/network.md)
@@ -97,7 +98,7 @@
 * BigO
 * DFS와 BFS의 차이
 * Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
-* Quick Sort
+* 정렬 알고리즘의 종류와 개념
 
 
 ## 7. Java
@@ -135,12 +136,15 @@
 
 ## 8. Spring
 :arrow_forward: [답변 내용](/contents/spring.md)
-* IOC
-* DI
-* AOP
+* 스프링 프레임워크란
+* Spring, Spring MVC, Spring Boot의 차이
+* IOC(Inversion of Control, 제어의 역전)란
+* MVC 패턴이란
+* DI(Dependency Injection, 의존성 주입)란
+* AOP(Aspect Oriented Programming)란
 * POJO
-* DAO, DTO
-* MVC
+* DAO, DTO의 차이
+* Spring JDBC를 이용한 데이터 접근
 
 ## 9. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
