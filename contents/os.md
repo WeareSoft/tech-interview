@@ -72,6 +72,13 @@
 #### :small_orange_diamond:동기화 객체의 종류
 
 #### :small_orange_diamond:뮤텍스와 세마포어의 차이
+<!-- * 뮤텍스
+  * 상호배제라고도 하며, Critical Section을 가진 스레드의 Running time이 서로 겹치지 않도록 각각 단독으로 실행하게 하는 기술
+  * synchronized 또는 lock을 통해 해결
+* 세마포어
+  * 리소스 상태를 나타내는 간단한 카운터
+  * 공유 리소스에 접근할 수 있는 프로세스의 최대 허용치만큼 동시에 사용자가 접근하여 사용할 수 있음. -->
+
 
 #### :small_orange_diamond:스케줄러
 

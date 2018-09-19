@@ -111,11 +111,17 @@
 
 #### :small_orange_diamond:효과적인 쿼리 저장
 
+#### :small_orange_diamond:옵티마이저(Optimizer)란
+
 #### :small_orange_diamond:Replication
 
 #### :small_orange_diamond:파티셔닝(Partitioning)
 
 #### :small_orange_diamond:샤딩(Sharding)
+
+#### :small_orange_diamond:객체 관계 매핑(Object-relational mapping; ORM)이란
+
+#### :small_orange_diamond:java JDBC
 
 ---
 

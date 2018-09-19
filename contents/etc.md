@@ -28,10 +28,19 @@
 > - []()
 
 
-#### :small_orange_diamond:64bit, 32bit 차이
+#### :small_orange_diamond:64bit CPU, 32bit CPU 차이
 
 > - []()
 
+#### :small_orange_diamond:CVS, SVN, Git
+
+
+#### :small_orange_diamond:웹 서버(Web Server)와 웹 어플리케이션 서버(WAS)의 차이
+
+
+#### :small_orange_diamond:애자일 방법론이란
+
+#### :small_orange_diamond:Servlet, JSP
 
 ---
 

@@ -39,14 +39,18 @@
 #### :small_orange_diamond:java의 접근 제어자의 종류와 특징
 <img src="./images/access-controller.png" width="70%" height="70%">
 
+#### :small_orange_diamond:java의 데이터 타입
+
+#### :small_orange_diamond:Wrapper class
+
 #### :small_orange_diamond:OOP의 4가지 특징
-1. 추상화
+1. 추상화(Abstraction)
     * 구체적인 사물들의 공통적인 특징을 파악해서 이를 하나의 개념(집합)으로 다루는 것
-2. 캡슐화
+2. 캡슐화(Encapsulation)
     * 정보 은닉(information hiding): 필요가 없는 정보는 외부에서 접근하지 못하도록 제한하는 것
-3. 일반화 관계
+3. 일반화 관계(Inheritance, 상속)
     * 여러 개체들이 가진 공통된 특성을 부각시켜 하나의 개념이나 법칙으로 성립시키는 과정
-4. 다형성
+4. 다형성(Polymorphism)
     * 서로 다른 클래스의 객체가 같은 메시지를 받았을 때 각자의 방식으로 동작하는 능력
 
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-features.html](https://gmlwjd9405.github.io/2018/07/05/oop-features.html)
@@ -101,6 +105,8 @@
   * 공유의 특성: **동일한 클래스의 모든 객체들에 의해 공유된다.**
 
 > - [https://gmlwjd9405.github.io/2018/08/04/java-static.html](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
+
+#### :question:java의 main 메서드가 static인 이유
 
 #### :small_orange_diamond:java의 final 키워드 (final/finally/finalize)
 * final 키워드
@@ -503,11 +509,11 @@ class FeaturePhone implements Phone {
     * 모든 메서드에 대해 동기 처리
     * key와 value에 null값을 허용하지 않는다.
 
- #### :small_orange_diamond:java Set 인터페이스 구현체의 종류
- * HashSet
-    * 저장 순서를 유지하지 않는 데이터의 집합이다.
-    * 해시 알고리즘(hash algorithm)을 사용하여 검색 속도가 매우 빠르다.
-    * 내부적으로 HashMap 인스턴스를 이용하여 요소를 저장한다.
+#### :small_orange_diamond:java Set 인터페이스 구현체의 종류
+* HashSet
+  * 저장 순서를 유지하지 않는 데이터의 집합이다.
+  * 해시 알고리즘(hash algorithm)을 사용하여 검색 속도가 매우 빠르다.
+  * 내부적으로 HashMap 인스턴스를 이용하여 요소를 저장한다.
 * LinkedHashSet
     * 저장 순서를 유지하는 HashSet
 * TreeSet
@@ -515,10 +521,10 @@ class FeaturePhone implements Phone {
     * 이진 탐색 트리 중에 성능을 향상시킨 레드-블랙 트리(Red-Black tree)로 구현되어 있다.
     * Compartor 구현으로 정렬 방법을 지정할 수 있다.
 
- #### :small_orange_diamond:java List 인터페이스 구현체의 종류
- * ArrayList
-    * 단방향 포인터 구조로 각 데이터에 대한 인덱스를 가지고 있어 데이터 검색에 적합하다.
-    * 데이터의 삽입, 삭제 시 해당 데이터 이후 모든 데이터가 복사되므로 삽입, 삭제가 빈번한 데이터에는 부적합하다.
+#### :small_orange_diamond:java List 인터페이스 구현체의 종류
+* ArrayList
+  * 단방향 포인터 구조로 각 데이터에 대한 인덱스를 가지고 있어 데이터 검색에 적합하다.
+  * 데이터의 삽입, 삭제 시 해당 데이터 이후 모든 데이터가 복사되므로 삽입, 삭제가 빈번한 데이터에는 부적합하다.
 * LinkedList
     * 양방향 포인터 구조로 데이터의 삽입, 삭제 시 해당 노드의 주소지만 바꾸면 되므로 삽입, 삭제가 빈번한 데이터에 적합하다.
     * 데이터의 검색 시 처음부터 노드를 순회하므로 검색에는 부적합하다.
@@ -526,8 +532,6 @@ class FeaturePhone implements Phone {
 * Vector
     * 내부에서 자동으로 동기화 처리가 일어난다.
     * 성능이 좋지 않고 무거워 잘 쓰이지 않는다.
-
-#### :small_orange_diamond:Wrapper class
 
 #### :small_orange_diamond:Annotation
 
