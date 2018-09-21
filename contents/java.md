@@ -461,6 +461,8 @@ class FeaturePhone implements Phone {
 
 #### :small_orange_diamond:JVM 구조
 
+> - [http://www.itworld.co.kr/news/110837](http://www.itworld.co.kr/news/110837)
+
 #### :small_orange_diamond:Java Collections Framework
 <img src="./images/java-collections-framework.png" width="70%" height="70%">
 
