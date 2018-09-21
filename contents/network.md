@@ -66,33 +66,33 @@
       * A 프로세스(Client)가 B 프로세스(Server)에 연결을 요청
         <img src="./images/3-way-handshaking.png" width="60%" height="60%">
         1. A -> B: SYN
-          * 접속 요청 프로세스 A가 연결 요청 메시지 전송 (SYN)
-          * 송신자가 최초로 데이터를 전송할 때 Sequence Number를 임의의 랜덤 숫자로 지정하고, SYN 플래그 비트를 1로 설정한 세그먼트를 전송한다.
-          * PORT 상태 - B: LISTEN, A: CLOSED
+            * 접속 요청 프로세스 A가 연결 요청 메시지 전송 (SYN)
+            * 송신자가 최초로 데이터를 전송할 때 Sequence Number를 임의의 랜덤 숫자로 지정하고, SYN 플래그 비트를 1로 설정한 세그먼트를 전송한다.
+            * PORT 상태 - B: LISTEN, A: CLOSED
         2. B -> A: SYN + ACK
-          * 접속 요청을 받은 프로세스 B가 요청을 수락했으며, 접속 요청 프로세스인 A도 포트를 열어 달라는 메시지 전송 (SYN + ACK)
-          * 수신자는 Acknowledgement Number 필드를 (Sequence Number + 1)로 지정하고, SYN과 ACK 플래그 비트를 1로 설정한 세그먼트를 전송한다.
-          * PORT 상태 - B: SYN_RCV, A: CLOSED
+            * 접속 요청을 받은 프로세스 B가 요청을 수락했으며, 접속 요청 프로세스인 A도 포트를 열어 달라는 메시지 전송 (SYN + ACK)
+            * 수신자는 Acknowledgement Number 필드를 (Sequence Number + 1)로 지정하고, SYN과 ACK 플래그 비트를 1로 설정한 세그먼트를 전송한다.
+            * PORT 상태 - B: SYN_RCV, A: CLOSED
         3. A -> B: ACK
-          * PORT 상태 - B: SYN_RCV, A: ESTABLISHED
-          * 마지막으로 접속 요청 프로세스 A가 수락 확인을 보내 연결을 맺음 (ACK)
-          * 이때, 전송할 데이터가 있으면 이 단계에서 데이터를 전송할 수 있다.
-          * PORT 상태 - B: ESTABLISHED, A: ESTABLISHED
+            * PORT 상태 - B: SYN_RCV, A: ESTABLISHED
+            * 마지막으로 접속 요청 프로세스 A가 수락 확인을 보내 연결을 맺음 (ACK)
+            * 이때, 전송할 데이터가 있으면 이 단계에서 데이터를 전송할 수 있다.
+            * PORT 상태 - B: ESTABLISHED, A: ESTABLISHED
 * 4-way handshake 란
   * TCP의 **연결을 해제(Connection Termination)** 하는 과정
       * A 프로세스(Client)가 B 프로세스(Server)에 연결 해제를 요청
         <img src="./images/4-way-handshaking.png" width="60%" height="60%">
         1. A -> B: FIN
-          * 프로세스 A가 연결을 종료하겠다는 FIN 플래그를 전송
-          * 프로세스 B가 FIN 플래그로 응답하기 전까지 연결을 계속 유지
+            * 프로세스 A가 연결을 종료하겠다는 FIN 플래그를 전송
+            * 프로세스 B가 FIN 플래그로 응답하기 전까지 연결을 계속 유지
         2. B -> A: ACK
-          * 프로세스 B는 일단 확인 메시지를 보내고 자신의 통신이 끝날 때까지 기다린다. (이 상태가 TIME_WAIT 상태)
-          * 수신자는 Acknowledgement Number 필드를 (Sequence Number + 1)로 지정하고, ACK 플래그 비트를 1로 설정한 세그먼트를 전송한다.
-          * 그리고 자신이 전송할 데이터가 남아있다면 이어서 계속 전송한다.
+            * 프로세스 B는 일단 확인 메시지를 보내고 자신의 통신이 끝날 때까지 기다린다. (이 상태가 TIME_WAIT 상태)
+            * 수신자는 Acknowledgement Number 필드를 (Sequence Number + 1)로 지정하고, ACK 플래그 비트를 1로 설정한 세그먼트를 전송한다.
+            * 그리고 자신이 전송할 데이터가 남아있다면 이어서 계속 전송한다.
         3. B -> A: FIN
-          * 프로세스 B가 통신이 끝났으면 연결 종료 요청에 합의한다는 의미로 프로세스 A에게 FIN 플래그를 전송
+            * 프로세스 B가 통신이 끝났으면 연결 종료 요청에 합의한다는 의미로 프로세스 A에게 FIN 플래그를 전송
         4. A -> B: ACK
-          * 프로세스 A는 확인했다는 메시지를 전송
+            * 프로세스 A는 확인했다는 메시지를 전송
 * 참고 - ***포트(PORT) 상태 정보***
   * CLOSED: 포트가 닫힌 상태
   * LISTEN: 포트가 열린 상태로 연결 요청 대기 중
@@ -121,7 +121,7 @@
 #### :question:TCP 관련 질문 2
 * Q. 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까?
   * A. 이러한 현상에 대비하여 Client는 Server로부터 FIN 플래그를 수신하더라도 일정시간(Default: 240sec)동안 세션을 남겨 놓고 잉여 패킷을 기다리는 과정을 거친다. (TIME_WAIT 과정)
-  * [관련 Reference]((http://mindnet.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-22%ED%8E%B8-TCP-3-WayHandshake-4-WayHandshake)
+  * [관련 Reference](http://mindnet.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-22%ED%8E%B8-TCP-3-WayHandshake-4-WayHandshake)
 
 #### :question:TCP 관련 질문 3
 * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
@@ -191,6 +191,107 @@
 #### :small_orange_diamond:DNS
 
 #### :small_orange_diamond:REST와 RESTful의 개념
+* REST란
+  * REST의 정의
+    * "Representational State Transfer(대표적인 상태 전달)"의 약자
+    * 월드 와이드 웹(www)과 같은 분산 하이퍼미디어 시스템을 위한 소프트웨어 개발 아키텍처의 한 형식
+      * REST는 기본적으로 웹의 기존 기술과 HTTP 프로토콜을 그대로 활용하기 때문에 웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일이다.
+      * REST는 네트워크 상에서 Client와 Server 사이의 통신 방식 중 하나이다.
+  * 구체적인 개념
+    * HTTP URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP Method(Post, Get, Put, Delete)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다.
+      * 즉, REST는 자원 기반의 구조(ROA, Resource Oriented Architecture) 설계의 중심에 Resource가 있고 HTTP Method를 통해 Resource를 처리하도록 설계된 아키텍쳐를 의미한다.
+    <!-- * REST API는 HTTP API에 속하는 개념
+      * Page URL: localhost/blog/1
+      * Open API: localhost/api/blog/UPDATE -->
+  * REST 특징
+  * 넒은 의미: 자원을 이름(자원의 대표)으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미한다. 즉, *자원(resource)의 대표(representation)* 에 의한 *상태 전달*
+    1. 자원(resource)의 대표(representation)
+      * 자원: 해당 소프트웨어가 관리하는 모든 것
+        * Ex) 문서, 그림, 데이터, 해당 소프트웨어 자체 등
+      * 자원의 대표: 그 자원을 대표하기 위한 이름
+        * Ex) DB의 학생 정보가 자원일 때, 'students'를 자원의 대표라 정한다.
+    2. 상태(정보) 전달
+      * 데이터가 요청되어지는 시점에서 자원의 상태(정보)를 전달한다.
+
+    * HTTP URI을 통해 자원을 명시하고, HTTP verbs를 통해 자원에 대한 할 일(CRUD)를 지정한다.
+      * 웹 사이트의 이미지, 텍스트, DB 내용 등의 모든 자원에 고유한 ID인 HTTP URI를 부여한다.
+      * CRUD 란
+        * Create : 생성(POST)
+        * Read : 조회(GET)
+        * Update : 수정(PUT)
+        * Delete : 삭제(DELETE)
+        * HEAD: header 정보 조회(HEAD)
+    * JSON 혹은 XML를 통해 데이터를 주고 받는 것이 일반적이다.
+  * REST 구성 요소
+    1. Resource
+      * 모든 자원에 고유한 ID가 존재하고, 이 자원은 Server에 존재한다.
+      * Client는 각 자원의 상태(정보)를 조작하기 위해서 요청을 보낸다.
+      * 자원을 구별하는 ID는 '/groups/:group_id'와 같은 HTTP **URI** 다.
+    2. Method
+      * HTTP 프로토콜을 **GET, POST, PUT, DELETE, HEAD** 와 같은 메서드를 제공한다.
+      * Client는 URI를 이용해서 자원을 지정하고 해당 자원의 상태(정보)에 대한 조작을 Server에 요청한다.
+    3. Representation of Resource
+      * Client가 자원의 상태(정보)에 대한 조작을 요청하면 Server는 이에 적절한 응답을 보낸다. 이 응답을 Representation이라고 한다.
+      * REST에서 하나의 자원은 여러 형태의 Representation으로 나타내어 질 수 있다.
+      * **JSON, XML, TEXT, RSS** 등
+  * 조건
+    1. Server-Client(서버-클라이언트 구조)
+      * 자원이 있는 쪽이 Server, 자원을 요청하는 쪽이 Client가 된다.
+        * REST Server: API를 제공하고 비즈니스 로직 처리 및 저장을 책임진다.
+        * Client: 사용자 인증이나 context(세션, 로그인 정보) 등을 직접 관리하고 책임진다.
+      * 서로 간 의존성이 줄어든다.
+    2. Stateless(무상태)
+      * Client의 context를 Server에 저장하지 않는다.
+        * 즉, 세션과 쿠키와 같은 context 정보를 신경쓰지 않아도 되므로 구현이 단순해진다.
+        <!-- * 각 API 서버는 Client의 요청만을 들어오는 메시지로 처리한다. -->
+      * Server는 각각의 요청을 완전히 별개의 것으로 인식하고 처리한다.
+        * 즉, 이전 요청이 다음 요청의 처리에 연관되어서는 안된다.
+        * 물론 이전 요청이 DB를 수정하여 DB에 의해 바뀌는 것은 허용한다.
+      * Server의 처리 방식에 일관성을 부여하고 부담이 줄어든다.
+    3. Cacheable(캐시 처리 가능)
+      * 웹 표준 HTTP 프로토콜을 그대로 사용하므로 캐시 처리가 가능하다.
+        * HTTP 프로토콜 표준에서 사용하는 Last-Modified 태그나 E-Tag를 이용하면 캐싱 구현이 가능하다.
+      * 대량의 요청을 효율적으로 처리하기 위해 캐시가 요구된다.
+      * 캐시 사용을 통해 응답시간이 빨라지고 REST Server 트랜잭션이 발생하지 않기 때문에 전체 응답시간, 성능, 서버의 자원 이용률을 향상시킬 수 있다.
+    4. Layered System(계층화)
+      * Client는 REST API Server만 호출한다.
+      * REST Server는 다중 계층으로 구성될 수 있다.
+        * 예를 들어 보안, 로드밸런싱, 암호화, 사용자 인증 등을 추가하여 구조상의 유연성을 줄 수 있다.
+        * 로드밸런싱, 공유 캐시 등을 통해 확장성과 보안성을 향상시킬 수 있다.
+    5. Code-On-Demand(optional)
+      * Server로부터 스크립트를 받아서 Client에서 실행한다.
+      * 반드시 충족할 필요는 없다.
+    6. Uniform Interface(인터페이스 일관성)
+      * URI로 지정한 Resource에 대한 조작을 통일되고 한정적인 인터페이스로 수행한다.
+  * REST API 설계 방법
+    * HTTP 프로토콜로 통신하는 것에서 RESTful정책을 쓰는 API를 뜻한다.
+    * | CRUD | HTTP verbs | Route |
+      | :---: | :---: | :---: |
+      | resource들의 목록을 표시 | GET | /resource |
+      | resource 하나의 내용을 표시 | GET | /resource/:id |
+      | resource를 생성 | POST | /resource |
+      | resource를 수정 | PUT | /resource/:id |
+      | resource를 삭제 | DELETE | /resource/:id |
+  * REST API 설계 규칙
+    * HTTP Method (GET, PUT, POST, DELETE등등)의 행위가 URI 표현으로 들어가서는 안된다.
+    * resource는 영어 소문자 복수형
+    * :id는 하나의 특정 resource를 나타내는 고유값
+    * Ex1) student를 생성하는 route: POST /students
+    * Ex2) id=12인 student를 삭제하는 route: DELETE /students/12
+  * RESTful 하지 못한 경우
+    * Ex1) CRUD 기능을 모두 POST로만 처리하는 API
+    * Ex2) route에 resource, id 외의 정보가 들어가는 경우(/students/updateName)
+* RESTful이란
+  * 개념
+    * RESTful은 일반적으로 REST라는 아키텍처를 구현하는 웹 서비스를 나타내기 위해 사용되는 용어이다.
+      * 즉, REST 원리를 따르는 시스템은 RESTful이란 용어로 지칭된다.
+    * RESTful은 REST를 REST답게 쓰기 위한 방법으로, 누군가가 공식적으로 발표한 것이 아니다.
+  * 목적
+    * 이해하기 쉽고 사용하기 쉬운 REST API를 만드는 것
+    * RESTful API를 구현하는 근본적인 목적이 퍼포먼스 향상에 있는게 아니라, 일관적인 컨벤션을 통한 API의 이해도 및 호환성을 높이는게 주 동기이니, 퍼포먼스가 중요한 상황에서는 굳이 RESTful API를 구현하실 필요는 없습니다.
+
+> - [https://www.a-mean-blog.com/ko/blog/%ED%86%A0%EB%A7%89%EA%B8%80/_/REST%EC%99%80-RESTful-API](https://www.a-mean-blog.com/ko/blog/%ED%86%A0%EB%A7%89%EA%B8%80/_/REST%EC%99%80-RESTful-API)
+> - [http://mygumi.tistory.com/55](http://mygumi.tistory.com/55)
 
 #### :small_orange_diamond:소켓(Socket)이란
 <!-- * 소켓(Socket)은 TCP/IP를 이용하는 API로 소프트웨어로 작성된 통신의 접속점이다. -->
