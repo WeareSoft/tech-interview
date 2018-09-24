@@ -123,7 +123,7 @@
 * java의 final 키워드 (final/finally/finalize)
 * java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
 * java의 가비지 컬렉션(Garbage Collection) 처리 방법
-* 객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
+* java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
 * 클래스, 객체, 인스턴스의 차이
 * 객체(Object)란 무엇인가
 * 오버로딩과 오버라이딩의 차이(Overloading vs Overriding)

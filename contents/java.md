@@ -199,7 +199,59 @@ int b2 = bar2->val; // 35
 
 #### :small_orange_diamond:java의 가비지 컬렉션(Garbage Collection) 처리 방법
 
-#### :small_orange_diamond:객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
+#### :small_orange_diamond:java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
+* 자바 직렬화(Serialize)란
+  * 자바 시스템 내부에서 사용되는 객체 또는 데이터를 외부의 자바 시스템에서도 사용할 수 있도록 바이트(byte) 형태로 데이터 변환하는 기술
+  * 시스템적으로 이야기하자면 JVM(Java Virtual Machine 이하 JVM)의 메모리에 상주(힙 또는 스택)되어 있는 객체 데이터를 바이트 형태로 변환하는 기술
+* 자바 직렬화 조건
+  1. 자바 기본(primitive) 타입
+  2. `java.io.Serializable` 인터페이스를 상속받은 객체
+* 직렬화 방법
+  * `java.io.ObjectOutputStream` 객체를 이용
+<!-- ~~~java
+public static void main(String[] args) {
+    Member member = new Member("김배민", "deliverykim@baemin.com", 25);
+    byte[] serializedMember;
+    try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(baos)) {
+            oos.writeObject(member);
+            // serializedMember -> 직렬화된 member 객체
+            serializedMember = baos.toByteArray();
+        }
+    }
+    // 바이트 배열로 생성된 직렬화 데이터를 base64로 변환
+    System.out.println(Base64.getEncoder().encodeToString(serializedMember));
+}
+~~~ -->
+* 자바 역직렬화(Deserialize)란
+  * 바이트로 변환된 데이터를 다시 객체로 변환하는 기술
+  * 직렬화된 바이트 형태의 데이터를 객체로 변환해서 JVM으로 상주시키는 형태의 기술
+* 자바 역직렬화 조건
+  1. 직렬화 대상이 된 객체의 클래스가 클래스 패스에 존재해야 하며 import 되어 있어야 한다.
+      * 중요한 점은 직렬화와 역직렬화를 진행하는 시스템이 서로 다를 수 있다는 것을 반드시 고려해야 한다. (같은 시스템 내부이라도 소스 버전이 다를 수 있다.)
+  2. 자바 직렬화 대상 객체는 동일한 serialVersionUID 를 가지고 있어야 한다.
+      * `private static final long serialVersionUID = 1L;`
+* 역직렬화 방법
+  * `java.io.ObjectInputStream` 객체를 이용
+<!-- ~~~java
+public static void main(String[] args){
+    // 직렬화 예제에서 생성된 base64 데이터
+    String base64Member = "...생략";
+    byte[] serializedMember = Base64.getDecoder().decode(base64Member);
+    try (ByteArrayInputStream bais = new ByteArrayInputStream(serializedMember)) {
+        try (ObjectInputStream ois = new ObjectInputStream(bais)) {
+            // 역직렬화된 Member 객체를 읽어온다.
+            Object objectMember = ois.readObject();
+            Member member = (Member) objectMember;
+            System.out.println(member);
+        }
+    }
+}
+~~~ -->
+
+> - [http://woowabros.github.io/experience/2017/10/17/java-serialize.html](http://woowabros.github.io/experience/2017/10/17/java-serialize.html)
+> - [http://woowabros.github.io/experience/2017/10/17/java-serialize2.html](http://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
+> - [https://nesoy.github.io/articles/2018-04/Java-Serialize](https://nesoy.github.io/articles/2018-04/Java-Serialize)
 
 #### :small_orange_diamond:클래스, 객체, 인스턴스의 차이
 * 클래스(Class)
