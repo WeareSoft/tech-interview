@@ -116,8 +116,64 @@
 #### :small_orange_diamond:Replication
 
 #### :small_orange_diamond:파티셔닝(Partitioning)
+* 배경
+  * 서비스의 크기가 점점 커지고 DB에 저장하는 데이터의 규모 또한 대용량화 되면서, 기존에 사용하는 DB 시스템의 **용량(storage)의 한계와 성능(performance)의 저하** 를 가져오게 되었다.
+  * 즉, VLDB(Very Large DBMS)와 같이 하나의 DBMS에 너무 큰 table이 들어가면서 용량과 성능 측면에서 많은 이슈가 발생하게 되었고, 이런 이슈를 해결하기 위한 방법으로 table을 '파티션(partition)'이라는 작은 단위로 나누어 관리하는 **'파티셔닝(Partitioning)'기법** 이 나타나게 되었다.
+* 파티셔닝의 개념
+  * **큰 table이나 index를, 관리하기 쉬운 partition이라는 작은 단위로 물리적으로 분할하는 것을 의미한다.**
+    * 물리적인 데이터 분할이 있더라도, DB에 접근하는 application의 입장에서는 이를 인식하지 못한다.
+  * '파티셔닝(Partitioning)'기법을 통해 소프트웨어적으로 데이터베이스를 분산 처리하여 성능이 저하되는 것을 방지하고 관리를 보다 수월하게 할 수 있게 되었다.
+* 파티셔닝의 목적
+  1. 성능(Performance)
+      * 특정 DML과 Query의 성능을 향상시킨다.
+      * 주로 대용량 Data WRITE 환경에서 효율적이다.
+      * 특히, Full Scan에서 데이터 Access의 범위를 줄여 성능 향상을 가져온다.
+      * 많은 INSERT가 있는 OLTP 시스템에서 INSERT 작업을 작은 단위인 partition들로 분산시켜 경합을 줄인다.
+  2. 가용성(Availability)
+      * 물리적인 파티셔닝으로 인해 전체 데이터의 훼손 가능성이 줄어들고 데이터 가용성이 향상된다.
+      * 각 분할 영역(partition별로)을 독립적으로 백업하고 복구할 수 있다.
+      * table의 partition 단위로 Disk I/O을 분산하여 경합을 줄이기 때문에 UPDATE 성능을 향상시킨다.
+  3. 관리용이성(Manageability)
+      * 큰 table들을 제거하여 관리를 쉽게 해준다.
+* 파티셔닝의 장점
+  * 관리적 측면 : partition 단위 백업, 추가, 삭제, 변경
+    * 전체 데이터를 손실할 가능성이 줄어들어 데이터 가용성이 향상된다.
+    * partition별로 백업 및 복구가 가능하다.
+    * partition 단위로 I/O 분산이 가능하여 UPDATE 성능을 향상시킨다.
+  * 성능적 측면 : partition 단위 조회 및 DML수행
+    * 데이터 전체 검색 시 필요한 부분만 탐색해 성능이 증가한다.
+    * 즉, Full Scan에서 데이터 Access의 범위를 줄여 성능 향상을 가져온다.
+    * 필요한 데이터만 빠르게 조회할 수 있기 때문에 쿼리 자체가 가볍다.
+* 파티셔닝의 단점
+  * table간 JOIN에 대한 비용이 증가한다.
+  * table과 index를 별도로 파티셔닝할 수 없다.
+    * table과 index를 같이 파티셔닝해야 한다.
+* 파티셔닝의 종류
+  <img src="./images/types-of-partitioning.png">
+  1. 수평(horizontal) 파티셔닝
+      * **샤딩(Sharding)** 과 동일한 개념
+  2. 수직(vertical) 파티셔닝
+* 파티셔닝의 분할 기준
+  <img src="./images/partitioning.png" width="70%" height="70%">
+  1. 범위 분할 (range partitioning)
+  2. 목록 분할 (list partitioning)
+  3. 해시 분할 (hash partitioning)
+  4. 합성 분할 (composite partitioning)
+
+> - [https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html](https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html)
+> - [https://nesoy.github.io/articles/2018-02/Database-Partitioning](https://nesoy.github.io/articles/2018-02/Database-Partitioning)
+
 
 #### :small_orange_diamond:샤딩(Sharding)
+  <!-- * 샤딩은 물리적으로 다른 데이터베이스에 데이터를 수평 분할 방식으로 분산 저장하고 조회하는 방법을 말한다.
+샤딩은 주로 키값(해쉬값 또는 특정 컬럼값)을 이용하여 테이블들의 데이터 자체를 나눠서 분산저장하거나, 특정 분류기준을 가지고(저장 데이터 종류-유저, 일반데이터 등) 테이블을 분류하여 저장하는 것
+샤딩은 수평 파티션과 동일한 개념이다.
+sharding == horizontal partitioning
+
+'주민' 테이블이 여러 DB에 있을 때, 서현동 주민에 대한 정보는 A DB에, 정자동 주민에 대한 정보는 B DB에 저장되도록 하는 방식을 말한다. 여러 데이터베이스를 대상으로 작업해야 하기 때문에 경우에 따라서는 기능에 제약이 있을 수 있고(JOIN 연산 등) 일관성(consistency)과 복제(replication) 등에서 불리한 점이 많다. 예전의 샤딩은 애플리케이션 서버 레벨에서 구현하는 경우가 많았다. 최근에는 이를 플랫폼 차원에서 제공하려는 시도가 많다. 크게 분류하면 Hibernate Shards와 같이 애플리케이션 서버에서 동작하는 형태, CUBRID SHARD, Spock Proxy, Gizzard와 같이 미들티어(middle tier)로 동작하는 형태, nStore나 MongoDB와 같이 데이터베이스 자체에서 샤딩 기능을 제공하는 형태로 나누어볼 수 있다. -->
+
+> - [http://mongodb.citsoft.net/?page_id=225#comment-91922](http://mongodb.citsoft.net/?page_id=225#comment-91922)
+> - [https://d2.naver.com/helloworld/14822](https://d2.naver.com/helloworld/14822)
 
 #### :small_orange_diamond:객체 관계 매핑(Object-relational mapping; ORM)이란
 
