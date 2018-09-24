@@ -43,7 +43,7 @@
   * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
 * HTTP, HTTPS
 * GET 메서드와 POST 메서드
-* 쿠키, 세션
+* 쿠키(Cokkie)와 세션(Session)
 * DNS
 * REST와 RESTful의 개념
 * 소켓(Socket)이란
