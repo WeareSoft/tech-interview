@@ -149,16 +149,16 @@
   * table과 index를 별도로 파티셔닝할 수 없다.
     * table과 index를 같이 파티셔닝해야 한다.
 * 파티셔닝의 종류
-  <img src="./images/types-of-partitioning.png">
   1. 수평(horizontal) 파티셔닝
       * **샤딩(Sharding)** 과 동일한 개념
   2. 수직(vertical) 파티셔닝
+  <img src="./images/types-of-partitioning.png">
 * 파티셔닝의 분할 기준
-  <img src="./images/partitioning.png" width="70%" height="70%">
   1. 범위 분할 (range partitioning)
   2. 목록 분할 (list partitioning)
   3. 해시 분할 (hash partitioning)
   4. 합성 분할 (composite partitioning)
+  <img src="./images/partitioning.png" width="70%" height="70%">
 
 > - [https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html](https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html)
 > - [https://nesoy.github.io/articles/2018-02/Database-Partitioning](https://nesoy.github.io/articles/2018-02/Database-Partitioning)

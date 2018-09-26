@@ -108,6 +108,7 @@
 ## 7. Java
 :arrow_forward: [답변 내용](/contents/java.md)
 * java 프로그래밍이란
+* Java SE와 Java EE 애플리케이션 차이
 * java와 c/c++의 차이점
 * java 언어의 장단점
 * java의 접근 제어자의 종류와 특징

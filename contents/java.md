@@ -2,6 +2,12 @@
 
 #### :small_orange_diamond:java 프로그래밍이란
 
+> - []()
+
+#### :small_orange_diamond:Java SE와 Java EE 애플리케이션 차이
+
+> - [https://www.ibm.com/support/knowledgecenter/ko/SSQP76_8.9.1/com.ibm.odm.dserver.rules.res.managing/topics/con_javase_javaee_applis.html](https://www.ibm.com/support/knowledgecenter/ko/SSQP76_8.9.1/com.ibm.odm.dserver.rules.res.managing/topics/con_javase_javaee_applis.html)
+
 #### :small_orange_diamond:java와 c/c++의 차이점
 - java와 c/c++의 가장 큰 차이점은 실행 환경이다.
 - java에서의 개발: 컴파일 혹은 컴파일 + jar압축
