@@ -46,6 +46,25 @@
 <img src="./images/access-controller.png" width="70%" height="70%">
 
 #### :small_orange_diamond:java의 데이터 타입
+1. 기본 데이터 타입(primitive data types)
+    * 기본 타입의 종류는 byte, short, char, int, float, double, boolean이 있다.
+        * 정수형 : byte, short, int, long
+        * 실수형 : float, double
+        * 논리형 : boolean(ture/false)
+        * 문자형 : char  
+    * 기본 타입의 크기가 작고 고정적이기 때문에 메모리의 **Stack** 영역에 저장된다.
+2. 참조 타입(Reference Type)
+    * 참조 타입의 종류는 class, array, interface, Enumeration이 있다.
+        * 기본형을 제외하고는 모두 참조형이다.
+        * new 키워드를 이용하여 객체를 생성하여 데이터가 생성된 주소를 참조하는 타입이다.
+        * String, StringBuffer, List, 개인이 만든 클래스 등 
+        * String과 배열은 참조 타입과 달리 new 없이 생성이 가능하지만 기본 타입이 아닌 참조 타입이다.
+    * 참조 타입의 데이터의 크기가 가변적, 동적이기 때문에 동적으로 관리되는 **Heap** 영역에 저장된다.
+    * 더 이상 참조하는 변수가 없을 때 가비지 컬렉션에 의해 파괴된다.
+    * 참조 타입은 값이 저장된 곳의 주소를 저장하는 공간으로 객체의 주소를 저장한다. (Call-By-Value)
+
+> - [http://robyncloud.tistory.com/entry/](http://robyncloud.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-%EA%BC%AD-%EC%9D%B4%ED%95%B4%ED%95%B4%EC%95%BC-%EB%90%98%EB%8A%94%EA%B0%9C%EB%85%90-1%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B0%9D%EC%B2%B4-%EC%B0%B8%EC%A1%B0%EB%B3%80%EC%88%98)
+> - [https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
 #### :small_orange_diamond:Wrapper class
 
@@ -557,6 +576,7 @@ class FeaturePhone implements Phone {
 #### :small_orange_diamond:JVM 구조
 
 > - [http://www.itworld.co.kr/news/110837](http://www.itworld.co.kr/news/110837)
+> - [http://hoonmaro.tistory.com/19](http://hoonmaro.tistory.com/19)
 
 #### :small_orange_diamond:Java Collections Framework
 <img src="./images/java-collections-framework.png" width="70%" height="70%">
