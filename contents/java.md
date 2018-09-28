@@ -392,6 +392,7 @@ public class FunctionCallTest {
   public static void changeName(Person p) {
     p.setNaem("hee");
   }
+
   public static void main(String[] args) {
     Person p = new Person("doy");
 
@@ -407,7 +408,7 @@ public class FunctionCallTest {
   * 오해 1. 특정 메서드 내에서 전달 받은 객체의 상태를 변경 할 수 있다.
     * `changeName` 메서드는 참조변수 p가 가리키는 [이름 속성이 "doy"인 Person 객체]를 [이름 속성이 "hee"인 새로운 Person 객체]로 변경한 것이 아니라, 단지 이름 속성만 변경했을 뿐이다.
   * 오해 2. 참조변수는 임의의 객체에 대한 레퍼런스를 저장하므로 메서드로 전달한 값이 레퍼런스(Call by Reference)이다.
-    * 전달 된 레퍼런스는 참조변수 p 자체의 레퍼런스가 아닌 p가 저장하고 있는 값(이것도 레퍼런스)이다.
+    * 전달된 레퍼런스는 참조변수 p 자체의 레퍼런스가 아닌 p가 저장하고 있는 값(이것도 레퍼런스)이다.
     * 만약 Java가 Call by Reference를 지원한다면 `assignNewPerson` 메서드 실행 후에 p 참조변수가 가리키는 객체가 [이름 속성이 "hee"인 새로운 Person 객체]로 변경되어야 한다.
     * 또한 참조변수 p 자체의 레퍼런스를 얻을 수 있는 방법이 있어야 한다. 그러나 Java는 이 방법을 지원하지 않는다.
   * **따라서 Java는 항상 Call by Value 이다.**
@@ -416,10 +417,46 @@ public class FunctionCallTest {
   * 기본자료형의 경우 해당하는 변수의 값을 복사해서 전달한다.
   * 참조자료형의 경우 해당하는 변수가 가지는 값이 레퍼런스이므로 인자로 넘길 때 Call by Value에 의해 변수가 가지고 있는 레퍼런스가 복사되어 전달된다.
 
+~~~java
+public class FunctionCallTest2 {
+    /* parameter는 참조변수 array 자체의 Reference가 아닌 array가 "저장하고 있는 주소값(Value)" */
+    public static void changeContent(int[] array) {
+        // If we change the content of arr,
+        array[0] = 10;  // Will change the content of array in main()
+        array[1] = 11;
+    }
+    public static void changeRef(int[] array) {
+        // If we change the reference,
+        array = new int[2];  // Will not change the array in main()
+        array[0] = 20;
+        array[1] = 21;
+    }
+
+    public static void main(String[] args) {
+        int[] array = new int[2];
+        array[0] = 0;
+        array[1] = 1;
+
+        changeContent(array);
+        for (int i = 0; i < array.length; i++) {
+            // Will print 10 11
+            System.out.print(array[i] + " ");  // 10 11
+        }
+        changeRef(array);
+        for (int i = 0; i < array.length; i++) {
+            // Will still print 10 11
+            // (Change the reference doesn't reflect change here)
+            System.out.print(array[i] + " ");  // 10 11
+        }
+    }
+}
+~~~
+
 > - [https://wayhome25.github.io/cs/2017/04/11/cs-13/](https://wayhome25.github.io/cs/2017/04/11/cs-13/)
 > - [http://wonwoo.ml/index.php/post/1679](http://wonwoo.ml/index.php/post/1679)
 > - [https://brunch.co.kr/@kd4/2](https://brunch.co.kr/@kd4/2)
 > - [http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html](http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html)
+> - [https://code.i-harness.com/ko-kr/q/c2ab51](https://code.i-harness.com/ko-kr/q/c2ab51)
 
 #### :small_orange_diamond:인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
 * 추상 메서드(Abstract Method)
