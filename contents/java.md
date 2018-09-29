@@ -46,18 +46,18 @@
 <img src="./images/access-controller.png" width="70%" height="70%">
 
 #### :small_orange_diamond:java의 데이터 타입
-1. 기본 데이터 타입(primitive data types)
+1. 기본 데이터 타입(Primitive Data Type)
     * 기본 타입의 종류는 byte, short, char, int, float, double, boolean이 있다.
         * 정수형 : byte, short, int, long
         * 실수형 : float, double
         * 논리형 : boolean(ture/false)
         * 문자형 : char  
     * 기본 타입의 크기가 작고 고정적이기 때문에 메모리의 **Stack** 영역에 저장된다.
-2. 참조 타입(Reference Type)
+2. 참조 타입(Reference Data Type)
     * 참조 타입의 종류는 class, array, interface, Enumeration이 있다.
         * 기본형을 제외하고는 모두 참조형이다.
         * new 키워드를 이용하여 객체를 생성하여 데이터가 생성된 주소를 참조하는 타입이다.
-        * String, StringBuffer, List, 개인이 만든 클래스 등 
+        * String, StringBuffer, List, 개인이 만든 클래스 등
         * String과 배열은 참조 타입과 달리 new 없이 생성이 가능하지만 기본 타입이 아닌 참조 타입이다.
     * 참조 타입의 데이터의 크기가 가변적, 동적이기 때문에 동적으로 관리되는 **Heap** 영역에 저장된다.
     * 더 이상 참조하는 변수가 없을 때 가비지 컬렉션에 의해 파괴된다.
@@ -423,19 +423,6 @@ public class FunctionCallTest {
   }
 }
 ~~~
-  * 기본자료형은 Call By Value이고, 참조자료형은 Call By Reference이다??
-  * 오해 1. 특정 메서드 내에서 전달 받은 객체의 상태를 변경 할 수 있다.
-    * `changeName` 메서드는 참조변수 p가 가리키는 [이름 속성이 "doy"인 Person 객체]를 [이름 속성이 "hee"인 새로운 Person 객체]로 변경한 것이 아니라, 단지 이름 속성만 변경했을 뿐이다.
-  * 오해 2. 참조변수는 임의의 객체에 대한 레퍼런스를 저장하므로 메서드로 전달한 값이 레퍼런스(Call by Reference)이다.
-    * 전달된 레퍼런스는 참조변수 p 자체의 레퍼런스가 아닌 p가 저장하고 있는 값(이것도 레퍼런스)이다.
-    * 만약 Java가 Call by Reference를 지원한다면 `assignNewPerson` 메서드 실행 후에 p 참조변수가 가리키는 객체가 [이름 속성이 "hee"인 새로운 Person 객체]로 변경되어야 한다.
-    * 또한 참조변수 p 자체의 레퍼런스를 얻을 수 있는 방법이 있어야 한다. 그러나 Java는 이 방법을 지원하지 않는다.
-  * **따라서 Java는 항상 Call by Value 이다.**
-    * 여기서 value 란?
-      * 기본자료형의 값 또는 객체에 대한 레퍼런스
-  * 기본자료형의 경우 해당하는 변수의 값을 복사해서 전달한다.
-  * 참조자료형의 경우 해당하는 변수가 가지는 값이 레퍼런스이므로 인자로 넘길 때 Call by Value에 의해 변수가 가지고 있는 레퍼런스가 복사되어 전달된다.
-
 ~~~java
 public class FunctionCallTest2 {
     /* parameter는 참조변수 array 자체의 Reference가 아닌 array가 "저장하고 있는 주소값(Value)" */
@@ -470,6 +457,19 @@ public class FunctionCallTest2 {
     }
 }
 ~~~
+
+  * 기본자료형은 Call By Value이고, 참조자료형은 Call By Reference이다??
+  * 오해 1. 특정 메서드 내에서 전달 받은 객체의 상태를 변경 할 수 있다.
+    * `changeName` 메서드는 참조변수 p가 가리키는 [이름 속성이 "doy"인 Person 객체]를 [이름 속성이 "hee"인 새로운 Person 객체]로 변경한 것이 아니라, 단지 이름 속성만 변경했을 뿐이다.
+  * 오해 2. 참조변수는 임의의 객체에 대한 레퍼런스를 저장하므로 메서드로 전달한 값이 레퍼런스(Call by Reference)이다.
+    * 전달된 레퍼런스는 참조변수 p 자체의 레퍼런스가 아닌 p가 저장하고 있는 값(이것도 레퍼런스)이다.
+    * 만약 Java가 Call by Reference를 지원한다면 `assignNewPerson` 메서드 실행 후에 p 참조변수가 가리키는 객체가 [이름 속성이 "hee"인 새로운 Person 객체]로 변경되어야 한다.
+    * 또한 참조변수 p 자체의 레퍼런스를 얻을 수 있는 방법이 있어야 한다. 그러나 Java는 이 방법을 지원하지 않는다.
+  * **따라서 Java는 항상 Call by Value 이다.**
+    * 여기서 value 란?
+      * 기본자료형의 값 또는 객체에 대한 레퍼런스
+    * 기본자료형의 경우 해당하는 변수의 값을 복사해서 전달한다.
+    * 참조자료형의 경우 해당하는 변수가 가지는 값이 레퍼런스이므로 인자로 넘길 때 Call by Value에 의해 변수가 가지고 있는 레퍼런스가 복사되어 전달된다.
 
 > - [https://wayhome25.github.io/cs/2017/04/11/cs-13/](https://wayhome25.github.io/cs/2017/04/11/cs-13/)
 > - [http://wonwoo.ml/index.php/post/1679](http://wonwoo.ml/index.php/post/1679)
