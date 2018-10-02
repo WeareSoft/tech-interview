@@ -178,7 +178,7 @@ void search(Node root) {
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/29/algorithm-kruskal-mst.html](https://gmlwjd9405.github.io/2018/08/29/algorithm-kruskal-mst.html)
 
-### 2. Prim MST 알고리즘
+### Prim MST 알고리즘
 * Prim MST 알고리즘이란
   * 시작 정점에서부터 출발하여 신장트리 집합을 **단계적으로 확장** 해나가는 방법
     * 정점 선택을 기반으로 하는 알고리즘이다.
