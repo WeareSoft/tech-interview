@@ -1,13 +1,13 @@
 # 6. Algorithm
 **:book: Contents**
-* [BigO](#:small_orange_diamond:BigO)
-* [DFS와 BFS의 차이](#:small_orange_diamond:DFS와-BFS의-차이)
-* [Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이](#:small_orange_diamond:Fibonacci에서의-세-가지(Recursion,-Dynamic-Programming,-반복)-방식에-대한-시간,-공간복잡도-차이)
-* [정렬 알고리즘의 종류와 개념](#:small_orange_diamond:정렬-알고리즘의-종류와-개념)
+* [BigO](#BigO)
+* [DFS와 BFS의 차이](#DFS와-BFS의-차이)
+* [Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이](#Fibonacci에서의-세-가지(Recursion,-Dynamic-Programming,-반복)-방식에-대한-시간,-공간복잡도-차이)
+* [정렬 알고리즘의 종류와 개념](#정렬-알고리즘의-종류와-개념)
 
 ---
 
-#### :small_orange_diamond:BigO
+#### BigO
 * BigO의 개념
 * BigO의 복잡성 차트 보기
   * <img src="./images/BigO-complexity-chart.png" width="50%" height="50%">
@@ -15,7 +15,7 @@
 
 > - []()
 
-#### :small_orange_diamond:DFS와 BFS의 차이
+#### DFS와 BFS의 차이
 * 깊이 우선 탐색(DFS, Depth-First Search)
   * DFS의 개념: 루트 노드(혹은 다른 임의의 노드)에서 시작해서 다음 분기(branch)로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법
     * 미로를 탐색할 때 한 방향으로 갈 수 있을 때까지 계속 가다가 더 이상 갈 수 없게 되면 다시 가장 가까운 갈림길로 돌아와서 이곳으로부터 다른 방향으로 다시 탐색을 진행하는 방법과 유사하다.
@@ -101,11 +101,11 @@ void search(Node root) {
 > - [https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html](https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html)
 > - [https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html](https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html)
 
-#### :small_orange_diamond:Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
+#### Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
 
 > - []()
 
-#### :small_orange_diamond:정렬 알고리즘의 종류와 개념
+#### 정렬 알고리즘의 종류와 개념
 * [버블 정렬(Bubble Sort)](https://gmlwjd9405.github.io/2018/05/06/algorithm-bubble-sort.html)
 * [삽입 정렬(insertion sort)](https://gmlwjd9405.github.io/2018/05/06/algorithm-insertion-sort.html)
 * [선택 정렬(selection sort)](https://gmlwjd9405.github.io/2018/05/06/algorithm-selection-sort.html)
