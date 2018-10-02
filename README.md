@@ -1,4 +1,4 @@
-# tech-interview
+# Tech Interview
 
 **기술 면접 대비를 위한 기본 개념을 정리하는 Repository 입니다.**
 > :star: 내용에 오류가 있거나 추가할 내용이 있다면 Pull Request를 통해서 알려주시면 감사하겠습니다.

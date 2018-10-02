@@ -133,6 +133,7 @@ class Node {
   * 순회는 Pre-order, In-order 아니면 Post-order로 이루어진다. 이 3가지 모두 DFS/BFS 안에 있다.
   * 트리는 이진 트리, 이진 탐색 트리, 균형 트리(AVL 트리, red-black 트리), 이진 힙(최대힙, 최소힙) 등이 있다.
 
+> - :arrow_double_up:[Top](#1-data-structure)  :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure) :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html](https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html)
 
 #### :small_orange_diamond:그래프(Graph)와 트리(Tree)의 차이점
