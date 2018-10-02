@@ -2,7 +2,7 @@
 **:book: Contents**
 * [BigO](#bigo)
 * [DFS와 BFS의 차이](#dfs와-bfs의-차이)
-* [Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이](#fibonacci에서의-세-가지(recursion,-dynamic-programming,-반복)-방식에-대한-시간,-공간복잡도-차이)
+* [Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간복잡도와 공간복잡도 차이](#fibonacci에서의-재귀-동적프로그래밍-반복의-세-가지-방식에-대한-시간복잡도와-공간복잡도)
 * [정렬 알고리즘의 종류와 개념](#정렬-알고리즘의-종류와-개념)
 
 ---
@@ -103,7 +103,10 @@ void search(Node root) {
 > - [https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html](https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html)
 > - [https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html](https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html)
 
-### Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
+### Fibonacci에서의 재귀 동적프로그래밍 반복의 세 가지 방식에 대한 시간복잡도와 공간복잡도
+1. 재귀 
+2. 동적 프로그래밍 
+3. 반복
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()

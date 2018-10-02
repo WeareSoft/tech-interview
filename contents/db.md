@@ -1,20 +1,20 @@
 # 4. Database
 **:book: Contents**
 * [데이터베이스 풀](#데이터베이스-풀)
-* [정규화(1~3차, BCNF)](#정규화(1~3차,-bcnf))
-* [트랜잭션(Transaction) 이란](#트랜잭션(transaction)-이란)
-* [트랜잭션 격리 수준(Transaction Isolation Level)](#트랜잭션-격리-수준(transaction-isolation-level))
+* [정규화(1차 2차 3차 BCNF)](#정규화-1차-2차-3차-BCNF)
+* [트랜잭션(Transaction) 이란](#트랜잭션이란)
+* [트랜잭션 격리 수준(Transaction Isolation Level)](#트랜잭션-격리-수준)
 * [Join](#join)
 * [SQL injection](#sql-injection)
-* [Index](#index)
-* [Statement, PrepareStatement](#statement,-preparestatement)
-* [RDBMS, NoSQL](#rdbms,-noSQL)
+* [Index란](#index란)
+* [Statement와 PrepareStatement](#statement와-preparestatement)
+* [RDBMS와 NoSQL](#rdbms와-noSQL)
 * [효과적인 쿼리 저장](#효과적인-쿼리-저장)
-* [옵티마이저(Optimizer)란](#옵티마이저(optimizer)란)
+* [옵티마이저(Optimizer)란](#옵티마이저란)
 * [Replication](#replication)
-* [파티셔닝(Partitioning)](#파티셔닝(partitioning))
-* [샤딩(Sharding)](#샤딩(sharding))
-* [객체 관계 매핑(Object-relational mapping; ORM)이란](#객체-관계-매핑(object-relational-mapping;-orm)이란)
+* [파티셔닝(Partitioning)](#파티셔닝)
+* [샤딩(Sharding)](#샤딩)
+* [객체 관계 매핑(Object-relational mapping, ORM)이란](#ORM이란)
 * [java JDBC](#java-jdbc)
 
 ---
@@ -23,11 +23,11 @@
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 정규화(1~3차, BCNF)
+### 정규화 1차 2차 3차 BCNF
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 트랜잭션(Transaction) 이란
+### 트랜잭션이란
 * 트랜잭션(Transaction) 이란
     * 데이터베이스의 상태를 변환시키는 하나의 논리적인 작업 단위를 구성하는 연산들의 집합이다.
         * 예를들어, A계좌에서 B계좌로 일정 금액을 이체한다고 가정하자.
@@ -75,7 +75,7 @@
 > - [http://yimoyimo.tk/transaction_DI/](http://yimoyimo.tk/transaction_DI/)
 > - [https://d2.naver.com/helloworld/407507](https://d2.naver.com/helloworld/407507)
 
-### 트랜잭션 격리 수준(Transaction Isolation Level)
+### 트랜잭션-격리-수준
 * Isolation Level 이란?
     * 트랜잭션에서 일관성이 없는 데이터를 허용하도록 하는 수준
 * Isolation Level 의 필요성
@@ -134,11 +134,11 @@
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### Statement, PrepareStatement
+### Statement와 PrepareStatement
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### RDBMS, NoSQL
+### RDBMS와 NoSQL
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
@@ -146,7 +146,7 @@
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 옵티마이저(Optimizer)란
+### 옵티마이저란
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
@@ -154,7 +154,7 @@
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 파티셔닝(Partitioning)
+### 파티셔닝
 * 배경
   * 서비스의 크기가 점점 커지고 DB에 저장하는 데이터의 규모 또한 대용량화 되면서, 기존에 사용하는 DB 시스템의 **용량(storage)의 한계와 성능(performance)의 저하** 를 가져오게 되었다.
   * 즉, VLDB(Very Large DBMS)와 같이 하나의 DBMS에 너무 큰 table이 들어가면서 용량과 성능 측면에서 많은 이슈가 발생하게 되었고, 이런 이슈를 해결하기 위한 방법으로 table을 '파티션(partition)'이라는 작은 단위로 나누어 관리하는 **'파티셔닝(Partitioning)'기법** 이 나타나게 되었다.
@@ -203,7 +203,7 @@
 > - [https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html](https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html)
 > - [https://nesoy.github.io/articles/2018-02/Database-Partitioning](https://nesoy.github.io/articles/2018-02/Database-Partitioning)
 
-### 샤딩(Sharding)
+### 샤딩
   <!-- * 샤딩은 물리적으로 다른 데이터베이스에 데이터를 수평 분할 방식으로 분산 저장하고 조회하는 방법을 말한다.
 샤딩은 주로 키값(해쉬값 또는 특정 컬럼값)을 이용하여 테이블들의 데이터 자체를 나눠서 분산저장하거나, 특정 분류기준을 가지고(저장 데이터 종류-유저, 일반데이터 등) 테이블을 분류하여 저장하는 것
 샤딩은 수평 파티션과 동일한 개념이다.
@@ -215,11 +215,13 @@ sharding == horizontal partitioning
 > - [http://mongodb.citsoft.net/?page_id=225#comment-91922](http://mongodb.citsoft.net/?page_id=225#comment-91922)
 > - [https://d2.naver.com/helloworld/14822](https://d2.naver.com/helloworld/14822)
 
-### 객체 관계 매핑(Object-relational mapping; ORM)이란
+### ORM이란
+
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 ### java JDBC
+
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 

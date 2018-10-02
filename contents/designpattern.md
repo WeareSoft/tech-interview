@@ -5,7 +5,7 @@
 * [Strategy 패턴](#strategy-패턴)
 * [Template Method 패턴](#template-method-패턴)
 * [Factory Method 패턴](#factory-method-패턴)
-* [MVC1, MVC2 패턴](#mvc1,-mvc2-패턴)
+* [MVC1 패턴과 MVC2 패턴](#mvc1-패턴과-mvc2-패턴)
 
 ---
 
@@ -133,7 +133,8 @@ GoF 디자인 패턴의 분류
 > :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/07/factory-method-pattern.html](https://gmlwjd9405.github.io/2018/08/07/factory-method-pattern.html)
 
-### MVC1, MVC2 패턴
+### MVC1 패턴과 MVC2 패턴
+
 > :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 

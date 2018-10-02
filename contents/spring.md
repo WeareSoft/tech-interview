@@ -1,13 +1,14 @@
 # 8. Spring
 **:book: Contents**
 * [스프링 프레임워크란](#스프링-프레임워크란)
-* [Spring, Spring MVC, Spring Boot의 차이](#spring,-spring-mvc,-spring-boot의-차이)
-* [IOC(Inversion of Control, 제어의 역전)란](#IOC(inversion-of-control,-제어의-역전)란)
+* [Spring, Spring MVC, Spring Boot의 차이](#spring-spring-mvc-spring-boot의-차이)
+* [Container란](#container란)
+* [IOC(Inversion of Control, 제어의 역전)란](#ioc란)
 * [MVC 패턴이란](#mvc-패턴이란)
-* [DI(Dependency Injection, 의존성 주입)란](#di(dependency-injection,-의존성-주입)란)
-* [AOP(Aspect Oriented Programming)란](#aop(aspect-oriented-programming)란)
+* [DI(Dependency Injection, 의존성 주입)란](#di란)
+* [AOP(Aspect Oriented Programming)란](#aop란)
 * [POJO](#pojo)
-* [DAO, DTO의 차이](#dao,-dto의-차이)
+* [DAO와 DTO의 차이](#dao-dto의-차이)
 * [Spring JDBC를 이용한 데이터 접근](#spring-jdbc를-이용한-데이터-접근)
 
 ---
@@ -16,12 +17,12 @@
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### Spring, Spring MVC, Spring Boot의 차이
+### Spring Spring MVC Spring Boot의 차이
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search](http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search)
 
-### Conatainer
-- 컨테이너는 보통 인스턴스의 생명주기를 관리하며, 생성된 인스턴스들에게 추가적인 기능을 제공하도록하는 것이라 할 수 있다. 다시말해, 컨테이너란 당신이 작성한 코드의 처리과정을 위임받은 독립적인 존재라고 생각하면 된다. 컨테이너는 적절한 설정만 되어있다면 누구의 도움없이도 프로그래머가 작성한 코드를 스스로 참조한 뒤 알아서 객체의 생성과 소멸을 컨트롤해준다.
+### Container란
+- 컨테이너(Container)는 보통 인스턴스의 생명주기를 관리하며, 생성된 인스턴스들에게 추가적인 기능을 제공하도록하는 것이라 할 수 있다. 다시말해, 컨테이너란 당신이 작성한 코드의 처리과정을 위임받은 독립적인 존재라고 생각하면 된다. 컨테이너는 적절한 설정만 되어있다면 누구의 도움없이도 프로그래머가 작성한 코드를 스스로 참조한 뒤 알아서 객체의 생성과 소멸을 컨트롤해준다.
 
 - Spring 프레임워크는 다른 프레임워크들과 달리 컨테이너 기능을 제공하고 있다. 이와 같은 컨테이너 기능을 제공하는 것이 가능하도록 하는 것이 IoC 패턴이다.
 
@@ -29,8 +30,8 @@
 > - [http://limmmee.tistory.com/13](http://limmmee.tistory.com/13)
 > - [http://wiki.javajigi.net/pages/viewpage.action?pageId=281](http://wiki.javajigi.net/pages/viewpage.action?pageId=281)  
 
-### IoC(Inversion of Control, 제어의 역전)란
-- IoC란
+### IoC란
+- IoC(Inversion of Control, 제어의 역전)란
     - 객체의 생성에서부터 생명주기의 관리까지 모든 객체에 대한 제어권이 바뀐 것을 의미, 또는 제어 권한을 자신이 아닌 다른 대상에게 위임하는 것이다.
     - 이 방식은 대부분의 프레임워크에서 사용하는 방법으로, 개발자는 필요한 부분을 개발해서 끼워 넣기의 형태로 개발하고 실행하게 된다. 프레임워크가 이러한 구조를 가지기 때문에 개발자는 프레임워크에 필요한 부품을 개발하고 조립하는 방식의 개발을 하게 된다.
     - 이렇게 조립된 코드의 최종 호출은 개발자에 의해서 제어되는 것이 아니라 프레임워크의 내부에서 결정된 대로 이뤄지게 되는데, 이러한 현상을 "제어의 역전"이라고 표현한다.
@@ -46,8 +47,13 @@
 > - [http://limmmee.tistory.com/13](http://limmmee.tistory.com/13)
 > - [http://wiki.javajigi.net/pages/viewpage.action?pageId=281](http://wiki.javajigi.net/pages/viewpage.action?pageId=281)
 
-### DI(Dependency Injection, 의존성 주입)란
+### MVC 패턴이란
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
+
+### DI란
 - DI?
+    - Dependency Injection, 의존성 주입
     - Dependency Injection은 Spring 프레임워크에서 지원하는 IoC의 형태이다. 
     - DI는 클래스 사이의 의존관계를 빈 설정 정보를 바탕으로 컨테이너가 자동적으로 연결해주는 것을 말한다. 개발자들은 제어를 담당할 필요없이 빈 설정 파일에 의존관계가 필요하다는 정보만 추가해주면 된다.
         - 컨테이너가 실행 흐름의 주체가 되어 애플리케이션 코드에 의존관계를 주입해주는 것.
@@ -73,11 +79,9 @@
 > - [http://wiki.javajigi.net/pages/viewpage.action?pageId=281](http://wiki.javajigi.net/pages/viewpage.action?pageId=281)
 > - [http://tony-programming.tistory.com/entry/Dependency-의존성-이란](http://tony-programming.tistory.com/entry/Dependency-의존성-이란) 
 
-### MVC 패턴이란
-> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+### AOP란
+* AOP(Aspect Oriented Programming)란
 
-### AOP(Aspect Oriented Programming)란
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
@@ -101,7 +105,7 @@
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://limmmee.tistory.com/8?category=654011](http://limmmee.tistory.com/8?category=654011)
 
-### DAO, DTO의 차이
+### DAO와 DTO의 차이
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 

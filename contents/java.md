@@ -8,30 +8,30 @@
 * [java의 데이터 타입](#java의-데이터-타입)
 * [Wrapper class](#wrapper-class)
 * [OOP의 4가지 특징](#oop의-4가지-특징)
-* [OOP의 5대 원칙 (SOLID)](#oop의-5대-원칙-(solid))
+* [OOP의 5대 원칙 (SOLID)](#oop의-5대-원칙)
 * [객체지향 프로그래밍과 절차지향 프로그래밍의 차이](#객체지향-프로그래밍과-절차지향-프로그래밍의-차이)
-* [객체지향(Object-Oriented)이란](#객체지향(object-oriented)이란)
+* [객체지향(Object-Oriented)이란](#객체지향이란)
 * [java의 non-static 멤버와 static 멤버의 차이](#java의-non-static-멤버와-static-멤버의-차이)
   * Q. java의 main 메서드가 static인 이유
-* [java의 final 키워드 (final/finally/finalize)](#java의-final-키워드-(final/finally/finalize))
-* [java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이](#java의-제네릭(generic)과-c++의-템플릿(template)의-차이)
-* [java의 가비지 컬렉션(Garbage Collection) 처리 방법](#java의-가비지-컬렉션(garbage-collection)-처리-방법)
-* [java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가](#java-직렬화(serialization)와-역직렬화(deserialization)란-무엇인가)
-* [클래스, 객체, 인스턴스의 차이](#클래스,-객체,-인스턴스의-차이)
-* [객체(Object)란 무엇인가](#객체(object)란-무엇인가)
-* [오버로딩과 오버라이딩의 차이(Overloading vs Overriding)](#오버로딩과-오버라이딩의-차이(overloading-vs-overriding))
+* [java의 final 키워드 (final/finally/finalize)](#java의-final-키워드)
+* [java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이](#java의-제네릭과-c++의-템플릿의-차이)
+* [java의 가비지 컬렉션(Garbage Collection) 처리 방법](#java의-가비지-컬렉션-처리-방법)
+* [java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가](#java-직렬화와-역직렬화란-무엇인가)
+* [클래스, 객체, 인스턴스의 차이](#클래스-객체-인스턴스의-차이)
+* [객체(Object)란 무엇인가](#객체란-무엇인가)
+* [오버로딩과 오버라이딩의 차이(Overloading vs Overriding)](#오버로딩과-오버라이딩의-차이)
 * [Call by Reference와 Call by Value의 차이](#call-by-reference와-call-by-value의-차이)
-* [인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)](#인터페이스와-추상-클래스의-차이(interface-vs-abstract-class))
+* [인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)](#인터페이스와-추상-클래스의-차이)
 * [JVM 구조](#jvm-구조)
 * [Java Collections Framework](#java-collections-framework)
   * [java Map 인터페이스 구현체의 종류](#java-map-인터페이스-구현체의-종류)
   * [java Set 인터페이스 구현체의 종류](#java-set-인터페이스-구현체의-종류)
   * [java List 인터페이스 구현체의 종류](#java-list-인터페이스-구현체의-종류)
 * [Annotation](#annotation)
-* [String, StringBuilder, StringBuffer](#string,-stringbuilder,-stringbuffer)
-* [동기화와 비동기화의 차이(Syncronous vs Asyncronous)](#동기화와-비동기화의-차이(syncronous-vs-asyncronous))
-* [java에서 '=='와 'Equals()'의 차이](#java에서-'=='와-'equals()'의-차이)
-* [java의 리플렉션(Reflection) 이란](#java의-리플렉션(reflection)-이란)
+* [String, StringBuilder, StringBuffer](#string-stringbuilder-stringbuffer)
+* [동기화와 비동기화의 차이(Syncronous vs Asyncronous)](#동기화와-비동기화의-차이)
+* [java에서 '=='와 'Equals()'의 차이](#java에서-==와-equals()의-차이)
+* [java의 리플렉션(Reflection) 이란](#java의-리플렉션-이란)
 
 ---
 
@@ -122,7 +122,8 @@
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-features.html](https://gmlwjd9405.github.io/2018/07/05/oop-features.html)
 
-### OOP의 5대 원칙 (SOLID)
+### OOP의 5대 원칙
+"**SOLID**" 원칙
 * **S**: 단일 책임 원칙(SRP, Single Responsibility Principle)
   * 객체는 단 하나의 책임만 가져야 한다.
 * **O**: 개방-폐쇄 원칙(OCP, Open Closed Principle)
@@ -150,7 +151,9 @@
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
-### 객체지향(Object-Oriented)이란
+### 객체지향이란
+* 객체지향(Object-Oriented)이란
+
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
@@ -182,8 +185,8 @@
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### java의 final 키워드 (final/finally/finalize)
-* final 키워드
+### java의 final 키워드 
+* **final 키워드**
   * 개념: 변수나 메서드 또는 클래스가 '변경 불가능'하도록 만든다.
   * 원시(Primitive) 변수에 적용 시
     * 해당 변수의 값은 변경이 불가능하다.
@@ -193,14 +196,14 @@
     * 해당 메서드를 오버라이드할 수 없다.
   * 클래스에 적용 시
     * 해당 클래스의 하위 클래스를 정의할 수 없다.
-* finally 키워드
+* **finally 키워드**
   * 개념: try/catch 블록이 종료될 때 항상 실행될 코드 블록을 정의하기 위해 사용한다.
   * finally는 선택적으로 try 혹은 catch 블록 뒤에 정의할 때 사용한다.
   * finally 블록은 예외가 발생하더라도 항상 실행된다.
     * 단, JVM이 try 블록 실행 중에 종료되는 경우는 제외한다.
   * finally 블록은 종종 뒷마무리 코드를 작성하는 데 사용된다.
   * finally 블록은 try와 catch 블록 다음과, 통제권이 이전으로 다시 돌아가기 전 사이에 실행된다.
-* finalize() 메서드
+* **finalize() 메서드**
   * 개념: 쓰레기 수집기(GC, Garbage Collector)가 더 이상의 참조가 존재하지 않는 객체를 메모리에서 삭제하겠다고 결정하는 순간 호출된다.
   * Object 클래스의 finalize() 메서드를 오버라이드해서 맞춤별 GC를 정의할 수 있다.
     * `protected void finalize() throws Throwable { // 파일 닫기, 자원 반환 등등 }`
@@ -208,7 +211,7 @@
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/06/java-final.html](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
-### java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
+### java의 제네릭과 c++의 템플릿의 차이
 * java의 제네릭(Generic)
   * 개념: 모든 종류의 타입을 다룰 수 있도록 일반화된 타입 매개 변수(generic type)로 클래스나 메서드를 선언하는 기법
   * <img src="./images/generics.png" width="60%" height="60%">
@@ -273,12 +276,14 @@ int b2 = bar2->val; // 35
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [코딩 인터뷰 완전 분석, 프로그래밍인사이트](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966263080&OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&a=A100532541&l=9999&l_cd1=0&u_id=jm0gctc7ca029ofs02yqe&l_cd2=0&tu=https%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf%3FmallGb%3DKOR%26ejkGb%3DKOR%26barcode%3D9788966263080)
 
-### java의 가비지 컬렉션(Garbage Collection) 처리 방법
+### java의 가비지 컬렉션 처리 방법
+* java의 가비지 컬렉션(Garbage Collection) 처리 방법
+
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
-* 자바 직렬화(Serialize)란
+### java 직렬화와 역직렬화란 무엇인가
+* 자바 직렬화(Serialization)란
   * 자바 시스템 내부에서 사용되는 객체 또는 데이터를 외부의 자바 시스템에서도 사용할 수 있도록 바이트(byte) 형태로 데이터 변환하는 기술
   * 시스템적으로 이야기하자면 JVM(Java Virtual Machine 이하 JVM)의 메모리에 상주(힙 또는 스택)되어 있는 객체 데이터를 바이트 형태로 변환하는 기술
 * 자바 직렬화 조건
@@ -301,7 +306,7 @@ public static void main(String[] args) {
     System.out.println(Base64.getEncoder().encodeToString(serializedMember));
 }
 ~~~ -->
-* 자바 역직렬화(Deserialize)란
+* 자바 역직렬화(Deserialization)란
   * 바이트로 변환된 데이터를 다시 객체로 변환하는 기술
   * 직렬화된 바이트 형태의 데이터를 객체로 변환해서 JVM으로 상주시키는 형태의 기술
 * 자바 역직렬화 조건
@@ -332,7 +337,7 @@ public static void main(String[] args){
 > - [http://woowabros.github.io/experience/2017/10/17/java-serialize2.html](http://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
 > - [https://nesoy.github.io/articles/2018-04/Java-Serialize](https://nesoy.github.io/articles/2018-04/Java-Serialize)
 
-### 클래스, 객체, 인스턴스의 차이
+### 클래스 객체 인스턴스의 차이
 * 클래스(Class)
   * 객체를 만들어 내기 위한 **설계도** 혹은 틀
   * 연관되어 있는 변수와 메서드의 집합
@@ -398,11 +403,13 @@ public class Main {
 > - [http://cerulean85.tistory.com/149](http://cerulean85.tistory.com/149)
 > - [https://www.ijemin.com/blog/%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4-difference-between-obect-and-instance/](https://www.ijemin.com/blog/%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4-difference-between-obect-and-instance/)
 
-### 객체(Object)란 무엇인가
+### 객체란 무엇인가
+* 객체(Object)란
+
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 오버로딩과 오버라이딩의 차이(Overloading vs Overriding)
+### 오버로딩과 오버라이딩의 차이
 <!-- [](#){name=Overloading-vs-Overriding} -->
 * 오버로딩(Overloading)
   * 두 메서드가 같은 이름을 갖고 있으나 인자의 수나 자료형이 다른 경우
@@ -535,7 +542,7 @@ public class FunctionCallTest2 {
 > - [http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html](http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html)
 > - [https://code.i-harness.com/ko-kr/q/c2ab51](https://code.i-harness.com/ko-kr/q/c2ab51)
 
-### 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
+### 인터페이스와 추상 클래스의 차이
 * 추상 메서드(Abstract Method)
   * abstract 키워드와 함께 원형만 선언되고, 코드는 작성되지 않은 메서드
 ~~~java
@@ -721,7 +728,7 @@ class FeaturePhone implements Phone {
 ### Annotation
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
-### String, StringBuilder, StringBuffer
+### String StringBuilder StringBuffer
 * String
     * 새로운 값을 할당할 때마다 새로 클래스에 대한 객체가 생성된다.
     * String에서 저장되는 문자열은 private final char[]의 형태이기 때문에 String 값은 바꿀수 없다.
@@ -742,15 +749,21 @@ class FeaturePhone implements Phone {
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
-### 동기화와 비동기화의 차이(Syncronous vs Asyncronous)
+### 동기화와 비동기화의 차이
+* 동기화(Syncronous)
+* 비동기화(Asyncronous)
+
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### java에서 '=='와 'Equals()'의 차이
+### java에서 ==와 Equals()의 차이
+* java의 '=='
+* java의 'Equals()'
+
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### java의 리플렉션(Reflection) 이란
+### java의 리플렉션 이란
 * 리플렉션(Reflection) 이란?
   * 자바에서 이미 로딩이 완료된 클래스에서 또 다른 클래스를 동적으로 로딩(Dynamic Loading)하여 생성자(Constructor), 멤버 필드(Member Variables) 그리고 멤버 메서드(Member Method) 등을 사용할 수 있는 기법이다.
   * 클래스의 패키지 정보, 접근 지정자, 수퍼 클래스, 어노테이션(Annotation) 등을 얻을 수 있다.

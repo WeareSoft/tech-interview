@@ -37,11 +37,11 @@
 * TCP/IP의 개념
 * TCP와 UDP
 * TCP와 UDP의 헤더 분석
-* TCP의 3-way-handshake, 4-way-handshake
+* TCP의 3-way-handshake와 4-way-handshake
   * Q. TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유?
   * Q. 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까?
   * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
-* HTTP, HTTPS
+* HTTP와 HTTPS
 * GET 메서드와 POST 메서드
 * 쿠키(Cookie)와 세션(Session)
 * DNS
@@ -58,13 +58,13 @@
 * 동기화 객체의 종류
 * 뮤텍스와 세마포어의 차이
 * 스케줄러
-* 동기, 비동기
+* 동기와 비동기
 * 프로세스 동기화
 * 메모리 관리 전략
 * 가상 메모리
 * 캐시의 지역성
-* 교착상태(데드락)의 개념과 조건
-* 사용자 수준 스레드, 커널 수준 스레드
+* 교착상태(데드락, Deadlock)의 개념과 조건
+* 사용자 수준 스레드와 커널 수준 스레드
 * 외부 단편화와 내부 단편화
 * Context Switching
 * Swapping
@@ -72,20 +72,20 @@
 ## 4. Database
 :arrow_forward: [답변 내용](/contents/db.md)
 * 데이터베이스 풀
-* 정규화(1~3차, BCNF)
+* 정규화(1차 2차 3차 BCNF)
 * 트랜잭션(Transaction) 이란
 * 트랜잭션 격리 수준(Transaction Isolation Level)
 * Join
 * SQL injection
-* Index
-* Statement, PrepareStatement
-* RDBMS, NoSQL
+* Index란
+* Statement와 PrepareStatement
+* RDBMS와 NoSQL
 * 효과적인 쿼리 저장
 * 옵티마이저(Optimizer)란
 * Replication
 * 파티셔닝(Partitioning)
 * 샤딩(Sharding)
-* 객체 관계 매핑(Object-relational mapping; ORM)이란
+* 객체 관계 매핑(Object-relational mapping, ORM)이란
 * java JDBC
 
 ## 5. Design Pattern
@@ -95,13 +95,14 @@
 * Strategy 패턴
 * Template Method 패턴
 * Factory Method 패턴
-* MVC1, MVC2 패턴
+* MVC1 패턴과 MVC2 패턴
 
-## 6. Algorithm :pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
+## 6. Algorithm 
+### :pushpin: [관련 링크](https://github.com/Do-Hee/algorithm-study)
 :arrow_forward: [답변 내용](/contents/algorithm.md)
 * BigO
 * DFS와 BFS의 차이
-* Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이
+* Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간복잡도와 공간복잡도 차이
 * 정렬 알고리즘의 종류와 개념
 
 
@@ -146,12 +147,13 @@
 :arrow_forward: [답변 내용](/contents/spring.md)
 * 스프링 프레임워크란
 * Spring, Spring MVC, Spring Boot의 차이
+* Container란
 * IOC(Inversion of Control, 제어의 역전)란
 * MVC 패턴이란
 * DI(Dependency Injection, 의존성 주입)란
 * AOP(Aspect Oriented Programming)란
 * POJO
-* DAO, DTO의 차이
+* DAO와 DTO의 차이
 * Spring JDBC를 이용한 데이터 접근
 
 ## 9. ETC
@@ -159,15 +161,15 @@
 * TDD란
 * 웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명
   * Ex. url에 'www.naver.com' 을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.
-* 대칭키, 비대칭키
-* 컴파일러, 인터프리터
+* 대칭키와 비대칭키
+* 컴파일러와 인터프리터
 * 분산락
 * 프레임워크와 라이브러리의 차이
-* 64bit CPU, 32bit CPU 차이
+* 64bit CPU와 32bit CPU 차이
 * CVS, SVN, Git
 * 웹 서버(Web Server)와 웹 어플리케이션 서버(WAS)의 차이
 * 애자일 방법론이란
-* Servlet, JSP
+* Servlet과 JSP
 
 ---
 

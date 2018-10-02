@@ -1,25 +1,25 @@
 # 3. Operating System
 **:book: Contents**
-* [프로세스와 스레드의 차이(Process vs Thread)](#프로세스와-스레드의-차이(process-vs-thread))
+* [프로세스와 스레드의 차이(Process vs Thread)](#프로세스와-스레드의-차이)
 * [멀티 프로세스 대신 멀티 스레드를 사용하는 이유](#멀티-프로세스-대신-멀티-스레드를-사용하는-이유)
 * [Thread-safe](#thread-safe)
 * [동기화 객체의 종류](#동기화-객체의-종류)
 * [뮤텍스와 세마포어의 차이](#뮤텍스와-세마포어의-차이)
 * [스케줄러](#스케줄러)
-* [동기, 비동기](#동기,-비동기)
+* [동기와 비동기](#동기와-비동기)
 * [프로세스 동기화](#프로세스-동기화)
 * [메모리 관리 전략](#메모리-관리-전략)
 * [가상 메모리](#가상-메모리)
 * [캐시의 지역성](#캐시의-지역성)
-* [교착상태(데드락)의 개념과 조건](#교착상태(데드락)의-개념과-조건)
-* [사용자 수준 스레드, 커널 수준 스레드](#사용자-수준-스레드,-커널-수준-스레드)
+* [교착상태(데드락, Deadlock)의 개념과 조건](#교착상태의-개념과-조건)
+* [사용자 수준 스레드와 커널 수준 스레드](#사용자-수준-스레드,-커널-수준-스레드)
 * [외부 단편화와 내부 단편화](#외부-단편화와-내부-단편화)
 * [Context Switching](#context-switching)
 * [Swapping](#swapping)
 
 ---
 
-### 프로세스와 스레드의 차이(Process vs Thread)
+### 프로세스와 스레드의 차이
 * 프로그램(Program) 이란
   * 사전적 의미: 어떤 작업을 위해 실행할 수 있는 파일
 * 프로세스(Process) 란
@@ -111,13 +111,10 @@
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 동기, 비동기
+### 동기와 비동기
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 멀티스레드
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
 
 ### 프로세스 동기화
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
@@ -135,8 +132,8 @@
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### 교착상태(데드락)의 개념과 조건
-* 교착상태(데드락) 란
+### 교착상태의 개념과 조건
+* 교착상태(데드락, Deadlock) 란
   * 첫 번째 스레드는 두 번째 스레드가 들고 있는 객체의 락이 풀리기를 기다리고 있고, 두 번째 스레드 역시 첫 번째 스레드가 들고 있는 객체의 락이 풀리기를 기다리는 상황을 일컷는다.
   * 모든 스레드가 락이 풀리기를 기다리고 있기 때문에, 무한 대기 상태에 빠지게 된다. 이런 스레드를 교착상태에 빠졌다고 한다.
 * 교착상태의 4가지 조건

@@ -7,7 +7,7 @@
 * [Queue](#queue)
 * [Graph](#graph)
 * [Tree](#tree)
-* [그래프(Graph)와 트리(Tree)의 차이점](#그래프(graph)와-트리(tree)의-차이점)
+* [그래프(Graph)와 트리(Tree)의 차이점](#그래프와-트리의-차이점)
 * [Binary Heap](#binary-heap)
 * [Red-Black Tree](#red-black-tree)
 * [B+ Tree](#B+-Tree)
@@ -142,7 +142,7 @@ class Node {
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html](https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html)
 
-### 그래프(Graph)와 트리(Tree)의 차이점
+### 그래프와 트리의 차이점
 <img src="./images/graph-vs-tree.png" width="70%" height="70%">
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)

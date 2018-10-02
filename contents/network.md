@@ -1,21 +1,21 @@
 # 2. Network
 **:book: Contents**
 * [OSI 7계층](#osi-7계층)
-* [TCP/IP의 개념](#tcp/ip의-개념)
+* [TCP/IP의 개념](#tcp-ip의-개념)
 * [TCP와 UDP](#tcp와-udp)
 * [TCP와 UDP의 헤더 분석](#tcp와-udp의-헤더-분석)
-* [TCP의 3-way-handshake, 4-way-handshake](#tcp의-3-way-handshake,-4-way-handshake)
+* [TCP의 3-way-handshake와 4-way-handshake](#tcp의-3-way-handshake와-4-way-handshake)
   * Q. TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유?
   * Q. 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까?
   * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
-* [HTTP, HTTPS](#http,-https)
+* [HTTP와 HTTPS](#http,-https)
 * [GET 메서드와 POST 메서드](#get-메서드와-post-메서드)
-* [쿠키(Cookie)와 세션(Session)](#쿠키(cookie)와-세션(session))
+* [쿠키(Cookie)와 세션(Session)](#쿠키와-세션)
 * [DNS](#dns)
 * [REST와 RESTful의 개념](#rest와-restful의-개념)
-* [소켓(Socket)이란](#소켓(socket)이란)
+* [소켓(Socket)이란](#소켓이란)
 * [Socket.io와 WebSocket의 차이](#socket.io와-websocket의-차이)
-* [Frame, Packet, Segment, Datagram](#frame,-packet,-segment,-datagram)
+* [Frame, Packet, Segment, Datagram](#frame-packet-segment-datagram)
 
 
 ---
@@ -26,7 +26,7 @@
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### TCP/IP의 개념
+### TCP IP의 개념
 <!-- * 네트워크를 상호 연결시켜 정보를 전송할 수 있도록 하는 기능을 가진 다수의 프로토콜이 모여있는 프로토콜 집합
 * 인터넷: 데이터 링크 계층을 지원하는 네트워크는 TCP/IP 프로토콜을 이용하여 상호 연결하는 네트워크 -->
 
@@ -83,7 +83,7 @@
 > - [https://idchowto.com/?p=18352](https://idchowto.com/?p=18352)
 > - [https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
-### TCP의 3-way-handshake, 4-way-handshake
+### TCP의 3 way handshake와 4 way handshake
 * TCP는 장치들 사이에 논리적인 접속을 성립(establish)하기 위하여 연결을 설정하여 **신뢰성을 보장하는 연결형 서비스** 이다.
 * 3-way handshake 란
   * TCP 통신을 이용하여 데이터를 전송하기 위해 네트워크 **연결을 설정(Connection Establish)** 하는 과정
@@ -155,7 +155,7 @@
   * A. Connection을 맺을 때 사용하는 포트(Port)는 유한 범위 내에서 사용하고 시간이 지남에 따라 재사용된다. 따라서 두 통신 호스트가 과거에 사용된 포트 번호 쌍을 사용하는 가능성이 존재한다. 서버 측에서는 패킷의 SYN을 보고 패킷을 구분하게 되는데 난수가 아닌 순처적인 Number가 전송된다면 이전의 Connection으로부터 오는 패킷으로 인식할 수 있다. 이런 문제가 발생할 가능성을 줄이기 위해서 난수로 ISN을 설정한다.
   * [관련 Reference](http://asfirstalways.tistory.com/356)
 
-### HTTP, HTTPS
+### HTTP와 HTTPS
 * HTTP 프로토콜
   * 웹상에서 클라이언트와 서버 간에 요청/응답으로 정보를 주고 받을 수 있는 프로토콜
 
@@ -217,7 +217,7 @@
 > - [https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/](https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/)
 > - [https://www.w3schools.com/tags/ref_httpmethods.asp](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
-### 쿠키(Cookie)와 세션(Session)
+### 쿠키와 세션
 * HTTP 프로토콜의 특징
   * 비연결 지향(Connectionless)
       * 클라이언트가 request를 서버에 보내고, 서버가 클라이언트에 요청에 맞는 response를 보내면 바로 연결을 끊는다.
@@ -411,7 +411,7 @@
 > - [https://meetup.toast.com/posts/92](https://meetup.toast.com/posts/92)
 > - [https://spoqa.github.io/2012/02/27/rest-introduction.html](https://spoqa.github.io/2012/02/27/rest-introduction.html)
 
-### 소켓(Socket)이란
+### 소켓이란
 <!-- * 소켓(Socket)은 TCP/IP를 이용하는 API로 소프트웨어로 작성된 통신의 접속점이다. -->
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
@@ -421,7 +421,7 @@
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://d2.naver.com/helloworld/1336](https://d2.naver.com/helloworld/1336)
 
-### Frame, Packet, Segment, Datagram
+### Frame Packet Segment Datagram
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
