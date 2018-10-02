@@ -1,8 +1,8 @@
 # 6. Algorithm
 **:book: Contents**
-* [BigO](#BigO)
-* [DFS와 BFS의 차이](#DFS와-BFS의-차이)
-* [Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이](#Fibonacci에서의-세-가지(Recursion,-Dynamic-Programming,-반복)-방식에-대한-시간,-공간복잡도-차이)
+* [BigO](#bigo)
+* [DFS와 BFS의 차이](#dfs와-bfs의-차이)
+* [Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간, 공간복잡도 차이](#fibonacci에서의-세-가지(recursion,-dynamic-programming,-반복)-방식에-대한-시간,-공간복잡도-차이)
 * [정렬 알고리즘의 종류와 개념](#정렬-알고리즘의-종류와-개념)
 
 ---
