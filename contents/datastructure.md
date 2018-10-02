@@ -1,36 +1,36 @@
 # 1. Data Structure
 **:book: Contents**
-* [Array](#:small_orange_diamond:Array)
-* [LinkedList](#:small_orange_diamond:LinkedList)
-* [HashTable](#:small_orange_diamond:HashTable)
-* [Stack](#:small_orange_diamond:Stack)
-* [Queue](#:small_orange_diamond:Queue)
-* [Graph](#:small_orange_diamond:Graph)
-* [Tree](#:small_orange_diamond:Tree)
-* [그래프(Graph)와 트리(Tree)의 차이점](#:small_orange_diamond:그래프(Graph)와-트리(Tree)의-차이점)
-* [Binary Heap](#:small_orange_diamond:Binary-Heap)
-* [Red-Black Tree](#:small_orange_diamond:Red-Black-Tree)
-* [B+ Tree](#:small_orange_diamond:B+-Tree)
+* [Array](#array)
+* [LinkedList](#linkedlist)
+* [HashTable](#hashtable)
+* [Stack](#stack)
+* [Queue](#queue)
+* [Graph](#graph)
+* [Tree](#tree)
+* [그래프(Graph)와 트리(Tree)의 차이점](#그래프(graph)와-트리(tree)의-차이점)
+* [Binary Heap](#binary-heap)
+* [Red-Black Tree](#red-black-tree)
+* [B+ Tree](#B+-Tree)
 
 ---
 
-#### :small_orange_diamond:Array
+### Array
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-#### :small_orange_diamond:LinkedList
+### LinkedList
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 
-#### :small_orange_diamond:HashTable
+### HashTable
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-#### :small_orange_diamond:Stack
+### Stack
 * 스택(Stack)의 개념
     * 한 쪽 끝에서만 자료를 넣고 뺄 수 있는 LIFO(Last In First Out) 형식의 자료 구조
 * 스택(Stack)의 연산
@@ -56,7 +56,7 @@
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/03/data-structure-stack.html](https://gmlwjd9405.github.io/2018/08/03/data-structure-stack.html)
 
-#### :small_orange_diamond:Queue
+### Queue
 * 큐(Queue)의 개념
   * 컴퓨터의 기본적인 자료 구조의 한가지로, 먼저 집어 넣은 데이터가 먼저 나오는 FIFO(First In First Out)구조로 저장하는 형식
 * 큐(Queue)의 연산
@@ -82,7 +82,7 @@
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html](https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html)
 
-#### :small_orange_diamond:Graph
+### Graph
 * 그래프(Graph)의 개념
   * 단순히 노드(N, node)와 그 노드를 연결하는 간선(E, edge)을 하나로 모아 놓은 자료 구조
     * 즉, 연결되어 있는 객체 간의 관계를 표현할 수 있는 자료 구조이다.
@@ -103,7 +103,7 @@
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html](https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html)
 
-#### :small_orange_diamond:Tree
+### Tree
 * 트리(Tree)의 개념
   * 트리는 노드로 이루어진 자료 구조
     1. 트리는 하나의 루트 노드를 갖는다.
@@ -142,22 +142,22 @@ class Node {
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html](https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html)
 
-#### :small_orange_diamond:그래프(Graph)와 트리(Tree)의 차이점
+### 그래프(Graph)와 트리(Tree)의 차이점
 <img src="./images/graph-vs-tree.png" width="70%" height="70%">
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
-#### :small_orange_diamond:Binary Heap
+### Binary Heap
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html](https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html)
 
-#### :small_orange_diamond:Red-Black Tree
+### Red-Black Tree
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-#### :small_orange_diamond:B+ Tree
+### B+ Tree
 
 > :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()

@@ -1,31 +1,33 @@
 # 4. Database
 **:book: Contents**
-* [데이터베이스 풀](#:small_orange_diamond:데이터베이스-풀)
-* [정규화(1~3차, BCNF)](#:small_orange_diamond:정규화(1~3차,-BCNF))
-* [트랜잭션(Transaction) 이란](#:small_orange_diamond:트랜잭션(Transaction)-이란)
-* [트랜잭션 격리 수준(Transaction Isolation Level)](#:small_orange_diamond:트랜잭션-격리-수준(Transaction-Isolation-Level))
-* [Join](#:small_orange_diamond:Join)
-* [SQL injection](#:small_orange_diamond:SQL-injection)
-* [Index](#:small_orange_diamond:Index)
-* [Statement, PrepareStatement](#:small_orange_diamond:Statement,-PrepareStatement)
-* [RDBMS, NoSQL](#:small_orange_diamond:RDBMS,-NoSQL)
-* [효과적인 쿼리 저장](#:small_orange_diamond:효과적인-쿼리-저장)
-* [옵티마이저(Optimizer)란](#:small_orange_diamond:옵티마이저(Optimizer)란)
-* [Replication](#:small_orange_diamond:Replication)
-* [파티셔닝(Partitioning)](#:small_orange_diamond:파티셔닝(Partitioning))
-* [샤딩(Sharding)](#:small_orange_diamond:샤딩(Sharding))
-* [객체 관계 매핑(Object-relational mapping; ORM)이란](#:small_orange_diamond:객체-관계-매핑(Object-relational-mapping;-ORM)이란)
-* [java JDBC](#:small_orange_diamond:java-JDBC)
+* [데이터베이스 풀](#데이터베이스-풀)
+* [정규화(1~3차, BCNF)](#정규화(1~3차,-bcnf))
+* [트랜잭션(Transaction) 이란](#트랜잭션(transaction)-이란)
+* [트랜잭션 격리 수준(Transaction Isolation Level)](#트랜잭션-격리-수준(transaction-isolation-level))
+* [Join](#join)
+* [SQL injection](#sql-injection)
+* [Index](#index)
+* [Statement, PrepareStatement](#statement,-preparestatement)
+* [RDBMS, NoSQL](#rdbms,-noSQL)
+* [효과적인 쿼리 저장](#효과적인-쿼리-저장)
+* [옵티마이저(Optimizer)란](#옵티마이저(optimizer)란)
+* [Replication](#replication)
+* [파티셔닝(Partitioning)](#파티셔닝(partitioning))
+* [샤딩(Sharding)](#샤딩(sharding))
+* [객체 관계 매핑(Object-relational mapping; ORM)이란](#객체-관계-매핑(object-relational-mapping;-orm)이란)
+* [java JDBC](#java-jdbc)
 
 ---
 
-#### :small_orange_diamond:데이터베이스 풀
-
+### 데이터베이스 풀
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-#### :small_orange_diamond:정규화(1~3차, BCNF)
+### 정규화(1~3차, BCNF)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:트랜잭션(Transaction) 이란
+### 트랜잭션(Transaction) 이란
 * 트랜잭션(Transaction) 이란
     * 데이터베이스의 상태를 변환시키는 하나의 논리적인 작업 단위를 구성하는 연산들의 집합이다.
         * 예를들어, A계좌에서 B계좌로 일정 금액을 이체한다고 가정하자.
@@ -67,12 +69,13 @@
     * 완료(Committed)
         * 트랜잭션이 성공적으로 종료되어 Commit 연산을 실행한 후의 상태
 
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://limkydev.tistory.com/100](http://limkydev.tistory.com/100)
 > - [http://coding-factory.tistory.com/226](http://coding-factory.tistory.com/226)
 > - [http://yimoyimo.tk/transaction_DI/](http://yimoyimo.tk/transaction_DI/)
 > - [https://d2.naver.com/helloworld/407507](https://d2.naver.com/helloworld/407507)
 
-#### :small_orange_diamond:트랜잭션 격리 수준(Transaction Isolation Level)
+### 트랜잭션 격리 수준(Transaction Isolation Level)
 * Isolation Level 이란?
     * 트랜잭션에서 일관성이 없는 데이터를 허용하도록 하는 수준
 * Isolation Level 의 필요성
@@ -115,26 +118,43 @@
         * 한 트랜잭션 안에서 일정 범위의 레코드를 두 번 이상 읽을 때, 첫 번째 쿼리에서 없던 레코드가 두 번째 쿼리에서 나타나는 현상
         * 이는 트랜잭션 도중 새로운 레코드가 삽입되는 것을 허용하기 때문에 나타난다.
 
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://hundredin.net/2012/07/26/isolation-level/](http://hundredin.net/2012/07/26/isolation-level/)
 > - [http://egloos.zum.com/ljlave/v/1530887](http://egloos.zum.com/ljlave/v/1530887)
 
-#### :small_orange_diamond:Join
+### Join
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:SQL Injection
+### SQL Injection
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:Index
+### Index
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:Statement, PrepareStatement
+### Statement, PrepareStatement
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:RDBMS, NoSQL
+### RDBMS, NoSQL
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:효과적인 쿼리 저장
+### 효과적인 쿼리 저장
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:옵티마이저(Optimizer)란
+### 옵티마이저(Optimizer)란
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:Replication
+### Replication
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:파티셔닝(Partitioning)
+### 파티셔닝(Partitioning)
 * 배경
   * 서비스의 크기가 점점 커지고 DB에 저장하는 데이터의 규모 또한 대용량화 되면서, 기존에 사용하는 DB 시스템의 **용량(storage)의 한계와 성능(performance)의 저하** 를 가져오게 되었다.
   * 즉, VLDB(Very Large DBMS)와 같이 하나의 DBMS에 너무 큰 table이 들어가면서 용량과 성능 측면에서 많은 이슈가 발생하게 되었고, 이런 이슈를 해결하기 위한 방법으로 table을 '파티션(partition)'이라는 작은 단위로 나누어 관리하는 **'파티셔닝(Partitioning)'기법** 이 나타나게 되었다.
@@ -179,11 +199,11 @@
   4. 합성 분할 (composite partitioning)
   <img src="./images/partitioning.png" width="70%" height="70%">
 
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html](https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html)
 > - [https://nesoy.github.io/articles/2018-02/Database-Partitioning](https://nesoy.github.io/articles/2018-02/Database-Partitioning)
 
-
-#### :small_orange_diamond:샤딩(Sharding)
+### 샤딩(Sharding)
   <!-- * 샤딩은 물리적으로 다른 데이터베이스에 데이터를 수평 분할 방식으로 분산 저장하고 조회하는 방법을 말한다.
 샤딩은 주로 키값(해쉬값 또는 특정 컬럼값)을 이용하여 테이블들의 데이터 자체를 나눠서 분산저장하거나, 특정 분류기준을 가지고(저장 데이터 종류-유저, 일반데이터 등) 테이블을 분류하여 저장하는 것
 샤딩은 수평 파티션과 동일한 개념이다.
@@ -191,12 +211,17 @@ sharding == horizontal partitioning
 
 '주민' 테이블이 여러 DB에 있을 때, 서현동 주민에 대한 정보는 A DB에, 정자동 주민에 대한 정보는 B DB에 저장되도록 하는 방식을 말한다. 여러 데이터베이스를 대상으로 작업해야 하기 때문에 경우에 따라서는 기능에 제약이 있을 수 있고(JOIN 연산 등) 일관성(consistency)과 복제(replication) 등에서 불리한 점이 많다. 예전의 샤딩은 애플리케이션 서버 레벨에서 구현하는 경우가 많았다. 최근에는 이를 플랫폼 차원에서 제공하려는 시도가 많다. 크게 분류하면 Hibernate Shards와 같이 애플리케이션 서버에서 동작하는 형태, CUBRID SHARD, Spock Proxy, Gizzard와 같이 미들티어(middle tier)로 동작하는 형태, nStore나 MongoDB와 같이 데이터베이스 자체에서 샤딩 기능을 제공하는 형태로 나누어볼 수 있다. -->
 
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://mongodb.citsoft.net/?page_id=225#comment-91922](http://mongodb.citsoft.net/?page_id=225#comment-91922)
 > - [https://d2.naver.com/helloworld/14822](https://d2.naver.com/helloworld/14822)
 
-#### :small_orange_diamond:객체 관계 매핑(Object-relational mapping; ORM)이란
+### 객체 관계 매핑(Object-relational mapping; ORM)이란
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:java JDBC
+### java JDBC
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
 ---
 

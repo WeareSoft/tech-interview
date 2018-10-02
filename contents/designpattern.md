@@ -1,15 +1,15 @@
 # 5. Design Pattern
 **:book: Contents**
-* [디자인 패턴의 개념과 종류](#:small_orange_diamond:디자인-패턴의-개념과-종류)
-* [Singleton 패턴](#:small_orange_diamond:Singleton-패턴)
-* [Strategy 패턴](#:small_orange_diamond:Strategy-패턴)
-* [Template Method 패턴](#:small_orange_diamond:Template-Method-패턴)
-* [Factory Method 패턴](#:small_orange_diamond:Factory-Method-패턴)
-* [MVC1, MVC2 패턴](#:small_orange_diamond:MVC1,-MVC2-패턴)
+* [디자인 패턴의 개념과 종류](#디자인-패턴의-개념과-종류)
+* [Singleton 패턴](#singleton-패턴)
+* [Strategy 패턴](#strategy-패턴)
+* [Template Method 패턴](#template-method-패턴)
+* [Factory Method 패턴](#factory-method-패턴)
+* [MVC1, MVC2 패턴](#mvc1,-mvc2-패턴)
 
 ---
 
-#### :small_orange_diamond:디자인 패턴의 개념과 종류
+### 디자인 패턴의 개념과 종류
 디자인 패턴이란
 * 소프트웨어를 설계할 때 특정 맥락에서 자주 발생하는 고질적인 문제들이 또 발생했을 때 재사용할 할 수있는 훌륭한 해결책
 * "바퀴를 다시 발명하지 마라(Don't reinvent the wheel)"
@@ -38,9 +38,10 @@ GoF 디자인 패턴의 분류
     * 객체나 클래스 사이의 알고리즘이나 책임 분배에 관련된 패턴
     * 한 객체가 혼자 수행할 수 없는 작업을 여러 개의 객체로 어떻게 분배하는지, 또 그렇게 하면서도 객체 사이의 결합도를 최소화하는 것에 중점을 둔다.
 
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/06/design-pattern.html](https://gmlwjd9405.github.io/2018/07/06/design-pattern.html)
 
-#### :small_orange_diamond:Singleton 패턴
+### Singleton 패턴
 * 개념
   * 전역 변수를 사용하지 않고 **객체를 하나만 생성** 하도록 하며, 생성된 객체를 **어디에서든지 참조할 수 있도록** 하는 패턴
   * '생성(Creational) 패턴'의 하나
@@ -51,9 +52,10 @@ GoF 디자인 패턴의 분류
 * 예시
   * 프린터 관리자 만들기
 
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/06/singleton-pattern.html](https://gmlwjd9405.github.io/2018/07/06/singleton-pattern.html)
 
-#### :small_orange_diamond:Strategy 패턴
+### Strategy 패턴
 * 개념
   * **행위를 클래스로 캡슐화해** 동적으로 행위를 자유롭게 바꿀 수 있게 해주는 패턴
     * 같은 문제를 해결하는 여러 알고리즘이 클래스별로 캡슐화되어 있고 이들이 필요할 때 교체할 수 있도록 함으로써 동일한 문제를 다른 알고리즘으로 해결할 수 있게 하는 디자인 패턴
@@ -74,9 +76,10 @@ GoF 디자인 패턴의 분류
 * 예시
   * 로봇 만들기
 
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html](https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html)
 
-#### :small_orange_diamond:Template Method 패턴
+### Template Method 패턴
 * 개념
   * 어떤 작업을 처리하는 일부분을 **서브 클래스로 캡슐화해** 전체 일을 수행하는 구조는 바꾸지 않으면서 특정 단계에서 수행하는 내역을 바꾸는 패턴
     * 즉, **전체적으로는 동일하면서 부분적으로는 다른 구문으로 구성된 메서드의 코드 중복을 최소화** 할 때 유용하다.
@@ -94,9 +97,10 @@ GoF 디자인 패턴의 분류
 * 예시
   * 여러 회사의 모터 지원하기
 
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/13/template-method-pattern.html](https://gmlwjd9405.github.io/2018/07/13/template-method-pattern.html)
 
-#### :small_orange_diamond:Factory Method 패턴
+### Factory Method 패턴
 * 개념
   * **객체 생성 처리를 서브 클래스로 분리** 해 처리하도록 캡슐화하는 패턴
     * 즉, 객체의 생성 코드를 별도의 클래스/메서드로 분리함으로써 객체 생성의 변화에 대비하는 데 유용하다.
@@ -126,12 +130,12 @@ GoF 디자인 패턴의 분류
 * 예시
   * 여러 가지 방식의 엘리베이터 스케줄링 방법 지원하기
 
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/07/factory-method-pattern.html](https://gmlwjd9405.github.io/2018/08/07/factory-method-pattern.html)
 
-#### :small_orange_diamond:MVC1, MVC2 패턴
-
+### MVC1, MVC2 패턴
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
-
 
 ---
 

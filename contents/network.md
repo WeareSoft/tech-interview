@@ -1,34 +1,39 @@
 # 2. Network
 **:book: Contents**
-* [OSI 7계층](#:small_orange_diamond:OSI-7계층)
-* [TCP/IP의 개념](#:small_orange_diamond:TCP/IP의-개념)
-* [TCP와 UDP](#:small_orange_diamond:TCP와-UDP)
-* [TCP와 UDP의 헤더 분석](#:small_orange_diamond:TCP와-UDP의-헤더-분석)
-* [TCP의 3-way-handshake, 4-way-handshake](#:small_orange_diamond:TCP의-3-way-handshake,-4-way-handshake)
-  * [Q. TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유?](#:question:TCP-관련-질문-1)
-  * [Q. 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까?](#:question:TCP-관련-질문-2)
-  * [Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?](#:question:TCP-관련-질문-3)
-* [HTTP, HTTPS](#:small_orange_diamond:HTTP,-HTTPS)
-* [GET 메서드와 POST 메서드](#:small_orange_diamond:GET-메서드와-POST-메서드)
-* [쿠키(Cookie)와 세션(Session)](#:small_orange_diamond:쿠키(Cookie)와-세션(Session))
-* [DNS](#:small_orange_diamond:DNS)
-* [REST와 RESTful의 개념](#:small_orange_diamond:REST와-RESTful의-개념)
-* [소켓(Socket)이란](#:small_orange_diamond:소켓(Socket)이란)
-* [Socket.io와 WebSocket의 차이](#:small_orange_diamond:Socket.io와-WebSocket의-차이)
-* [Frame, Packet, Segment, Datagram](#:small_orange_diamond:Frame,-Packet,-Segment,-Datagram)
+* [OSI 7계층](#osi-7계층)
+* [TCP/IP의 개념](#tcp/ip의-개념)
+* [TCP와 UDP](#tcp와-udp)
+* [TCP와 UDP의 헤더 분석](#tcp와-udp의-헤더-분석)
+* [TCP의 3-way-handshake, 4-way-handshake](#tcp의-3-way-handshake,-4-way-handshake)
+  * Q. TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유?
+  * Q. 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까?
+  * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
+* [HTTP, HTTPS](#http,-https)
+* [GET 메서드와 POST 메서드](#get-메서드와-post-메서드)
+* [쿠키(Cookie)와 세션(Session)](#쿠키(cookie)와-세션(session))
+* [DNS](#dns)
+* [REST와 RESTful의 개념](#rest와-restful의-개념)
+* [소켓(Socket)이란](#소켓(socket)이란)
+* [Socket.io와 WebSocket의 차이](#socket.io와-websocket의-차이)
+* [Frame, Packet, Segment, Datagram](#frame,-packet,-segment,-datagram)
+
 
 ---
 
-#### :small_orange_diamond:OSI 7계층
+### OSI 7계층
 <img src="./images/osi-7-layer.png" width="60%" height="60%">
 
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-#### :small_orange_diamond:TCP/IP의 개념
+### TCP/IP의 개념
 <!-- * 네트워크를 상호 연결시켜 정보를 전송할 수 있도록 하는 기능을 가진 다수의 프로토콜이 모여있는 프로토콜 집합
 * 인터넷: 데이터 링크 계층을 지원하는 네트워크는 TCP/IP 프로토콜을 이용하여 상호 연결하는 네트워크 -->
 
-#### :small_orange_diamond:TCP와 UDP
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
+
+### TCP와 UDP
 * 네트워크 계층 중 **전송 계층에서 사용하는 프로토콜**
 * TCP(Transmission Control Protocol)  
     <img src="./images/tcp-virtual-circuit.png" width="60%" height="60%">
@@ -68,15 +73,17 @@
   * UDP와 TCP는 각각 별도의 포트 주소 공간을 관리하므로 같은 포트 번호를 사용해도 무방하다. 즉, 두 프로토콜에서 동일한 포트 번호를 할당해도 서로 다른 포트로 간주한다.
   * 또한 같은 모듈(UDP or TCP) 내에서도 클라이언트 프로그램에서 동시에 여러 커넥션을 확립한 경우에는 서로 다른 포트 번호를 동적으로 할당한다. (동적할당에 사용되는 포트번호는 49,152~65,535이다.)
 
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://mangkyu.tistory.com/15](http://mangkyu.tistory.com/15)
 > - [http://ddooooki.tistory.com/21](http://ddooooki.tistory.com/21)
 
-#### :small_orange_diamond:TCP와 UDP의 헤더 분석
+### TCP와 UDP의 헤더 분석
 
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://idchowto.com/?p=18352](https://idchowto.com/?p=18352)
 > - [https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
-#### :small_orange_diamond:TCP의 3-way-handshake, 4-way-handshake
+### TCP의 3-way-handshake, 4-way-handshake
 * TCP는 장치들 사이에 논리적인 접속을 성립(establish)하기 위하여 연결을 설정하여 **신뢰성을 보장하는 연결형 서비스** 이다.
 * 3-way handshake 란
   * TCP 통신을 이용하여 데이터를 전송하기 위해 네트워크 **연결을 설정(Connection Establish)** 하는 과정
@@ -129,6 +136,7 @@
   * FIN(Finish) / 000001
     * 연결 해제. 세션 연결을 종료시킬 때 사용되며, 더 이상 전송할 데이터가 없음을 의미한다.
 
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://needjarvis.tistory.com/157](http://needjarvis.tistory.com/157)
 > - [http://hyeonstorage.tistory.com/286](http://hyeonstorage.tistory.com/286)
 
@@ -147,11 +155,14 @@
   * A. Connection을 맺을 때 사용하는 포트(Port)는 유한 범위 내에서 사용하고 시간이 지남에 따라 재사용된다. 따라서 두 통신 호스트가 과거에 사용된 포트 번호 쌍을 사용하는 가능성이 존재한다. 서버 측에서는 패킷의 SYN을 보고 패킷을 구분하게 되는데 난수가 아닌 순처적인 Number가 전송된다면 이전의 Connection으로부터 오는 패킷으로 인식할 수 있다. 이런 문제가 발생할 가능성을 줄이기 위해서 난수로 ISN을 설정한다.
   * [관련 Reference](http://asfirstalways.tistory.com/356)
 
-#### :small_orange_diamond:HTTP, HTTPS
+### HTTP, HTTPS
 * HTTP 프로토콜
   * 웹상에서 클라이언트와 서버 간에 요청/응답으로 정보를 주고 받을 수 있는 프로토콜
 
-#### :small_orange_diamond:GET 메서드와 POST 메서드
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
+
+### GET 메서드와 POST 메서드
 * HTTP 프로토콜을 이용해서 서버에 데이터(요청 정보)를 전달할 때 사용하는 방식
 * GET 메서드 방식
   * 개념
@@ -201,11 +212,12 @@
 
 <!-- * 클라이언트에서 서버로 데이터를 전송하려면 GET이나 POST 방식밖에 없다. -->
 
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://blog.outsider.ne.kr/312](https://blog.outsider.ne.kr/312)
 > - [https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/](https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/)
 > - [https://www.w3schools.com/tags/ref_httpmethods.asp](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
-#### :small_orange_diamond:쿠키(Cookie)와 세션(Session)
+### 쿠키(Cookie)와 세션(Session)
 * HTTP 프로토콜의 특징
   * 비연결 지향(Connectionless)
       * 클라이언트가 request를 서버에 보내고, 서버가 클라이언트에 요청에 맞는 response를 보내면 바로 연결을 끊는다.
@@ -282,11 +294,15 @@
       * 쿠키 : 클라이언트에 저장되어서 서버에 요청 시 빠르다.
       * 세션 : 실제 저장된 정보가 서버에 있으므로 서버의 처리가 필요해 쿠키보다 느리다.
 
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://doooyeon.github.io/2018/09/10/cookie-and-session.html](https://doooyeon.github.io/2018/09/10/cookie-and-session.html)
 
-#### :small_orange_diamond:DNS
+### DNS
 
-#### :small_orange_diamond:REST와 RESTful의 개념
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
+
+### REST와 RESTful의 개념
 * REST란
   * REST의 정의
     * "Representational State Transfer(대표적인 상태 전달)"의 약자
@@ -386,6 +402,7 @@
     * Ex1) CRUD 기능을 모두 POST로만 처리하는 API
     * Ex2) route에 resource, id 외의 정보가 들어가는 경우(/students/updateName)
 
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html)
 > - [https://www.a-mean-blog.com/ko/blog/%ED%86%A0%EB%A7%89%EA%B8%80/_/REST%EC%99%80-RESTful-API](https://www.a-mean-blog.com/ko/blog/%ED%86%A0%EB%A7%89%EA%B8%80/_/REST%EC%99%80-RESTful-API)
 > - [http://mygumi.tistory.com/55](http://mygumi.tistory.com/55)
@@ -394,15 +411,20 @@
 > - [https://meetup.toast.com/posts/92](https://meetup.toast.com/posts/92)
 > - [https://spoqa.github.io/2012/02/27/rest-introduction.html](https://spoqa.github.io/2012/02/27/rest-introduction.html)
 
-#### :small_orange_diamond:소켓(Socket)이란
+### 소켓(Socket)이란
 <!-- * 소켓(Socket)은 TCP/IP를 이용하는 API로 소프트웨어로 작성된 통신의 접속점이다. -->
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
+### Socket.io와 WebSocket의 차이
 
-#### :small_orange_diamond:Socket.io와 WebSocket의 차이
-
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://d2.naver.com/helloworld/1336](https://d2.naver.com/helloworld/1336)
 
-#### :small_orange_diamond:Frame, Packet, Segment, Datagram
+### Frame, Packet, Segment, Datagram
+
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
 ---
 ## Reference

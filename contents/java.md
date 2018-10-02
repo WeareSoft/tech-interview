@@ -1,57 +1,57 @@
 # 7. Java
 **:book: Contents**
-* [java 프로그래밍이란](#:small_orange_diamond:java-프로그래밍이란)
-* [Java SE와 Java EE 애플리케이션 차이](#:small_orange_diamond:Java-SE와-Java-EE-애플리케이션-차이)
-* [java와 c/c++의 차이점](#:small_orange_diamond:java와-c/c++의-차이점)
-* [java 언어의 장단점](#:small_orange_diamond:java-언어의-장단점)
-* [java의 접근 제어자의 종류와 특징](#:small_orange_diamond:java의-접근-제어자의-종류와-특징)
-* [java의 데이터 타입](#:small_orange_diamond:java의-데이터-타입)
-* [Wrapper class](#:small_orange_diamond:Wrapper-class)
-* [OOP의 4가지 특징](#:small_orange_diamond:OOP의-4가지-특징)
-* [OOP의 5대 원칙 (SOLID)](#:small_orange_diamond:OOP의-5대-원칙-(SOLID))
-* [객체지향 프로그래밍과 절차지향 프로그래밍의 차이](#:small_orange_diamond:객체지향-프로그래밍과-절차지향-프로그래밍의-차이)
-* [객체지향(Object-Oriented)이란](#:small_orange_diamond:객체지향(Object-Oriented)이란)
-* [java의 non-static 멤버와 static 멤버의 차이](#:small_orange_diamond:java의-non-static-멤버와-static-멤버의-차이)
-  * [Q. java의 main 메서드가 static인 이유](#:question:java의-main-메서드가-static인-이유)
-* [java의 final 키워드 (final/finally/finalize)](#:small_orange_diamond:java의-final-키워드-(final/finally/finalize))
-* [java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이](#:small_orange_diamond:java의-제네릭(Generic)과-c++의-템플릿(Template)의-차이)
-* [java의 가비지 컬렉션(Garbage Collection) 처리 방법](#:small_orange_diamond:java의-가비지-컬렉션(Garbage-Collection)-처리-방법)
-* [java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가](#:small_orange_diamond:java-직렬화(Serialization)와-역직렬화(Deserialization)란-무엇인가)
-* [클래스, 객체, 인스턴스의 차이](#:small_orange_diamond:클래스,-객체,-인스턴스의-차이)
-* [객체(Object)란 무엇인가](#:small_orange_diamond:객체(Object)란-무엇인가)
-* [오버로딩과 오버라이딩의 차이(Overloading vs Overriding)](#:small_orange_diamond:오버로딩과-오버라이딩의-차이(Overloading-vs-Overriding))
-* [Call by Reference와 Call by Value의 차이](#:small_orange_diamond:Call-by-Reference와-Call-by-Value의-차이)
-* [인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)](#:small_orange_diamond:인터페이스와-추상-클래스의-차이(Interface-vs-Abstract-Class))
-* [JVM 구조](#:small_orange_diamond:JVM-구조)
-* [Java Collections Framework](#:small_orange_diamond:Java-Collections-Framework)
-  * [java Map 인터페이스 구현체의 종류](#:small_orange_diamond:java-Map-인터페이스-구현체의-종류)
-  * [java Set 인터페이스 구현체의 종류](#:small_orange_diamond:java-Set-인터페이스-구현체의-종류)
-  * [java List 인터페이스 구현체의 종류](#:small_orange_diamond:java-List-인터페이스-구현체의-종류)
-* [Annotation](#:small_orange_diamond:Annotation)
-* [String, StringBuilder, StringBuffer](#:small_orange_diamond:String,-StringBuilder,-StringBuffer)
-* [동기화와 비동기화의 차이(Syncronous vs Asyncronous)](#:small_orange_diamond:동기화와-비동기화의-차이(Syncronous-vs-Asyncronous))
-* [java에서 '=='와 'Equals()'의 차이](#:small_orange_diamond:java에서-'=='와-'Equals()'의-차이)
-* [java의 리플렉션(Reflection) 이란](#:small_orange_diamond:java의-리플렉션(Reflection)-이란)
+* [java 프로그래밍이란](#java-프로그래밍이란)
+* [Java SE와 Java EE 애플리케이션 차이](#java-se와-java-ee-애플리케이션-차이)
+* [java와 c/c++의 차이점](#java와-c/c++의-차이점)
+* [java 언어의 장단점](#java-언어의-장단점)
+* [java의 접근 제어자의 종류와 특징](#java의-접근-제어자의-종류와-특징)
+* [java의 데이터 타입](#java의-데이터-타입)
+* [Wrapper class](#wrapper-class)
+* [OOP의 4가지 특징](#oop의-4가지-특징)
+* [OOP의 5대 원칙 (SOLID)](#oop의-5대-원칙-(solid))
+* [객체지향 프로그래밍과 절차지향 프로그래밍의 차이](#객체지향-프로그래밍과-절차지향-프로그래밍의-차이)
+* [객체지향(Object-Oriented)이란](#객체지향(object-oriented)이란)
+* [java의 non-static 멤버와 static 멤버의 차이](#java의-non-static-멤버와-static-멤버의-차이)
+  * Q. java의 main 메서드가 static인 이유
+* [java의 final 키워드 (final/finally/finalize)](#java의-final-키워드-(final/finally/finalize))
+* [java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이](#java의-제네릭(generic)과-c++의-템플릿(template)의-차이)
+* [java의 가비지 컬렉션(Garbage Collection) 처리 방법](#java의-가비지-컬렉션(garbage-collection)-처리-방법)
+* [java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가](#java-직렬화(serialization)와-역직렬화(deserialization)란-무엇인가)
+* [클래스, 객체, 인스턴스의 차이](#클래스,-객체,-인스턴스의-차이)
+* [객체(Object)란 무엇인가](#객체(object)란-무엇인가)
+* [오버로딩과 오버라이딩의 차이(Overloading vs Overriding)](#오버로딩과-오버라이딩의-차이(overloading-vs-overriding))
+* [Call by Reference와 Call by Value의 차이](#call-by-reference와-call-by-value의-차이)
+* [인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)](#인터페이스와-추상-클래스의-차이(interface-vs-abstract-class))
+* [JVM 구조](#jvm-구조)
+* [Java Collections Framework](#java-collections-framework)
+  * [java Map 인터페이스 구현체의 종류](#java-map-인터페이스-구현체의-종류)
+  * [java Set 인터페이스 구현체의 종류](#java-set-인터페이스-구현체의-종류)
+  * [java List 인터페이스 구현체의 종류](#java-list-인터페이스-구현체의-종류)
+* [Annotation](#annotation)
+* [String, StringBuilder, StringBuffer](#string,-stringbuilder,-stringbuffer)
+* [동기화와 비동기화의 차이(Syncronous vs Asyncronous)](#동기화와-비동기화의-차이(syncronous-vs-asyncronous))
+* [java에서 '=='와 'Equals()'의 차이](#java에서-'=='와-'equals()'의-차이)
+* [java의 리플렉션(Reflection) 이란](#java의-리플렉션(reflection)-이란)
 
 ---
 
-#### :small_orange_diamond:java 프로그래밍이란
-
+### java 프로그래밍이란
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-#### :small_orange_diamond:Java SE와 Java EE 애플리케이션 차이
-
+### Java SE와 Java EE 애플리케이션 차이
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://www.ibm.com/support/knowledgecenter/ko/SSQP76_8.9.1/com.ibm.odm.dserver.rules.res.managing/topics/con_javase_javaee_applis.html](https://www.ibm.com/support/knowledgecenter/ko/SSQP76_8.9.1/com.ibm.odm.dserver.rules.res.managing/topics/con_javase_javaee_applis.html)
 
-#### :small_orange_diamond:java와 c/c++의 차이점
+### java와 c/c++의 차이점
 - java와 c/c++의 가장 큰 차이점은 실행 환경이다.
 - java에서의 개발: 컴파일 혹은 컴파일 + jar압축
   - 자바는 링크 과정이 없이 컴파일러가 바로 바이트 코드를 생성
 - c/c++에서의 개발: 컴파일 + 링크
 
-> - []()
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
-#### :small_orange_diamond:java 언어의 장단점
+### java 언어의 장단점
 - 장점
   - **운영체제에 독립적이다.**
     - JVM에서 동작하기 때문에, 특정 운영체제에 종속되지 않는다.
@@ -74,13 +74,16 @@
   - **예외처리가 불편하다.**
     - 프로그래머 검사가 필요한 예외가 등장한다면 무조건 프로그래머가 선언을 해줘야 한다.
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://yolojeb.tistory.com/17](http://yolojeb.tistory.com/17)
 > - [http://huhghiza.tistory.com/7](http://huhghiza.tistory.com/7)
 
-#### :small_orange_diamond:java의 접근 제어자의 종류와 특징
+### java의 접근 제어자의 종류와 특징
 <img src="./images/access-controller.png" width="70%" height="70%">
 
-#### :small_orange_diamond:java의 데이터 타입
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+
+### java의 데이터 타입
 1. 기본 데이터 타입(Primitive Data Type)
     * 기본 타입의 종류는 byte, short, char, int, float, double, boolean이 있다.
         * 정수형 : byte, short, int, long
@@ -98,12 +101,15 @@
     * 더 이상 참조하는 변수가 없을 때 가비지 컬렉션에 의해 파괴된다.
     * 참조 타입은 값이 저장된 곳의 주소를 저장하는 공간으로 객체의 주소를 저장한다. (Call-By-Value)
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://robyncloud.tistory.com/entry/](http://robyncloud.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-%EA%BC%AD-%EC%9D%B4%ED%95%B4%ED%95%B4%EC%95%BC-%EB%90%98%EB%8A%94%EA%B0%9C%EB%85%90-1%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B0%9D%EC%B2%B4-%EC%B0%B8%EC%A1%B0%EB%B3%80%EC%88%98)
 > - [https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
-#### :small_orange_diamond:Wrapper class
+### Wrapper class
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:OOP의 4가지 특징
+### OOP의 4가지 특징
 1. 추상화(Abstraction)
     * 구체적인 사물들의 공통적인 특징을 파악해서 이를 하나의 개념(집합)으로 다루는 것
 2. 캡슐화(Encapsulation)
@@ -113,9 +119,10 @@
 4. 다형성(Polymorphism)
     * 서로 다른 클래스의 객체가 같은 메시지를 받았을 때 각자의 방식으로 동작하는 능력
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-features.html](https://gmlwjd9405.github.io/2018/07/05/oop-features.html)
 
-#### :small_orange_diamond:OOP의 5대 원칙 (SOLID)
+### OOP의 5대 원칙 (SOLID)
 * **S**: 단일 책임 원칙(SRP, Single Responsibility Principle)
   * 객체는 단 하나의 책임만 가져야 한다.
 * **O**: 개방-폐쇄 원칙(OCP, Open Closed Principle)
@@ -127,9 +134,10 @@
 * **D**: 인터페이스 분리 원칙(ISP, Interface Segregation Principle)
   * 인터페이스를 클라이언트에 특화되도록 분리시키라는 설계 원칙이다.
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-solid.html](https://gmlwjd9405.github.io/2018/07/05/oop-solid.html)
 
-#### :small_orange_diamond:객체지향 프로그래밍과 절차지향 프로그래밍의 차이
+### 객체지향 프로그래밍과 절차지향 프로그래밍의 차이
 * 절차지향 프로그래밍
   * 실행하고자 하는 절차를 정하고, 이 절차대로 프로그래밍하는 방법
   * 목적을 달성하기 위한 일의 흐름에 중점을 둔다.
@@ -140,10 +148,13 @@
   * 사람의 사고와 가장 비슷하게 프로그래밍을 하기 위해서 생성된 기법
   * 하나의 클래스를 바탕으로 서로 다른 상태를 가진 인스턴스를 만들면 서로 다른 행동을 하게 된다. 즉, 하나의 클래스가 여러 개의 인스턴스가 될 수 있다는 점이 객체 지향이 제공하는 가장 기본적인 재활용성이라고 할 수 있다.
 
-#### :small_orange_diamond:객체지향(Object-Oriented)이란
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
+### 객체지향(Object-Oriented)이란
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:java의 non-static 멤버와 static 멤버의 차이
+### java의 non-static 멤버와 static 멤버의 차이
 * non-static 멤버
   * 공간적 특성: **멤버는 객체마다 별도로 존재한다.**
     * ***인스턴스 멤버*** 라고 부른다.
@@ -164,11 +175,14 @@
     * 멤버는 프로그램이 종료될 때 사라진다.
   * 공유의 특성: **동일한 클래스의 모든 객체들에 의해 공유된다.**
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/04/java-static.html](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
 
-#### :question:java의 main 메서드가 static인 이유
+### :question:java의 main 메서드가 static인 이유
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:java의 final 키워드 (final/finally/finalize)
+### java의 final 키워드 (final/finally/finalize)
 * final 키워드
   * 개념: 변수나 메서드 또는 클래스가 '변경 불가능'하도록 만든다.
   * 원시(Primitive) 변수에 적용 시
@@ -191,9 +205,10 @@
   * Object 클래스의 finalize() 메서드를 오버라이드해서 맞춤별 GC를 정의할 수 있다.
     * `protected void finalize() throws Throwable { // 파일 닫기, 자원 반환 등등 }`
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/06/java-final.html](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
-#### :small_orange_diamond:java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
+### java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
 * java의 제네릭(Generic)
   * 개념: 모든 종류의 타입을 다룰 수 있도록 일반화된 타입 매개 변수(generic type)로 클래스나 메서드를 선언하는 기법
   * <img src="./images/generics.png" width="60%" height="60%">
@@ -255,11 +270,14 @@ int b2 = bar2->val; // 35
       * 왜냐하면 MyClass<Foo>나 MyClass<Bar>가 이 메서드와 변수를 공유하기 때문이다.
       * c++ Template은 이 두 클래스를 다른 클래스로 처리하므로 Template 타입 인자를 정적 메서드나 변수를 선언하는 데 사용할 수 있다.
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [코딩 인터뷰 완전 분석, 프로그래밍인사이트](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966263080&OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&a=A100532541&l=9999&l_cd1=0&u_id=jm0gctc7ca029ofs02yqe&l_cd2=0&tu=https%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf%3FmallGb%3DKOR%26ejkGb%3DKOR%26barcode%3D9788966263080)
 
-#### :small_orange_diamond:java의 가비지 컬렉션(Garbage Collection) 처리 방법
+### java의 가비지 컬렉션(Garbage Collection) 처리 방법
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
+### java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
 * 자바 직렬화(Serialize)란
   * 자바 시스템 내부에서 사용되는 객체 또는 데이터를 외부의 자바 시스템에서도 사용할 수 있도록 바이트(byte) 형태로 데이터 변환하는 기술
   * 시스템적으로 이야기하자면 JVM(Java Virtual Machine 이하 JVM)의 메모리에 상주(힙 또는 스택)되어 있는 객체 데이터를 바이트 형태로 변환하는 기술
@@ -309,11 +327,12 @@ public static void main(String[] args){
 }
 ~~~ -->
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://woowabros.github.io/experience/2017/10/17/java-serialize.html](http://woowabros.github.io/experience/2017/10/17/java-serialize.html)
 > - [http://woowabros.github.io/experience/2017/10/17/java-serialize2.html](http://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
 > - [https://nesoy.github.io/articles/2018-04/Java-Serialize](https://nesoy.github.io/articles/2018-04/Java-Serialize)
 
-#### :small_orange_diamond:클래스, 객체, 인스턴스의 차이
+### 클래스, 객체, 인스턴스의 차이
 * 클래스(Class)
   * 객체를 만들어 내기 위한 **설계도** 혹은 틀
   * 연관되어 있는 변수와 메서드의 집합
@@ -373,14 +392,17 @@ public class Main {
       * 구체적으로 클래스 내의 객체에 대해 특정한 변형을 정의하고, 이름을 붙인 다음, 그것을 물리적인 어떤 장소에 위치시키는 등의 작업을 통해 인스턴스를 만드는 것을 말한다.
       * '예시(Exemplification)'라고도 부른다.
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://www.slipp.net/questions/126](https://www.slipp.net/questions/126)
 > - [https://opentutorials.org/course/1223/5400](https://opentutorials.org/course/1223/5400)
 > - [http://cerulean85.tistory.com/149](http://cerulean85.tistory.com/149)
 > - [https://www.ijemin.com/blog/%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4-difference-between-obect-and-instance/](https://www.ijemin.com/blog/%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4-difference-between-obect-and-instance/)
 
-#### :small_orange_diamond:객체(Object)란 무엇인가
+### 객체(Object)란 무엇인가
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:오버로딩과 오버라이딩의 차이(Overloading vs Overriding)
+### 오버로딩과 오버라이딩의 차이(Overloading vs Overriding)
 <!-- [](#){name=Overloading-vs-Overriding} -->
 * 오버로딩(Overloading)
   * 두 메서드가 같은 이름을 갖고 있으나 인자의 수나 자료형이 다른 경우
@@ -409,10 +431,10 @@ public class Ambiguous extends Shape {
 }
 ~~~
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/09/java-overloading-vs-overriding.html](https://gmlwjd9405.github.io/2018/08/09/java-overloading-vs-overriding.html)
 
-
-#### :small_orange_diamond:Call by Reference와 Call by Value의 차이
+### Call by Reference와 Call by Value의 차이
 * Call by Value (값에 의한 호출)
   * 함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다.
   * 함수 호출시 인자로 전달되는 변수의 값을 복사하여 함수의 인자로 전달한다.
@@ -506,13 +528,14 @@ public class FunctionCallTest2 {
     * 기본자료형의 경우 해당하는 변수의 값을 복사해서 전달한다.
     * 참조자료형의 경우 해당하는 변수가 가지는 값이 레퍼런스이므로 인자로 넘길 때 Call by Value에 의해 변수가 가지고 있는 레퍼런스가 복사되어 전달된다.
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://wayhome25.github.io/cs/2017/04/11/cs-13/](https://wayhome25.github.io/cs/2017/04/11/cs-13/)
 > - [http://wonwoo.ml/index.php/post/1679](http://wonwoo.ml/index.php/post/1679)
 > - [https://brunch.co.kr/@kd4/2](https://brunch.co.kr/@kd4/2)
 > - [http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html](http://mussebio.blogspot.com/2012/05/java-call-by-valuereference.html)
 > - [https://code.i-harness.com/ko-kr/q/c2ab51](https://code.i-harness.com/ko-kr/q/c2ab51)
 
-#### :small_orange_diamond:인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
+### 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
 * 추상 메서드(Abstract Method)
   * abstract 키워드와 함께 원형만 선언되고, 코드는 작성되지 않은 메서드
 ~~~java
@@ -605,15 +628,17 @@ class FeaturePhone implements Phone {
     * Ex) 추상 클래스: Appliances(Abstract Class) - TV, Refrigerator
     * Ex) 인터페이스: Flyable(Interface) - Plane, Bird
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://loustler.io/languages/oop_interface_and_abstract_class/](http://loustler.io/languages/oop_interface_and_abstract_class/)
 > - [http://alecture.blogspot.com/2011/05/abstract-class-interface.html](http://alecture.blogspot.com/2011/05/abstract-class-interface.html)
 
-#### :small_orange_diamond:JVM 구조
+### JVM 구조
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://www.itworld.co.kr/news/110837](http://www.itworld.co.kr/news/110837)
 > - [http://hoonmaro.tistory.com/19](http://hoonmaro.tistory.com/19)
 
-#### :small_orange_diamond:Java Collections Framework
+### Java Collections Framework
 <img src="./images/java-collections-framework.png" width="70%" height="70%">
 
 * Map
@@ -635,7 +660,9 @@ class FeaturePhone implements Phone {
     2-2. List: LinkedList, ArrayList
     2-3. Set: TreeSet, HashSet
 
-#### :small_orange_diamond:java Map 인터페이스 구현체의 종류
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+
+### java Map 인터페이스 구현체의 종류
 * HashMap
     * Entry<K,V>의 배열로 저장되며, 배열의 index는 내부 해쉬 함수를 통해 계산된다.
     * 내부 hash값에 따라서 키순서가 정해지므로 특정 규칙없이 출력된다.
@@ -661,7 +688,9 @@ class FeaturePhone implements Phone {
     * 모든 메서드에 대해 동기 처리
     * key와 value에 null값을 허용하지 않는다.
 
-#### :small_orange_diamond:java Set 인터페이스 구현체의 종류
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+
+### java Set 인터페이스 구현체의 종류
 * HashSet
   * 저장 순서를 유지하지 않는 데이터의 집합이다.
   * 해시 알고리즘(hash algorithm)을 사용하여 검색 속도가 매우 빠르다.
@@ -673,7 +702,9 @@ class FeaturePhone implements Phone {
     * 이진 탐색 트리 중에 성능을 향상시킨 레드-블랙 트리(Red-Black tree)로 구현되어 있다.
     * Compartor 구현으로 정렬 방법을 지정할 수 있다.
 
-#### :small_orange_diamond:java List 인터페이스 구현체의 종류
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+
+### java List 인터페이스 구현체의 종류
 * ArrayList
   * 단방향 포인터 구조로 각 데이터에 대한 인덱스를 가지고 있어 데이터 검색에 적합하다.
   * 데이터의 삽입, 삭제 시 해당 데이터 이후 모든 데이터가 복사되므로 삽입, 삭제가 빈번한 데이터에는 부적합하다.
@@ -685,9 +716,12 @@ class FeaturePhone implements Phone {
     * 내부에서 자동으로 동기화 처리가 일어난다.
     * 성능이 좋지 않고 무거워 잘 쓰이지 않는다.
 
-#### :small_orange_diamond:Annotation
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
-#### :small_orange_diamond:String, StringBuilder, StringBuffer
+### Annotation
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+
+### String, StringBuilder, StringBuffer
 * String
     * 새로운 값을 할당할 때마다 새로 클래스에 대한 객체가 생성된다.
     * String에서 저장되는 문자열은 private final char[]의 형태이기 때문에 String 값은 바꿀수 없다.
@@ -706,11 +740,17 @@ class FeaturePhone implements Phone {
         * 동기 처리
         * multiple thread 환경에서 안전한 클래스(thread safe)
 
-#### :small_orange_diamond:동기화와 비동기화의 차이(Syncronous vs Asyncronous)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 
-#### :small_orange_diamond:java에서 '=='와 'Equals()'의 차이
+### 동기화와 비동기화의 차이(Syncronous vs Asyncronous)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:java의 리플렉션(Reflection) 이란
+### java에서 '=='와 'Equals()'의 차이
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
+
+### java의 리플렉션(Reflection) 이란
 * 리플렉션(Reflection) 이란?
   * 자바에서 이미 로딩이 완료된 클래스에서 또 다른 클래스를 동적으로 로딩(Dynamic Loading)하여 생성자(Constructor), 멤버 필드(Member Variables) 그리고 멤버 메서드(Member Method) 등을 사용할 수 있는 기법이다.
   * 클래스의 패키지 정보, 접근 지정자, 수퍼 클래스, 어노테이션(Annotation) 등을 얻을 수 있다.
@@ -796,11 +836,12 @@ class FeaturePhone implements Phone {
 * 주의할 점
   * 외부에 공개되지 않는 private 멤버도 `Field.setAccessible()` 메서드를 true로 지정하면 접근과 조작이 가능하기 때문에 주의해야 한다.
 
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://madplay.github.io/post/java-reflection](https://madplay.github.io/post/java-reflection)
+
 ---
 
 ## Reference
 > - []()
-
 
 ## :house: [Home](https://github.com/Do-Hee/tech-interview)

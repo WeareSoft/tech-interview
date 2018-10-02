@@ -1,34 +1,35 @@
 # 8. Spring
 **:book: Contents**
-* [스프링 프레임워크란](#:small_orange_diamond:스프링-프레임워크란)
-* [Spring, Spring MVC, Spring Boot의 차이](#:small_orange_diamond:Spring,-Spring-MVC,-Spring-Boot의-차이)
-* [IOC(Inversion of Control, 제어의 역전)란](#:small_orange_diamond:IOC(Inversion-of-Control,-제어의-역전)란)
-* [MVC 패턴이란](#:small_orange_diamond:MVC-패턴이란)
-* [DI(Dependency Injection, 의존성 주입)란](#:small_orange_diamond:DI(Dependency-Injection,-의존성-주입)란)
-* [AOP(Aspect Oriented Programming)란](#:small_orange_diamond:AOP(Aspect-Oriented-Programming)란)
-* [POJO](#:small_orange_diamond:POJO)
-* [DAO, DTO의 차이](#:small_orange_diamond:DAO,-DTO의-차이)
-* [Spring JDBC를 이용한 데이터 접근](#:small_orange_diamond:Spring-JDBC를-이용한-데이터-접근)
+* [스프링 프레임워크란](#스프링-프레임워크란)
+* [Spring, Spring MVC, Spring Boot의 차이](#spring,-spring-mvc,-spring-boot의-차이)
+* [IOC(Inversion of Control, 제어의 역전)란](#IOC(inversion-of-control,-제어의-역전)란)
+* [MVC 패턴이란](#mvc-패턴이란)
+* [DI(Dependency Injection, 의존성 주입)란](#di(dependency-injection,-의존성-주입)란)
+* [AOP(Aspect Oriented Programming)란](#aop(aspect-oriented-programming)란)
+* [POJO](#pojo)
+* [DAO, DTO의 차이](#dao,-dto의-차이)
+* [Spring JDBC를 이용한 데이터 접근](#spring-jdbc를-이용한-데이터-접근)
 
 ---
 
-#### :small_orange_diamond:스프링 프레임워크란
-
+### 스프링 프레임워크란
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-#### :small_orange_diamond:Spring, Spring MVC, Spring Boot의 차이
-
+### Spring, Spring MVC, Spring Boot의 차이
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search](http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search)
 
-#### :small_orange_diamond:Conatainer
+### Conatainer
 - 컨테이너는 보통 인스턴스의 생명주기를 관리하며, 생성된 인스턴스들에게 추가적인 기능을 제공하도록하는 것이라 할 수 있다. 다시말해, 컨테이너란 당신이 작성한 코드의 처리과정을 위임받은 독립적인 존재라고 생각하면 된다. 컨테이너는 적절한 설정만 되어있다면 누구의 도움없이도 프로그래머가 작성한 코드를 스스로 참조한 뒤 알아서 객체의 생성과 소멸을 컨트롤해준다.
 
 - Spring 프레임워크는 다른 프레임워크들과 달리 컨테이너 기능을 제공하고 있다. 이와 같은 컨테이너 기능을 제공하는 것이 가능하도록 하는 것이 IoC 패턴이다.
 
-> http://limmmee.tistory.com/13  
-> http://wiki.javajigi.net/pages/viewpage.action?pageId=281
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - [http://limmmee.tistory.com/13](http://limmmee.tistory.com/13)
+> - [http://wiki.javajigi.net/pages/viewpage.action?pageId=281](http://wiki.javajigi.net/pages/viewpage.action?pageId=281)  
 
-#### :small_orange_diamond:IoC(Inversion of Control, 제어의 역전)란
+### IoC(Inversion of Control, 제어의 역전)란
 - IoC란
     - 객체의 생성에서부터 생명주기의 관리까지 모든 객체에 대한 제어권이 바뀐 것을 의미, 또는 제어 권한을 자신이 아닌 다른 대상에게 위임하는 것이다.
     - 이 방식은 대부분의 프레임워크에서 사용하는 방법으로, 개발자는 필요한 부분을 개발해서 끼워 넣기의 형태로 개발하고 실행하게 된다. 프레임워크가 이러한 구조를 가지기 때문에 개발자는 프레임워크에 필요한 부품을 개발하고 조립하는 방식의 개발을 하게 된다.
@@ -40,11 +41,12 @@
     - 라이브러리를 사용하는 애플리케이션 코드는 애플리케이션 흐름을 직접 제어한다. 단지 동작히는 중에 필요한 기능이 있을 때 능동적으로 라이브러리를 시용할 뿐이다.
     - 반면에 프레임워크는 거꾸로 애플리케이션 코드가 프레임워크에 의해 사용된다. 보통 프레임워크 위에 개발한 클래스를 등록해두고, 프레임워크가 흐름을 주도히는 중에 개발자가 만든 애플리케이션 코드를 시용하도록 만드는 방식이다.
 
-> http://wiki.javajigi.net/pages/viewpage.action?pageId=3664  
-> http://limmmee.tistory.com/13  
-> http://wiki.javajigi.net/pages/viewpage.action?pageId=281
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - [http://wiki.javajigi.net/pages/viewpage.action?pageId=3664](http://wiki.javajigi.net/pages/viewpage.action?pageId=3664)
+> - [http://limmmee.tistory.com/13](http://limmmee.tistory.com/13)
+> - [http://wiki.javajigi.net/pages/viewpage.action?pageId=281](http://wiki.javajigi.net/pages/viewpage.action?pageId=281)
 
-#### :small_orange_diamond:DI(Dependency Injection, 의존성 주입)란
+### DI(Dependency Injection, 의존성 주입)란
 - DI?
     - Dependency Injection은 Spring 프레임워크에서 지원하는 IoC의 형태이다. 
     - DI는 클래스 사이의 의존관계를 빈 설정 정보를 바탕으로 컨테이너가 자동적으로 연결해주는 것을 말한다. 개발자들은 제어를 담당할 필요없이 빈 설정 파일에 의존관계가 필요하다는 정보만 추가해주면 된다.
@@ -66,15 +68,20 @@
     - Method(Setter) Injection : 메소드 매게 변수 삽입
     - Field Injection : 멤버 변수 삽입
 
-> http://www.nextree.co.kr/p11247/  
-> http://wiki.javajigi.net/pages/viewpage.action?pageId=281  
-> http://tony-programming.tistory.com/entry/Dependency-의존성-이란 
-#### :small_orange_diamond:MVC 패턴이란
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - [http://www.nextree.co.kr/p11247/](http://www.nextree.co.kr/p11247/)
+> - [http://wiki.javajigi.net/pages/viewpage.action?pageId=281](http://wiki.javajigi.net/pages/viewpage.action?pageId=281)
+> - [http://tony-programming.tistory.com/entry/Dependency-의존성-이란](http://tony-programming.tistory.com/entry/Dependency-의존성-이란) 
 
-#### :small_orange_diamond:AOP(Aspect Oriented Programming)란
+### MVC 패턴이란
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
+### AOP(Aspect Oriented Programming)란
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:POJO
+### POJO
 번역하면 '평범한 구식 자바 객체'. 즉 프레임워크 인터페이스나 클래스를 구현하거나 확장하지 않는 단순한 클래스.
 - EJB와 엔터프라이즈 서비스
     - EJB(Enterprise JavaBean)
@@ -91,13 +98,16 @@
     - 자동화 테스트에 유리 (환경 종속적인 코드는 자동화 테스트가 어렵지만, POJO는 테스트가 매우 유연)
     - 객체지향 설계의 자유로운 사용
 
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > http://limmmee.tistory.com/8?category=654011
 
-#### :small_orange_diamond:DAO, DTO의 차이
+### DAO, DTO의 차이
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-
-#### :small_orange_diamond:Spring JDBC를 이용한 데이터 접근
-
+### Spring JDBC를 이용한 데이터 접근
+> :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
 ---
 

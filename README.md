@@ -53,7 +53,7 @@
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
 * 프로세스와 스레드의 차이(Process vs Thread)
-* 멀티 프로세스 대신 멀티 스레드를 사용하는 이유?
+* 멀티 프로세스 대신 멀티 스레드를 사용하는 이유
 * Thread-safe
 * 동기화 객체의 종류
 * 뮤텍스와 세마포어의 차이

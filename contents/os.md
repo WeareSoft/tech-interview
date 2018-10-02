@@ -1,25 +1,25 @@
 # 3. Operating System
 **:book: Contents**
-* [프로세스와 스레드의 차이(Process vs Thread)](#:small_orange_diamond:프로세스와-스레드의-차이(Process-vs-Thread))
-* [멀티 프로세스 대신 멀티 스레드를 사용하는 이유?](#:small_orange_diamond:멀티-프로세스-대신-멀티-스레드를-사용하는-이유?)
-* [Thread-safe](#:small_orange_diamond:Thread-safe)
-* [동기화 객체의 종류](#:small_orange_diamond:동기화-객체의-종류)
-* [뮤텍스와 세마포어의 차이](#:small_orange_diamond:뮤텍스와-세마포어의-차이)
-* [스케줄러](#:small_orange_diamond:스케줄러)
-* [동기, 비동기](#:small_orange_diamond:동기,-비동기)
-* [프로세스 동기화](#:small_orange_diamond:프로세스-동기화)
-* [메모리 관리 전략](#:small_orange_diamond:메모리-관리-전략)
-* [가상 메모리](#:small_orange_diamond:가상-메모리)
-* [캐시의 지역성](#:small_orange_diamond:캐시의-지역성)
-* [교착상태(데드락)의 개념과 조건](#:small_orange_diamond:교착상태(데드락)의-개념과-조건)
-* [사용자 수준 스레드, 커널 수준 스레드](#:small_orange_diamond:사용자-수준-스레드,-커널-수준-스레드)
-* [외부 단편화와 내부 단편화](#:small_orange_diamond:외부-단편화와-내부-단편화)
-* [Context Switching](#:small_orange_diamond:Context-Switching)
-* [Swapping](#:small_orange_diamond:Swapping)
+* [프로세스와 스레드의 차이(Process vs Thread)](#프로세스와-스레드의-차이(process-vs-thread))
+* [멀티 프로세스 대신 멀티 스레드를 사용하는 이유](#멀티-프로세스-대신-멀티-스레드를-사용하는-이유)
+* [Thread-safe](#thread-safe)
+* [동기화 객체의 종류](#동기화-객체의-종류)
+* [뮤텍스와 세마포어의 차이](#뮤텍스와-세마포어의-차이)
+* [스케줄러](#스케줄러)
+* [동기, 비동기](#동기,-비동기)
+* [프로세스 동기화](#프로세스-동기화)
+* [메모리 관리 전략](#메모리-관리-전략)
+* [가상 메모리](#가상-메모리)
+* [캐시의 지역성](#캐시의-지역성)
+* [교착상태(데드락)의 개념과 조건](#교착상태(데드락)의-개념과-조건)
+* [사용자 수준 스레드, 커널 수준 스레드](#사용자-수준-스레드,-커널-수준-스레드)
+* [외부 단편화와 내부 단편화](#외부-단편화와-내부-단편화)
+* [Context Switching](#context-switching)
+* [Swapping](#swapping)
 
 ---
 
-#### :small_orange_diamond:프로세스와 스레드의 차이(Process vs Thread)
+### 프로세스와 스레드의 차이(Process vs Thread)
 * 프로그램(Program) 이란
   * 사전적 의미: 어떤 작업을 위해 실행할 수 있는 파일
 * 프로세스(Process) 란
@@ -59,6 +59,7 @@
     * 스레드 우선순위는 얼마인지
   * 즉, 개발자는 자바 스레드로 작동할 스레드 코드를 작성하고, 스레드 코드가 생명을 가지고 실행을 시작하도록 JVM에 요청하는 일 뿐이다.
 
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html](https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)
 > - [https://brunch.co.kr/@kd4/3](https://brunch.co.kr/@kd4/3)
 > - [https://magi82.github.io/process-thread/](https://magi82.github.io/process-thread/)
@@ -66,7 +67,7 @@
 > - [http://includestdio.tistory.com/6](http://includestdio.tistory.com/6)
 > - [https://lalwr.blogspot.com/2016/02/process-thread.html](https://lalwr.blogspot.com/2016/02/process-thread.html)
 
-#### :small_orange_diamond:멀티 프로세스 대신 멀티 스레드를 사용하는 이유?
+### 멀티 프로세스 대신 멀티 스레드를 사용하는 이유
 * 쉽게 설명하면, 프로그램을 여러 개 키는 것보다 하나의 프로그램 안에서 여러 작업을 해결하는 것이다.
   * <img src="./images/multi-thread.png" width="50%" height="50%">
 
@@ -84,13 +85,18 @@
   * **동기화 문제**
   * 스레드 간의 자원 공유는 전역 변수(데이터 세그먼트)를 이용하므로 함께 상용할 때 충돌이 발생할 수 있다.
 
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://you9010.tistory.com/136](http://you9010.tistory.com/136)
 
-#### :small_orange_diamond:Thread-safe
+### Thread-safe
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:동기화 객체의 종류
+### 동기화 객체의 종류
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:뮤텍스와 세마포어의 차이
+### 뮤텍스와 세마포어의 차이
 <!-- * 뮤텍스
   * 상호배제라고도 하며, Critical Section을 가진 스레드의 Running time이 서로 겹치지 않도록 각각 단독으로 실행하게 하는 기술
   * synchronized 또는 lock을 통해 해결
@@ -98,22 +104,38 @@
   * 리소스 상태를 나타내는 간단한 카운터
   * 공유 리소스에 접근할 수 있는 프로세스의 최대 허용치만큼 동시에 사용자가 접근하여 사용할 수 있음. -->
 
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:스케줄러
+### 스케줄러
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:동기, 비동기
+### 동기, 비동기
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:멀티스레드
+### 멀티스레드
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:프로세스 동기화
+### 프로세스 동기화
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:메모리 관리 전략
+### 메모리 관리 전략
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:가상 메모리
+### 가상 메모리
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:캐시의 지역성
+### 캐시의 지역성
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:교착상태(데드락)의 개념과 조건
+### 교착상태(데드락)의 개념과 조건
 * 교착상태(데드락) 란
   * 첫 번째 스레드는 두 번째 스레드가 들고 있는 객체의 락이 풀리기를 기다리고 있고, 두 번째 스레드 역시 첫 번째 스레드가 들고 있는 객체의 락이 풀리기를 기다리는 상황을 일컷는다.
   * 모든 스레드가 락이 풀리기를 기다리고 있기 때문에, 무한 대기 상태에 빠지게 된다. 이런 스레드를 교착상태에 빠졌다고 한다.
@@ -132,15 +154,24 @@
   * 공유 자원 중 많은 경우가 한 번에 한 프로세스만 사용할 수 있기 때문에(예를 들어, 프린트) 1번 조건은 제거하기 어렵다.
   * 대부분의 교착상태 방지 알고리즘은 4번 조건, 즉 대기 상태의 사이클이 발생하는 일을 막는 데 초점이 맞춰져 있다.
 
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [코딩 인터뷰 완전 분석, 프로그래밍인사이트](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966263080&OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&a=A100532541&l=9999&l_cd1=0&u_id=jm0gctc7ca029ofs02yqe&l_cd2=0&tu=https%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf%3FmallGb%3DKOR%26ejkGb%3DKOR%26barcode%3D9788966263080)
 
-#### :small_orange_diamond:사용자 수준 스레드, 커널 수준 스레드
+### 사용자 수준 스레드, 커널 수준 스레드
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:외부 단편화와 내부 단편화
+### 외부 단편화와 내부 단편화
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:Context Switching
+### Context Switching
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
-#### :small_orange_diamond:Swapping
+### Swapping
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - []()
 
 ---
 
