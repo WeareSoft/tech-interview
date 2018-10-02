@@ -1,20 +1,20 @@
 # 4. Database
 **:book: Contents**
 * [데이터베이스 풀](#데이터베이스-풀)
-* [정규화(1차 2차 3차 BCNF)](#정규화-1차-2차-3차-BCNF)
+* [정규화(1차 2차 3차 BCNF)](#정규화-1차-2차-3차-bcnf)
 * [트랜잭션(Transaction) 이란](#트랜잭션이란)
 * [트랜잭션 격리 수준(Transaction Isolation Level)](#트랜잭션-격리-수준)
 * [Join](#join)
 * [SQL injection](#sql-injection)
 * [Index란](#index란)
 * [Statement와 PrepareStatement](#statement와-preparestatement)
-* [RDBMS와 NoSQL](#rdbms와-noSQL)
+* [RDBMS와 NoSQL](#rdbms와-nosql)
 * [효과적인 쿼리 저장](#효과적인-쿼리-저장)
 * [옵티마이저(Optimizer)란](#옵티마이저란)
 * [Replication](#replication)
 * [파티셔닝(Partitioning)](#파티셔닝)
 * [샤딩(Sharding)](#샤딩)
-* [객체 관계 매핑(Object-relational mapping, ORM)이란](#ORM이란)
+* [객체 관계 매핑(Object-relational mapping, ORM)이란](#orm이란)
 * [java JDBC](#java-jdbc)
 
 ---
@@ -75,7 +75,7 @@
 > - [http://yimoyimo.tk/transaction_DI/](http://yimoyimo.tk/transaction_DI/)
 > - [https://d2.naver.com/helloworld/407507](https://d2.naver.com/helloworld/407507)
 
-### 트랜잭션-격리-수준
+### 트랜잭션 격리 수준
 * Isolation Level 이란?
     * 트랜잭션에서 일관성이 없는 데이터를 허용하도록 하는 수준
 * Isolation Level 의 필요성
@@ -130,7 +130,7 @@
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### Index
+### Index란
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 

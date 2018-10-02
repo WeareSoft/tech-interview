@@ -8,7 +8,7 @@
 * [DI(Dependency Injection, 의존성 주입)란](#di란)
 * [AOP(Aspect Oriented Programming)란](#aop란)
 * [POJO](#pojo)
-* [DAO와 DTO의 차이](#dao-dto의-차이)
+* [DAO와 DTO의 차이](#dao와-dto의-차이)
 * [Spring JDBC를 이용한 데이터 접근](#spring-jdbc를-이용한-데이터-접근)
 
 ---
