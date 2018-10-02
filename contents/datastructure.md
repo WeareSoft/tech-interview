@@ -16,13 +16,15 @@
 
 ### Array
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
-<div style="text-align: right"> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview) </div>
 
 ### LinkedList
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
-:arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home] {: .text-right }(https://github.com/Do-Hee/tech-interview#tech-interview)
+
+:arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview) {: .text-right }
 
 
 ### HashTable
