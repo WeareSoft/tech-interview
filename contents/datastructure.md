@@ -16,15 +16,18 @@
 
 #### :small_orange_diamond:Array
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 #### :small_orange_diamond:LinkedList
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 
 #### :small_orange_diamond:HashTable
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 #### :small_orange_diamond:Stack
@@ -50,6 +53,7 @@
       * Ex) 올바른 괄호 문자열(VPS, Valid Parenthesis String) 판단하기
     * 후위 표기법 계산
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/03/data-structure-stack.html](https://gmlwjd9405.github.io/2018/08/03/data-structure-stack.html)
 
 #### :small_orange_diamond:Queue
@@ -75,6 +79,7 @@
     * 윈도우 시스템의 메시지 처리기
     * 프로세스 관리
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html](https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html)
 
 #### :small_orange_diamond:Graph
@@ -95,6 +100,7 @@
   * 그래프는 크게 방향 그래프와 무방향 그래프가 있다.
   * 간선의 유무는 그래프에 따라 다르다.
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html](https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html)
 
 #### :small_orange_diamond:Tree
@@ -133,22 +139,27 @@ class Node {
   * 순회는 Pre-order, In-order 아니면 Post-order로 이루어진다. 이 3가지 모두 DFS/BFS 안에 있다.
   * 트리는 이진 트리, 이진 탐색 트리, 균형 트리(AVL 트리, red-black 트리), 이진 힙(최대힙, 최소힙) 등이 있다.
 
-> - :arrow_double_up:[Top](#1-data-structure)  :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure) :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html](https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html)
 
 #### :small_orange_diamond:그래프(Graph)와 트리(Tree)의 차이점
 <img src="./images/graph-vs-tree.png" width="70%" height="70%">
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+
 #### :small_orange_diamond:Binary Heap
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html](https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html)
 
 #### :small_orange_diamond:Red-Black Tree
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 #### :small_orange_diamond:B+ Tree
 
+> :arrow_double_up:[Top](#1-data-structure)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#1-data-structure)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 ---
