@@ -10,7 +10,7 @@
   * [Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?](#:question:TCP-관련-질문-3)
 * [HTTP, HTTPS](#:small_orange_diamond:HTTP,-HTTPS)
 * [GET 메서드와 POST 메서드](#:small_orange_diamond:GET-메서드와-POST-메서드)
-* [쿠키(Cokkie)와 세션(Session)](#:small_orange_diamond:쿠키(Cokkie)와-세션(Session))
+* [쿠키(Cookie)와 세션(Session)](#:small_orange_diamond:쿠키(Cookie)와-세션(Session))
 * [DNS](#:small_orange_diamond:DNS)
 * [REST와 RESTful의 개념](#:small_orange_diamond:REST와-RESTful의-개념)
 * [소켓(Socket)이란](#:small_orange_diamond:소켓(Socket)이란)
@@ -205,7 +205,7 @@
 > - [https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/](https://hongsii.github.io/2017/08/02/what-is-the-difference-get-and-post/)
 > - [https://www.w3schools.com/tags/ref_httpmethods.asp](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
-#### :small_orange_diamond:쿠키(Cokkie)와 세션(Session)
+#### :small_orange_diamond:쿠키(Cookie)와 세션(Session)
 * HTTP 프로토콜의 특징
   * 비연결 지향(Connectionless)
       * 클라이언트가 request를 서버에 보내고, 서버가 클라이언트에 요청에 맞는 response를 보내면 바로 연결을 끊는다.
