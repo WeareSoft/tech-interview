@@ -180,6 +180,7 @@
 * 프레임워크와 라이브러리의 차이
 * 64bit CPU와 32bit CPU 차이
 * CVS, SVN, Git
+* Git Branch 종류(5가지)
 * 웹 서버(Web Server)와 웹 어플리케이션 서버(WAS)의 차이
 * 애자일 방법론이란
 * Servlet과 JSP
