@@ -30,7 +30,7 @@
 * [Annotation](#annotation)
 * [String, StringBuilder, StringBuffer](#string-stringbuilder-stringbuffer)
 * [동기화와 비동기화의 차이(Syncronous vs Asyncronous)](#동기화와-비동기화의-차이)
-* [java에서 '=='와 'equals()'의 차이](#java에서-==와-equals()의-차이)
+* [java에서 '=='와 'equals()'의 차이](#java에서-==와-equals의-차이)
 * [java의 리플렉션(Reflection) 이란](#java의-리플렉션-이란)
 
 ---
@@ -756,7 +756,7 @@ class FeaturePhone implements Phone {
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### java에서 ==와 equals()의 차이
+### java에서 ==와 equals의 차이
 * "=="
   * 항등 **연산자(Operator)** 이다.
     * <-->  !=
@@ -777,6 +777,7 @@ class FeaturePhone implements Phone {
     * 같은 내용이면 return true, 다른 내용이면 return false
 * "==" VS "equals()" 예시
 <img src="./images/equals-example.png" width="90%" height="90%">
+
 ~~~java
 public class Test { 
     public static void main(String[] args) { 
