@@ -756,12 +756,47 @@ class FeaturePhone implements Phone {
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### java에서 ==와 Equals()의 차이
-* java의 '=='
-* java의 'Equals()'
+### java에서 ==와 equals()의 차이
+* "=="
+  * 항등 **연산자(Operator)** 이다.
+    * <-->  !=
+  * **참조 비교(Reference Comparison)** ; (주소 비교, Address Comparison)
+    * 두 객체가 같은 메모리 공간을 가리키는지 확인한다.
+  * 반환 형태: boolean type
+    * 같은 주소면 return true, 다른 주소면 return false
+  * 모든 기본 유형(Primitive Types)에 대해 적용할 수 있다.
+    * byte, short, char, int, float, double, boolean
+* "equals()"
+  * 객체 비교 **메서드(Method)** 이다.
+  * <-->  !(s1.equals(s2));
+  * **내용 비교(Content Comparison)**
+    * 두 객체의 값이 같은지 확인한다.
+    * 즉, 문자열의 데이터/내용을 기반으로 비교한다.
+  * 기본 유형(Primitive Types)에 대해서는 적용할 수 없다.
+  * 반환 형태: boolean type
+    * 같은 내용이면 return true, 다른 내용이면 return false
+* <img src="./images/equals-example.png" width="90%" height="90%">
+~~~java
+public class Test { 
+    public static void main(String[] args) { 
+        // Thread 객체 
+        Thread t1 = new Thread(); 
+        Thread t2 = new Thread(); // 새로운 객체 생성. 즉, s1과 다른 객체. 
+        Thread t3 = t1; // 같은 대상을 가리킨다.
+        // String 객체 
+        String s1 = new String("WORLD"); 
+        String s2 = new String("WORLD"); 
+        /* --print-- */
+        System.out.println(t1 == t3); // true
+        System.out.println(t1 == t2); // false(서로 다른 객체이므로 별도의 주소를 갖는다.)
+        System.out.println(t1.equals(t2)); // false
+        System.out.println(s1.equals(s2)); // true(모두 "WORLD"라는 동일한 내용을 갖는다.)
+    } 
+} 
+~~~
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+> - [https://gmlwjd9405.github.io/2018/10/06/java-==-and-equals.html](https://gmlwjd9405.github.io/2018/10/06/java-==-and-equals.html)
 
 ### java의 리플렉션 이란
 * 리플렉션(Reflection) 이란?

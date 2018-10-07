@@ -152,7 +152,7 @@
 * Annotation
 * String, StringBuilder, StringBuffer
 * 동기화와 비동기화의 차이(Syncronous vs Asyncronous)
-* java에서 '=='와 'Equals()'의 차이
+* java에서 '=='와 'equals()'의 차이
 * java의 리플렉션(Reflection) 이란
 
 
