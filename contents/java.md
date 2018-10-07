@@ -30,7 +30,7 @@
 * [Annotation](#annotation)
 * [String, StringBuilder, StringBuffer](#string-stringbuilder-stringbuffer)
 * [동기화와 비동기화의 차이(Syncronous vs Asyncronous)](#동기화와-비동기화의-차이)
-* [java에서 '=='와 'Equals()'의 차이](#java에서-==와-equals()의-차이)
+* [java에서 '=='와 'equals()'의 차이](#java에서-==와-equals()의-차이)
 * [java의 리플렉션(Reflection) 이란](#java의-리플렉션-이란)
 
 ---
@@ -775,7 +775,8 @@ class FeaturePhone implements Phone {
   * 기본 유형(Primitive Types)에 대해서는 적용할 수 없다.
   * 반환 형태: boolean type
     * 같은 내용이면 return true, 다른 내용이면 return false
-* <img src="./images/equals-example.png" width="90%" height="90%">
+* "==" VS "equals()" 예시
+<img src="./images/equals-example.png" width="90%" height="90%">
 ~~~java
 public class Test { 
     public static void main(String[] args) { 
