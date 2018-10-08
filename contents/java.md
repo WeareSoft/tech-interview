@@ -449,7 +449,7 @@ public class Ambiguous extends Shape {
   * 따라서 함수 안에서 인자의 값이 변경되어도, 외부의 변수의 값은 변경되지 않는다.
 * Call by Reference (참조에 의한 호출)
   * 함수가 호출될 때, 메모리 공간 안에서는 함수를 위한 별도의 임시 공간이 생성된다.
-  * 함수 호출시 인자로 전달되는 변수의 레퍼런스를 전달한다. (해당 변수를 가르킨다.)
+  * 함수 호출시 인자로 전달되는 변수의 레퍼런스를 전달한다. (해당 변수를 가리킨다.)
   * 따라서 함수 안에서 인자의 값이 변경되면, 인자로 전달된 변수의 값도 함께 변경된다.
 * Java는 Call by Value 일까? Call by Reference 일까?
 ~~~java
@@ -473,7 +473,7 @@ public class FunctionCallTest {
     p = new Person("hee");
   }
   public static void changeName(Person p) {
-    p.setNaem("hee");
+    p.setName("hee");
   }
 
   public static void main(String[] args) {
@@ -756,7 +756,7 @@ class FeaturePhone implements Phone {
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
-### java에서 ==와 equals의 차이
+### java에서 ==와 equals()의 차이
 * "=="
   * 항등 **연산자(Operator)** 이다.
     * <-->  !=
