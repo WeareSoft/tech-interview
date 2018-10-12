@@ -130,10 +130,10 @@
   * 기존의 코드를 변경하지 않으면서 기능을 추가할 수 있도록 설계가 되어야 한다.
 * **L**: 리스코프 치환 원칙(LSP, Liskov Substitution Principle)
   * 일반화 관계에 대한 이야기며, 자식 클래스는 최소한 자신의 부모 클래스에서 가능한 행위는 수행할 수 있어야 한다.
-* **I**: 의존 역전 원칙(DIP, Dependency Inversion Principle)
-  * 의존 관계를 맺을 때 변화하기 쉬운 것 또는 자주 변화하는 것보다는 변화하기 어려운 것, 거의 변화가 없는 것에 의존하라는 것이다.
-* **D**: 인터페이스 분리 원칙(ISP, Interface Segregation Principle)
+* **I**: 인터페이스 분리 원칙(ISP, Interface Segregation Principle)
   * 인터페이스를 클라이언트에 특화되도록 분리시키라는 설계 원칙이다.
+* **D**: 의존 역전 원칙(DIP, Dependency Inversion Principle)
+  * 의존 관계를 맺을 때 변화하기 쉬운 것 또는 자주 변화하는 것보다는 변화하기 어려운 것, 거의 변화가 없는 것에 의존하라는 것이다.
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-solid.html](https://gmlwjd9405.github.io/2018/07/05/oop-solid.html)
