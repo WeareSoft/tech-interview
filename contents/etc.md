@@ -47,8 +47,14 @@
 > - []()
 
 ### 프레임워크와 라이브러리의 차이
+* 프레임워크(Framework)란
+    * 소프트웨어의 구체적인 부분에 해당하는 설계와 구현을 재사용이 가능하게끔 일련의 협업화된 형태로 클래스들을 제공하는 것
+    * Ex) 자동차의 프레임, 즉 기본적으로 구성하고 있는 뼈대
+* 라이브러리(Library)란 
+    * 자주 사용되는 로직을 재사용하기 편리하도록 잘 정리한 일련의 코드들의 집합
+    * Ex) 자동차의 기능을 하는 부품
 > :arrow_double_up:[Top](#9-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#9-etc)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+> - [http://moolgogiheart.tistory.com/87](http://moolgogiheart.tistory.com/87)
 
 ### 64bit CPU와 32bit CPU 차이
 > :arrow_double_up:[Top](#9-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#9-etc)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
