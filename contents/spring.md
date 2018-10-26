@@ -14,8 +14,17 @@
 ---
 
 ### 스프링 프레임워크란
+* 자바 엔터프라이즈 개발을 편하게 해주는 경량급 오픈소스 애플리케이션 프레임워크
+* **Lightweight Java Applicaion Framework**
+    * 목표: **POJO 기반의** Enterprise Application 개발을 쉽고 편하게 할 수 있도록 한다.
+    * Java Application을 개발하는데 필요한 하부구조(Infrastructure)를 포괄적으로 제공한다.
+    * Spring이 하부구조를 처리하기 때문에 개발자는 Application 개발에 집중할 수 있다.
+* 간단히 *스프링(Spring)*이라고도 불린다. 
+* 동적인 웹 사이트를 개발하기 위한 여러 가지 서비스를 제공한다.
+* 대한민국 공공기관의 웹 서비스 개발 시 사용을 권장하고 있는 전자 정부 표준 프레임워크의 기반 기술
+
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+> - [https://gmlwjd9405.github.io/2018/10/26/spring-framework.html](https://gmlwjd9405.github.io/2018/10/26/spring-framework.html)
 
 ### Spring Spring MVC Spring Boot의 차이
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
