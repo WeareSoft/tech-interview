@@ -115,8 +115,18 @@
 > - [http://limmmee.tistory.com/8?category=654011](http://limmmee.tistory.com/8?category=654011)
 
 ### DAO와 DTO의 차이
+- **DAO(Data Access Object)**
+    - DB의 데이터를 조회하거나 조작하는 기능을 전담하도록 만든 객체를 말한다.
+    - DB에 접근을 하기위한 로직과 비즈니스 로직을 분리하기 위해서 사용 한다.
+- **DTO(Data Transfer Object)**
+    - 계층간 데이터 교환을 위한 자바빈즈를 말한다.
+        - 여기서 말하는 계층은 Controller, View, Business Layer, Persistent Layer 이다.
+    - 일반적인 DTO는 로직을 갖고 있지 않는 순수한 데이터 객체이며, 속성과 그 속성에 접근하기 위한 getter, setter 메소드만 가진 클래스이다.
+    - VO(Value Object) 라고도 불린다.
+        - DTO와 동일한 개념이지만 read only 속성을 가진다.
+
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+> - [https://jungwoon.github.io/common%20sense/2017/11/16/DAO-VO-DTO/](https://jungwoon.github.io/common%20sense/2017/11/16/DAO-VO-DTO/)
 
 ### Spring JDBC를 이용한 데이터 접근
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
