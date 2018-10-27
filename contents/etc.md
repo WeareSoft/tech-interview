@@ -89,8 +89,41 @@
 
 
 ### Web Server와 WAS의 차이
+* Web Server
+    * Web Server의 개념
+        * 소프트웨어와 하드웨어로 구분된다.
+        * 1) 하드웨어
+            * Web 서버가 설치되어 있는 컴퓨터
+        * 2) 소프트웨어
+            * 웹 브라우저 클라이언트로부터 HTTP 요청을 받아 **정적인 컨텐츠(.html .jpeg .css 등)**를 제공하는 컴퓨터 프로그램
+    * Web Server의 기능
+        * **HTTP 프로토콜을 기반으로 하여 웹 브라우저의 요청을 서비스 하는 기능**을 담당한다.
+        * 요청에 따라 아래의 두 가지 기능 중 적절하게 선택하여 수행한다.
+        * 기능 1)
+            * 정적인 컨텐츠 제공
+            * WAS를 거치지 않고 바로 자원을 제공한다.
+        * 기능 2)
+            * 동적인 컨텐츠 제공을 위한 요청 전달
+            * 클라이언트의 요청(Request)을 WAS에 보내고, WAS가 처리한 결과를 클라이언트에게 전달(응답, Response)한다.
+    * Web Server의 예
+        * Ex) Apache Server, Nginx, IIS(Windows 전용 Web 서버) 등
+* WAS(Web Application Server)
+    * WAS의 개념
+        * DB 조회나 다양한 로직 처리를 요구하는 **동적인 컨텐츠**를 제공하기 위해 만들어진 Application Server
+        * HTTP를 통해 컴퓨터나 장치에 애플리케이션을 수행해주는 미들웨어(소프트웨어 엔진)이다.
+        * **"웹 컨테이너(Web Container)" 혹은 "서블릿 컨테이너(Servlet Container)"**라고도 불린다.
+            * Container란 JSP, Servlet을 실행시킬 수 있는 소프트웨어를 말한다.
+            * 즉, WAS는 JSP, Servlet 구동 환경을 제공한다.
+    * WAS의 기능
+        * **WAS = Web Server + Web Container**
+        * Web Server 기능들을 구조적으로 분리하여 처리하고자하는 목적으로 제시되었다.
+            * 분산 트랜잭션, 보안, 메시징, 쓰레드 처리 등의 기능을 처리하는 분산 환경에서 사용된다.
+            * 주로 DB 서버와 같이 수행된다. 
+    * WAS의 예
+        * Ex) Tomcat, JBoss, Jeus, Web Sphere 등
+
 > :arrow_double_up:[Top](#9-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#9-etc)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+> - [https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html](https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html)
 
 ### 애자일 방법론이란
 > :arrow_double_up:[Top](#9-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#9-etc)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
