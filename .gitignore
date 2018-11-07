@@ -12,3 +12,6 @@ out/*
 .idea/dictionaries
 .idea/libraries
 .idea/caches
+
+# MacOS
+.DS_Store
