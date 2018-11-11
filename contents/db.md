@@ -154,6 +154,7 @@
     * 다른 한편으로는 서로 관계있는 데이터가 여러 테이블로 나뉘어 저장되므로, 각 테이블에 저장된 데이터를 효과적으로 검색하기 위해 조인이 필요하다.
 * 조인의 종류  
 <img src="./images/join-table.png" width="70%" height="70%">
+
 1. **내부 조인(INNER JOIN)**
     * 여러 애플리케이션에서 사용되는 가장 흔한 결합 방식이며, 기본 조인 형식으로 간주된다.
     * 내부 조인은 조인 구문에 기반한 2개의 테이블(A, B)의 컬럼 값을 결합함으로써 새로운 결과 테이블을 생성한다.
@@ -185,7 +186,7 @@
             SELECT * FROM employee NATURAL JOIN department;
             ```
         * 결과  
-        <img src="./images/natural-join.png" width="70%" height="70%">
+            <img src="./images/natural-join.png" width="50%" height="50%">
     3. **교차 조인(CROSS JOIN)**
         * 조인되는 두 테이블에서 곱집합을 반환한다. 
         * 즉, 두 번째 테이블로부터 각 행과 첫 번째 테이블에서 각 행이 한번씩 결합된 열을 만들 것이다.
@@ -199,7 +200,7 @@
             SELECT * FROM employee, department;
             ```
         * 결과  
-        <img src="./images/cross-join.png" width="70%" height="70%">
+            <img src="./images/cross-join.png" width="70%" height="70%">
 2. **외부 조인(OUTER JOIN)**
     * 조인 대상 테이블에서 특정 테이블의 데이터가 모두 필요한 상황에서 외부 조인을 활용하여 효과적으로 결과 집합을 생성할 수 있다.
     1. **왼쪽 외부 조인(LEFT OUTER JOIN)**
@@ -212,7 +213,7 @@
             ON employee.DepartmentID = department.DepartmentID;
             ```
         * 결과  
-        <img src="./images/left-outer-join.png" width="70%" height="70%">
+            <img src="./images/left-outer-join.png" width="70%" height="70%">
     2. **오른쪽 외부 조인(RIGHT OUTER JOIN)**
         * 좌측 테이블에 조인할 컬럼의 값이 없는 경우 사용한다.
         * 즉, 우측 테이블의 모든 데이터를 포함하는 결과 집합을 생성한다.
@@ -223,7 +224,7 @@
             ON employee.DepartmentID = department.DepartmentID;
             ```
         * 결과  
-        <img src="./images/right-outer-join.png" width="70%" height="70%">
+            <img src="./images/right-outer-join.png" width="70%" height="70%">
     3. **완전 외부 조인(FULL OUTER JOIN)**
         * 양쪽 테이블 모두 OUTER JOIN이 필요할 때 사용한다.
         * SQL
@@ -233,7 +234,7 @@
             ON employee.DepartmentID = department.DepartmentID;
             ```
         * 결과  
-        <img src="./images/full-outer-join.png" width="70%" height="70%">
+            <img src="./images/full-outer-join.png" width="70%" height="70%">
 3. **셀프 조인(SELF JOIN)**
     * 한 테이블에서 자기 자신에 조인을 시키는 것이다.
 * 조인을 사용할 때 주의사항
