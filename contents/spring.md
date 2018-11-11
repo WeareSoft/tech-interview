@@ -80,7 +80,7 @@
     - 비즈니스 로직의 특정 구현이 아닌 클래스를 생성하는데 매우 효과적
 - DI의 세가지 방법
     - Contructor Injection : 생성자 삽입
-    - Method(Setter) Injection : 메소드 매게 변수 삽입
+    - Method(Setter) Injection : 메소드 매개 변수 삽입
     - Field Injection : 멤버 변수 삽입
 
 > :arrow_double_up:[Top](#8-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#8-spring)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
