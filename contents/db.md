@@ -24,26 +24,20 @@
     - 클라이언트의 요청에 따라 각 어플리케이션의 스레드에서 데이터베이스에 접근하기 위해서는 Connection이 필요하다.
     - Connection pool은 이런 Connection을 여러 개 생성해 두어 저장해 놓은 **공간(캐시)**, 또는 이 공간의 Connection을 필요할 때 꺼내 쓰고 반환하는 **기법**을 말한다.
 ![](./images/db-img/db-connection-02.png)
-
 - **DB에 접근하는 단계**
     1. 웹 컨테이너가 실행되면서 DB와 연결된 Connection 객체들을 미리 생성하여 pool에 저장한다.
     2. DB에 요청 시, pool에서 Connection 객체를 가져와 DB에 접근한다.
     3. 처리가 끝나면 다시 pool에 반환한다.
-
 ![](./images/db-img/db-connection-01.jpeg)
-
 - **Connction이 부족하면?**
-모든 요청이 DB에 접근하고 있고 남은 Conncetion이 없다면, 해당 클라이언트는 대기 상태로 전환시키고 Pool에 Connection이 반환되면 대기 상태에 있는 클라이언트에게 순차적으로 제공된다.
-
+    - 모든 요청이 DB에 접근하고 있고 남은 Conncetion이 없다면, 해당 클라이언트는 대기 상태로 전환시키고 Pool에 Connection이 반환되면 대기 상태에 있는 클라이언트에게 순차적으로 제공된다.
 - **왜 사용할까?**
     - 매 연결마다 Connection 객체를 생성하고 소멸시키는 비용을 줄일 수 있다.
     - 미리 생성된 Connection 객체를 사용하기 때문에, DB 접근 시간이 단축된다.
     - DB에 접근하는 Connection의 수를 제한하여, 메모리와 DB에 걸리는 부하를 조정할 수 있다.
-
 - **Thread Pool**
     - 비슷한 맥락으로 Thread pool이라는 개념도 있다.
     - 이 역시 매 요청마다 요청을 처리할 Thread를 만드는것이 아닌, 미리 생성한 pool 내의 Thread를 소멸시키지 않고 재사용하여 효율적으로 자원을 활용하는 기법.
-
 - **Thread Pool과 Connection pool**
     - WAS에서 Thread pool과 Connection pool내의 Thread와 Connection의 수는 직접적으로 메모리와 관련이 있기 때문에, 많이 사용하면 할 수록 메모리를 많이 점유하게 된다. 그렇다고 반대로 메모리를 위해 적게 지정한다면, 서버에서는 많은 요청을 처리하지 못하고 대기 할 수 밖에 없다.
     - 보통 WAS의 Thread의 수가 Conncetion의 수보다 많은 것이 좋은데, 그 이유는 모든 요청이 DB에 접근하는 작업이 아니기 때문이다.
@@ -151,8 +145,110 @@
 > - [http://egloos.zum.com/ljlave/v/1530887](http://egloos.zum.com/ljlave/v/1530887)
 
 ### Join
+* 조인이란
+    * **한 데이터베이스 내의 여러 테이블의 레코드를 조합하여 하나의 열로 표현한 것**이다.
+    * 따라서 조인은 테이블로서 저장되거나, 그 자체로 이용할 수 있는 결과 셋을 만들어 낸다.
+* 조인의 필요성
+    * 관계형 데이터베이스의 구조적 특징으로 정규화를 수행하면 의미 있는 데이터의 집합으로 테이블이 구성되고, 각 테이블끼리는 관계(Relationship)를 갖게 된다. 
+    * 이와 같은 특징으로 관계형 데이터베이스는 저장 공간의 효율성과 확장성이 향상되게 된다.
+    * 다른 한편으로는 서로 관계있는 데이터가 여러 테이블로 나뉘어 저장되므로, 각 테이블에 저장된 데이터를 효과적으로 검색하기 위해 조인이 필요하다.
+* 조인의 종류  
+<img src="./images/join-table.png" width="70%" height="70%">
+    1. **내부 조인(INNER JOIN)**
+        * 여러 애플리케이션에서 사용되는 가장 흔한 결합 방식이며, 기본 조인 형식으로 간주된다.
+        * 내부 조인은 조인 구문에 기반한 2개의 테이블(A, B)의 컬럼 값을 결합함으로써 새로운 결과 테이블을 생성한다.
+        * **명시적 조인 표현**(explicit)과 **암시적 조인 표현**(implicit) 2개의 다른 조인식 구문이 있다.
+        * 명시적 조인 표현
+            * 테이블에 조인을 하라는 것을 지정하기 위해 JOIN 키워드를 사용하며, 그리고 나서 다음의 예제와 같이 ON 키워드를 조인에 대한 구문을 지정하는데 사용한다.
+                ```sql
+                SELECT *
+                FROM employee INNER JOIN department
+                ON employee.DepartmentID = department.DepartmentID;
+                ```
+        * 암시적 조인 표현
+            * SELECT 구문의 FROM 절에서 그것들을 분리하는 컴마를 사용해서 단순히 조인을 위한 여러 테이블을 나열하기만 한다.
+                ```sql
+                SELECT *
+                FROM employee, department
+                WHERE employee.DepartmentID = department.DepartmentID;
+                ```
+        * 결과  
+            <img src="./images/inner-join.png" width="70%" height="70%">
+        1. **동등 조인(EQUI JOIN)**
+            * 비교자 기반의 조인이며, 조인 구문에서 **동등비교만을 사용**한다.
+            * 다른 비교 연산자(<와 같은)를 사용하는 것은 동등 조인으로서의 조인의 자격을 박탈하는 것이다.
+        2. **자연 조인(NATURAL JOIN)**
+            * 동등 조인의 한 유형으로 조인 구문이 조인된 테이블에서 동일한 컬럼명을 가진 2개의 테이블에서 모든 컬럼들을 비교함으로써, 암시적으로 일어나는 구문이다.
+            * 결과적으로 나온 조인된 테이블은 동일한 이름을 가진 컬럼의 각 쌍에 대한 단 하나의 컬럼만 포함하고 있다.
+            * SQL
+                ```sql
+                SELECT * FROM employee NATURAL JOIN department;
+                ```
+            * 결과  
+            <img src="./images/natural-join.png" width="70%" height="70%">
+        3. **교차 조인(CROSS JOIN)**
+            * 조인되는 두 테이블에서 곱집합을 반환한다. 
+            * 즉, 두 번째 테이블로부터 각 행과 첫 번째 테이블에서 각 행이 한번씩 결합된 열을 만들 것이다.
+            * 예를 들어 m행을 가진 테이블과 n행을 가진 테이블이 교차 조인되면 m*n 개의 행을 생성한다
+            * 명시적 조인 표현
+                ```sql
+                SELECT * FROM employee CROSS JOIN department;
+                ```
+            * 암시적 조인 표현
+                ```sql
+                SELECT * FROM employee, department;
+                ```
+            * 결과  
+            <img src="./images/cross-join.png" width="70%" height="70%">
+    2. **외부 조인(OUTER JOIN)**
+        * 조인 대상 테이블에서 특정 테이블의 데이터가 모두 필요한 상황에서 외부 조인을 활용하여 효과적으로 결과 집합을 생성할 수 있다.
+        1. **왼쪽 외부 조인(LEFT OUTER JOIN)**
+            * 우측 테이블에 조인할 컬럼의 값이 없는 경우 사용한다.
+            * 즉, 좌측 테이블의 모든 데이터를 포함하는 결과 집합을 생성한다.
+            * SQL
+                ```sql
+                SELECT *
+                FROM employee LEFT OUTER JOIN department
+                ON employee.DepartmentID = department.DepartmentID;
+                ```
+            * 결과  
+            <img src="./images/left-outer-join.png" width="70%" height="70%">
+        2. **오른쪽 외부 조인(RIGHT OUTER JOIN)**
+            * 좌측 테이블에 조인할 컬럼의 값이 없는 경우 사용한다.
+            * 즉, 우측 테이블의 모든 데이터를 포함하는 결과 집합을 생성한다.
+            * SQL
+                ```sql
+                SELECT *
+                FROM employee RIGHT OUTER JOIN department
+                ON employee.DepartmentID = department.DepartmentID;
+                ```
+            * 결과  
+            <img src="./images/right-outer-join.png" width="70%" height="70%">
+        3. **완전 외부 조인(FULL OUTER JOIN)**
+            * 양쪽 테이블 모두 OUTER JOIN이 필요할 때 사용한다.
+            * SQL
+                ```sql
+                SELECT *
+                FROM employee FULL OUTER JOIN department
+                ON employee.DepartmentID = department.DepartmentID;
+                ```
+            * 결과  
+            <img src="./images/full-outer-join.png" width="70%" height="70%">
+    3. **셀프 조인(SELF JOIN)**
+        * 한 테이블에서 자기 자신에 조인을 시키는 것이다.
+* 조인을 사용할 때 주의사항
+    * SQL 문장의 의미를 제대로 파악
+        * SQL을 어떻게 작성하느냐에 따라 성능이 크게 좌우된다. 어떤 질의를 수행할 것인지를 명확하게 정의한 후, 비효율을 제거하여 최적의 SQL을 작성해야 한다.
+    * 명확한 조인 조건 제공
+        * 조인 조건을 명확하게 제공하지 않을 경우, 의도치 않게 CROSS JOIN(Cartesian Product)이 수행될 수 있다.
+* 조인을 사용할 때 고려사항
+    * 조인할 대상의 집합을 최소화
+        * 집합을 최소화할 방법이 있으면, 조건을 먼저 적용하여 관계를 맺을 집합을 최소화한 후, 조인을 맺는 것이 효율적이다.
+    * 효과적인 인덱스의 활용
+        * 인덱스를 활용하면, 조인 연산의 비용을 극적으로 낮출 수 있다.
+
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+> - [https://doooyeon.github.io/2018/11/11/database-join.html](https://doooyeon.github.io/2018/11/11/database-join.html)
 
 ### SQL Injection
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
