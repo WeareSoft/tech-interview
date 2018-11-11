@@ -22,7 +22,7 @@
 ### 데이터베이스 풀
 - **Connection Pool**
     - 클라이언트의 요청에 따라 각 어플리케이션의 스레드에서 데이터베이스에 접근하기 위해서는 Connection이 필요하다.
-    - Connection pool은 이런 Connection을 여러 개 생성해 두어 저장해 놓은 **공간(캐시)**, 또는 이 공간의 Connection을 필요할 때 꺼내 쓰고 반환하는 **기법**을 말한다.
+    - Connection pool은 이런 Connection을 여러 개 생성해 두어 저장해 놓은 **공간(캐시)**, 또는 이 공간의 Connection을 필요할 때 꺼내 쓰고 반환하는 **기법**을 말한다.  
 ![](./images/db-img/db-connection-02.png)
 - **DB에 접근하는 단계**
     1. 웹 컨테이너가 실행되면서 DB와 연결된 Connection 객체들을 미리 생성하여 pool에 저장한다.
@@ -154,88 +154,88 @@
     * 다른 한편으로는 서로 관계있는 데이터가 여러 테이블로 나뉘어 저장되므로, 각 테이블에 저장된 데이터를 효과적으로 검색하기 위해 조인이 필요하다.
 * 조인의 종류  
 <img src="./images/join-table.png" width="70%" height="70%">
-    1. **내부 조인(INNER JOIN)**
-        * 여러 애플리케이션에서 사용되는 가장 흔한 결합 방식이며, 기본 조인 형식으로 간주된다.
-        * 내부 조인은 조인 구문에 기반한 2개의 테이블(A, B)의 컬럼 값을 결합함으로써 새로운 결과 테이블을 생성한다.
-        * **명시적 조인 표현**(explicit)과 **암시적 조인 표현**(implicit) 2개의 다른 조인식 구문이 있다.
-        * 명시적 조인 표현
-            * 테이블에 조인을 하라는 것을 지정하기 위해 JOIN 키워드를 사용하며, 그리고 나서 다음의 예제와 같이 ON 키워드를 조인에 대한 구문을 지정하는데 사용한다.
-                ```sql
-                SELECT *
-                FROM employee INNER JOIN department
-                ON employee.DepartmentID = department.DepartmentID;
-                ```
-        * 암시적 조인 표현
-            * SELECT 구문의 FROM 절에서 그것들을 분리하는 컴마를 사용해서 단순히 조인을 위한 여러 테이블을 나열하기만 한다.
-                ```sql
-                SELECT *
-                FROM employee, department
-                WHERE employee.DepartmentID = department.DepartmentID;
-                ```
+1. **내부 조인(INNER JOIN)**
+    * 여러 애플리케이션에서 사용되는 가장 흔한 결합 방식이며, 기본 조인 형식으로 간주된다.
+    * 내부 조인은 조인 구문에 기반한 2개의 테이블(A, B)의 컬럼 값을 결합함으로써 새로운 결과 테이블을 생성한다.
+    * **명시적 조인 표현**(explicit)과 **암시적 조인 표현**(implicit) 2개의 다른 조인식 구문이 있다.
+    * 명시적 조인 표현
+        * 테이블에 조인을 하라는 것을 지정하기 위해 JOIN 키워드를 사용하며, 그리고 나서 다음의 예제와 같이 ON 키워드를 조인에 대한 구문을 지정하는데 사용한다.
+            ```sql
+            SELECT *
+            FROM employee INNER JOIN department
+            ON employee.DepartmentID = department.DepartmentID;
+            ```
+    * 암시적 조인 표현
+        * SELECT 구문의 FROM 절에서 그것들을 분리하는 컴마를 사용해서 단순히 조인을 위한 여러 테이블을 나열하기만 한다.
+            ```sql
+            SELECT *
+            FROM employee, department
+            WHERE employee.DepartmentID = department.DepartmentID;
+            ```
+    * 결과  
+        <img src="./images/inner-join.png" width="70%" height="70%">
+    1. **동등 조인(EQUI JOIN)**
+        * 비교자 기반의 조인이며, 조인 구문에서 **동등비교만을 사용**한다.
+        * 다른 비교 연산자(<와 같은)를 사용하는 것은 동등 조인으로서의 조인의 자격을 박탈하는 것이다.
+    2. **자연 조인(NATURAL JOIN)**
+        * 동등 조인의 한 유형으로 조인 구문이 조인된 테이블에서 동일한 컬럼명을 가진 2개의 테이블에서 모든 컬럼들을 비교함으로써, 암시적으로 일어나는 구문이다.
+        * 결과적으로 나온 조인된 테이블은 동일한 이름을 가진 컬럼의 각 쌍에 대한 단 하나의 컬럼만 포함하고 있다.
+        * SQL
+            ```sql
+            SELECT * FROM employee NATURAL JOIN department;
+            ```
         * 결과  
-            <img src="./images/inner-join.png" width="70%" height="70%">
-        1. **동등 조인(EQUI JOIN)**
-            * 비교자 기반의 조인이며, 조인 구문에서 **동등비교만을 사용**한다.
-            * 다른 비교 연산자(<와 같은)를 사용하는 것은 동등 조인으로서의 조인의 자격을 박탈하는 것이다.
-        2. **자연 조인(NATURAL JOIN)**
-            * 동등 조인의 한 유형으로 조인 구문이 조인된 테이블에서 동일한 컬럼명을 가진 2개의 테이블에서 모든 컬럼들을 비교함으로써, 암시적으로 일어나는 구문이다.
-            * 결과적으로 나온 조인된 테이블은 동일한 이름을 가진 컬럼의 각 쌍에 대한 단 하나의 컬럼만 포함하고 있다.
-            * SQL
-                ```sql
-                SELECT * FROM employee NATURAL JOIN department;
-                ```
-            * 결과  
-            <img src="./images/natural-join.png" width="70%" height="70%">
-        3. **교차 조인(CROSS JOIN)**
-            * 조인되는 두 테이블에서 곱집합을 반환한다. 
-            * 즉, 두 번째 테이블로부터 각 행과 첫 번째 테이블에서 각 행이 한번씩 결합된 열을 만들 것이다.
-            * 예를 들어 m행을 가진 테이블과 n행을 가진 테이블이 교차 조인되면 m*n 개의 행을 생성한다
-            * 명시적 조인 표현
-                ```sql
-                SELECT * FROM employee CROSS JOIN department;
-                ```
-            * 암시적 조인 표현
-                ```sql
-                SELECT * FROM employee, department;
-                ```
-            * 결과  
-            <img src="./images/cross-join.png" width="70%" height="70%">
-    2. **외부 조인(OUTER JOIN)**
-        * 조인 대상 테이블에서 특정 테이블의 데이터가 모두 필요한 상황에서 외부 조인을 활용하여 효과적으로 결과 집합을 생성할 수 있다.
-        1. **왼쪽 외부 조인(LEFT OUTER JOIN)**
-            * 우측 테이블에 조인할 컬럼의 값이 없는 경우 사용한다.
-            * 즉, 좌측 테이블의 모든 데이터를 포함하는 결과 집합을 생성한다.
-            * SQL
-                ```sql
-                SELECT *
-                FROM employee LEFT OUTER JOIN department
-                ON employee.DepartmentID = department.DepartmentID;
-                ```
-            * 결과  
-            <img src="./images/left-outer-join.png" width="70%" height="70%">
-        2. **오른쪽 외부 조인(RIGHT OUTER JOIN)**
-            * 좌측 테이블에 조인할 컬럼의 값이 없는 경우 사용한다.
-            * 즉, 우측 테이블의 모든 데이터를 포함하는 결과 집합을 생성한다.
-            * SQL
-                ```sql
-                SELECT *
-                FROM employee RIGHT OUTER JOIN department
-                ON employee.DepartmentID = department.DepartmentID;
-                ```
-            * 결과  
-            <img src="./images/right-outer-join.png" width="70%" height="70%">
-        3. **완전 외부 조인(FULL OUTER JOIN)**
-            * 양쪽 테이블 모두 OUTER JOIN이 필요할 때 사용한다.
-            * SQL
-                ```sql
-                SELECT *
-                FROM employee FULL OUTER JOIN department
-                ON employee.DepartmentID = department.DepartmentID;
-                ```
-            * 결과  
-            <img src="./images/full-outer-join.png" width="70%" height="70%">
-    3. **셀프 조인(SELF JOIN)**
-        * 한 테이블에서 자기 자신에 조인을 시키는 것이다.
+        <img src="./images/natural-join.png" width="70%" height="70%">
+    3. **교차 조인(CROSS JOIN)**
+        * 조인되는 두 테이블에서 곱집합을 반환한다. 
+        * 즉, 두 번째 테이블로부터 각 행과 첫 번째 테이블에서 각 행이 한번씩 결합된 열을 만들 것이다.
+        * 예를 들어 m행을 가진 테이블과 n행을 가진 테이블이 교차 조인되면 m*n 개의 행을 생성한다
+        * 명시적 조인 표현
+            ```sql
+            SELECT * FROM employee CROSS JOIN department;
+            ```
+        * 암시적 조인 표현
+            ```sql
+            SELECT * FROM employee, department;
+            ```
+        * 결과  
+        <img src="./images/cross-join.png" width="70%" height="70%">
+2. **외부 조인(OUTER JOIN)**
+    * 조인 대상 테이블에서 특정 테이블의 데이터가 모두 필요한 상황에서 외부 조인을 활용하여 효과적으로 결과 집합을 생성할 수 있다.
+    1. **왼쪽 외부 조인(LEFT OUTER JOIN)**
+        * 우측 테이블에 조인할 컬럼의 값이 없는 경우 사용한다.
+        * 즉, 좌측 테이블의 모든 데이터를 포함하는 결과 집합을 생성한다.
+        * SQL
+            ```sql
+            SELECT *
+            FROM employee LEFT OUTER JOIN department
+            ON employee.DepartmentID = department.DepartmentID;
+            ```
+        * 결과  
+        <img src="./images/left-outer-join.png" width="70%" height="70%">
+    2. **오른쪽 외부 조인(RIGHT OUTER JOIN)**
+        * 좌측 테이블에 조인할 컬럼의 값이 없는 경우 사용한다.
+        * 즉, 우측 테이블의 모든 데이터를 포함하는 결과 집합을 생성한다.
+        * SQL
+            ```sql
+            SELECT *
+            FROM employee RIGHT OUTER JOIN department
+            ON employee.DepartmentID = department.DepartmentID;
+            ```
+        * 결과  
+        <img src="./images/right-outer-join.png" width="70%" height="70%">
+    3. **완전 외부 조인(FULL OUTER JOIN)**
+        * 양쪽 테이블 모두 OUTER JOIN이 필요할 때 사용한다.
+        * SQL
+            ```sql
+            SELECT *
+            FROM employee FULL OUTER JOIN department
+            ON employee.DepartmentID = department.DepartmentID;
+            ```
+        * 결과  
+        <img src="./images/full-outer-join.png" width="70%" height="70%">
+3. **셀프 조인(SELF JOIN)**
+    * 한 테이블에서 자기 자신에 조인을 시키는 것이다.
 * 조인을 사용할 때 주의사항
     * SQL 문장의 의미를 제대로 파악
         * SQL을 어떻게 작성하느냐에 따라 성능이 크게 좌우된다. 어떤 질의를 수행할 것인지를 명확하게 정의한 후, 비효율을 제거하여 최적의 SQL을 작성해야 한다.
