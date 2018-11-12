@@ -12,8 +12,7 @@
 [![NesoyBlog](https://img.shields.io/badge/blog-Nesoy-lightgrey.svg)](https://nesoy.github.io/)
 [![DelfBlog](https://img.shields.io/badge/blog-Delf-lightgrey.svg)](https://delf-lee.github.io/)
 [![contributors](https://img.shields.io/badge/contributors-4-yellowgreen.svg)](https://github.com/WeareSoft/tech-interview/graphs/contributors)
-<!-- [![HitCount](http://hits.dwyl.io/WeareSoft/tech-interview.svg?style=popout)](http://hits.dwyl.io/WeareSoft/tech-interview) -->
-[![HitCount](http://hits.dwyl.io/Do-Hee/tech-interview.svg?style=popout)](http://hits.dwyl.io/Do-Hee/tech-interview)
+[![HitCount](http://hits.dwyl.io/WeareSoft/tech-interview.svg?style=popout)](http://hits.dwyl.io/WeareSoft/tech-interview)
 
 </div>
 
