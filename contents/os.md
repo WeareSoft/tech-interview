@@ -93,13 +93,13 @@
 > - []()
 
 ### 동기화 객체의 종류
-* 쓰레드 동기화 방법 
+* 쓰레드 동기화 방법
     1. 실행 순서의 동기화
         * 쓰레드의 실행순서를 정의하고, 이 순서에 반드시 따르도록 하는 것
     2. 메모리 접근에 대한 동기화
         * 메모리 접근에 있어서 동시접근을 막는 것
         * 실행의 순서가 중요한 상황이 아니고, 한 순간에 하나의 쓰레드만 접근하면 되는 상황을 의미
-* 동기화 기법의 종류 
+* 동기화 기법의 종류
     1. 유저 모드 동기화
         * 커널의 힘을 빌리지 않는(커널 코드가 실행되지 않는) 동기화 기법
         * 성능상 이점, 기능상의 제한
@@ -116,28 +116,28 @@
 ### 뮤텍스와 세마포어의 차이
 * 뮤텍스(Mutex)
     * 공유된 자원의 데이터를 **여러 쓰레드가** 접근하는 것을 막는 것
-    * 상호배제라고도 하며, Critical Section을 가진 쓰레드의 Running time이 서로 겹치지 않도록 각각 단독으로 실행하게 하는 기술이다. 
+    * 상호배제라고도 하며, Critical Section을 가진 쓰레드의 Running time이 서로 겹치지 않도록 각각 단독으로 실행하게 하는 기술이다.
     * 다중 프로세스들의 공유 리소스에 대한 접근을 조율하기 위해 synchronized 또는 lock을 사용한다.
         * 즉, 뮤텍스 객체를 두 쓰레드가 동시에 사용할 수 없다.
 * 세마포어(Semaphore)
     * 공유된 자원의 데이터를 **여러 프로세스가** 접근하는 것을 막는 것
-    * 리소스 상태를 나타내는 간단한 카운터로 생각할 수 있다. 
-        * 운영체제 또는 커널의 한 지정된 저장장치 내의 값이다. 
-        * 일반적으로 비교적 긴 시간을 확보하는 리소스에 대해 이용한다. 
-        * 유닉스 시스템 프로그래밍에서 세마포어는 운영체제의 리소스를 경쟁적으로 사용하는 다중 프로세스에서 행동을 조정하거나 또는 동기화 시키는 기술이다. 
-    * 공유 리소스에 접근할 수 있는 프로세스의 최대 허용치만큼 동시에 사용자가 접근하여 사용할 수 있다. 
+    * 리소스 상태를 나타내는 간단한 카운터로 생각할 수 있다.
+        * 운영체제 또는 커널의 한 지정된 저장장치 내의 값이다.
+        * 일반적으로 비교적 긴 시간을 확보하는 리소스에 대해 이용한다.
+        * 유닉스 시스템 프로그래밍에서 세마포어는 운영체제의 리소스를 경쟁적으로 사용하는 다중 프로세스에서 행동을 조정하거나 또는 동기화 시키는 기술이다.
+    * 공유 리소스에 접근할 수 있는 프로세스의 최대 허용치만큼 동시에 사용자가 접근하여 사용할 수 있다.
     * 각 프로세스는 세마포어 값은 확인하고 변경할 수 있다.
         * 1) 사용 중이지 않는 자원의 경우 그 프로세스가 즉시 자원을 사용할 수 있다.
         * 2) 이미 다른 프로세스에 의해 사용 중이라는 사실을 알게 되면 재시도하기 전에 일정 시간을 기다려야 한다.
         * 세마포어를 사용하는 프로세스는 그 값을 확인하고, 자원을 사용하는 동안에는 그 값을 변경함으로써 다른 세마포어 사용자들이 기다리도록 해야한다.
     * 세마포어는 이진수 (0 또는 1)를 사용하거나, 또는 추가적인 값을 가질 수도 있다.
-* 차이 
+* 차이
     1. 가장 큰 차이점은 관리하는 **동기화 대상의 개수**
         * Mutex는 동기화 대상이 오직 하나뿐일 때, Semaphore는 동기화 대상이 하나 이상일 때 사용한다.
     2. Semaphore는 Mutex가 될 수 있지만 Mutex는 Semaphore가 될 수 없다.
         * Mutex는 상태가 0, 1 두 개 뿐인 binary Semaphore
-    3. Semaphore는 소유할 수 없는 반면, Mutex는 소유가 가능하며 소유주가 이에 대한 책임을 가진다. 
-        * Mutex 의 경우 상태가 두개 뿐인 lock 이므로 lock 을 가질 수 있다. 
+    3. Semaphore는 소유할 수 없는 반면, Mutex는 소유가 가능하며 소유주가 이에 대한 책임을 가진다.
+        * Mutex 의 경우 상태가 두개 뿐인 lock 이므로 lock 을 가질 수 있다.
     4. Mutex의 경우 Mutex를 소유하고 있는 쓰레드가 이 Mutex를 해제할 수 있다. 하지만 Semaphore의 경우 이러한 Semaphore를 소유하지 않는 쓰레드가 Semaphore를 해제할 수 있다.
     5. Semaphore는 시스템 범위에 걸쳐있고 파일시스템상의 파일 형태로 존재하는 반면 Mutex는 프로세스 범위를 가지며 프로세스가 종료될 때 자동으로 Clean up 된다.
 
@@ -201,7 +201,18 @@
 
 ### Context Switching
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+
+* Context Switching이란?
+    * 현재 진행하고 있는 Task(Process, Thread)의 상태를 저장하고 다음 진행할 Task의 상태 값을 읽어 적용하는 과정을 말합니다.
+* Context Switching 과정
+    * Task의 대부분 정보는 Register에 저장되고 PCB(Process Control Block)로 관리되고 있습니다.
+    * 현재 실행하고 있는 Task의 PCB 정보를 저장하게 됩니다. (Process Stack, Ready Queue)
+    * 다음 실행할 Task의 PCB 정보를 읽어 Register에 적재하고 CPU가 이전에 진행했던 과정을 연속적으로 수행을 할 수 있습니다.
+* Context Switching Cost (Process vs Thread)
+    * Context Switching 비용은 Process가 Thread보다 많이 듭니다.
+    * Thread는 Stack 영역을 제외한 모든 메모리를 공유하기 때문에 Stack 영역만 변경을 진행하면 되기 때문에 비용이 저렴 합니다.
+
+> - [Context Switching이란?](https://nesoy.github.io/articles/2018-11/Context-Switching)
 
 ### Swapping
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
