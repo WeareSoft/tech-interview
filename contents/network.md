@@ -449,9 +449,47 @@
 > - []()
 
 ### Socket.io와 WebSocket의 차이
+* WebSocket
+    * 개념
+        * 웹 페이지의 한계에서 벗어나 실시간으로 상호작용하는 웹 서비스를 만드는 표준 기술
+    * 배경 
+        * HTTP 프로토콜 자체가 클라이언트에서 서버로의 단방향 통신을 위해 만들어진 방법이어서 양방향 통신이 가능하게 하기 위한 HTML5 표준의 일부로 WebSocket이 만들어지게 되었다. 
+        * 즉, WebSocket 이전에 실시간 웹을 구현하기 위해서는 Polling, Streaming 방식의 AJAX 코드를 이용했다. 
+        * 이 방법들을 이용하면 각 브라우저마다 구현 방법이 달라 개발이 어려웠기 때문에 WebSocket이란 표준이 나왔다.
+    * 특징 
+        * 소켓을 이용하여 자유롭게 데이터를 주고 받을 수 있다. 
+        * 기존의 요청-응답 관계 방식보다 더 쉽게 데이터를 교환할 수 있다.
+        * 다른 HTTP Request와 마찬가지로 80포트를 통해 웹 서버에 연결한다. 
+        * 클라이언트인 브라우저와 마찬가지로 웹 서버도 WebSocket 기능을 지원해야 한다.
+        * 클라이언트인 브라우저 중에서는 Chrome, Safari, Firefox, Opera에서 WebSocket을 사용할 수 있으며, 각종 모바일 브라우저에서도 WebSocket을 사용할 수 있다.
+        * http:// 대신 ws:// 로 시작하며 Streaming과 유사한 방식으로 푸쉬를 지원한다.
+    * 일반 TCP Socket과의 차이점
+        * 일반 HTTP Request를 통해 handshaking 과정을 거쳐 최초 접속이 이루어진다.
+    * 장점
+        * HTTP Request를 그대로 사용하기 때문에 기존의 80, 443포트로 접속을 하므로 추가로 방화벽을 열지 않고도 양방향 통신이 가능하다. 
+        * HTTP 규격인 CORS 적용이나 인증 등의 과정을 기존과 동일하게 사용할 수 있다. 
+    * 단점
+        * 그러나 WebSocket 프로토콜은 아직 확정된 상태가 아니기 때문에 브라우저별로 지원하는 WebSocket 버전이 다르다. (예전 브라우저는 지원하지 않는다.)
+        * 즉, WebSocket은 다가올 미래의 기술이지 아직 인터넷 기업에서 시범적으로라도 써 볼 수 있는 기술이 아니다. 
+* Socket.io
+    * 개념
+        * 다양한 방식의 실시간 웹 기술을 손쉽게 사용할 수 있는 모듈 (웹 클라이언트로의 푸쉬를 지원하는 모듈)
+        * WebSocket, FlashSocket, AJAX Long Polling, AJAX Multi part Streaming, IFrame, JSONP Polling 등 다양한 방법을 하나의 API로 추상화한 것이다. 
+        * 즉, Socket.io는 JavaScript를 이용하여 브라우저 종류에 상관없이 실시간 웹을 구현할 수 있도록 한 기술이다. 
+    * 특징
+        * Socket.io는 현재 바로 사용할 수 있는 기술이다. 
+        * WebSocket 프로토콜은 IETF에서 관장하는 표준 프로토콜이라서 WebSocket을 지원하는 여러 서버 구현체(Jetty, GlassFish, Node.js, Netty, Grizzly 등)가 있지만 Socket.io는 Node.js 하나 밖에 없다.
+    * 장점
+        * 개발자는 Socket.IO로 개발을 하고 클라이언트로 푸쉬 메시지를 보내기만 하면, WebSocket을 지원하지 않는 브라우저의 경우는 브라우저 모델과 버전에 따라서 AJAX Long Polling, MultiPart Streaming, Iframe을 이용한 푸쉬, JSONP Polling, Flash Socket 등 다양한 방법으로 내부적으로 푸쉬 메시지를 보내준다.
+        * 즉, WebSocket을 지원하지 않는 어느 브라우져라도 푸쉬 메시지를 일관된 모듈로 보낼 수 있다. 
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [https://d2.naver.com/helloworld/1336](https://d2.naver.com/helloworld/1336)
+> - [http://bcho.tistory.com/896](http://bcho.tistory.com/896)
+> - [http://adrenal.tistory.com/20](http://adrenal.tistory.com/20)
+> - [http://blog.jeonghwan.net/socket-io를-이용한-실시간-웹-구현](http://blog.jeonghwan.net/socket-io%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%9B%B9-%EA%B5%AC%ED%98%84/)
+> - [http://woowabros.github.io/woowabros/2017/09/12/realtime-service.html](http://woowabros.github.io/woowabros/2017/09/12/realtime-service.html)
+
 
 ### Frame Packet Segment Datagram
 
