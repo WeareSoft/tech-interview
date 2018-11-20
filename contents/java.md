@@ -184,7 +184,7 @@
 ### :question:java의 main 메서드가 static인 이유
 - `static` 키워드
     - `static` 멤버는 클래스 로딩(프로그램 시작) 시 메모리에 로드되어 인스턴트를 생성하지 않아도 호출이 가능하다.
-- main 메서드가 static인 이유
+- main 메서드가 `static`인 이유
     - ``` java 
         public static void main(String[] args){...}
         ```
@@ -197,7 +197,6 @@
     - JVM은 Meathod Area에 로드된 `main()`을 실행한다.
 
 ![](/contents/images/jvm-runtime-data-areas.png)
-
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [JVM의 Runtime Data Area - Minhyeok Jung](https://www.holaxprogramming.com/2013/07/16/java-jvm-runtime-data-area/)
