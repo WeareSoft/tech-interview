@@ -182,9 +182,29 @@
 > - [https://gmlwjd9405.github.io/2018/08/04/java-static.html](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
 
 ### :question:java의 main 메서드가 static인 이유
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+- `static` 키워드
+    - `static` 멤버는 클래스 로딩(프로그램 시작) 시 메모리에 로드되어 인스턴트를 생성하지 않아도 호출이 가능하다.
+- main 메서드가 static인 이유
+    - ``` java 
+        public static void main(String[] args){...}
+        ```
+    - 위와 같은 형식은 java에서의 `main()` 관례이다. 위와 같은 시그니처를 가진 메소드가 없으면 실행되지 않는다.
+    - JVM은 인스턴스가 없는 클래스의 `main()`을 호출해야하기 때문에 `static`이어야 한다.
+- JVM과 `static`
+    - 코드를 실행하면 컴파일러가 `.java` 코드를 `.class`(byte code)로 변환한다.
+    - 클래스 로더가 `.class`파일을 메모리 영역(Runtime Data Area)에 로드한다.
+    - Runtime Data Area 중 Meathod Area(= Class area = Static area)라고 불리는 영역에 Class Variable이 저장되는데, `static` 변수 또한 여기에 포함된다.
+    - JVM은 Meathod Area에 로드된 `main()`을 실행한다.
 
+![](/contents/images/jvm-runtime-data-areas.png)
+
+
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - [JVM의 Runtime Data Area - Minhyeok Jung](https://www.holaxprogramming.com/2013/07/16/java-jvm-runtime-data-area/)
+> - [Why is the Java main method static? - Stack Overflow](https://stackoverflow.com/questions/146576/why-is-the-java-main-method-static)
+> - [main에 static 사용하는이유 :: public static void main(String[] args) - PYH](https://m.blog.naver.com/PostView.nhn?blogId=blogpyh&logNo=220041002621&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+> - [[자바]static, JVM memory의 기본(1편) - ITPangPang](http://itpangpang.xyz/71)
+> - [JAVA :: 자바의 메모리 구조 - 1. 메소드 영역(Method Area) - WANZARGEN](http://wanzargen.tistory.com/16)
 ### java의 final 키워드 
 * **final 키워드**
   * 개념: 변수나 메서드 또는 클래스가 '변경 불가능'하도록 만든다.
