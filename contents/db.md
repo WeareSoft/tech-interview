@@ -340,6 +340,7 @@ sharding == horizontal partitioning
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://mongodb.citsoft.net/?page_id=225#comment-91922](http://mongodb.citsoft.net/?page_id=225#comment-91922)
 > - [https://d2.naver.com/helloworld/14822](https://d2.naver.com/helloworld/14822)
+> - [http://tech.kakao.com/2016/07/01/adt-mysql-shard-rebalancing/](http://tech.kakao.com/2016/07/01/adt-mysql-shard-rebalancing/)
 
 ### ORM이란
 

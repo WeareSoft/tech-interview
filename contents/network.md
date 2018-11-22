@@ -108,6 +108,7 @@
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://mangkyu.tistory.com/15](http://mangkyu.tistory.com/15)
 > - [http://ddooooki.tistory.com/21](http://ddooooki.tistory.com/21)
+> - [http://www.inven.co.kr/webzine/news/?news=165870](http://www.inven.co.kr/webzine/news/?news=165870)
 
 ### TCP와 UDP의 헤더 분석
 
