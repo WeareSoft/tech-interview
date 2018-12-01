@@ -89,8 +89,24 @@
 > - [http://you9010.tistory.com/136](http://you9010.tistory.com/136)
 
 ### Thread-safe
+- **Thread-safe란?**
+    - 직역하면 **스레드 안전**.
+    - 멀티스레드 환경에서 <u>여러 스레드</u>가 동시에 <u>하나의 객체 및 변수(공유 자원)</u>에 접근할 때, 의도한 대로 동작하는 것을 말한다.
+    - 이러한 상황을 "Thead-safe하다" 라고 표현한다.
+- **Thread-safe하게 구현하기**
+    - Thread-safe하기 위해서는 공유 자원에 접근하는 임계영역(critical section)을 동기화 기법으로 제어해줘야 한다.
+        - 이를 '상호배제'라고 한다.
+    - 동기화 기법으로는 Mutex나 Semaphore 등이 있다.
+- **Reentrant**
+    - Reentrant는 **재진입성**이라는 의미로, 어떤 함수가 Reentrant하다는 것은 여러 스레드가 동시에 접근해도 언제나 같은 실행 결과를 보장한다는 의미이다.
+    - 이를 만족하기 위해서 해당 서브루틴에서는 공유자원을 사용하지 않으면 된다.
+        - 예를들어 정적(전역) 변수를 사용하거나 반환하면 안 되고 호출 시 제공된 매개변수만으로 동작해야한다.
+    - 따라서, Reentrant하다면 Thread-safe하지만 그 역은 성립하지 않는다.
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+
+> - [위키백과 - 재진입성](https://ko.wikipedia.org/wiki/%EC%9E%AC%EC%A7%84%EC%9E%85%EC%84%B1)
+> - [[OS] Thread Safe란? - 곰팡](gompangs.tistory.com/7)
+> - [스레드-안전(Thread-safe)과 재진입가능(Reentrant)의 차이 - 커피한잔의 여유와 코딩](sjava.net/tag/thread-safe/)
 
 ### 동기화 객체의 종류
 * 쓰레드 동기화 방법
