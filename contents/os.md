@@ -109,12 +109,12 @@
 > - [스레드-안전(Thread-safe)과 재진입가능(Reentrant)의 차이 - 커피한잔의 여유와 코딩](sjava.net/tag/thread-safe/)
 
 ### 동기화 객체의 종류
-* 쓰레드 동기화 방법
+* 스레드 동기화 방법
     1. 실행 순서의 동기화
-        * 쓰레드의 실행순서를 정의하고, 이 순서에 반드시 따르도록 하는 것
+        * 스레드의 실행순서를 정의하고, 이 순서에 반드시 따르도록 하는 것
     2. 메모리 접근에 대한 동기화
         * 메모리 접근에 있어서 동시접근을 막는 것
-        * 실행의 순서가 중요한 상황이 아니고, 한 순간에 하나의 쓰레드만 접근하면 되는 상황을 의미
+        * 실행의 순서가 중요한 상황이 아니고, 한 순간에 하나의 스레드만 접근하면 되는 상황을 의미
 * 동기화 기법의 종류
     1. 유저 모드 동기화
         * 커널의 힘을 빌리지 않는(커널 코드가 실행되지 않는) 동기화 기법
@@ -131,10 +131,10 @@
 
 ### 뮤텍스와 세마포어의 차이
 * 뮤텍스(Mutex)
-    * 공유된 자원의 데이터를 **여러 쓰레드가** 접근하는 것을 막는 것
-    * 상호배제라고도 하며, Critical Section을 가진 쓰레드의 Running time이 서로 겹치지 않도록 각각 단독으로 실행하게 하는 기술이다.
+    * 공유된 자원의 데이터를 **여러 스레드가** 접근하는 것을 막는 것
+    * 상호배제라고도 하며, Critical Section을 가진 스레드의 Running time이 서로 겹치지 않도록 각각 단독으로 실행하게 하는 기술이다.
     * 다중 프로세스들의 공유 리소스에 대한 접근을 조율하기 위해 synchronized 또는 lock을 사용한다.
-        * 즉, 뮤텍스 객체를 두 쓰레드가 동시에 사용할 수 없다.
+        * 즉, 뮤텍스 객체를 두 스레드가 동시에 사용할 수 없다.
 * 세마포어(Semaphore)
     * 공유된 자원의 데이터를 **여러 프로세스가** 접근하는 것을 막는 것
     * 리소스 상태를 나타내는 간단한 카운터로 생각할 수 있다.
@@ -154,7 +154,7 @@
         * Mutex는 상태가 0, 1 두 개 뿐인 binary Semaphore
     3. Semaphore는 소유할 수 없는 반면, Mutex는 소유가 가능하며 소유주가 이에 대한 책임을 가진다.
         * Mutex 의 경우 상태가 두개 뿐인 lock 이므로 lock 을 가질 수 있다.
-    4. Mutex의 경우 Mutex를 소유하고 있는 쓰레드가 이 Mutex를 해제할 수 있다. 하지만 Semaphore의 경우 이러한 Semaphore를 소유하지 않는 쓰레드가 Semaphore를 해제할 수 있다.
+    4. Mutex의 경우 Mutex를 소유하고 있는 스레드가 이 Mutex를 해제할 수 있다. 하지만 Semaphore의 경우 이러한 Semaphore를 소유하지 않는 스레드가 Semaphore를 해제할 수 있다.
     5. Semaphore는 시스템 범위에 걸쳐있고 파일시스템상의 파일 형태로 존재하는 반면 Mutex는 프로세스 범위를 가지며 프로세스가 종료될 때 자동으로 Clean up 된다.
 
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
