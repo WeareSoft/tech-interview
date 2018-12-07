@@ -165,9 +165,28 @@
 > - []()
 
 ### 동기와 비동기
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+이 개념은 OS에서 뿐만 아니라 여러가지 분야에서도 쓰인다.
+- **동기(Synchronous)란?**
+    > '동기' 라고하면 다수의 개채들이 동일(일정)한 **무언가**를 가지는 것. 또는 **무언가**가 동일(일정)하게 되는 것.
+    - 그 **무언가**는 `상태`가 될 수 있고 `행위`가 될 수 있고, `시간`,`속도`, `주기`, `출현` 등이 될 수 있다.
+    - 여기서 말하는 '동기'는 두개의 프로세스가 데이터를 주고 받을 때, 주고 받는 `순서`(또는 `시간`)가 일정하다는 것을 뜻한다. (너 한번, 나 한번)
+- **비동기(Asynchronous)란?**
+    - '동기'가 아닌 것.
+- **동기식, 동기적이다.**
+    - 어떤 작업을 요청했을 때 그 작업이 종료될 때까지 기다린 후 다음 작업을 수행한다.
+        - 데이터를 주고받는 '순서'가 중요할때 사용된다.
+        - 요청한 작업만 처리하면 되기 때문에 전체적인 수행 속도는 빠를 수 있다. (일만 하면 된다)
+        - 한 작업에 대한 시간이 길어질 경우, 전체 응답이 지연될 수 있다.
+- **비동기식, 비동기적이다.**
+    - 어떤 작업을 요청했을 때 그 작업이 종료될 때까지 기다리지 않고(작업을 위임하고), 다음 작업을 수행한다. 요청했던 작업이 끝나면 결과를 받고, 그에 따른 추가 작업이 있다면 수행한다.
+        - 요청 순서에 상관없이, 동시에 다수의 작업을 처리할 수 있다.
+        - 작업이 끝날 때 따로 이벤트를 감지하고 결과를 받아 그에 따른 추가 작업을 해줘야하기 때문에, 비교적 느릴 수 있다.
+        - I/O 작업이 잦고, 빠른 응답속도를 요구하는 프로그램에 적합하다.
 
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - [동기(Sync) 와 비동기(Async) - 리충닷컴](http://leechoong.com/posts/2017/nodejs_syncasync/)
+> - [Sync async-blocking-nonblocking-io - Choloh Bae](https://www.slideshare.net/unitimes/sync-asyncblockingnonblockingio)
+> - [Synchronous(동기) Vs Asynchronous(비동기) - Nesoy Bolg](https://nesoy.github.io/articles/2017-01/Synchronized)
 
 ### 프로세스 동기화
 > :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
