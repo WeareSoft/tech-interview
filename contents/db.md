@@ -389,6 +389,7 @@ public String getPersonName(long personId) throws SQLException {
 public String getPersonName(long personId) {
     Person p = em.find(Person.calss, personId);
     return p.getName();
+}
 ```
 
 #### 장점 - 왜 사용하는가?
