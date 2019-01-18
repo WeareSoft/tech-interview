@@ -15,7 +15,7 @@
 * [파티셔닝(Partitioning)](#파티셔닝)
 * [샤딩(Sharding)](#샤딩)
 * [객체 관계 매핑(Object-relational mapping, ORM)이란](#orm이란)
-* [java JDBC](#java-jdbc)
+* [JDBC](#jdbc)
 
 ---
 
@@ -423,14 +423,101 @@ public String getPersonName(long personId) {
 > - [ORM - 人CoDOM](http://www.incodom.kr/ORM#h_702209f3f35878a32ee91352ddc6bbe7)
 
 ### JDBC
+#### JDBC란?
+> JDBC(Java Database Connectivity)는 DB에 접근할 수 있도록 Java에서 제공하는 API이다. 
+
+- JDBC는 관계형 데이터베이스에 사용되는 SQL문을 실행하기 위해 자바로 작성된 클래스와 인터페이스로 구성되어 있다.
+- 특정 데이터베이스나 특정 데이터베이스 메커니즘에 구애 받지않는 독립적인 인터페이스를 통해 다양한 데이터베이스에 접근하는 코드를 구현할 수 있도록 제공하는 자바 클래스의 표준 집합이다.
+- JDBC 클래스는 자바 패키지 `java.sql`과 `javax.sql`에 포함되어 있다.
+
+데이터베이스 벤더들이 이러한 라이브러리를 각자 만든다면, 자바 프로그래머는 각 벤더가 만든 라이브러리 사용법을 익혀야 할것이다.
+
+![](images/jdbc1.png)
+
+#### JDBC를 이용한 DB접근
+- 다음과 같은 순서로 이루어진다.
+  1. JDBC driver 로딩
+  2. Connection 맺기
+  3. SQL 실행
+  4. 자원 반환
+
+#### 1. **JDBC driver 로딩**
+- 예)
+    ``` java
+    Class.forName("com.mysql.jdbc.Driver"); // mysql 드리이버 로딩
+    ```
+- Driver란?
+  - JDBC Driver는 자바 프로그램의 요청을 DBMS가 이해할 수 있는 프로토콜로 변환해주는 클라이언트 사이드 어댑터
+#### 2. **Connection 맺기**
+- 예) 
+    ``` java
+    Connection conn = null;
+    conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+    ```
+- `DriverManager`는 이름 그대로 데이터베이스 벤더들이 JDBC API를 구현한 드라이버를 관리한다. `DriverManager.getConnection()` 메서드는 인자로 들어오는 값에 따라서 특정 데이터베이스 벤더가 구현한 `Connection` 타입의 객체를 반환한다. `Connection` 객체가 생성은 데이터베이스와 연결이 확립되었음을 의미한다.
+
+#### 3. **SQL 실행**
+- 쿼리 준비
+    ``` java
+    Statement stmt = conn.createStatement();
+    ```
+- 쿼리 실행(쓰기 작업의 경우 - `insert`, `update`, `delete`)
+    ``` java
+    rs = stmt.executeQuery(SQL_QUERY_STRING);
+    ```
+- 쿼리 실행(읽기 작업의 경우 - `select`)  
+  - 결과 값을 받아오는 작업이라면
+  ``` java
+  ResultSet rs = psmt.executeQuery();
+  ```
+- SQL문이 `select`문이었다면 `ResultSet`을 이용한 처리
+  - 값 추출
+   ``` java
+   while(rs.next()){
+       String result1 = resultSet.getString(1) // 컬럼 인덱스
+       String result2 = resultSet.getString("NAME") // 컬럼명
+   }
+    ```
+    이렇게 추출한 값들은 보통 DTO객체로 변환하여 사용한다.
+#### 4. 자원 반환
+``` java
+rs.close(); // ResultSet를 닫는다.
+stmt.close(); // Statement를 닫는다.
+conn.close(); // Connection를 닫는다.
+```
+#### (참고) JDBC의 DB접근 플로우
+![](images/jdbc_basic_cycle.png)
+
+#### (참고) JDBC 컴포넌트의 상호작용
+![](images/jdbc-component-interface-diagram.png)
+
+#### Plain JDBC API의 문제점
+- 쿼리를 실행하기 전과 후에 많은 코드를 작성해야한다. EX) 연결 생성, 명령문, ResultSet 닫기, 연결 등
+- 데이터베이스 로직에서 예외 처리 코드를 수행해야 한다.
+- 트랜잭션을 처리해야 한다.
+- 이러한 모든 코드를 반복하는 것으로, 시간이 낭비된다.
+
+#### JDBC Template
+JDBC Template은 Spring JDBC 접근 방법 중 하나로, 내부적으로 Plain JDBC API를 사용하지만 위와 같은 문제점들을 제거한 형태의 Spring에서 제공하는 class이다.
+
+![](images/data-access-layer.png)
+- **Spring JDBC가 하는 일**
+  - 자원의 생성과 반환(Connection, Statement, ResultSet 등)
+  - Statement 실행
+  - ResultSet Loop 처리
+  - Exception 처리와 반환
+  - Transaction 처리
+- **Spring JDBC에서 개발자가 할 일**
+  - 핵심적으로 해야될 작업만 해주면 나머지는 Framwork가 알아서 처리해준다.
+    - datasource 설정
+    - sql문 작성
+    - 결과 처리
 
 > :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
-
----
-
-## Reference
-> - []()
-
+>- https://gmlwjd9405.github.io/2018/05/15/setting-for-db-programming.html
+>- http://www.java-school.net/jdbc/Guide-to-using-JDBC
+>- http://ooz.co.kr/272
+>- https://ko.wikipedia.org/wiki/JDBC#JDBC_드라이버
+>- https://blog.outsider.ne.kr/6
 
 ## :house: [Home](https://github.com/Do-Hee/tech-interview)
