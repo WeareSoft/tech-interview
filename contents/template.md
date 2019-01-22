@@ -10,4 +10,4 @@
 > - []()
 
 
-## :house: [Home](https://github.com/Do-Hee/tech-interview)
+## :house: [Home](https://github.com/WeareSoft/tech-interview)

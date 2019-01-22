@@ -15,11 +15,11 @@
   * <img src="./images/BigO-complexity-chart.png" width="50%" height="50%">
   * -> [http://bigocheatsheet.com/](http://bigocheatsheet.com/)
 
-> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### DFS와 BFS의 차이
-![](https://github.com/Do-Hee/tech-interview/blob/master/contents/images/bfs-vs-dfs.gif)
+![](https://github.com/WeareSoft/tech-interview/blob/master/contents/images/bfs-vs-dfs.gif)
 
 * 깊이 우선 탐색(DFS, Depth-First Search)
   * DFS의 개념: 루트 노드(혹은 다른 임의의 노드)에서 시작해서 다음 분기(branch)로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법
@@ -103,7 +103,7 @@ void search(Node root) {
 }
 ```
 
-> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html](https://gmlwjd9405.github.io/2018/08/14/algorithm-dfs.html)
 > - [https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html](https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html)
 
@@ -112,7 +112,7 @@ void search(Node root) {
 2. 동적 프로그래밍 
 3. 반복
 
-> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 정렬 알고리즘의 종류와 개념
@@ -126,7 +126,7 @@ void search(Node root) {
 * 정렬 알고리즘의 애니메이션 보기
   * -> [https://www.toptal.com/developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 
-> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 ---
 
 ### MST란
@@ -156,7 +156,7 @@ void search(Node root) {
     * 통신: 전화선의 길이가 최소가 되도록 전화 케이블 망을 구성하는 문제
     * 배관: 파이프를 모두 연결하면서 파이프의 총 길이가 최소가 되도록 연결하는 문제
 
-> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/28/algorithm-mst.html](https://gmlwjd9405.github.io/2018/08/28/algorithm-mst.html)
 
 ### Kruskal MST 알고리즘
@@ -172,7 +172,7 @@ void search(Node root) {
       * 사이클을 형성하는 간선을 제외한다.
   3. 해당 간선을 현재의 MST(최소 비용 신장 트리)의 집합에 추가한다.
 
-> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/29/algorithm-kruskal-mst.html](https://gmlwjd9405.github.io/2018/08/29/algorithm-kruskal-mst.html)
 
 ### Prim MST 알고리즘
@@ -186,7 +186,7 @@ void search(Node root) {
       * 즉, 가장 낮은 가중치를 먼저 선택한다.
   3. 위의 과정을 트리가 (N-1)개의 간선을 가질 때까지 반복한다.
 
-> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/30/algorithm-prim-mst.html](https://gmlwjd9405.github.io/2018/08/30/algorithm-prim-mst.html)
 
 
@@ -195,4 +195,4 @@ void search(Node root) {
 > - [https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
 
-## :house: [Home](https://github.com/Do-Hee/tech-interview)
+## :house: [Home](https://github.com/WeareSoft/tech-interview)

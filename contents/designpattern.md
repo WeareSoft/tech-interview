@@ -38,7 +38,7 @@ GoF 디자인 패턴의 분류
     * 객체나 클래스 사이의 알고리즘이나 책임 분배에 관련된 패턴
     * 한 객체가 혼자 수행할 수 없는 작업을 여러 개의 객체로 어떻게 분배하는지, 또 그렇게 하면서도 객체 사이의 결합도를 최소화하는 것에 중점을 둔다.
 
-> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/06/design-pattern.html](https://gmlwjd9405.github.io/2018/07/06/design-pattern.html)
 
 ### Singleton 패턴
@@ -52,7 +52,7 @@ GoF 디자인 패턴의 분류
 * 예시
   * 프린터 관리자 만들기
 
-> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/06/singleton-pattern.html](https://gmlwjd9405.github.io/2018/07/06/singleton-pattern.html)
 
 ### Strategy 패턴
@@ -76,7 +76,7 @@ GoF 디자인 패턴의 분류
 * 예시
   * 로봇 만들기
 
-> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html](https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html)
 
 ### Template Method 패턴
@@ -97,7 +97,7 @@ GoF 디자인 패턴의 분류
 * 예시
   * 여러 회사의 모터 지원하기
 
-> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/13/template-method-pattern.html](https://gmlwjd9405.github.io/2018/07/13/template-method-pattern.html)
 
 ### Factory Method 패턴
@@ -130,12 +130,12 @@ GoF 디자인 패턴의 분류
 * 예시
   * 여러 가지 방식의 엘리베이터 스케줄링 방법 지원하기
 
-> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/07/factory-method-pattern.html](https://gmlwjd9405.github.io/2018/08/07/factory-method-pattern.html)
 
 ### MVC1 패턴과 MVC2 패턴
 
-> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#5-design-pattern)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#5-design-pattern)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ---
@@ -144,4 +144,4 @@ GoF 디자인 패턴의 분류
 > - [JAVA 객체지향 디자인 패턴, 한빛미디어](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788968480911&orderClick=JAj)
 
 
-## :house: [Home](https://github.com/Do-Hee/tech-interview)
+## :house: [Home](https://github.com/WeareSoft/tech-interview)

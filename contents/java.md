@@ -36,11 +36,11 @@
 ---
 
 ### java 프로그래밍이란
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### Java SE와 Java EE 애플리케이션 차이
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://www.ibm.com/support/knowledgecenter/ko/SSQP76_8.9.1/com.ibm.odm.dserver.rules.res.managing/topics/con_javase_javaee_applis.html](https://www.ibm.com/support/knowledgecenter/ko/SSQP76_8.9.1/com.ibm.odm.dserver.rules.res.managing/topics/con_javase_javaee_applis.html)
 
 ### java와 c/c++의 차이점
@@ -49,7 +49,7 @@
   - 자바는 링크 과정이 없이 컴파일러가 바로 바이트 코드를 생성
 - c/c++에서의 개발: 컴파일 + 링크
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### java 언어의 장단점
 - 장점
@@ -74,14 +74,14 @@
   - **예외처리가 불편하다.**
     - 프로그래머 검사가 필요한 예외가 등장한다면 무조건 프로그래머가 선언을 해줘야 한다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://yolojeb.tistory.com/17](http://yolojeb.tistory.com/17)
 > - [http://huhghiza.tistory.com/7](http://huhghiza.tistory.com/7)
 
 ### java의 접근 제어자의 종류와 특징
 <img src="./images/access-controller.png" width="70%" height="70%">
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### java의 데이터 타입
 1. 기본 데이터 타입(Primitive Data Type)
@@ -101,12 +101,12 @@
     * 더 이상 참조하는 변수가 없을 때 가비지 컬렉션에 의해 파괴된다.
     * 참조 타입은 값이 저장된 곳의 주소를 저장하는 공간으로 객체의 주소를 저장한다. (Call-By-Value)
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://robyncloud.tistory.com/entry/](http://robyncloud.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-%EA%BC%AD-%EC%9D%B4%ED%95%B4%ED%95%B4%EC%95%BC-%EB%90%98%EB%8A%94%EA%B0%9C%EB%85%90-1%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B0%9D%EC%B2%B4-%EC%B0%B8%EC%A1%B0%EB%B3%80%EC%88%98)
 > - [https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
 ### Wrapper class
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### OOP의 4가지 특징
@@ -119,7 +119,7 @@
 4. 다형성(Polymorphism)
     * 서로 다른 클래스의 객체가 같은 메시지를 받았을 때 각자의 방식으로 동작하는 능력
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-features.html](https://gmlwjd9405.github.io/2018/07/05/oop-features.html)
 
 ### OOP의 5대 원칙
@@ -135,7 +135,7 @@
 * **D**: 의존 역전 원칙(DIP, Dependency Inversion Principle)
   * 의존 관계를 맺을 때 변화하기 쉬운 것 또는 자주 변화하는 것보다는 변화하기 어려운 것, 거의 변화가 없는 것에 의존하라는 것이다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-solid.html](https://gmlwjd9405.github.io/2018/07/05/oop-solid.html)
 
 ### 객체지향 프로그래밍과 절차지향 프로그래밍의 차이
@@ -149,12 +149,12 @@
   * 사람의 사고와 가장 비슷하게 프로그래밍을 하기 위해서 생성된 기법
   * 하나의 클래스를 바탕으로 서로 다른 상태를 가진 인스턴스를 만들면 서로 다른 행동을 하게 된다. 즉, 하나의 클래스가 여러 개의 인스턴스가 될 수 있다는 점이 객체 지향이 제공하는 가장 기본적인 재활용성이라고 할 수 있다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### 객체지향이란
 * 객체지향(Object-Oriented)이란
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### java의 non-static 멤버와 static 멤버의 차이
@@ -178,7 +178,7 @@
     * 멤버는 프로그램이 종료될 때 사라진다.
   * 공유의 특성: **동일한 클래스의 모든 객체들에 의해 공유된다.**
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/04/java-static.html](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
 
 ### :question:java의 main 메서드가 static인 이유
@@ -198,7 +198,7 @@
 
 ![](/contents/images/jvm-runtime-data-areas.png)
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [JVM의 Runtime Data Area - Minhyeok Jung](https://www.holaxprogramming.com/2013/07/16/java-jvm-runtime-data-area/)
 > - [Why is the Java main method static? - Stack Overflow](https://stackoverflow.com/questions/146576/why-is-the-java-main-method-static)
 > - [main에 static 사용하는이유 :: public static void main(String[] args) - PYH](https://m.blog.naver.com/PostView.nhn?blogId=blogpyh&logNo=220041002621&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
@@ -227,7 +227,7 @@
   * Object 클래스의 finalize() 메서드를 오버라이드해서 맞춤별 GC를 정의할 수 있다.
     * `protected void finalize() throws Throwable { // 파일 닫기, 자원 반환 등등 }`
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/06/java-final.html](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
 ### java의 제네릭과 c++의 템플릿의 차이
@@ -292,13 +292,13 @@ int b2 = bar2->val; // 35
       * 왜냐하면 MyClass<Foo>나 MyClass<Bar>가 이 메서드와 변수를 공유하기 때문이다.
       * c++ Template은 이 두 클래스를 다른 클래스로 처리하므로 Template 타입 인자를 정적 메서드나 변수를 선언하는 데 사용할 수 있다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [코딩 인터뷰 완전 분석, 프로그래밍인사이트](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966263080&OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&a=A100532541&l=9999&l_cd1=0&u_id=jm0gctc7ca029ofs02yqe&l_cd2=0&tu=https%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf%3FmallGb%3DKOR%26ejkGb%3DKOR%26barcode%3D9788966263080)
 
 ### java의 가비지 컬렉션 처리 방법
 * java의 가비지 컬렉션(Garbage Collection) 처리 방법
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### java 직렬화와 역직렬화란 무엇인가
@@ -351,7 +351,7 @@ public static void main(String[] args){
 }
 ~~~ -->
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://woowabros.github.io/experience/2017/10/17/java-serialize.html](http://woowabros.github.io/experience/2017/10/17/java-serialize.html)
 > - [http://woowabros.github.io/experience/2017/10/17/java-serialize2.html](http://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
 > - [https://nesoy.github.io/articles/2018-04/Java-Serialize](https://nesoy.github.io/articles/2018-04/Java-Serialize)
@@ -416,7 +416,7 @@ public class Main {
       * 구체적으로 클래스 내의 객체에 대해 특정한 변형을 정의하고, 이름을 붙인 다음, 그것을 물리적인 어떤 장소에 위치시키는 등의 작업을 통해 인스턴스를 만드는 것을 말한다.
       * '예시(Exemplification)'라고도 부른다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://www.slipp.net/questions/126](https://www.slipp.net/questions/126)
 > - [https://opentutorials.org/course/1223/5400](https://opentutorials.org/course/1223/5400)
 > - [http://cerulean85.tistory.com/149](http://cerulean85.tistory.com/149)
@@ -425,7 +425,7 @@ public class Main {
 ### 객체란 무엇인가
 * 객체(Object)란
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 오버로딩과 오버라이딩의 차이
@@ -457,7 +457,7 @@ public class Ambiguous extends Shape {
 }
 ~~~
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/08/09/java-overloading-vs-overriding.html](https://gmlwjd9405.github.io/2018/08/09/java-overloading-vs-overriding.html)
 
 ### Call by Reference와 Call by Value의 차이
@@ -554,7 +554,7 @@ public class FunctionCallTest2 {
     * 기본자료형의 경우 해당하는 변수의 값을 복사해서 전달한다.
     * 참조자료형의 경우 해당하는 변수가 가지는 값이 레퍼런스이므로 인자로 넘길 때 Call by Value에 의해 변수가 가지고 있는 레퍼런스가 복사되어 전달된다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://wayhome25.github.io/cs/2017/04/11/cs-13/](https://wayhome25.github.io/cs/2017/04/11/cs-13/)
 > - [http://wonwoo.ml/index.php/post/1679](http://wonwoo.ml/index.php/post/1679)
 > - [https://brunch.co.kr/@kd4/2](https://brunch.co.kr/@kd4/2)
@@ -654,13 +654,13 @@ class FeaturePhone implements Phone {
     * Ex) 추상 클래스: Appliances(Abstract Class) - TV, Refrigerator
     * Ex) 인터페이스: Flyable(Interface) - Plane, Bird
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://loustler.io/languages/oop_interface_and_abstract_class/](http://loustler.io/languages/oop_interface_and_abstract_class/)
 > - [http://alecture.blogspot.com/2011/05/abstract-class-interface.html](http://alecture.blogspot.com/2011/05/abstract-class-interface.html)
 
 ### JVM 구조
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://www.itworld.co.kr/news/110837](http://www.itworld.co.kr/news/110837)
 > - [http://hoonmaro.tistory.com/19](http://hoonmaro.tistory.com/19)
 
@@ -686,7 +686,7 @@ class FeaturePhone implements Phone {
     2-2. List: LinkedList, ArrayList
     2-3. Set: TreeSet, HashSet
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### java Map 인터페이스 구현체의 종류
 * HashMap
@@ -714,7 +714,7 @@ class FeaturePhone implements Phone {
     * 모든 메서드에 대해 동기 처리
     * key와 value에 null값을 허용하지 않는다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### java Set 인터페이스 구현체의 종류
 * HashSet
@@ -728,7 +728,7 @@ class FeaturePhone implements Phone {
     * 이진 탐색 트리 중에 성능을 향상시킨 레드-블랙 트리(Red-Black tree)로 구현되어 있다.
     * Compartor 구현으로 정렬 방법을 지정할 수 있다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### java List 인터페이스 구현체의 종류
 * ArrayList
@@ -742,10 +742,10 @@ class FeaturePhone implements Phone {
     * 내부에서 자동으로 동기화 처리가 일어난다.
     * 성능이 좋지 않고 무거워 잘 쓰이지 않는다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### Annotation
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### String StringBuilder StringBuffer
 * String
@@ -772,14 +772,14 @@ class FeaturePhone implements Phone {
     * 하지만 반복 루프를 사용해서 문자열을 더할 때에는 객체를 계속 새로운 메모리에 할당함
     * String 클래스를 사용하는 것 보다는 스레드와 관련이 있으면 StringBuffer, 스레드 안전 여부와 상관이 없으면 StringBuilder를 사용하는 것을 권장
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://12bme.tistory.com/42](https://12bme.tistory.com/42)
 
 ### 동기화와 비동기화의 차이
 * 동기화(Syncronous)
 * 비동기화(Asyncronous)
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### java에서 ==와 equals()의 차이
@@ -823,7 +823,7 @@ public class Test {
 } 
 ~~~
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/10/06/java-==-and-equals.html](https://gmlwjd9405.github.io/2018/10/06/java-==-and-equals.html)
 
 ### java의 리플렉션 이란
@@ -912,7 +912,7 @@ public class Test {
 * 주의할 점
   * 외부에 공개되지 않는 private 멤버도 `Field.setAccessible()` 메서드를 true로 지정하면 접근과 조작이 가능하기 때문에 주의해야 한다.
 
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#7-java)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://madplay.github.io/post/java-reflection](https://madplay.github.io/post/java-reflection)
 
 ---
@@ -920,4 +920,4 @@ public class Test {
 ## Reference
 > - []()
 
-## :house: [Home](https://github.com/Do-Hee/tech-interview)
+## :house: [Home](https://github.com/WeareSoft/tech-interview)

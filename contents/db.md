@@ -42,11 +42,11 @@
     - WAS에서 Thread pool과 Connection pool내의 Thread와 Connection의 수는 직접적으로 메모리와 관련이 있기 때문에, 많이 사용하면 할 수록 메모리를 많이 점유하게 된다. 그렇다고 반대로 메모리를 위해 적게 지정한다면, 서버에서는 많은 요청을 처리하지 못하고 대기 할 수 밖에 없다.
     - 보통 WAS의 Thread의 수가 Conncetion의 수보다 많은 것이 좋은데, 그 이유는 모든 요청이 DB에 접근하는 작업이 아니기 때문이다.
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - https://delf-lee.github.io/post/connection-pool/
 
 ### 정규화 1차 2차 3차 BCNF
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 트랜잭션이란
@@ -91,7 +91,7 @@
     * 완료(Committed)
         * 트랜잭션이 성공적으로 종료되어 Commit 연산을 실행한 후의 상태
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://limkydev.tistory.com/100](http://limkydev.tistory.com/100)
 > - [http://coding-factory.tistory.com/226](http://coding-factory.tistory.com/226)
 > - [http://yimoyimo.tk/transaction_DI/](http://yimoyimo.tk/transaction_DI/)
@@ -140,7 +140,7 @@
         * 한 트랜잭션 안에서 일정 범위의 레코드를 두 번 이상 읽을 때, 첫 번째 쿼리에서 없던 레코드가 두 번째 쿼리에서 나타나는 현상
         * 이는 트랜잭션 도중 새로운 레코드가 삽입되는 것을 허용하기 때문에 나타난다.
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://hundredin.net/2012/07/26/isolation-level/](http://hundredin.net/2012/07/26/isolation-level/)
 > - [http://egloos.zum.com/ljlave/v/1530887](http://egloos.zum.com/ljlave/v/1530887)
 
@@ -249,35 +249,35 @@
     * 효과적인 인덱스의 활용
         * 인덱스를 활용하면, 조인 연산의 비용을 극적으로 낮출 수 있다.
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://doooyeon.github.io/2018/11/11/database-join.html](https://doooyeon.github.io/2018/11/11/database-join.html)
 
 ### SQL Injection
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### Index란
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### Statement와 PrepareStatement
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### RDBMS와 NoSQL
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 효과적인 쿼리 저장
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 옵티마이저란
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### Replication
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 파티셔닝
@@ -325,7 +325,7 @@
   4. 합성 분할 (composite partitioning)
   <img src="./images/partitioning.png" width="70%" height="70%">
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html](https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html)
 > - [https://nesoy.github.io/articles/2018-02/Database-Partitioning](https://nesoy.github.io/articles/2018-02/Database-Partitioning)
 
@@ -337,7 +337,7 @@ sharding == horizontal partitioning
 
 '주민' 테이블이 여러 DB에 있을 때, 서현동 주민에 대한 정보는 A DB에, 정자동 주민에 대한 정보는 B DB에 저장되도록 하는 방식을 말한다. 여러 데이터베이스를 대상으로 작업해야 하기 때문에 경우에 따라서는 기능에 제약이 있을 수 있고(JOIN 연산 등) 일관성(consistency)과 복제(replication) 등에서 불리한 점이 많다. 예전의 샤딩은 애플리케이션 서버 레벨에서 구현하는 경우가 많았다. 최근에는 이를 플랫폼 차원에서 제공하려는 시도가 많다. 크게 분류하면 Hibernate Shards와 같이 애플리케이션 서버에서 동작하는 형태, CUBRID SHARD, Spock Proxy, Gizzard와 같이 미들티어(middle tier)로 동작하는 형태, nStore나 MongoDB와 같이 데이터베이스 자체에서 샤딩 기능을 제공하는 형태로 나누어볼 수 있다. -->
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://mongodb.citsoft.net/?page_id=225#comment-91922](http://mongodb.citsoft.net/?page_id=225#comment-91922)
 > - [https://d2.naver.com/helloworld/14822](https://d2.naver.com/helloworld/14822)
 > - [http://tech.kakao.com/2016/07/01/adt-mysql-shard-rebalancing/](http://tech.kakao.com/2016/07/01/adt-mysql-shard-rebalancing/)
@@ -417,7 +417,7 @@ public String getPersonName(long personId) {
 - **프로시저가 많은 시스템에선 ORM의 객체 지향적인 장점을 활용하기 어렵다.**
   - 이미 프로시저가 많은 시스템에선 다시 객체로 바꿔야하며, 그 과정에서 생산성 저하나 리스크가 많이 발생할 수 있다.
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [[Slide Share] ORM을 활용할 경우의 설계, 개발 과정 - Javajigi](https://www.slideshare.net/javajigi/orm-27141159)
 > - [[SlidePlayer] Data Persistence Layer - 思 旁](https://slideplayer.com/slide/11663617/)
 > - [ORM - 人CoDOM](http://www.incodom.kr/ORM#h_702209f3f35878a32ee91352ddc6bbe7)
@@ -513,11 +513,11 @@ JDBC Template은 Spring JDBC 접근 방법 중 하나로, 내부적으로 Plain 
     - sql문 작성
     - 결과 처리
 
-> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#4-database)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#4-database)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#4-database)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 >- https://gmlwjd9405.github.io/2018/05/15/setting-for-db-programming.html
 >- http://www.java-school.net/jdbc/Guide-to-using-JDBC
 >- http://ooz.co.kr/272
 >- https://ko.wikipedia.org/wiki/JDBC#JDBC_드라이버
 >- https://blog.outsider.ne.kr/6
 
-## :house: [Home](https://github.com/Do-Hee/tech-interview)
+## :house: [Home](https://github.com/WeareSoft/tech-interview)

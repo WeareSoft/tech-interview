@@ -59,7 +59,7 @@
     * 스레드 우선순위는 얼마인지
   * 즉, 개발자는 자바 스레드로 작동할 스레드 코드를 작성하고, 스레드 코드가 생명을 가지고 실행을 시작하도록 JVM에 요청하는 일 뿐이다.
 
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html](https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)
 > - [https://brunch.co.kr/@kd4/3](https://brunch.co.kr/@kd4/3)
 > - [https://magi82.github.io/process-thread/](https://magi82.github.io/process-thread/)
@@ -85,7 +85,7 @@
   * **동기화 문제**
   * 스레드 간의 자원 공유는 전역 변수(데이터 세그먼트)를 이용하므로 함께 상용할 때 충돌이 발생할 수 있다.
 
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://you9010.tistory.com/136](http://you9010.tistory.com/136)
 
 ### Thread-safe
@@ -102,7 +102,7 @@
     - 이를 만족하기 위해서 해당 서브루틴에서는 공유자원을 사용하지 않으면 된다.
         - 예를들어 정적(전역) 변수를 사용하거나 반환하면 안 되고 호출 시 제공된 매개변수만으로 동작해야한다.
     - 따라서, Reentrant하다면 Thread-safe하지만 그 역은 성립하지 않는다.
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 > - [위키백과 - 재진입성](https://ko.wikipedia.org/wiki/%EC%9E%AC%EC%A7%84%EC%9E%85%EC%84%B1)
 > - [[OS] Thread Safe란? - 곰팡](gompangs.tistory.com/7)
@@ -125,7 +125,7 @@
         * 커널 모드로의 변경이 필요하고 이는 성능 저하로 이어짐, 다양한 기능 활용 가능
         * **Ex) 뮤텍스 기반의 동기화, 세마포어 기반의 동기화, 이름있는 뮤텍스 기반의 프로세스 동기화, 이벤트 기반의 동기화**
 
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://christin2.tistory.com/entry/Chapter-13-%EC%93%B0%EB%A0%88%EB%93%9C-%EB%8F%99%EA%B8%B0%ED%99%94-%EA%B8%B0%EB%B2%95-1](http://christin2.tistory.com/entry/Chapter-13-%EC%93%B0%EB%A0%88%EB%93%9C-%EB%8F%99%EA%B8%B0%ED%99%94-%EA%B8%B0%EB%B2%95-1)
 > - [https://m.blog.naver.com/PostView.nhn?blogId=smuoon4680&logNo=50127179815&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=smuoon4680&logNo=50127179815&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
@@ -157,11 +157,11 @@
     4. Mutex의 경우 Mutex를 소유하고 있는 스레드가 이 Mutex를 해제할 수 있다. 하지만 Semaphore의 경우 이러한 Semaphore를 소유하지 않는 스레드가 Semaphore를 해제할 수 있다.
     5. Semaphore는 시스템 범위에 걸쳐있고 파일시스템상의 파일 형태로 존재하는 반면 Mutex는 프로세스 범위를 가지며 프로세스가 종료될 때 자동으로 Clean up 된다.
 
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://jwprogramming.tistory.com/13](http://jwprogramming.tistory.com/13)
 
 ### 스케줄러
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 동기와 비동기
@@ -183,25 +183,25 @@
         - 작업이 끝날 때 따로 이벤트를 감지하고 결과를 받아 그에 따른 추가 작업을 해줘야하기 때문에, 비교적 느릴 수 있다.
         - I/O 작업이 잦고, 빠른 응답속도를 요구하는 프로그램에 적합하다.
 
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [동기(Sync) 와 비동기(Async) - 리충닷컴](http://leechoong.com/posts/2017/nodejs_syncasync/)
 > - [Sync async-blocking-nonblocking-io - Choloh Bae](https://www.slideshare.net/unitimes/sync-asyncblockingnonblockingio)
 > - [Synchronous(동기) Vs Asynchronous(비동기) - Nesoy Bolg](https://nesoy.github.io/articles/2017-01/Synchronized)
 
 ### 프로세스 동기화
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 메모리 관리 전략
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 가상 메모리
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 캐시의 지역성
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 교착상태의 개념과 조건
@@ -223,19 +223,19 @@
   * 공유 자원 중 많은 경우가 한 번에 한 프로세스만 사용할 수 있기 때문에(예를 들어, 프린트) 1번 조건은 제거하기 어렵다.
   * 대부분의 교착상태 방지 알고리즘은 4번 조건, 즉 대기 상태의 사이클이 발생하는 일을 막는 데 초점이 맞춰져 있다.
 
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [코딩 인터뷰 완전 분석, 프로그래밍인사이트](https://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788966263080&OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&a=A100532541&l=9999&l_cd1=0&u_id=jm0gctc7ca029ofs02yqe&l_cd2=0&tu=https%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf%3FmallGb%3DKOR%26ejkGb%3DKOR%26barcode%3D9788966263080)
 
 ### 사용자 수준 스레드와 커널 수준 스레드
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 외부 단편화와 내부 단편화
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### Context Switching
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 * Context Switching이란?
     * 현재 진행하고 있는 Task(Process, Thread)의 상태를 저장하고 다음 진행할 Task의 상태 값을 읽어 적용하는 과정을 말한다. 
@@ -250,7 +250,7 @@
 > - [Context Switching이란?](https://nesoy.github.io/articles/2018-11/Context-Switching)
 
 ### Swapping
-> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#3-operating-system)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#3-operating-system)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ---
@@ -259,4 +259,4 @@
 > - []()
 
 
-## :house: [Home](https://github.com/Do-Hee/tech-interview)
+## :house: [Home](https://github.com/WeareSoft/tech-interview)
