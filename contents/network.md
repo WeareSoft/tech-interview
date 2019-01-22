@@ -189,11 +189,55 @@
   * [관련 Reference](http://asfirstalways.tistory.com/356)
 
 ### HTTP와 HTTPS
-* HTTP 프로토콜
-  * 웹상에서 클라이언트와 서버 간에 요청/응답으로 정보를 주고 받을 수 있는 프로토콜
+- HTTP 프로토콜
+    - 개념 
+        - HyperText Transfer Protocol
+        - 웹 상에서 클라이언트와 서버 간에 요청/응답(request/response)으로 정보를 주고 받을 수 있는 프로토콜
+    - 특징 
+        - 주로 HTML 문서를 주고받는 데에 쓰인다. 
+        - TCP와 UDP를 사용하며, **80번 포트**를 사용한다.
+- HTTPS 프로토콜 
+    - 개념 
+        - HyperText Transfer Protocol over Secure Socket Layer
+            - 또는 HTTP over TLS, HTTP over SSL, HTTP Secure
+        - 웹 통신 프로토콜인 HTTP의 보안이 강화된 버전의 프로토콜
+    - 특징 
+        - HTTPS의 기본 TCP/IP 포트로 **443번 포트**를 사용한다.
+        - HTTPS는 소켓 통신에서 일반 텍스트를 이용하는 대신에, 웹 상에서 정보를 암호화하는 SSL이나 TLS 프로토콜을 통해 세션 데이터를 암호화한다. 
+            - TLS(Transport Layer Security) 프로토콜은 SSL(Secure Socket Layer) 프로토콜에서 발전한 것이다.
+            - 두 프로토콜의 주요 목표는 기밀성(사생활 보호), 데이터 무결성, ID 및 디지털 인증서를 사용한 인증을 제공하는 것이다.
+        - 따라서 데이터의 적절한 보호를 보장한다. 
+            - 보호의 수준은 웹 브라우저에서의 구현 정확도와 서버 소프트웨어, 지원하는 암호화 알고리즘에 달려있다.
+        - 금융 정보나 메일 등 중요한 정보를 주고받는 것은 HTTPS를, 아무나 봐도 상관 없는 페이지는 HTTP를 사용한다.
+    - 장점 
+        - 네트워크 상에서 열람, 수정이 불가능하므로 안전하다.
+    - 단점 
+        - 암호화를 하는 과정이 웹 서버에 부하를 준다.
+        - HTTPS는 설치 및 인증서를 유지하는데 추가 비용이 발생한다.
+        - HTTP에 비해 느리다. 
+        - 인터넷 연결이 끊긴 경우 재인증 시간이 소요된다.
+            - HTTP는 비연결형으로 웹 페이지를 보는 중 인터넷 연결이 끊겼다가 다시 연결되어도 페이지를 계속 볼 수 있다.
+            - 그러나 HTTPS의 경우에는 소켓(데이터를 주고 받는 경로) 자체에서 인증을 하기 때문에 인터넷 연결이 끊기면 소켓도 끊어져서 다시 HTTPS 인증이 필요하다.
+- HTTPS가 필요한 이유?
+    - 클라이언트인 웹브라우저가 서버에 HTTP를 통해 웹 페이지나 이미지 정보를 요청하면 서버는 이 요청에 응답하여 요구하는 정보를 제공하게 된다.
+    - 웹 페이지(HTML)은 텍스트이고, HTTP를 통해 이런 텍스트 정보를 교환하는 것이다.
+    - 이때 주고받는 텍스트 정보에 주민등록번호나 비밀번호와 같이 민감한 정보가 포함된 상태에서 네트워크 상에서 중간에 제3자가 정보를 가로챈다면 보안상 큰 문제가 발생한다.
+    - 즉, 중간에서 정보를 볼 수 없도록 주고받는 정보를 암호화하는 방법인 HTTPS를 사용하는 것이다.
+- HTTPS의 원리 
+    - **[공개키 알고리즘 방식](https://github.com/WeareSoft/tech-interview/blob/master/contents/security.md#대칭키와-비대칭키-차이)**
+    - 암호화, 복호화시킬 수 있는 서로 다른 키(공개키, 개인키)를 이용한 암호화 방법 
+        - 공개키: 모두에게 공개. 공캐키 저장소에 등록 
+        - 개인키(비공개키): 개인에게만 공개. 클라이언트-서버 구조에서는 서버가 가지고 있는 비공개키 
+    - 클라이언트 -> 서버 
+        - 사용자의 데이터를 **공개키로 암호화** (공개키를 얻은 인증된 사용자)
+        - 서버로 전송 (데이터를 가로채도 개인키가 없으므로 **복호화할 수 없음**)
+        - 서버의 **개인키를 통해 복호화**하여 요청 처리 
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
-> - []()
+> - [https://ko.wikipedia.org/wiki/HTTPS](https://ko.wikipedia.org/wiki/HTTPS)
+> - [https://jeong-pro.tistory.com/89](https://jeong-pro.tistory.com/89)
+> - [https://m.blog.naver.com/reviewer__/221294104297](https://m.blog.naver.com/reviewer__/221294104297)
+> - [https://www.ibm.com/support/knowledgecenter/ko/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10630_.htm](https://www.ibm.com/support/knowledgecenter/ko/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10630_.htm)
 
 ### GET 메서드와 POST 메서드
 * HTTP 프로토콜을 이용해서 서버에 데이터(요청 정보)를 전달할 때 사용하는 방식
