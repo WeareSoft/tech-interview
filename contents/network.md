@@ -254,7 +254,6 @@
         - **Date**: HTTP 메시지를 생성한 일시 (RFC 1123에서 규정)
             - `Date: Sat, 2 Oct 2018 02:00:12 GMT`
         - **Connection**: 클라이언트와 서버 간 연결에 대한 옵션 설정(다소 모호한 복잡성 있음)
-            - `Connection: 'Token list'`
             - `Connection: close` => 현재 HTTP 메시지 직후에 TCP 접속을 끊는다는 것을 알림
             - `Connection: Keep-Alive` => 현재 TCP 커넥션을 유지
         - **Cache-Control** 
@@ -262,14 +261,10 @@
         - **Trailer**
 -  HTTP 헤더 내 엔터티/개체 헤더 (Entity Header) 항목
     - 요청 및 응답 메시지 모두에서 사용 가능한 Entity(콘텐츠, 본문, 리소스 등)에 대한 설명 헤더 
-        - HTTP 메시지 내 포함된 선택적인 개체에 대한 구체적인 미디어 타입 등의 설명
-        - HTTP 메시지는 이미지, 비디오, 오디오, HTML 문서, 전자메일 등의 개체들을 운반할 수 있다.
     - 주요 항목들
         - **Content-Type**: 해당 개체에 포함되는 미디어 타입 정보
             - 컨텐츠의 타입(MIME 미디어 타입) 및 문자 인코딩 방식(EUC-KR,UTF-8 등)을 지정
             - 타입 및 서브타입(type/subtype)으로 구성 
-                - 타입(type): 10개 정도 표준으로 지정됨(application, audio, font, image, multipart 등)
-                - 서브타입(subtype): 각 타입별로 수십에서 수백개 정도
             - `Content-Type: text/html; charset-latin-1` => 해당 개체가 html으로 표현된 텍스트 문서이고, iso-latin-1 문자 인코딩 방식으로 표현됨
         - **Content-Language**: 해당 개체와 가장 잘 어울리는 사용자 언어(자연언어)
         - **Content-Encoding**: 해당 개체 데이터의 압축 방식
@@ -294,16 +289,11 @@
             - 새로 생성된 경우에 HTTP 상태 코드 `201 Created`가 반환됨
             - `HTTP/1.1 302 Found  Location: /`
                 - 이런 응답이 왔다면 브라우저는 / 주소로 redirect한다.
-        - **Expires**: 리소스가 지정된 일시까지 캐시로써 유효함
         - **Last-Modified**: 리소스를 마지막으로 갱신한 일시
-        - **Transfer-Encoding**: chuncked
-            - 동적으로 생성되어 Body의 길이를 모르는 경우에 조금씩 전송 가능
-            - 각 chunk 마다 그 시작에 16진수 길이를 삽입하여 chunk 길이를 알려줌
 - HTTP 헤더 내 요청 헤더 (Request Header) 항목
     - 요청 헤더는 HTTP 요청 메시지 내에서만 나타나며 가장 방대하다.
     - 주요 항목들
         - **Host**: 요청하는 호스트에 대한 호스트명 및 포트번호 (***필수***)
-            - (HTTP/1.1 이후부터 Host 필드는 필수 항목. 웹브라우저는 이를 반드시 포함 필요)
             - Host 필드에 도메인명 및 호스트명 모두를 포함한 전체 URI(FQDN) 지정 필요
             - 이에 따라 동일 IP 주소를 갖는 단일 서버에 여러 사이트가 구축 가능
         - **User-Agent**: 클라이언트 소프트웨어(브라우저, OS) 명칭 및 버전 정보
@@ -321,7 +311,6 @@
             - 응답 헤더의 **Access-Control-Allow-Origin**와 관련 
     - 다음 4개는 주로 HTTP 메세지 Body의 속성 또는 내용 협상용 항목들
         - **Accept**: 클라이언트 자신이 원하는 미디어 타입 및 우선순위를 알림
-            - 텍스트(text/html,text/plain,...),이미지(image/jpeg,...) 등
             - `Accept: */*` => 어떤 미디어 타입도 가능
             - `Accept: image/*` => 모든 이미지 유형
         - **Accept-Charset**: 클라이언트 자신이 원하는 문자 집합
@@ -334,6 +323,7 @@
         - **Server**: 서버 소프트웨어 정보
         - **Accept-Range**
         - **Set-Cookie**: 서버측에서 클라이언트에게 세션 쿠키 정보를 설정 (RFC 2965에서 규정)
+        - **Expires**: 리소스가 지정된 일시까지 캐시로써 유효함
         - **Age**: 캐시 응답. max-age 시간 내에서 얼마나 흘렀는지 알려줌(초 단위)
         - **ETag**: HTTP 컨텐츠가 바뀌었는지를 검사할 수 있는 태그
         - **Proxy-authenticate**
@@ -348,7 +338,6 @@
             * `Access-Control-Allow-Origin: *`
                 * 만약 주소를 일일이 지정하기 싫다면 *으로 모든 주소에 CORS 요청을 허용되지만 그만큼 보안이 취약해진다.
             * 유사한 헤더로 `Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Methods, Access-Control-Allow-Headers` 등이 있다. 
-            * Request와 Allow에서 Method 단수 복수 주의
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - [http://www.ktword.co.kr/abbr_view.php?nav=&m_temp1=5905&id=902](http://www.ktword.co.kr/abbr_view.php?nav=&m_temp1=5905&id=902)
