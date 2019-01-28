@@ -1,4 +1,4 @@
-# 10. ETC
+# 11. ETC
 **:book: Contents**
 * [TDD란](#tdd란)
 * [웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명](#웹-브라우저에서-서버로-어떤-페이지를-요청하면-일어나는-일련의-과정을-설명)
@@ -24,22 +24,22 @@
 * 추상적인 레벨에서의 TDD의 핵심 개념(중요)
   * 결정과 피드백 사이의 갭에 대한 인식, 더 나아가 결정과 피드백 사이의 갭을 조절하기 위한 테크닉이라고도 할 수 있다.
 
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/06/03/agile-tdd.html](https://gmlwjd9405.github.io/2018/06/03/agile-tdd.html)
 
 ### 웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명
 * Ex. url에 'www.naver.com' 을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.
   * 관련 링크: [http://owlgwang.tistory.com/1](http://owlgwang.tistory.com/1)
 
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 컴파일러와 인터프리터
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)     :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 분산락
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)     :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### 프레임워크와 라이브러리의 차이
@@ -49,15 +49,15 @@
 * 라이브러리(Library)란 
     * 자주 사용되는 로직을 재사용하기 편리하도록 잘 정리한 일련의 코드들의 집합
     * Ex) 자동차의 기능을 하는 부품
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)     :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://moolgogiheart.tistory.com/87](http://moolgogiheart.tistory.com/87)
 
 ### 64bit CPU와 32bit CPU 차이
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### CVS SVN Git
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
 ### Git Branch 종류
@@ -80,7 +80,7 @@
     * **출시 버전에서 발생한 버그를 수정 하는 브랜치** 
     * 배포한 버전에 긴급하게 수정을 해야 할 필요가 있을 경우, ‘master’ 브랜치에서 분기하는 브랜치이다. ‘develop’ 브랜치에서 문제가 되는 부분을 수정하여 배포 가능한 버전을 만들기에는 시간도 많이 소요되고 안정성을 보장하기도 어려우므로 바로 배포가 가능한 ‘master’ 브랜치에서 직접 브랜치를 만들어 필요한 부분만을 수정한 후 다시 ‘master’브랜치에 병합하여 이를 배포해야 하는 것이다. 
 
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)      :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html](https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html)
 
 
@@ -118,11 +118,11 @@
     * WAS의 예
         * Ex) Tomcat, JBoss, Jeus, Web Sphere 등
 
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html](https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html)
 
 ### 애자일 방법론이란
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/05/26/what-is-agile.html](https://gmlwjd9405.github.io/2018/05/26/what-is-agile.html)
 
 ### Servlet과 JSP
@@ -146,14 +146,14 @@
     * JSP가 수정된 경우 재배포할 필요가 없이 WAS가 알아서 처리한다. **(쉬운 배포)**
     * 구체적인 내용은 [https://gmlwjd9405.github.io/2018/11/03/jsp.html](https://gmlwjd9405.github.io/2018/11/03/jsp.html) 참고
 
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)     :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html](https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html)
 
 ### Memcached와 Redis의 차이
 * Memcached
 * Redis
 
-> :arrow_double_up:[Top](#10-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#10-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://ojava.tistory.com/70](https://ojava.tistory.com/70)
 
 ---
