@@ -210,7 +210,6 @@
 ---
 
 # Reference
-# Reference
 * [jojoldu님의 junior-recruit-scheduler](https://github.com/jojoldu/junior-recruit-scheduler/blob/master/README.md)
 * [JaeYeopHan 님의 Interview_Question_for_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
 * [KimHunJin님의 Study-Book/interview](https://github.com/KimHunJin/Study-Book/tree/master/interview)
