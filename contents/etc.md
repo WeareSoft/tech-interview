@@ -11,7 +11,8 @@
 * [웹 서버(Web Server)와 웹 어플리케이션 서버(WAS)의 차이](#web-server와-was의-차이)
 * [애자일 방법론이란](#애자일-방법론이란)
 * [Servlet과 JSP](#servlet과-jsp)
-* [Memcached와 Redis의 차이](#Memcached와-Redis의-차이)
+* [Memcached와 Redis의 차이](#memcached와-Redis의-차이)
+* [Maven과 Gradle의 차이](#maven과-gradle의-차이)
 
 ---
 
@@ -152,6 +153,13 @@
 ### Memcached와 Redis의 차이
 * Memcached
 * Redis
+
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [https://ojava.tistory.com/70](https://ojava.tistory.com/70)
+
+### Maven과 Gradle의 차이
+* Maven
+* Gradle
 
 > :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://ojava.tistory.com/70](https://ojava.tistory.com/70)
