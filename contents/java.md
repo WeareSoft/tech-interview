@@ -145,7 +145,7 @@
 * 객체지향 프로그래밍
   * 실세상의 물체를 객체로 표현하고, 이들 사이의 관계, 상호 작용을 프로그램으로 나타낸다.
   * 객체를 추출하고 객체들의 관계를 결정하고 이들의 상호 작용에 필요한 함수(메서드)와 변수(필드)를 설계 및 구현하다.
-  * 객체 지향의 행심은 연관되어 있는 변수와 메서드를 하나의 그룹으로 묶어서 그룹핑하는 것이다.
+  * 객체 지향의 핵심은 연관되어 있는 변수와 메서드를 하나의 그룹으로 묶어서 그룹핑하는 것이다.
   * 사람의 사고와 가장 비슷하게 프로그래밍을 하기 위해서 생성된 기법
   * 하나의 클래스를 바탕으로 서로 다른 상태를 가진 인스턴스를 만들면 서로 다른 행동을 하게 된다. 즉, 하나의 클래스가 여러 개의 인스턴스가 될 수 있다는 점이 객체 지향이 제공하는 가장 기본적인 재활용성이라고 할 수 있다.
 
@@ -185,7 +185,7 @@
 - `static` 키워드
     - `static` 멤버는 클래스 로딩(프로그램 시작) 시 메모리에 로드되어 인스턴트를 생성하지 않아도 호출이 가능하다.
 - main 메서드가 `static`인 이유
-    - ``` java 
+    - ``` java
         public static void main(String[] args){...}
         ```
     - 위와 같은 형식은 java에서의 `main()` 관례이다. 위와 같은 시그니처를 가진 메소드가 없으면 실행되지 않는다.
@@ -204,7 +204,7 @@
 > - [main에 static 사용하는이유 :: public static void main(String[] args) - PYH](https://m.blog.naver.com/PostView.nhn?blogId=blogpyh&logNo=220041002621&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 > - [[자바]static, JVM memory의 기본(1편) - ITPangPang](http://itpangpang.xyz/71)
 > - [JAVA :: 자바의 메모리 구조 - 1. 메소드 영역(Method Area) - WANZARGEN](http://wanzargen.tistory.com/16)
-### java의 final 키워드 
+### java의 final 키워드
 * **final 키워드**
   * 개념: 변수나 메서드 또는 클래스가 '변경 불가능'하도록 만든다.
   * 원시(Primitive) 변수에 적용 시
@@ -805,22 +805,22 @@ class FeaturePhone implements Phone {
 <img src="./images/equals-example.png" width="90%" height="90%">
 
 ~~~java
-public class Test { 
-    public static void main(String[] args) { 
-        // Thread 객체 
-        Thread t1 = new Thread(); 
-        Thread t2 = new Thread(); // 새로운 객체 생성. 즉, s1과 다른 객체. 
+public class Test {
+    public static void main(String[] args) {
+        // Thread 객체
+        Thread t1 = new Thread();
+        Thread t2 = new Thread(); // 새로운 객체 생성. 즉, s1과 다른 객체.
         Thread t3 = t1; // 같은 대상을 가리킨다.
-        // String 객체 
-        String s1 = new String("WORLD"); 
-        String s2 = new String("WORLD"); 
+        // String 객체
+        String s1 = new String("WORLD");
+        String s2 = new String("WORLD");
         /* --print-- */
         System.out.println(t1 == t3); // true
         System.out.println(t1 == t2); // false(서로 다른 객체이므로 별도의 주소를 갖는다.)
         System.out.println(t1.equals(t2)); // false
         System.out.println(s1.equals(s2)); // true(모두 "WORLD"라는 동일한 내용을 갖는다.)
-    } 
-} 
+    }
+}
 ~~~
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
