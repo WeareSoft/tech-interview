@@ -164,7 +164,13 @@
 ## 8. JavaScript
 :arrow_forward: [답변 내용](/contents/javascript.md)
 * JavaScript Event Loop
-* Hoisting
+* 함수 선언식과 함수 표현식
+* 화살표 함수(Arrow Function)
+* 향상된 객체 리터럴(Enhanced Object Literals)
+* Modules
+* 디스트럭처링(Destructuring)
+* 전개 연산자(Spread Operator)
+* 호이스팅(Hoisting)
 * Closure
 * this
 * Promise
