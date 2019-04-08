@@ -685,6 +685,8 @@ class FeaturePhone implements Phone {
     2-1. Map: HashMap, LinkedHashMap, HashTable, TreeMap
     2-2. List: LinkedList, ArrayList
     2-3. Set: TreeSet, HashSet
+* Collections Framework 동기화
+    * [https://madplay.github.io/post/java-collection-synchronize](https://madplay.github.io/post/java-collection-synchronize)
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
