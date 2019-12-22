@@ -387,7 +387,7 @@ public String getPersonName(long personId) throws SQLException {
 - JPA example
 ``` java
 public String getPersonName(long personId) {
-    Person p = em.find(Person.calss, personId);
+    Person p = em.find(Person.class, personId);
     return p.getName();
 }
 ```
