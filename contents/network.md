@@ -1,23 +1,28 @@
 # 2. Network
 **:book: Contents**
-* [OSI 7계층](#osi-7계층)
-* [TCP/IP의 개념](#tcp-ip의-개념)
-* [TCP와 UDP](#tcp와-udp)
-* [TCP와 UDP의 헤더 분석](#tcp와-udp의-헤더-분석)
-* [TCP의 3-way-handshake와 4-way-handshake](#tcp의-3-way-handshake와-4-way-handshake)
-  * Q. TCP의 연결 설정 과정(3단계)과 연결 종료 과정(4단계)이 단계가 차이나는 이유?
-  * Q. 만약 Server에서 FIN 플래그를 전송하기 전에 전송한 패킷이 Routing 지연이나 패킷 유실로 인한 재전송 등으로 인해 FIN 패킷보다 늦게 도착하는 상황이 발생하면 어떻게 될까?
-  * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
-* [HTTP와 HTTPS](#http와-https)
-* [HTTP 요청/응답 헤더](#http-요청-응답-헤더)
-* [CORS란](#cors란)
-* [GET 메서드와 POST 메서드](#get-메서드와-post-메서드)
-* [쿠키(Cookie)와 세션(Session)](#쿠키와-세션)
-* [DNS](#dns)
-* [REST와 RESTful의 개념](#rest와-restful의-개념)
-* [소켓(Socket)이란](#소켓이란)
-* [Socket.io와 WebSocket의 차이](#socket.io와-websocket의-차이)
-* [Frame, Packet, Segment, Datagram](#frame-packet-segment-datagram)
+- [2. Network](#2-network)
+    - [OSI 7계층](#osi-7계층)
+    - [TCP IP의 개념](#tcp-ip의-개념)
+    - [TCP와 UDP](#tcp와-udp)
+    - [TCP와 UDP의 헤더 분석](#tcp와-udp의-헤더-분석)
+    - [TCP의 3 way handshake와 4 way handshake](#tcp의-3-way-handshake와-4-way-handshake)
+      - [:question:TCP 관련 질문 1](#questiontcp-관련-질문-1)
+      - [:question:TCP 관련 질문 2](#questiontcp-관련-질문-2)
+      - [:question:TCP 관련 질문 3](#questiontcp-관련-질문-3)
+    - [HTTP와 HTTPS](#http와-https)
+    - [HTTP 요청 응답 헤더](#http-요청-응답-헤더)
+    - [CORS란](#cors란)
+    - [GET 메서드와 POST 메서드](#get-메서드와-post-메서드)
+    - [쿠키와 세션](#쿠키와-세션)
+    - [DNS](#dns)
+    - [REST와 RESTful의 개념](#rest와-restful의-개념)
+    - [소켓이란](#소켓이란)
+    - [Socket.io와 WebSocket의 차이](#socketio와-websocket의-차이)
+    - [Frame Packet Segment Datagram](#frame-packet-segment-datagram)
+      - [PDU (Protocol Data Unit)](#pdu-protocol-data-unit)
+      - [데이터 캡슐화](#데이터-캡슐화)
+  - [Reference](#reference)
+  - [:house: Home](#house-home)
 
 
 ---
@@ -666,12 +671,37 @@
 
 ### Frame Packet Segment Datagram
 
+#### PDU (Protocol Data Unit)
+![](./images/osi-pdu.png)
+
+프로토콜 데이터 단위. 데이터 통신에서 상위 계층이 전달한 데이터에 붙이는 제어정보를 뜻한다. 각 계층의 데이터의 단위이다.
+- 물리 계층: Bit
+- 데이터링크 계층: Frame
+- 네트워크 계층: Packets
+- 전송 계층: Segment
+- 세션, 표현, 어플리케이션 계층: Message(Data)
+
+#### 데이터 캡슐화
+![](./images/data-encapsulation.png)
+
+PDU는 SDU(Service Data Unit) 와 PCI(Protocol Control Information)로 구성되어 있다. SDU는 전송하려는 데이터고, PCI는 제어 정보다. PCI에는 송신자와 수신자 주소, 오류 검출 코드, 프로토콜 제어 정보 등이 있다. 데이터에 제어 정보를 덧붙이는 것을 캡슐화(Encapsulation)라 한다.
+
+다시 말해, 캡슐화는 어떤 네트워크를 통과하기 위해 전송하려는 데이터를 다른 무언가로 감싸서 보내고 해당 네트워크를 통과하면 감싼 부분을 다시 벗겨내어 전송하는 기능을 말한다.
+
+ 
+
+ 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
 > - []()
 
 ---
 ## Reference
-> - []()
+> - [데이터가 전달되는 원리" OSI 7계층 모델과 TCP/IP 모델](https://velog.io/@hidaehyunlee/%EB%8D%B0%EC%9D%B4%ED%84%B0%EA%B0%80-%EC%A0%84%EB%8B%AC%EB%90%98%EB%8A%94-%EC%9B%90%EB%A6%AC-OSI-7%EA%B3%84%EC%B8%B5-%EB%AA%A8%EB%8D%B8%EA%B3%BC-TCPIP-%EB%AA%A8%EB%8D%B8)
+> - [Network Fundamentals CCNA Exploration Companion Guide](https://www.ibserveis.com/pax/1-protocols_ok.pdf)
+> - [OSI 7계층](https://brownbears.tistory.com/189)
+> 
+
 
 
 ## :house: [Home](https://github.com/Do-Hee/tech-interview)
+
