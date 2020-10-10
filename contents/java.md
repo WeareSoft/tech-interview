@@ -1,37 +1,43 @@
 # 7. Java
 **:book: Contents**
-* [java 프로그래밍이란](#java-프로그래밍이란)
-* [Java SE와 Java EE 애플리케이션 차이](#java-se와-java-ee-애플리케이션-차이)
-* [java와 c/c++의 차이점](#java와-c/c++의-차이점)
-* [java 언어의 장단점](#java-언어의-장단점)
-* [java의 접근 제어자의 종류와 특징](#java의-접근-제어자의-종류와-특징)
-* [java의 데이터 타입](#java의-데이터-타입)
-* [Wrapper class](#wrapper-class)
-* [OOP의 4가지 특징](#oop의-4가지-특징)
-* [OOP의 5대 원칙 (SOLID)](#oop의-5대-원칙)
-* [객체지향 프로그래밍과 절차지향 프로그래밍의 차이](#객체지향-프로그래밍과-절차지향-프로그래밍의-차이)
-* [객체지향(Object-Oriented)이란](#객체지향이란)
-* [java의 non-static 멤버와 static 멤버의 차이](#java의-non-static-멤버와-static-멤버의-차이)
-  * Q. java의 main 메서드가 static인 이유
-* [java의 final 키워드 (final/finally/finalize)](#java의-final-키워드)
-* [java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이](#java의-제네릭과-c++의-템플릿의-차이)
-* [java의 가비지 컬렉션(Garbage Collection) 처리 방법](#java의-가비지-컬렉션-처리-방법)
-* [java 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가](#java-직렬화와-역직렬화란-무엇인가)
-* [클래스, 객체, 인스턴스의 차이](#클래스-객체-인스턴스의-차이)
-* [객체(Object)란 무엇인가](#객체란-무엇인가)
-* [오버로딩과 오버라이딩의 차이(Overloading vs Overriding)](#오버로딩과-오버라이딩의-차이)
-* [Call by Reference와 Call by Value의 차이](#call-by-reference와-call-by-value의-차이)
-* [인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)](#인터페이스와-추상-클래스의-차이)
-* [JVM 구조](#jvm-구조)
-* [Java Collections Framework](#java-collections-framework)
-  * [java Map 인터페이스 구현체의 종류](#java-map-인터페이스-구현체의-종류)
-  * [java Set 인터페이스 구현체의 종류](#java-set-인터페이스-구현체의-종류)
-  * [java List 인터페이스 구현체의 종류](#java-list-인터페이스-구현체의-종류)
-* [Annotation](#annotation)
-* [String, StringBuilder, StringBuffer](#string-stringbuilder-stringbuffer)
-* [동기화와 비동기화의 차이(Syncronous vs Asyncronous)](#동기화와-비동기화의-차이)
-* [java에서 '=='와 'equals()'의 차이](#java에서-==와-equals의-차이)
-* [java의 리플렉션(Reflection) 이란](#java의-리플렉션-이란)
+- [7. Java](#7-java)
+    - [java 프로그래밍이란](#java-프로그래밍이란)
+    - [Java SE와 Java EE 애플리케이션 차이](#java-se와-java-ee-애플리케이션-차이)
+    - [java와 c/c++의 차이점](#java와-cc의-차이점)
+    - [java 언어의 장단점](#java-언어의-장단점)
+    - [java의 접근 제어자의 종류와 특징](#java의-접근-제어자의-종류와-특징)
+    - [java의 데이터 타입](#java의-데이터-타입)
+    - [Wrapper class](#wrapper-class)
+      - [자바에서 제공하는 Wrapper class](#자바에서-제공하는-wrapper-class)
+      - [박싱(Boxing), 언박싱(Unboxing)](#박싱boxing-언박싱unboxing)
+      - [오토 박싱(AutoBoxing)과 오토 언박싱(AutoUnBoxing)](#오토-박싱autoboxing과-오토-언박싱autounboxing)
+    - [OOP의 4가지 특징](#oop의-4가지-특징)
+    - [OOP의 5대 원칙](#oop의-5대-원칙)
+    - [객체지향 프로그래밍과 절차지향 프로그래밍의 차이](#객체지향-프로그래밍과-절차지향-프로그래밍의-차이)
+    - [객체지향이란](#객체지향이란)
+    - [java의 non-static 멤버와 static 멤버의 차이](#java의-non-static-멤버와-static-멤버의-차이)
+    - [:question:java의 main 메서드가 static인 이유](#questionjava의-main-메서드가-static인-이유)
+    - [java의 final 키워드](#java의-final-키워드)
+    - [java의 제네릭과 c++의 템플릿의 차이](#java의-제네릭과-c의-템플릿의-차이)
+    - [java의 가비지 컬렉션 처리 방법](#java의-가비지-컬렉션-처리-방법)
+    - [java 직렬화와 역직렬화란 무엇인가](#java-직렬화와-역직렬화란-무엇인가)
+    - [클래스 객체 인스턴스의 차이](#클래스-객체-인스턴스의-차이)
+    - [객체란 무엇인가](#객체란-무엇인가)
+    - [오버로딩과 오버라이딩의 차이](#오버로딩과-오버라이딩의-차이)
+    - [Call by Reference와 Call by Value의 차이](#call-by-reference와-call-by-value의-차이)
+    - [인터페이스와 추상 클래스의 차이](#인터페이스와-추상-클래스의-차이)
+    - [JVM 구조](#jvm-구조)
+    - [Java Collections Framework](#java-collections-framework)
+    - [java Map 인터페이스 구현체의 종류](#java-map-인터페이스-구현체의-종류)
+    - [java Set 인터페이스 구현체의 종류](#java-set-인터페이스-구현체의-종류)
+    - [java List 인터페이스 구현체의 종류](#java-list-인터페이스-구현체의-종류)
+    - [Annotation](#annotation)
+    - [String StringBuilder StringBuffer](#string-stringbuilder-stringbuffer)
+    - [동기화와 비동기화의 차이](#동기화와-비동기화의-차이)
+    - [java에서 ==와 equals()의 차이](#java에서-와-equals의-차이)
+    - [java의 리플렉션 이란](#java의-리플렉션-이란)
+  - [Reference](#reference)
+  - [:house: Home](#house-home)
 
 ---
 
@@ -106,6 +112,89 @@
 > - [https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
 ### Wrapper class
+프로그램에 따라 기본 타입의 데이터를 객체로 취급해야 하는 경우가 있다. 예를 들어, 메소드의 인수로 객체 타입만이 요구되면, 기본 타입의 데이터를 그대로 사용할 수는 없다. 이때 기본 타입의 데이터를 먼저 객체로 변환한 후 작업을 수행해야 한다.
+
+#### 자바에서 제공하는 Wrapper class
+기본 타입	| 래퍼 클래스
+---|---
+`byte`|`Byte`
+`short`|`Short`
+`int`|`Integer`
+`long`|`Long`
+`float`|`Float`
+`double`|`Double`
+`char`|`Character`
+`boolean`|`Boolean`
+
+ 이렇게 8개의 기본 타입에 해당하는 데이터를 객체로 포장해 주는 클래스를 래퍼 클래스(Wrapper class)라고 한다. 래퍼 클래스는 각각의 타입에 해당하는 데이터를 인수로 전달받아, 해당 값을 가지는 객체로 만들어 준다. 이러한 래퍼 클래스는 모두 java.lang 패키지에 포함되어 제공된다.
+
+ #### 박싱(Boxing), 언박싱(Unboxing)
+래퍼 클래스(Wrapper class)는 산술 연산을 위해 정의된 클래스가 아니므로, 인스턴스에 저장된 값을 변경할 수 없다. 단지, 값을 참조하기 위해 새로운 인스턴스를 생성하고, 생성된 인스턴스의 값만을 참조할 수 있다.
+
+![](./images/java_boxing_unboxing.png)
+
+위의 그림과 같이 기본 타입의 데이터를 래퍼 클래스의 인스턴스로 변환하는 과정을 박싱(Boxing), 래퍼 클래스의 인스턴스에 저장된 값을 다시 기본 타입의 데이터로 꺼내는 과정을 언박싱(UnBoxing)이라고 한다.
+
+
+#### 오토 박싱(AutoBoxing)과 오토 언박싱(AutoUnBoxing)
+JDK 1.5부터는 박싱과 언박싱이 필요한 상황에서 자바 컴파일러가 이를 자동으로 처리해 준다. 이렇게 자동화된 박싱과 언박싱을 오토 박싱(AutoBoxing)과 오토 언박싱(AutoUnBoxing)이라고 부른다.
+
+ ``` java
+Integer num = new Integer(17); // 박싱
+int n = num.intValue();        // 언박싱
+System.out.println(n); // 출력 값: 17
+
+
+Character ch = 'X'; // Character ch = new Character('X'); : 오토박싱
+char c = ch;        // char c = ch.charValue();           : 오토언박싱
+System.out.println(c); // 출력 값: X
+ ```
+
+ ```
+ 17
+ X
+ ```
+
+ 오토 박싱을 이용하면 `new` 키워드를 사용하지 않고도 자동으로 `Character` 인스턴스를 생성할 수 있다. 반대로 `charValue()` 메소드를 사용하지 않고도, 오토 언박싱을 이용하여 인스턴스에 저장된 값을 바로 참조할 수 있다.
+
+``` java
+public class Wrapper02 {
+    public static void main(String[] args) {
+        Integer num1 = new Integer(7); // 박싱
+        Integer num2 = new Integer(3); // 박싱
+
+        int int1 = num1.intValue();    // 언박싱
+        int int2 = num2.intValue();    // 언박싱
+
+        Integer result1 = num1 + num2; // 10 
+        Integer result2 = int1 - int2; // 4
+        int result3 = num1 * int2;     // 21
+    }
+}
+```
+
+``` java
+public class Wrapper03 {
+    public static void main(String[] args) {
+      Integer num1 = new Integer(10);
+      Integer num2 = new Integer(20);
+      Integer num3 = new Integer(10);
+
+      System.out.println(num1 < num2);       // true
+      System.out.println(num1 == num3);      // false
+      System.out.println(num1.equals(num3)); // true
+    }
+}
+```
+
+래퍼 클래스의 비교 연산도 오토언박싱을 통해 가능해지지만, 인스턴스에 저장된 값의 동등 여부 판단은 비교 연산자인 동등 연산자(`==`)를 사용해서는 안 되며, `equals()` 메소드를 사용해야만 한다.
+
+래퍼 클래스도 객체이므로 동등 연산자(`==`)를 사용하게 되면, 두 인스턴스의 값을 비교하는 것이 아니라 두 인스턴스의 주소값을 비교한다.
+
+따라서 서로 다른 두 인스턴스를 동등 연산자(`==`)로 비교하게 되면, 언제나 `false` 값을 반환한다.
+
+그러므로 인스턴스에 저장된 값의 동등 여부를 정확히 판단하려면 `equals()` 메소드를 사용해야한다.
+
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
