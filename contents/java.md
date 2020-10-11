@@ -15,6 +15,10 @@
     - [OOP의 5대 원칙](#oop의-5대-원칙)
     - [객체지향 프로그래밍과 절차지향 프로그래밍의 차이](#객체지향-프로그래밍과-절차지향-프로그래밍의-차이)
     - [객체지향이란](#객체지향이란)
+      - [객체지향의 장점(강점)](#객체지향의-장점강점)
+      - [객체지향의 단점(한계)](#객체지향의-단점한계)
+      - [객체지향적 설계원칙 SOLID](#객체지향적-설계원칙-solid)
+      - [객체지향의 특징](#객체지향의-특징)
     - [java의 non-static 멤버와 static 멤버의 차이](#java의-non-static-멤버와-static-멤버의-차이)
     - [:question:java의 main 메서드가 static인 이유](#questionjava의-main-메서드가-static인-이유)
     - [java의 final 키워드](#java의-final-키워드)
@@ -241,10 +245,63 @@ public class Wrapper03 {
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 
 ### 객체지향이란
-* 객체지향(Object-Oriented)이란
+- 객체(Object)
+   - 현실세계의 실체 및 개념을 반영하는 상태(Status)와 행위(Behavior)를 정의한 데이터의 집합
+- 객체지향(Object-Oriented) 프로그래밍
+   - 각자의 역할을 지닌 객체들끼리 서로 메시지를 주고받으며 동작할 수 있도록 프로그래밍 하는 것
+
+#### 객체지향의 장점(강점)
+객체를 중심으로 프로그래밍하기 때문에,
+- 사람의 관점에서 프로그램을 이해하고 파악하기 쉽다.
+- 강한 응집력(Strong Cohesion)과 약한 결합력(Weak Coupling)을 가진다.
+- 재사용성, 확장성, 융통성이 높다.
+
+이러한 장점 때문에 디버깅과 유지보수가 용이하고 설계과 분석이 비교적 쉽다.
+
+#### 객체지향의 단점(한계)
+- 객체 간의 정보 교환이 모두 메시지 교환을 통해 일어나므로 실행 시스템에 많은 overhead가 발생하게 된다.
+  - 처리속도가 상대적으로 느리다.
+  - 하지만 하드웨어의 발전으로 이러한 단점은 어느정도 해소되었다.
+- 객체가 상태를 갖기 때문에 예상치 못한 부작용이 발생할 수 있다. 변수가 존재하고 이 변수를 통해 객체가 예측할 수 없는 상태를 갖게 되어 애플리케이션 내부에서 버그를 발생시킬 수 있다.
+  - 이는 함수형 프로그래밍 등장의 패러다임이다.
+
+#### 객체지향적 설계원칙 SOLID
+- SRP(Single Responsibility Principle)단일 책임 원칙
+  - 클래스는 단 하나의 책임을 가져야 하며 클래스를 변경하는 이유는 단 하나의 이유이어야 한다.
+- OCP(Open-Closed Principle) : 개방-폐쇄 원칙
+  - 확장에는 열려 있어야 하고 변경에는 닫혀 있어야 한다.
+- LSP(Liskov Substitution Principle) : 리스코프 치환 원칙
+  - 상위 타입의 객체를 하위 타입의 객체로 치환해도 상위 타입을 사용하는 프로그램은 정상적으로 동작해야 한다.
+- ISP(Interface Segregation Principle) : 인터페이스 분리 원칙
+  - 인터페이스는 그 인터페이스를 사용하는 클라이언트를 기준으로 분리해야 한다.
+- DIP(Dependency Inversion Principle) : 의존 역전 원칙
+  - 고수준 모듈은 저수준 모듈의 구현에 의존해서는 안된다.
+
+#### 객체지향의 특징
+- 추상화
+  - 객체에서 공통된 속성이나 기능을 추출하는 것.
+중요하지 않은 것(관심 대상이 아닌 것)은 감추거나 무시하고, 중요한 것(관심있는 것)만을 강조하여 추출하는 것.
+관점에 따라 추상화의 결과가 달라질 수 있다.
+주요 관심사에만 집중함으로써, 프로그램의 복잡도를 관리할 수 있다.
+- 캡슐화
+  - 관심있는 데이터와 기능을 모아놓고 패킹한 것이다. 객체지향에서는 이를 클래스로 정의하고 외부에서 마음대로 접근할 수 없게하였다. 과거 절차지향 프로그래밍에서는 소스코드가 거대해질수록 데이터가 어디서 어떻게 변화하는지 파악하기 어려웠고 유지보수가 힘들어지는 문제가 발생하였다. 객체지향 프로그래밍에서는 캡슐화를 통해 이란 폐단을 해결하였다. 이렇게 내부의 데이터나 함수를 외부에서 참조하지 못하도록 차단하는 개념을 정보 은닉화(Information Hiding)라고 하며 이것이 바로 캡슐화라는 개념이다.
+- 다형성
+  - 같은 코드라 하더라도 상황에 따라 다른 방식으로 동작하는 성질. Java에서 다형성을 구현할 수 있는 대표적으로 Overriding과 Overloading이 있다.
+  - Overriding
+    - 임의의 클래스가 다른 클래스를 상속 받거나 인터페이스를 구현했을 때, 상위 클래스 또는 인터페이스에 정의되어 있는 메소드를 재정의 하여 사용하는 것이다. 메소드 호출 시 재정의되어 있지 않다면 상위 클래스의 메소드가 호출된다. (인터페이스는 오버라이딩이 강제된다.)
+  - Overloading
+    - 메소드에 주어진 인자(parameter)에 따라 동작을 다르게 구현할 수 있다. 코드의 중복이 줄어들고, 가독성이 늘어난다. 반환 형(return type)은 관계가 없지만, 인자의 개수, 인자의 타입에 따라 다르게 구현할 수 있다.
+- 상속
+  - 부모의 형질을 이어받는다는 의미로, 부모 클래스의 속성과 메소드를 그대로 활용할 수 있다. 여기에 더해 새로운 속성과 메소드를 추가할 수 있으며 같은 메소드라 하더라도 오버라이딩(Overriding)을 통하여 재정의하여 다르게 동작하게끔 할 수 있다. 손쉽게 클래스를 재활용할 수 있으며, 부모가 같은 클래스들을 동시에 처리하기 용이하다.
+- 클래스(class)
+  - 객체를 만들기 위해 상태(field)와 행위(method)를 정의한 틀.
+- 메시지
+  - 객체지향적으로 구현된 프로그램은 객체들끼리의 메시지를 주고받고 상호작용하며 동작한다. 코드적으로는 임의의 객체에게 인자(parameter)를 전달하여 메소드를 호출하며 반환값(return value)을 받아 처리를 한다.
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - []()
+> - https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Development_common_sense#object-oriented-programming
+> - https://ko.wikipedia.org/wiki/객체_지향_프로그래밍
+> - http://asfirstalways.tistory.com/177
 
 ### java의 non-static 멤버와 static 멤버의 차이
 * non-static 멤버
