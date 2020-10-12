@@ -207,10 +207,12 @@ public class Wrapper03 {
     * 구체적인 사물들의 공통적인 특징을 파악해서 이를 하나의 개념(집합)으로 다루는 것
 2. 캡슐화(Encapsulation)
     * 정보 은닉(information hiding): 필요가 없는 정보는 외부에서 접근하지 못하도록 제한하는 것
+    * 높은 응집도, 낮은 결합도를 유지하여 유연함과 유지보수성 증가
 3. 일반화 관계(Inheritance, 상속)
     * 여러 개체들이 가진 공통된 특성을 부각시켜 하나의 개념이나 법칙으로 성립시키는 과정
 4. 다형성(Polymorphism)
     * 서로 다른 클래스의 객체가 같은 메시지를 받았을 때 각자의 방식으로 동작하는 능력
+    * 오버라이딩(Overriding), 오버로딩(Overloading)
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/07/05/oop-features.html](https://gmlwjd9405.github.io/2018/07/05/oop-features.html)
