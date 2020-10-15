@@ -96,9 +96,50 @@
 
 ### AOP란
 * AOP(Aspect Oriented Programming)란
+  - Aspect Oriented Programming, 관점 지향 프로그래밍
+  - 어떤 로직을 기준으로 핵심 관점과 부가 관점을 나누고, 관점을 기준으로 모듈화하는 것
+  - 핵심 관점은 주로 핵심 비즈니스 로직
+  - 부가 관점은 핵심 로직을 실행하기 위한 데이터베이스 연결, 로깅, 파일 입출력 등
+  
+* AOP 목적
+  - 소스 코드에서 여러 번 반복해서 쓰는 코드(= 흩어진 관심사, Concern)를 Aspect로 모듈화하여 핵심 로직에서 분리 및 재사용
+  - 개발자가 핵심 로직에 집중할 수 있게 하기 위함
+  - 주로 부가 기능을 모듈화
+  
+* AOP 주요 용어
+  - **Aspect**
+    - 흩어진 관심사를 모듈화 한 것
+    - Advice + PointCut
+  - **Target**
+    - Aspect를 적용하는 곳(클래스, 메소드 등)
+  - **Advice**
+    - 실질적으로 수행해야 하는 기능을 담은 구현체
+  - **JoinPoint**
+    - Advice가 적용될 위치
+    - 끼어들 수 있는 지점
+    - ex. 메소드 진입 시, 생성자 호출 시, 필드에서 값 꺼낼 때 등
+  - **PointCut**
+    - JoinPoint의 상세 스펙 정의
+    - 더욱 구체적으로 Advice가 실행될 지점 지정
+  - **Weaving**
+    - PointCut에 의해 결정된 Target의 JoinPoint에 Advice를 삽입하는 과정
+  
+* AOP 적용 방법
+  1. 컴파일 시 적용
+      - AspectJ가 사용하는 방법
+      - 자바 파일을 클래스 파일로 만들 때 Advice 소스가 추가되어 조작된 바이트 코드 생성하는 방법
+  2. 로드 시 적용
+      - AspectJ가 사용하는 방법
+      - 컴파일 후 컴파일 된 클래스를 로딩하는 시점에 Advice 소스를 끼워넣는 방법
+  3. 런타임 시 적용
+      - **Spring AOP**가 사용하는 방법
+      - 스프링은 런타임 시 Bean 생성
+      - A라는 Bean 만들 때 A라는 타입의 프록시 Bean도 생성하고, 프록시 Bean이 A의 메소드 호출 직전에 Advice 소스를 호출한 후 A의 메소드 호출
 
 > :arrow_double_up:[Top](#9-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#9-spring)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - []()
+> - [[Spring] 스프링 AOP (Spring AOP) 총정리 : 개념, 프록시 기반 AOP, @AOP](https://engkimbs.tistory.com/746)
+> - [[Spring] AOP란?](https://velog.io/@max9106/Spring-AOP%EB%9E%80-93k5zjsm95)
+> - [Spring AOP, Aspect 개념 특징, AOP 용어 정리](https://shlee0882.tistory.com/206)
 
 ### POJO
 번역하면 '평범한 구식 자바 객체'. 즉 프레임워크 인터페이스나 클래스를 구현하거나 확장하지 않는 단순한 클래스.
