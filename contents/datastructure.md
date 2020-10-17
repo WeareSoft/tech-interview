@@ -39,7 +39,7 @@
 
 * HashTable 구조
 
-![hashtable](./images/hashtable.png)
+  ![hashtable](./images/hashtable.png)
   * Key, Hash Function, Hash, Value, 저장소(Bucket, Slot)로 구성
   * Key
     * 고유한 값
