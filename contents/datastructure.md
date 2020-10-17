@@ -38,6 +38,7 @@
   * Key가 주어졌을 때, 해당 Key에 연관된 Value 제거
 
 * HashTable 구조
+
 ![hashtable](./images/hashtable.png)
   * Key, Hash Function, Hash, Value, 저장소(Bucket, Slot)로 구성
   * Key
