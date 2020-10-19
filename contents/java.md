@@ -445,9 +445,26 @@ int b2 = bar2->val; // 35
 
 ### java의 가비지 컬렉션 처리 방법
 * java의 가비지 컬렉션(Garbage Collection) 처리 방법
+  * GC 작업을 수행하는 가비지 콜렉터가 하는 일
+      1. 메모리 할당
+      2. 사용 중인 메모리 인식
+      3. 미사용 메모리 인식
+  
+  ![jvmheap](./images/JVMHeap.png)
+  * 가비지 콜렉터가 들르는 메모리 영역은 Young 영역에 포함되는 Eden, Survivor1, Survivor2와 Old 영역 (Permanent 영역은 Java 1.8 부터 제거)
+  * Young 영역에 있는 객체는 각 하위 영역이 가득 차면 Miner GC가 동작하여 더이상 참조되지 않는 객체 제거
+  * Old 영역에 있는 객체는 영역이 가득 차면 Major GC(Full GC)가 동작하여 더이상 참조되지 않는 객체 제거
+  * 동작 과정
+    * 객체를 최초 생성하면 Young 영역 중 Eden 영역에 위치
+    * Eden 영역에서 Miner GC 발생 시, 참조 중인 객체라면 Survivor1로 이동
+    * Survivor1에서 Miner GC 발생 시, 참조 중인 객체라면 Survivor2로 이동
+    * Survivor2에서 Miner GC 발생 시, 참조 중인 객체라면 다시 Survivor1 영역으로 이동 (Survivor1 <--> 2 반복)
+    * Survivor 영역이 가득 차거나 Young 영역에서 오래 살아남은 객체는 Old 영역으로 이동
+      * '오래'의 기준은 객체마다 age bit라는 것을 가지고 있는데 이는 Miner GC에서 살아남은 횟수를 기록하는 값
+    * Old 영역에 있는 객체는 Major GC가 발생했을 때 참조 여부에 따라 공간이 유지되거나 제거
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - []()
+> - [Java 의 GC는 어떻게 동작하나?](https://mirinae312.github.io/develop/2018/06/04/jvm_gc.html)
 
 ### java 직렬화와 역직렬화란 무엇인가
 * 자바 직렬화(Serialization)란
