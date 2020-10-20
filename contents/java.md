@@ -40,6 +40,9 @@
     - [동기화와 비동기화의 차이](#동기화와-비동기화의-차이)
     - [java에서 ==와 equals()의 차이](#java에서-와-equals의-차이)
     - [java의 리플렉션 이란](#java의-리플렉션-이란)
+    - [함수형 프로그래밍이란?](#함수형-프로그래밍이란?)
+    - [Stream이란?](#Stream이란?)
+    - [Lambda란?](#Lambda란?)
   - [Reference](#reference)
   - [:house: Home](#house-home)
 
@@ -1184,6 +1187,51 @@ public class Test {
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://madplay.github.io/post/java-reflection](https://madplay.github.io/post/java-reflection)
+
+### 함수형 프로그래밍이란?
+
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - []()
+
+### Stream이란?
+* Stream이란?
+  * java8에서 추가된 API
+  * 데이터를 다루는데 자주 사용되는 메소드 정의
+  * 컬렉션 타입의 데이터를 Stream 메소드에서 내부 반복을 통해 정렬, 필터링 등 가능
+
+* 특징
+  * 병렬 처리에 유리
+    * 병렬 처리를 위해 common fork join pool을 사용하는 parallel() 메소드 제공
+    * common fork join pool
+      * 각 스레드가 개별 큐를 가지고 있으며, 놀고 있는 스레드가 있으면 일하는 스레드의 작업을 가져와 수행하여 최적의 성능 도출
+    * 코어의 수가 많을수록, 처리할 데이터 수가 많을수록, 데이터당 처리 시간이 길수록 병렬 처리 성능 향상
+    * 배열, ArrayList 사용 시 유리(LinkedList는 순차 진행이 더 나을 수 있음)
+  * Immutable
+    * 원본 데이터 변경 불가능
+    * 애초에 데이터를 저장하지 않으며, 변경되는 내용은 Stream을 지원하는 컬렉션의 데이터
+  * lazy
+    * 스트림에는 중간 연산과 최종 연산이 있는데 중간 연산을 여러개 작성 시 모두 합쳐서 진행하고, 합쳐진 연산을 최종 연산에서 한 번에 처리
+    * 마지막 최종 연산이 끝날 때 값 계산
+      * 중간 연산 : filter, map, flatMap, ...
+      * 최종 연산 : allMatch, findFirst, collect, count, ...
+      * 중간 연산은 데이터 처리된 스트림을 반환하여 파이프라이닝 가능
+  * 재사용 불가능
+    * 최종 연산 완료 후 Stream이 닫히므로 재사용 불가능
+    * 저장된 데이터를 꺼내서 처리하는 용도이지 데이터 저장 목적이 아니기 때문
+
+* 장점
+  * 내부 반복을 사용하기 때문에 불필요한 코딩 과정을 줄일 수 있고, 코드 가독성 향상
+  
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [java 8 Stream이란?](https://effectivesquid.tistory.com/entry/Java-Stream%EC%9D%B4%EB%9E%80)
+> - [JAVA8의 스트림 알아보기](https://velog.io/@adam2/JAVA8%EC%9D%98-%EC%8A%A4%ED%8A%B8%EB%A6%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
+> - [Java8 Parallel Stream, 성능장애를 조심하세요!](https://m.blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220945933678&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
+> - [https://ict-nroo.tistory.com/43](https://ict-nroo.tistory.com/43)
+
+### Lambda란?
+
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - []()
 
 ---
 

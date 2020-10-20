@@ -160,6 +160,9 @@
 * 동기화와 비동기화의 차이(Syncronous vs Asyncronous)
 * java에서 '=='와 'equals()'의 차이
 * java의 리플렉션(Reflection) 이란
+* 함수형 프로그래밍이란?
+* Stream이란?
+* Lambda란?
 
 ## 8. JavaScript
 :arrow_forward: [답변 내용](/contents/javascript.md)
