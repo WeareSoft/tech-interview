@@ -42,12 +42,12 @@
 * 컨테이너에 담겨있으며, 필요할 때 컨테이너에서 가져와서 사용
 * @Bean 을 사용하거나 xml 설정을 통해 일반 객체를 Bean으로 등록할 수 있고, Bean으로 등록된 객체는 쉽게 주입하여 사용 가능
 * Bean Scope
-  * singleton (default)
+  * **singleton (default)**
     * 애플리케이션에서 Bean 등록 시 singleton scope로 등록
     * Spring IoC 컨테이너 당 한 개의 인스턴스만 생성
     * 컨테이너가 Bean 가져다 주입할 때 항상 같은 객체 사용
     * 메모리나 성능 최적화에 유리
-  * prototype
+  * **prototype**
     * 컨테이너에서 Bean 가져다 쓸 때 항상 다른 인스턴스 사용
     * 모든 요청에서 새로운 객체 생성
     * gc에 의해 Bean 제거
