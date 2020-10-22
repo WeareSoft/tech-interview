@@ -2,6 +2,7 @@
 **:book: Contents**
 * [스프링 프레임워크란](#스프링-프레임워크란)
 * [Spring, Spring MVC, Spring Boot의 차이](#spring-spring-mvc-spring-boot의-차이)
+* [Bean이란](#bean이란)
 * [Container란](#container란)
 * [IOC(Inversion of Control, 제어의 역전)란](#ioc란)
 * [MVC 패턴이란](#mvc-패턴이란)
@@ -35,6 +36,37 @@
 
 > :arrow_double_up:[Top](#9-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#9-spring)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search](http://blog.naver.com/PostView.nhn?blogId=sthwin&logNo=221271008423&parentCategoryNo=&categoryNo=50&viewDate=&isShowPopularPosts=true&from=search)
+
+### Bean이란
+* 컨테이너 안에 들어있는 객체
+* 컨테이너에 담겨있으며, 필요할 때 컨테이너에서 가져와서 사용
+* @Bean 을 사용하거나 xml 설정을 통해 일반 객체를 Bean으로 등록할 수 있고, Bean으로 등록된 객체는 쉽게 주입하여 사용 가능
+* Bean Scope
+  * singleton (default)
+    * 애플리케이션에서 Bean 등록 시 singleton scope로 등록
+    * Spring IoC 컨테이너 당 한 개의 인스턴스만 생성
+    * 컨테이너가 Bean 가져다 주입할 때 항상 같은 객체 사용
+    * 메모리나 성능 최적화에 유리
+  * prototype
+    * 컨테이너에서 Bean 가져다 쓸 때 항상 다른 인스턴스 사용
+    * 모든 요청에서 새로운 객체 생성
+    * gc에 의해 Bean 제거
+  * request
+    * Bean 등록 시 하나의 HTTP request 생명주기 안에 단 하나의 Bean만 존재
+    * 각각의 HTTP 요청은 고유 Bean 객체 보유
+    * Spring MVC Web Application에서 사용
+  * session
+    * 하나의 HTTP Session 생명주기 안에 단 하나의 Bean만 존재
+    * Spring MVC Web Application에서 사용
+  * global session
+    * 하나의 global HTTP Session 생명주기 안에 한 개의 Bean 지정
+    * Spring MVC Web Application에서 사용
+  * application
+    * ServletContext 생명주기 안에 한 개의 Bean 지정
+    * Spring MVC Web Application에서 사용
+> :arrow_double_up:[Top](#9-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#9-spring)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - - [[Spring] IOC(Inversion Of Control): 제어 역전](https://velog.io/@max9106/Spring-IOC%EB%AF%B8%EC%99%84)
+> - [[Spring] Spring Bean의 개념과 Bean Scope 종류](https://gmlwjd9405.github.io/2018/11/10/spring-beans.html)
 
 ### Container란
 - 컨테이너(Container)는 보통 인스턴스의 생명주기를 관리하며, 생성된 인스턴스들에게 추가적인 기능을 제공하도록하는 것이라 할 수 있다. 다시말해, 컨테이너란 당신이 작성한 코드의 처리과정을 위임받은 독립적인 존재라고 생각하면 된다. 컨테이너는 적절한 설정만 되어있다면 누구의 도움없이도 프로그래머가 작성한 코드를 스스로 참조한 뒤 알아서 객체의 생성과 소멸을 컨트롤해준다.

@@ -40,9 +40,9 @@
     - [동기화와 비동기화의 차이](#동기화와-비동기화의-차이)
     - [java에서 ==와 equals()의 차이](#java에서-와-equals의-차이)
     - [java의 리플렉션 이란](#java의-리플렉션-이란)
-    - [함수형 프로그래밍이란?](#함수형-프로그래밍이란?)
-    - [Stream이란?](#Stream이란?)
-    - [Lambda란?](#Lambda란?)
+    - [함수형 프로그래밍이란](#함수형-프로그래밍이란)
+    - [Stream이란](#stream이란)
+    - [Lambda란](#lambda란)
   - [Reference](#reference)
   - [:house: Home](#house-home)
 
@@ -1188,12 +1188,12 @@ public class Test {
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://madplay.github.io/post/java-reflection](https://madplay.github.io/post/java-reflection)
 
-### 함수형 프로그래밍이란?
+### 함수형 프로그래밍이란
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
-### Stream이란?
+### Stream이란
 * Stream이란?
   * java8에서 추가된 API
   * 데이터를 다루는데 자주 사용되는 메소드 정의
@@ -1228,7 +1228,7 @@ public class Test {
 > - [Java8 Parallel Stream, 성능장애를 조심하세요!](https://m.blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220945933678&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
 > - [https://ict-nroo.tistory.com/43](https://ict-nroo.tistory.com/43)
 
-### Lambda란?
+### Lambda란
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
