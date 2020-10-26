@@ -54,18 +54,18 @@
   * request
     * Bean 등록 시 하나의 HTTP request 생명주기 안에 단 하나의 Bean만 존재
     * 각각의 HTTP 요청은 고유 Bean 객체 보유
-    * Spring MVC Web Application에서 사용
+    * Spring MVC Web Application에서 사용
   * session
     * 하나의 HTTP Session 생명주기 안에 단 하나의 Bean만 존재
-    * Spring MVC Web Application에서 사용
+    * Spring MVC Web Application에서 사용
   * global session
     * 하나의 global HTTP Session 생명주기 안에 한 개의 Bean 지정
-    * Spring MVC Web Application에서 사용
+    * Spring MVC Web Application에서 사용
   * application
     * ServletContext 생명주기 안에 한 개의 Bean 지정
-    * Spring MVC Web Application에서 사용
+    * Spring MVC Web Application에서 사용
 > :arrow_double_up:[Top](#9-spring)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#9-spring)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - - [[Spring] IOC(Inversion Of Control): 제어 역전](https://velog.io/@max9106/Spring-IOC%EB%AF%B8%EC%99%84)
+> - [[Spring] IOC(Inversion Of Control): 제어 역전](https://velog.io/@max9106/Spring-IOC%EB%AF%B8%EC%99%84)
 > - [[Spring] Spring Bean의 개념과 Bean Scope 종류](https://gmlwjd9405.github.io/2018/11/10/spring-beans.html)
 
 ### Container란
