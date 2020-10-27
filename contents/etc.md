@@ -13,6 +13,7 @@
 * [Servlet과 JSP](#servlet과-jsp)
 * [Memcached와 Redis의 차이](#memcached와-Redis의-차이)
 * [Maven과 Gradle의 차이](#maven과-gradle의-차이)
+* [Blocking과 Non-Blocking](#blocking과-non-blocking)
 
 ---
 
@@ -164,10 +165,49 @@
 > :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://ojava.tistory.com/70](https://ojava.tistory.com/70)
 
+### Blocking과 Non-Blocking
+* 직접 제어할 수 없는 대상을 처리하는 방법에 따라 블록/논블록
+* ex. IO, 멀티쓰레드 동기화
+* Blocking
+  * 함수 호출 시 호출된 함수에게 제어권이 넘어가고, 해당 함수가 끝날 때까지 호출한 함수는 대기
+* Non-Blocking
+  * 호출된 함수가 바로 return해서 호출한 함수에게 제어권을 돌려주어 다른 작업 진행 가능
+
+### Blocking, Non-Blocking vs Synchronous, Asynchronous
+![blocking](./images/blocking.png)
+* 두 그룹의 차이점은 관심사
+* Blocking/Non-Blocking
+  * 호출된 함수의 return 여부에 관심
+  * 호출된 함수의 제어권 소유 여부로 구분
+* Synchronous/Asynchronous
+  * 호출된 함수의 작업 완료 여부를 신경쓰는 주체에 관심
+  * Asynchronous
+    * 호출된 함수에 callback을 전달하여 해당 함수가 작업 완료 시 callback을 실행
+    * 이 때, 호출한 함수는 호출된 함수의 작업 완료 여부를 신경쓰지 않아도 됨
+  * Synchronous
+    * 호출한 함수가 호출된 함수의 return을 기다리거나 또는 바로 return 받더라도 작업 완료 여부를 신경쓰는 것
+
+### Non-Blocking, Synchronous
+![nonb-sync](./images/non-sync.png)
+* 호출된 함수는 바로 return, 호출한 함수는 호출된 함수의 작업 완료 여부 확인
+* 호출한 함수 본인은 함수 호출 후 바로 다른 작업 수행이 가능하지만 호출된 함수의 완료 여부를 계속 확인하는 동작
+
+### Blocking, Asynchronous
+![b-async](./images/b-async.png)
+* 호출된 함수는 바로 return하지 않고, 호출한 함수는 호출된 함수의 작업 완료 여부 미확인
+* Blocking, Synchronous 방식과 큰 차이 없음
+* [참고] Non-Blocking, Asynchronous 방식을 사용하려던 의도와 다르게 Blocking, Asynchronous 되어버리는 경우가 존재
+  * ex. Node.js와 MySQL 조합
+  * Node.js가 Async 동작을 해도, DB 호출 시 MySQL 드라이버가 Blocking 방식
+  * Non-Blocking, Asynchronous 방식 사용 중 하나라도 Blocking 동작을 한다면 의도치 않게 Blocking, Asynchronous 동작
+
+> :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [Blocking-NonBlocking-Synchronous-Asynchronous](http://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/)
+> - [Sync VS Async, Blocking VS Non-Blocking](https://velog.io/@codemcd/Sync-VS-Async-Blocking-VS-Non-Blocking-sak6d01fhx)
+
 ---
 
 ## Reference
 > - []()
-
 
 ## :house: [Home](https://github.com/WeareSoft/tech-interview)

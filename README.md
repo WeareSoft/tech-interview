@@ -216,7 +216,8 @@
 * 애자일 방법론이란
 * Servlet과 JSP
 * Memcached와 Redis의 차이
-* Maven과 Gradle의 차이 
+* Maven과 Gradle의 차이
+* Blocking과 Non-Blocking
 
 ---
 
