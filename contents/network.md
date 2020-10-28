@@ -123,7 +123,48 @@
 
 ### TCP와 UDP의 헤더 분석
 
+#### TCP Header
+* TCP는 상위계층으로부터 데이터를 받아 **헤더**를 추가해 IP로 전송
+
+![tcpheader](./images/tcpheader.png)
+
+|필드|내용|크기(bits)|
+|----|----|----|
+|Source Port, Destination Port|TCP로 연결되는 가상 회선 양단의 송수신 프로세스에 할당되는 포트 주소|16|
+|Sequence Number|송신자가 지정하는 순서 번호, **전송되는 바이트 수** 기준으로 증가<br/>SYN = 1 : 초기 시퀀스 번호. ACK 번호는 이 값에 + 1|32|
+|Acknowledgment(ACK) Number|수신 프로세스가 제대로 **수신한 바이트의 수** 응답 용|32|
+|Header Length(Data Offset)|TCP 헤더 길이를 4바이트 단위로 표시(최소 20, 최대 60 바이트)|4|
+|Resv(Reserved)|나중을 위해 0으로 채워진 예약 필드|6|
+|Flag Bit|SYN, ACK, FIN 등 제어 번호(아래 표 참고)|6|
+|Window Size|**수신 윈도우의 버퍼 크기** 지정(0이면 송신 중지). 상대방의 확인 없이 전송 가능한 최대 바이트 수|16|
+|TCP Checksum|헤더와 데이터의 에러 확인 용도|16|
+|Urgent Pointer(긴급 위치)|현재 순서 번호부터 표시된 바이트까지 긴급한 데이터임을 표시, URG 플래그 비트가 지정된 경우에만 유효|16|
+|Options|추가 옵션 있을 경우 표시|0~40|
+
+  * Flag Bit
+
+    |종류|내용|
+    |----|----|
+    |URG|긴급 위치 필드 유효 여부 설정|
+    |ACK|응답 유효 여부 설정. 최초의 SYN 패킷 이후 모든 패킷은 ACK 플래그 설정 필요. 데이터를 잘 받았으면 긍정 응답으로 ACK(=SYN+1) 전송|
+    |PSH|수신측에 버퍼링된 데이터를 상위 계층에 즉시 전달할 때|
+    |RST|연결 리셋 응답 혹은 유효하지 않은 세그먼트 응답|
+    |SYN|연결 설정 요청. 양쪽이 보낸 최초 패킷에만 SYN 플래그 설정|
+    |FIN|연결 종료 의사 표시|
+
+#### UDP Header
+![udpheader](./images/udpheader.png)
+
+|필드|내용|크기(bits)|
+|----|----|----|
+|Source Port, Destination Port|TCP로 연결되는 가상 회선 양단의 송수신 프로세스에 할당되는 포트 주소|16|
+|Length|헤더와 데이터 포함 전체 길이|16|
+|Checksum|헤더와 데이터의 에러 확인 용도. UDP는 에러 복구를 위한 필드가 불필요하기 때문에 TCP 헤더에 비해 간단|16|
+
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/Do-Hee/tech-interview#2-network)    :information_source:[Home](https://github.com/Do-Hee/tech-interview#tech-interview)
+> - [TCP 와 UDP 차이를 자세히 알아보자](https://velog.io/@hidaehyunlee/TCP-%EC%99%80-UDP-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
+> - [TCP, UDP header](https://cysecguide.blogspot.com/2018/04/tcp-udp-header.html)
+> - [TCP 와 UDP [동작원리/헤더/차이점]](https://m.blog.naver.com/PostView.nhn?blogId=minki0127&logNo=220804490550&proxyReferer=https:%2F%2Fwww.google.com%2F)
 > - [https://idchowto.com/?p=18352](https://idchowto.com/?p=18352)
 > - [https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=koromoon&logNo=120162515270&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
