@@ -157,7 +157,7 @@
 
 |필드|내용|크기(bits)|
 |----|----|----|
-|Source Port, Destination Port|TCP로 연결되는 가상 회선 양단의 송수신 프로세스에 할당되는 포트 주소|16|
+|Source Port, Destination Port|송수신 애플리케이션의 포트 번호|16|
 |Length|헤더와 데이터 포함 전체 길이|16|
 |Checksum|헤더와 데이터의 에러 확인 용도. UDP는 에러 복구를 위한 필드가 불필요하기 때문에 TCP 헤더에 비해 간단|16|
 
