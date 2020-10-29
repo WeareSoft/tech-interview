@@ -58,6 +58,7 @@
   * Q. 초기 Sequence Number인 ISN을 0부터 시작하지 않고 난수를 생성해서 설정하는 이유?
 * HTTP와 HTTPS
 * HTTP 요청/응답 헤더
+* HTTP와 HTTPS 동작 과정
 * CORS란
 * GET 메서드와 POST 메서드
 * 쿠키(Cookie)와 세션(Session)

@@ -11,6 +11,7 @@
       - [:question:TCP 관련 질문 3](#questiontcp-관련-질문-3)
     - [HTTP와 HTTPS](#http와-https)
     - [HTTP 요청 응답 헤더](#http-요청-응답-헤더)
+    - [HTTP와 HTTPS 동작 과정](#http와-https-동작-과정)
     - [CORS란](#cors란)
     - [GET 메서드와 POST 메서드](#get-메서드와-post-메서드)
     - [쿠키와 세션](#쿠키와-세션)
@@ -393,6 +394,77 @@
 > - [http://www.ktword.co.kr/abbr_view.php?nav=&m_temp1=5905&id=902](http://www.ktword.co.kr/abbr_view.php?nav=&m_temp1=5905&id=902)
 > - [https://gmlwjd9405.github.io/2019/01/28/http-header-types.html](https://gmlwjd9405.github.io/2019/01/28/http-header-types.html)
 > - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+
+### HTTP와 HTTPS 동작 과정
+#### HTTP 동작 과정
+* 서버 접속 -> 클라이언트 -> 요청 -> 서버 -> 응답 -> 클라이언트 -> 연결 종료
+1. **사용자가 웹 브라우저에 URL 주소 입력**
+2. **DNS 서버에 웹 서버의 호스트 이름을 IP 주소로 변경 요청**
+3. **웹 서버와 TCP 연결 시도**
+    * 3way-handshaking
+4. **클라이언트가 서버에게 요청**
+    * HTTP Request Message = Request Header + 빈 줄 + Request Body
+    * Request Header
+      * 요청 메소드 + 요청 URI + HTTP 프로토콜 버전
+        * ```GET /background.png HTTP/1.0``` ```POST / HTTP 1.1```
+        * Header 정보(key-value 구조)
+    * 빈 줄
+      * 요청에 대한 모든 메타 정보가 전송되었음을 알리는 용도
+    * Request Body
+      * GET, HEAD, DELETE, OPTIONS처럼 리소스를 가져오는 요청은 바디 미포함
+      * 데이터 업데이트 요청과 관련된 내용 (HTML 폼 콘텐츠 등)
+5. **서버가 클라이언트에게 데이터 응답**
+    * HTTP Response Message = Response Header + 빈 줄 + Response Body
+    * Response Header
+      * HTTP 프로토콜 버전 + 응답 코드 + 응답 메시지
+        * ex. ```HTTP/1.1 404 Not Found.```
+      * Header 정보(key-value 구조)
+    * 빈 줄
+      * 요청에 대한 모든 메타 정보가 전송되었음을 알리는 용도
+    * Response Body
+      * 응답 리소스 데이터
+        * 201, 204 상태 코드는 바디 미포함
+6. **서버 클라이언트 간 연결 종료**
+    * 4way-handshaking
+7. **웹 브라우저가 웹 문서 출력**
+
+#### HTTPS(SSL) 동작 과정
+* 공개키 암호화 방식과 대칭키 암호화 방식의 장점을 활용해 하이브리드 사용
+  * 데이터를 대칭키 방식으로 암복호화하고, 공개키 방식으로 대칭키 전달
+1. **클라이언트가 서버 접속하여 Handshaking 과정에서 서로 탐색**
+    
+    1.1. **Client Hello**
+      * 클라이언트가 서버에게 전송할 데이터
+        * 클라이언트 측에서 생성한 **랜덤 데이터**
+        * 클-서 암호화 방식 통일을 위해 **클라이언트가 사용할 수 있는 암호화 방식**
+        * 이전에 이미 Handshaking 기록이 있다면 자원 절약을 위해 기존 세션을 재활용하기 위한 **세션 아이디**
+
+    1.2. **Server Hello**
+      * Client Hello에 대한 응답으로 전송할 데이터
+        * 서버 측에서 생성한 **랜덤 데이터**
+        * **서버가 선택한 클라이언트의 암호화 방식**
+        * **SSL 인증서**
+
+    1.3. **Client 인증 확인**
+      * 서버로부터 받은 인증서가 CA에 의해 발급되었는지 본인이 가지고 있는 목록에서 확인하고, 목록에 있다면 CA 공개키로 인증서 복호화
+      * 클-서 각각의 랜덤 데이터를 조합하여 pre master secret 값 생성(데이터 송수신 시 대칭키 암호화에 사용할 키)
+      * pre master secret 값을 공개키 방식으로 서버 전달(공개키는 서버로부터 받은 인증서에 포함)
+      * 일련의 과정을 거쳐 session key 생성
+
+    1.4. **Server 인증 확인**
+      * 서버는 비공개키로 복호화하여 pre master secret 값 취득(대칭키 공유 완료)
+      * 일련의 과정을 거쳐 session key 생성
+
+    1.5. **Handshaking 종료**
+2. **데이터 전송**
+    * 서버와 클라이언트는 session key를 활용해 데이터를 암복호화하여 데이터 송수신
+3. **연결 종료 및 session key 폐기**
+
+> :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#2-network)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [[Network] HTTP의 동작 및 HTTP Message 형식](https://gmlwjd9405.github.io/2019/04/17/what-is-http-protocol.html)
+> - [HTTP 동작 과정](https://jess-m.tistory.com/17)
+> - [HTTP 메시지](https://developer.mozilla.org/ko/docs/Web/HTTP/Messages)
+> - [HTTPS와 SSL 인증서](https://opentutorials.org/course/228/4894)
 
 ### CORS란 
 - CORS(Cross Origin Resource Sharing)란 
