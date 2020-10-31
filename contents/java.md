@@ -40,7 +40,6 @@
     - [동기화와 비동기화의 차이](#동기화와-비동기화의-차이)
     - [java에서 ==와 equals()의 차이](#java에서-와-equals의-차이)
     - [java의 리플렉션 이란](#java의-리플렉션-이란)
-    - [함수형 프로그래밍이란](#함수형-프로그래밍이란)
     - [Stream이란](#stream이란)
     - [Lambda란](#lambda란)
   - [Reference](#reference)
@@ -1187,11 +1186,6 @@ public class Test {
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://madplay.github.io/post/java-reflection](https://madplay.github.io/post/java-reflection)
-
-### 함수형 프로그래밍이란
-
-> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - []()
 
 ### Stream이란
 * Stream이란?

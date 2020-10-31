@@ -14,6 +14,7 @@
 * [Memcached와 Redis의 차이](#memcached와-Redis의-차이)
 * [Maven과 Gradle의 차이](#maven과-gradle의-차이)
 * [Blocking과 Non-Blocking](#blocking과-non-blocking)
+* [함수형 프로그래밍이란](#함수형-프로그래밍이란)
 
 ---
 
@@ -204,6 +205,48 @@
 > :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [Blocking-NonBlocking-Synchronous-Asynchronous](http://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/)
 > - [Sync VS Async, Blocking VS Non-Blocking](https://velog.io/@codemcd/Sync-VS-Async-Blocking-VS-Non-Blocking-sak6d01fhx)
+
+### 함수형 프로그래밍이란
+
+#### 프로그래밍 패러다임
+* 명령형 프로그래밍
+  * 애플리케이션의 상태와 상태를 변경시키는 구문의 관점에서 연산을 설명하는 방식
+  * 어떻게 할 것인지 표현
+    * 절차지향 프로그래밍
+    * 객체지향 프로그래밍
+* 선언형 프로그래밍
+  * 무엇을 할 것인지 표현
+    * **함수형 프로그래밍**
+
+#### 함수형 프로그래밍 개념
+* 선언형 프로그래밍
+* 함수형 프로그래밍은 계산을 수학적 함수의 조합으로 생각하는 방식
+* 함수를 1급 객체로 사용(고차 함수)
+  * 1급 객체가 될 수 있는 조건
+    * 변수나 데이터 구조 안에 담을 수 있는 객체
+    * 함수의 파라미터로 전달 가능
+    * 반환값으로 사용 가능
+    * 할당에 사용된 이름과 관계없이 고유한 구별 가능
+    * 동적으로 프로퍼티 할당 가능
+* 애플리케이션의 상태는 순수 함수를 통해 전달
+  * 공유 상태와 side effect 대신 순수 함수를 사용
+  * 순수 함수 : 같은 입력이 주어지면 항상 같은 출력을 반환하는 함수
+* 명령형 흐름 제어보다 합성 함수를 사용
+  * 합성 함수 : 새로운 함수를 만들거나 계산하기 위해 둘 이상의 함수를 조합
+  * ex. 메소드 체이닝
+* 불변성
+  * 함수형 프로그래밍의 핵심 개념
+* 함수를 1급 객체로 사용하며 함수를 조합하고, 공유 상태와 변경 가능한 데이터 및 사이드 이펙트를 피해 소프트웨어를 만드는 프로세스
+
+#### 함수형 프로그래밍 특징
+* 변경 가능한 상태를 불변 상태로 만들어 side effect 방지 가능
+* 고차함수를 통한 재사용성 증가
+* 코드를 간결하게 하고 가독성을 높여 구현할 로직에 집중
+* 동시성 작업을 보다 쉽고 안전하게 구현 가능
+
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [함수형 프로그래밍 요약](https://velog.io/@kyusung/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9A%94%EC%95%BD)
+> - [번역 - 함수형 프로그래밍이란 무엇인가?](https://sungjk.github.io/2017/07/17/fp.html)
 
 ---
 

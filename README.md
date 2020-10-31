@@ -161,7 +161,6 @@
 * 동기화와 비동기화의 차이(Syncronous vs Asyncronous)
 * java에서 '=='와 'equals()'의 차이
 * java의 리플렉션(Reflection) 이란
-* 함수형 프로그래밍이란?
 * Stream이란?
 * Lambda란?
 
@@ -219,6 +218,7 @@
 * Memcached와 Redis의 차이
 * Maven과 Gradle의 차이
 * Blocking과 Non-Blocking
+* 함수형 프로그래밍이란?
 
 ---
 
