@@ -192,6 +192,7 @@
 * POJO
 * DAO와 DTO의 차이
 * Spring JDBC를 이용한 데이터 접근
+* Filter와 Interceptor 차이
 
 ## 10. Security 
 :arrow_forward: [답변 내용](/contents/security.md)
