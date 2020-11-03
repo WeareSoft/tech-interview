@@ -11,7 +11,7 @@
 * [웹 서버(Web Server)와 웹 어플리케이션 서버(WAS)의 차이](#web-server와-was의-차이)
 * [애자일 방법론이란](#애자일-방법론이란)
 * [Servlet과 JSP](#servlet과-jsp)
-* [Memcached와 Redis의 차이](#memcached와-Redis의-차이)
+* [Redis와 Memcached의 차이](#redis와-memcached의-차이)
 * [Maven과 Gradle의 차이](#maven과-gradle의-차이)
 * [Blocking과 Non-Blocking](#blocking과-non-blocking)
 * [함수형 프로그래밍이란](#함수형-프로그래밍이란)
@@ -152,12 +152,72 @@
 > :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)     :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html](https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html)
 
-### Memcached와 Redis의 차이
-* Memcached
-* Redis
+### Redis와 Memcached의 차이
+
+#### Redis and Memcached
+* 분산 메모리 캐싱 시스템(인메모리 데이터 저장소)
+* 데이터를 Key-Value 형태로 메모리에 저장하는 방식(NoSql)
+* 데이터베이스 부하를 줄여 동적 웹 애플리케이션의 속도 개선을 위해 사용
+* 데이터 파티셔닝을 통해 많은 데이터를 효과적으로 처리 가능
+
+##### Memcached 메모리 구조
+
+  ![memcached](./images/memcached-usage.png)
+* Memcached 미사용 시(위)
+  * 각 웹 서버는 할당된 메모리만큼만 캐시 사용 가능
+  * 웹 서버가 사용 가능한 전체 용량의 일부분만 사용하기 때문에 낭비 발생
+* Memcached 사용 시(아래)
+  * 각 웹 서버는 메모리 공간이 논리적으로 통합된 가상 풀을 바라보고 있기 때문에 전체 메모리 크기만큼의 캐시 사용 가능
+  * 효율성 있는 메모리 운용 가능
+  * 특정 항목이 주어졌을 때 전체 웹 클러스터에서 항상 동일한 위치에 저장 및 검색 가능
+  * 서버 증설 시, 정기적으로 접근되는 데이터의 캐싱을 통해 DB나 API 호출 횟수 감소
+
+#### Redis vs Memcached
+
+| |**Redis**|**Memcached**|
+|----|----|----|
+|데이터 타입|String, Set, Sorted Set, Hash, List|String|
+|데이터 저장|Memory, Disk|Memory|
+|메모리 재사용|X<br/>명시적으로만 데이터 제거 가능|메모리 부족 시 LRU 알고리즘으로 데이터 삭제 후 재사용|
+|스레드|단일 스레드|멀티 스레드|
+|캐싱 용량|Key, Value 모두 512MB|Key 250byte, Value 1MB|
+
+##### Redis만의 장점
+* 다양한 자료구조 지원
+* 데이터 복구 가능 및 데이터 영속성
+  * Snapshots 방식 : 특정 시점에 데이터를 디스크에 저장하여 파일 보관
+  * AOF 방식 : 이벤트를 로그에 남겨서 로그 기반 복구
+* 마스터 슬레이브 구조로 여러개의 복제본 생성 가능
+* 다양한 데이터 Eviction 정책 지원
+  * Eviction : 캐시가 데이터 공간 확보를 위해 사용하지 않는 데이터를 지우는 것
+* PUB/SUB 기능 제공
+  * 게시자/구독자의 메시지 패러다임을 구현
+  * 게시된 메시지는 구독자가 누구인지는 모르고 채널로 구분
+  * 구독자는 하나 이상의 채널에 관심을 갖고(구독), 게시자는 누구인지 알 필요 없이 관심있는 메시지만 수신
+* 트랜잭션 지원
+* 위치기반 데이터 타입 지원
+
+##### Redis 단점
+* Copy-on-Write 방식으로 사용할 메모리의 두 배 필요
+  * 리눅스는 부모 프로세스와 자식 프로세스 간 메모리를 공유하는데, 공유 할 수 없는 상황에 대비해 복사한 다음 수정하는 특징
+  * 실제 사용하는 메모리보다 임시로 데이터를 복사하고 수정할 수 있는 더 많은 메모리 필요
+  * Copy-on-Write는 Redis의 수정 관련 명령 실행 시 발생
+  * [참고](https://real-dongsoo7.tistory.com/114)
+* 메모리 파편화 발생 가능
+
+##### Memcached만의 장점
+* 멀티스레드 아키텍처 지원
+* Redis에 비해 적은 메모리 요구
+  * 정적인 데이터 캐싱 시 유리
 
 > :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - [https://ojava.tistory.com/70](https://ojava.tistory.com/70)
+> - [Memcached, Redis : 메모리 캐시](https://ojava.tistory.com/70)
+> - [About Memcached](https://memcached.org/about)
+> - [[Spring] Spring은 왜 memcached 대신 Redis를 선택했을까?](https://deveric.tistory.com/65)
+> - [[Cache] Redis vs. Memcached](https://medium.com/@chrisjune_13837/redis-vs-memcached-10e796ddd717)
+> - [[Redis] Pub/Sub 설명](https://realmojo.tistory.com/170)
+> - [[Cache]Redis vs Memcached](https://americanopeople.tistory.com/148)
+> - [In memory dictionary Redis 소개](https://bcho.tistory.com/654)
 
 ### Maven과 Gradle의 차이
 * Maven
