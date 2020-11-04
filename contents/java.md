@@ -24,6 +24,7 @@
     - [java의 final 키워드](#java의-final-키워드)
     - [java의 제네릭과 c++의 템플릿의 차이](#java의-제네릭과-c의-템플릿의-차이)
     - [java의 가비지 컬렉션 처리 방법](#java의-가비지-컬렉션-처리-방법)
+      - [java9의 default GC](#java9의-default-gc)
     - [java 직렬화와 역직렬화란 무엇인가](#java-직렬화와-역직렬화란-무엇인가)
     - [클래스 객체 인스턴스의 차이](#클래스-객체-인스턴스의-차이)
     - [객체란 무엇인가](#객체란-무엇인가)
@@ -451,6 +452,10 @@ int b2 = bar2->val; // 35
       1. 메모리 할당
       2. 사용 중인 메모리 인식
       3. 미사용 메모리 인식
+  * Stop the World
+    * 자바 애플리케이션은 GC 실행 시 GC 실행 스레드를 제외한 모든 스레드를 멈추고, GC 완료 후 다시 스레드들을 실행 상태로 변경
+    * Stop the World는 모든 애플리케이션 스레드의 작업이 멈추는 상태
+    * 어떤 GC 알고리즘을 사용하더라도, Stop the World는 불가피하며 최소화하기 위해 GC 튜닝을 진행
   
   ![jvmheap](./images/JVMHeap.png)
   * 가비지 콜렉터가 들르는 메모리 영역은 Young 영역에 포함되는 Eden, Survivor1, Survivor2와 Old 영역 (Permanent 영역은 Java 1.8 부터 제거)
@@ -465,8 +470,67 @@ int b2 = bar2->val; // 35
       * '오래'의 기준은 객체마다 age bit라는 것을 가지고 있는데 이는 Miner GC에서 살아남은 횟수를 기록하는 값
     * Old 영역에 있는 객체는 Major GC가 발생했을 때 참조 여부에 따라 공간이 유지되거나 제거
 
+#### java9의 default GC
+##### G1GC
+- Garbage First Garbage Collector
+- Java 9, 10의 default GC
+- Java 7, 8의 default GC는 ParallelGC
+  - 활성화 옵션 ```-XX:+UseG1GC```
+- 큰 메모리를 가진 멀티 프로세스 시스템에서 사용하기 위해 개발된 GC
+- Stop the World 최소화 목적(실시간 GC는 불가능)
+- 통계를 계산하면서 GC 작업량 조절
+- G1을 사용하면 좋은 경우
+  - Java heap의 50% 이상이 라이브 데이터일 때
+  - GC가 너무 오래 걸릴 때(0.5초 ~ 1초)
+
+##### G1GC 특징
+- 다른 GC와 다르게 전체 힙 공간을 체스판처럼 여러 영역으로 나누어 관리
+  - GC 발생 시, 전체 힙이 아닌 일부 영역에서만 GC 수행
+  - 따라서 큰 힙 크기를 가질 경우 유리
+- 영역의 참조를 관리할 목적으로 remember set을 만들어 사용(set은 전체 힙의 5% 미만 크기)
+
+![g1gc](./images/g1gc.png)
+- **회색** : 빈 영역 / **빨간색** : Eden 영역 / **빨간색 S** : Survivor 영역 / **파란색** : Old 영역(파란색 H는 크기가 커서 여러 영역 차지하는 객체)
+- Young과 Old 영역의 구분 없이 사용
+- 비어있는 영역에 새로 할당한 객체 위치
+- STW 시간 최소화를 위해 병렬 GC 작업 처리(각 스레드가 자신만의 영역을 잡고 작업)
+
+##### G1GC 동작 과정
+- Young 영역(Eden, Survivor)에서는 Young GC가 수행되며 Eden, Survivor 영역 이동
+  - 옮기면서 비워진 영역은 사용 가능한 빈 영역으로 되돌림
+- Full GC 수행 단계
+  - Initial Mark -> Root Region Scan -> Concurrent Mark -> Remark -> Cleanup -> Copy
+  - Initial Mark
+    - Old 지역에 존재하는 객체가 참조하는 Survivor 영역 탐색
+    - STW 발생
+  - Root Region Scan
+    - 이전 단계에서 찾은 영역에 대한 GC 대상 객체 스캔
+  - Concurrent Mark
+    - 전체 힙 영역 스캔
+    - GC 대상 객체가 없는 영역은 이후 단계에서 제외
+  - Remark
+    - STW가 발생하며 최종으로 GC 대상에서 제외할 객체 식별
+  - Cleanup
+    - STW가 발생하며 제거할 객체가 가장 많은 지역에서 GC 수행
+    - 완료 후, 완전히 비워진 영역을 재사용하기 위해 Freelist에 추가
+  - Copy
+    - GC 대상이었지만 Cleanup 단계에서 완전히 비워지지 않은 지역의 남은 객체를 새로운 영역에 복사하여 조각 모음(Compaction) 작업 수행
+
+##### G1GC vs ParallelGC
+- ParallelGC는 Old Generation 영역에서만 Full GC(공간 재확보 및 조각 모음) 수행
+- G1은 더 짧은 주기의 Full GC 작업을 수행하여 전체적인 처리량이 줄어드는 대신 일시 정지 시간을 크게 단축
+
+##### G1GC vs CMS
+- CMS는 Old Generation의 조각 모음(Compaction)을 하지 않으므로 Full GC 시간이 길어지는 문제 발생
+- CMS는 Old 영역 사용량이 특정 기준치 값 넘어가면 수행
+- G1GC는 Old 영역에서 GC 발생 시, 힙 사용량이 특정 기준치 값을 넘어가면 실행
+
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [Java 의 GC는 어떻게 동작하나?](https://mirinae312.github.io/develop/2018/06/04/jvm_gc.html)
+> - [JVM의 Garbage Collection](https://www.holaxprogramming.com/2013/07/20/java-jvm-gc/)
+> - [Java HotSpot VM G1GC](https://johngrib.github.io/wiki/java-g1gc/)
+> - [Java Garbage Collection Basics](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html)
+> - [Java8 G1 garbage collection 특징](https://starblood.tistory.com/entry/Java8-G1-garbage-collection-%ED%8A%B9%EC%A7%95)
 
 ### java 직렬화와 역직렬화란 무엇인가
 * 자바 직렬화(Serialization)란
