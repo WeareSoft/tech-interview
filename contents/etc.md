@@ -338,6 +338,13 @@
   * 무엇을 할 것인지 표현
     * **함수형 프로그래밍**
 
+<a id="fn" name="fn"></a>
+#### 함수형 패러다임의 등장 계기
+* 하드웨어의 발전과 함께 소프트웨어 패러다임은 TEXT기반의 절차적 프로그래밍에서 GUI기반의 객체지향 프로그래밍으로 변화하였고, 이제 멀티코어를 배경으로 하는 함수형 프로그래밍으로 변화
+* **대용량의 데이터를 빠르고 효율적으로 처리하기 위해서 멀티코어를 활용하는 병렬처리 프로그래밍 도입이 필요**
+* 안정적으로 다루기 위해서는 함수형 프로그램이 필연적인 선택
+* 또한, **프로그램을 보다 단순하게 하려는 요구사항**에 의해 등장
+
 #### 함수형 프로그래밍 개념
 * 선언형 프로그래밍
 * 함수형 프로그래밍은 계산을 수학적 함수의 조합으로 생각하는 방식
@@ -367,6 +374,7 @@
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [함수형 프로그래밍 요약](https://velog.io/@kyusung/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9A%94%EC%95%BD)
 > - [번역 - 함수형 프로그래밍이란 무엇인가?](https://sungjk.github.io/2017/07/17/fp.html)
+> - [람다, 람다, 람다(Lambda, Lambda, Lambda) - 1](http://blog.naver.com/tmondev/220412722908)
 
 ---
 

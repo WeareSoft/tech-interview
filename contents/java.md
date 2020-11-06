@@ -1287,9 +1287,45 @@ public class Test {
 > - [https://ict-nroo.tistory.com/43](https://ict-nroo.tistory.com/43)
 
 ### Lambda란
+#### Lambda 개념
+* Java 8에서 등장
+* 메소드를 하나의 식으로 표현
+* 매개변수, ->(화살표), {몸통} 구조
+* 메소드의 매개변수로 전달할 수 있고, 메소드 결과로 반환 가능
+* 람다는 함수형 인터페이스를 통해서만 사용 가능
+  * 함수형 인터페이스
+  * 인터페이스 내에 한 개의 추상 메소드만 정의
+  * 외부에서 메소드 호출 시 람다식이나 메소드 참조 가능
+  * 자바에서 함수를 일급 객체로 사용할 수 없는 단점 보완
+  * 함수형 인터페이스임을 명확히 하기 위해 ```@FunctionalInterface``` 사용
+  * ex. Comparator, Runnuble
+* **Lambda와 Stream의 등장 계기**
+  * 함수형 프로그래밍, 함수형 패러다임의 등장에 따라 등장
+  * [참고] <a href="./etc/함수형프로그래밍.md#fn">함수형프로그래밍의 등장 계기</a>
+  * [참고] [함수형프로그래밍의 등장 계기](./etc/함수형프로그래밍.md#함수형-프로그래밍의-등장-계기)
+
+#### Lambda 장점
+* 기존에 익명함수로 작성하던 코드를 줄여 간단하게 작성 가능
+* 가독성 증가
+* 병렬 프로그래밍에 용이
+
+#### Lambda 단점
+* 남용하면 코드를 이해하는데 어려움
+* 까다로운 재귀 활용 및 디버깅
+
+#### 컴파일러가 Lambda 표현식을 처리하는 방법
+- 익명 함수와는 다르게 컴파일
+- 익명 함수는 별도 클래스의 인스턴스를 생성
+- Lambda는 'invokedynamic'을 사용하여 **Lambda 표현식 구현을 위한 코드 생성을 런타임 시 까지 연기**
+- 런타임 시에 어떤 방법으로 객체를 생성할지 결정하는데, 성능 향상을 위한 최적화된 방법 사용
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - []()
+> - [함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가](https://futurecreator.github.io/2018/10/05/why-functional-programming/)
+> - [람다가 이끌어 갈 모던 Java](https://d2.naver.com/helloworld/4911107)
+> - [java 8 람다식이란?](https://effectivesquid.tistory.com/entry/java-8-%EB%9E%8C%EB%8B%A4%EC%8B%9D%EC%9D%B4%EB%9E%80)
+> - [[Java] Java8 람다식](https://velog.io/@think2wice/Java-Java8-%EB%9E%8C%EB%8B%A4%EC%8B%9D)
+> - [Java 람다의 실체](https://ntalbs.github.io/2019/java-lambda/)
+> - [Java 8 - Function Interface](https://beomseok95.tistory.com/277)
 
 ---
 
