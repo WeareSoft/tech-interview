@@ -59,9 +59,69 @@
 > :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
 
-### CVS SVN Git
+### CVS, SVN, Git
+* 형상관리 툴
+* 소스의 변화를 끊임없이 관리하는 툴
+* 소스를 버전별로 관리할 수 있고, 실수할 경우 원복 가능하게 하는 툴
+
+#### CVS
+* 개념
+  * Concurrent Versions System
+  * GNU 라이센스
+  * 중앙에 위치한 Repository에 파일을 저장하고, 모든 사용자가 접근 가능하도록 설계
+  * checkout으로 파일 복사, commit으로 변경사항 저장
+  * 최종 버전의 소스만 관리
+  * 먼저 반영한 소스가 먼저 처리되는 시스템
+* 장점
+  * 오랫동안 사용이 되었으며 안정적
+  * 파일 전체를 저장하지 않고 변경사항만 저장하여 적은 용량 사용
+* 단점
+  * 파일 이동이나 이름 변경은 버전 변경 미발생(파일 지우고 다시 추가)
+  * 버전 분기가 힘들고, 장기간 분기된 버전 운영에 대해 미설계
+  * commit 실패 시 롤백 불가능
+  * 상대적으로 느린 속도
+* 혼자 개발할 경우 최종버전만 관리하는 CVS 툴 사용이 편리
+
+#### SVN
+* 개념
+  * Apache Subversion
+  * CVS와 높은 호환성을 유지하며 약간의 버그를 수정한 대체 시스템으로 개발
+  * 중앙 관리
+  * 최초 1회에 한해 파일 원본 저장, 이후에는 원본과 차이점을 저장
+  * 버전 분기가 쉽고, 대규모의 분기된 프로젝트에 도움
+* 장점
+  * 원자적 commit으로 다른 사용자의 commit과 엉키지 않으며 commit 실패 시 롤백 지원
+    * 원자적 commit : 파일 단위가 아닌 change set이 commit 단위
+  * 효율적인 버전 분기, 언제든지 원하는 버전으로 복구 가능
+  * 이진파일도 효율적으로 저장 가능
+* 단점
+  * 파일과 디렉토리 변경 관련 버그
+  * 불충분한 저장소 관리 명령어
+  * CVS에 비해 상대적으로 불안정
+  * **Local Repository가 없기** 때문에 자신만의 version history 관리 불가능
+  * commit에 실수가 있을 시 다른 개발자에게 바로 영향 가능성
+
+#### Git
+* 개념
+  * CVS를 개선하고, 보다 빠른 분산 버전 제어 시스템
+  * **서버 저장소와 개발자 저장소가 독립적**
+  * 사용자 기록 탐색 가능
+* 장점
+  * 빠른 속도
+  * 분기 버전의 효율적인 운영
+  * 오프라인에서도 전체 이력 이용 가능
+  * 분산된 P2P 모델
+  * commit에 실수가 있어도 서버에 바로 영향 없음
+* 단점
+  * SVN보다 많은 기능을 지원하는 만큼 높은 진입장벽
+  * 개인 개발자에게 부적절
+* 팀 개발을 위한 분산 환경 코딩에 최적화
+
 > :arrow_double_up:[Top](#11-etc)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#11-etc)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - []()
+> - [[IT/트랜드] [금융IT]형상관리 툴 CVS, SVN, 그리고 Git비교](https://daitso.kbhub.co.kr/50240/)
+> - [[웹개발 기초] 형상관리툴이란? (SVN GIT 간단비교)](https://goddaehee.tistory.com/158)
+> - [형상관리툴 특징 (Perforce, Git, SVN, CVS)](https://haayany.tistory.com/entry/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%ED%88%B4-%ED%8A%B9%EC%A7%95-Perforce-Git-SVN-CVS)
+> - [형상 관리 툴 비교 Git, SVN, CVS](https://digital-play.tistory.com/60)
 
 ### Git Branch 종류
 1. Master Branch
