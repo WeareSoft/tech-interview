@@ -4,6 +4,7 @@
 * [DFS와 BFS의 차이](#dfs와-bfs의-차이)
 * [Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간복잡도와 공간복잡도 차이](#fibonacci에서의-재귀-동적프로그래밍-반복의-세-가지-방식에-대한-시간복잡도와-공간복잡도)
 * [정렬 알고리즘의 종류와 개념](#정렬-알고리즘의-종류와-개념)
+* [Greedy 알고리즘](#greedy-알고리즘)
 * [최소 신장 트리(MST, Minimum Spanning Tree)란](#mst란)
 * [Kruskal MST 알고리즘](#kruskal-mst-알고리즘)
 * [Prim MST 알고리즘](#prim-mst-알고리즘)
@@ -127,7 +128,29 @@ void search(Node root) {
   * -> [https://www.toptal.com/developers/sorting-algorithms](https://www.toptal.com/developers/sorting-algorithms)
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
----
+
+### Greedy 알고리즘
+- 탐욕법
+- 문제 해결 과정에서 순간순간마다 최적이라고 판단한 방식으로 진행하여 답에 도달
+- 문제의 성질이 동일하게 보존되고, 같은 전략을 반복적으로 사용 가능할 때 적용
+  - 앞의 선택이 이후의 선택의 영향을 주지 않는 조건
+  - 문제 최종 해결 방법이 부분 문제에 대한 해결 방법과 동일한 조건
+- 장점
+  - 다른 최적해 계산 알고리즘에 비해 적은 비용 (빠른 속도)
+- 단점
+  - 당장 그 순간의 최적 값을 찾기 때문에 항상 최적 해를 찾는 것은 불가능
+- 대표적인 그리디 알고리즘 문제
+  - 주어진 각 동전을 가장 적게 사용해 N원을 만드는 문제
+    - 일반적으로 동전은 보다 작은 금액 동전의 배수이기 때문에 작은 금액 동전을 무조건 큰 금액 동전으로 교체하는 것이 이득
+    - 60원 동전이 생긴다면? 규칙이 깨지기 때문에 그리디 알고리즘 더이상 사용 불가
+  - [도시락 문제](https://algospot.com/judge/problem/read/LUNCHBOX)
+    - N개의 도시락을 단 한 대의 전자렌지에서 한 번에 하나만 데우기 가능하며, 각 도시락은 조리 시간과 먹는 시간이 다르게 정해져 있을 때 모든 도시락을 먹는데 걸리는 최소 시간
+    - 먹는데 시간이 오래 걸리는 도시락부터 순서대로 데우면 가능
+  - 이 외 첫번째 Reference 링크에서 추천 문제 참고
+
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#6-algorithm)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [탐욕적 기법(Greedy Algorithm) (수정: 2019-11-23)](https://blog.naver.com/kks227/220775134486)
+> - [동적 계획법(Dynamic Programming)과 탐욕법(Greedy Algorithm)](https://velog.io/@cyranocoding/%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95Dynamic-Programming%EA%B3%BC-%ED%83%90%EC%9A%95%EB%B2%95Greedy-Algorithm-3yjyoohia5)
 
 ### MST란
 * Spanning Tree란

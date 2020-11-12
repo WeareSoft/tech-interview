@@ -122,6 +122,7 @@
 * DFS와 BFS의 차이
 * Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간복잡도와 공간복잡도 차이
 * 정렬 알고리즘의 종류와 개념
+* Greedy 알고리즘
 * 최소 신장 트리(MST, Minimum Spanning Tree)란
 * Kruskal MST 알고리즘
 * Prim MST 알고리즘
