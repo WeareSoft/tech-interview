@@ -15,6 +15,7 @@
 * [Maven과 Gradle의 차이](#maven과-gradle의-차이)
 * [Blocking과 Non-Blocking](#blocking과-non-blocking)
 * [함수형 프로그래밍이란](#함수형-프로그래밍이란)
+* [이벤트 기반 프로그래밍이란](#이벤트-기반-프로그래밍이란)
 
 ---
 
@@ -375,6 +376,20 @@
 > - [번역 - 함수형 프로그래밍이란 무엇인가?](https://sungjk.github.io/2017/07/17/fp.html)
 > - [람다, 람다, 람다(Lambda, Lambda, Lambda) - 1](http://blog.naver.com/tmondev/220412722908)
 
+
+### 이벤트 기반 프로그래밍이란
+#### 개념
+- 프로그램의 제어 흐름이 이벤트의 발생에 의해 결정되는 컴퓨터 프로그래밍 패러다임
+- 프로그램이 다양한 형태의 사용자 이벤트(클릭, 키 입력)에 응답
+- 이벤트 리스너가 대기하고, 이벤트가 발생(요청)하면 해당 이벤트와 상황에 등록된 이벤트 핸들러(콜백 함수)를 실행하여 관련 데이터를 전달해 응답
+
+#### 특징
+- 마이크로 서비스 사이의 결합도를 낮추고 비동기적인 문제 처리 시 유용
+- 이벤트 소스(마우스, 키보드 등)는 본인이 발생시킬 수 있는 이벤트를 보유
+- 이벤트 소스를 먼저 정의하고, 소스가 일으킬 수 있는 이벤트를 정의하는 방식으로 구현
+
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [[프로그래밍 패러다임]이벤트 기반 프로그래밍(Event-based programming)](https://kamang-it.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EA%B8%B0%EB%B0%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8DEvent-based-programming)
 ---
 
 ## Reference

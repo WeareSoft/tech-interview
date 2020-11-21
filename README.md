@@ -220,7 +220,8 @@
 * Redis와 Memcached의 차이
 * Maven과 Gradle의 차이
 * Blocking과 Non-Blocking
-* 함수형 프로그래밍이란?
+* 함수형 프로그래밍이란
+* 이벤트 기반 프로그래밍이란
 
 ---
 
