@@ -16,6 +16,7 @@
 * [Blocking과 Non-Blocking](#blocking과-non-blocking)
 * [함수형 프로그래밍이란](#함수형-프로그래밍이란)
 * [이벤트 기반 프로그래밍이란](#이벤트-기반-프로그래밍이란)
+* [Mock이란](#Mock이란)
 
 ---
 
@@ -390,9 +391,135 @@
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [[프로그래밍 패러다임]이벤트 기반 프로그래밍(Event-based programming)](https://kamang-it.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EA%B8%B0%EB%B0%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8DEvent-based-programming)
+
+### Mock이란
+
+#### Mock 개념
+- 실제 객체를 만들어 사용하기에는 비용이 크고, 객체간 의존성이 높아 구현하기 힘들 경우 만드는 **가짜 객체**
+
+#### Mock 사용 예시
+- 테스트 작성을 위한 환경 구축
+- 테스트가 특정 경우나 순간에 의존적인 경우
+- 테스트 시간이 오래 걸리는 경우
+- 개인 PC나 서버의 성능 문제로 동작이 오래 걸릴 수 있는 경우
+
+#### Mock 관련 용어
+1. 테스트 더블(Test double)
+    - 테스트를 진행하기 어려운 경우, 대신 테스트를 진행할 수 있도록 만들어주는 객체
+    - Mock 객체와 비슷하지만 테스트 더블이 Mock 객체보다 상위 개념
+
+2. 더미객체(Dummy object)
+    - 단순히 인스턴스화 될 수 있는 수준으로만 객체 구현
+    - 인스턴스화 된 객체 자체를 필요로하고, 해당 객체의 기능까지는 필요하지 않을 때 사용
+
+3. 테스트 스텁(Test stub)
+    - 더미 객체가 실제로 동작하는 것처럼 보이게 만들어놓은 객체
+    - 객체의 특정 상태를 가정해서 작성하고 특정 **값을 반환하거나 메시지 출력**
+    - 가정한 값을 하드코딩으로 작성하기 때문에 값의 변경은 테스트 불가능
+    - 어떤 행위가 호출됐을 때 특정 값으로 반환해주는 형태
+    - **객체의 상태를 검증**
+
+4. 페이크 객체(Fake object)
+    - 실제 로직이 구현된 것처럼 보이는 객체
+    - 실제로 DB에 접속해서 비교할 때와 동일한 결과가 보이도록 객체 내부에 구현 가능
+      - 보통 List나 Map을 이용
+    - 테스트케이스 작성 시 다른 객체들과 의존성을 제거하기 위해 사용
+    - 페이크 객체 만들 때 비용이 많이 발생할 경우 적절한 수준으로만 구현하거나 Mock 프레임워크 사용 또는 실제 객체를 가져와 테스트
+
+5. 테스트 스파이(Test spy)
+    - 테스트에 사용하는 객체와 메소드의 사용 여부 및 정상 호출 여부를 기록하고 요청 시 알림
+    - 행위 기반 테스트가 필요한 경우 사용(특정 메소드 호출 시 또다른 메소드 실행하는 등)
+
+6. Mock 객체
+    - **행위를 검증**하기 위해 사용하는 객체
+      ```JAVA
+      public class MessageSender {
+        private CellphoneService service;
+    
+        public MessageSender(CellphoneService service) {
+          this.service = service;
+        }
+    
+        public void send(String msg) {
+          service.sendMMS(msg);
+        }
+      }
+      ```
+      - ```CellphoneService```와 ```MessageSender``` 객체가 있을 때, 실제로 문자를 보내는 것은 ```CellphoneService```의 책임이며, ```MessageSender```는 ```CellphoneService```의 ```sendMMS()``` 메소드를 호출하는 역할
+      - 호출 여부를 테스트하는 것이 **행위를 검증**하는 것
+        - stub과의 차이
+          - stub은 객체의 반환값이나 상태값을 검증하는 것
+          - mock은 메소드 호출 여부, 메소드의 동작 여부를 검증
+      - ```MessageSender``` 테스트 시, ```CellphoneService```의 **가짜 객체**를 만들어 검증할 수 있으며 이 가짜 객체가 **Mock 객체**
+        - Mock 객체 수동 생성
+          ```JAVA
+          public class CellphoneServiceMock extends CellphoneService {
+            private boolean isSendMMSCalled = false;
+            private String sendMsg = "";
+    
+            @Override
+            public void sendMMS(String msg) {
+              // 실제 동작하는 부모 객체 호출 대신 테스트 동작 처리 호출 여부만 확인하도록 구현
+              // super.sendMMS(msg);
+              
+              isSendMMSCalled = true;
+              sendMsg = msg;
+            }
+    
+            public boolean isSendMMSCalled() {
+              return isSendMMSCalled;
+            }
+    
+            public Stirng getSendMsg() {
+              return sendMsg;
+            }
+          }
+          ```
+          ```JAVA
+          // Mock 객체를 사용한 테스트 코드
+          public class MessageSenderTest {
+            @Test
+            public void testSend() throws Exception {
+              // Given
+              final String message = "테스트 문자 메시지입니다.";
+              CellphoneServiceMock mock = new CellphoneServiceMock();
+              MessageSender sender = new MessageSender(mock);
+    
+              // When
+              sender.send(message);
+    
+              // Then
+              assertTrue(mock.isSendMMSCalled());
+              assertEqual(message, mock.getSendMsg());
+            }
+          }
+          ```
+        - 프레임워크를 사용한 Mock 객체 생성
+          - 대표적으로 Mockito가 지원하는 mock을 사용해 별도의 Mock 객체(CellphoneServiceMock)를 만들지 않고 Mock 객체 생성 가능
+          ```JAVA
+          public class MessageSenderTest {
+            @Test
+            public void testSend() throws Exception {
+              // Given
+              final String message = "테스트 문자 메시지";
+              CellphoneService mock = mock(CellphoneService.class);
+              MessageSender sender = new MessageSender(mock);
+    
+              // When
+              sender.send(message);
+    
+              // Then - CellphoneService의 sendMMS() 호출 여부 검증
+              verify(mock).sendMMS(message);
+            }
+          }
+          ```
+    - 행위 기반 테스트는 작성하기 어려운 부분이 많기 때문에 상태 기반 테스트가 가능하다면 생략 가능
+
 ---
 
 ## Reference
-> - []()
+> - [[Mockito] Mock 개념(Mock Object)](https://www.crocus.co.kr/1555)
+> - [Mock Object란 무엇인가?](https://medium.com/@SlackBeck/mock-object%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-85159754b2ac)
+
 
 ## :house: [Home](https://github.com/WeareSoft/tech-interview)
