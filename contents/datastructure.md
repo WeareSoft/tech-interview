@@ -101,11 +101,11 @@
 * HashTable vs HashMap
   * Key-Value 구조 및 Key에 대한 Hash로 Value 관리하는 것은 동일
   * HashTable
-    * 비동기(단일 스레드)에서 사용
+    * 동기
     * null값 허용
     * 보조 Hash Function과 separating Chaining을 사용해서 비교적 충돌 덜 발생 (Key의 Hash 변형)
   * HashMap
-    * 동기(멀티 스레드)에서 사용
+    * 비동기 (멀티 스레드 환경에서 주의)
     * null값 미허용(Key가 hashcode(), equals()를 사용하기 때문)
 
 * HashTable 성능
