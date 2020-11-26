@@ -515,11 +515,14 @@
           ```
     - 행위 기반 테스트는 작성하기 어려운 부분이 많기 때문에 상태 기반 테스트가 가능하다면 생략 가능
 
----
-
-## Reference
+> :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - [[Mockito] Mock 개념(Mock Object)](https://www.crocus.co.kr/1555)
 > - [Mock Object란 무엇인가?](https://medium.com/@SlackBeck/mock-object%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-85159754b2ac)
 
+
+---
+
+## Reference
+> -[]()
 
 ## :house: [Home](https://github.com/WeareSoft/tech-interview)
