@@ -6,6 +6,7 @@
 - [SQL Injection 공격](#sql-injection-공격)
 - [CSRF 공격](#csrf-공격)
 - [XSS 공격](#xss-공격)
+- [OAuth](#oauth)
 
 ---
 
@@ -123,6 +124,48 @@
 
 > :arrow_double_up:[Top](#9-security)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#9-security)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
 > - []()
+
+### OAuth
+#### OAuth 개념
+- 사용자가 어떤 애플리케이션을 이용할 때, 비밀번호를 입력하지 않고 OAuth를 제공하는 애플리케이션의 계정 정보를 공유하여 접근 권한을 부여할 수 있는 수단
+- OAuth가 사용되기 전에는 보안이 취약한 구조
+  - 각 애플리케이션이나 웹 사이트마다 개별적인 인증 방식으로 아이디와 비밀번호를 사용하여 로그인
+- OAuth는 제각각인 인증방식을 표준화한 것
+- 인증을 공유하는 애플리케이션끼리는 별도 인증과정 불필요
+- '인증(Authentication)' 프로토콜이 아닌 **'인가(Authorization)' 프로토콜**
+  - 인증 : 접근 가능함을 확인하는 과정
+  - 인가 : 허가, 접근 권한을 관리
+  - 사용자의 확인(인증) 과정을 통해 권한을 부여(인가)
+
+#### OAuth 관련 용어
+- 사용자
+  - '서비스 제공자'와 '소비자'를 사용하는 계정을 가지고있는 개인
+- 서비스 제공자
+  - OAuth를 통한 접근을 지원하는 애플리케이션(Open API 제공 서비스)
+  - 대표적으로 구글, 네이버, 카카오, 페이스북 등
+- 소비자
+  - Open API를 사용하여 개발된 OAuth를 사용하여 '서비스 제공자'에게 접근하는 애플리케이션
+- 소비자 비밀번호
+  - '서비스 제공자'에서 소비자가 자신임을 인증하는 키
+- 요청 토큰
+  - '소비자'가 '사용자'의 접근 권한을 인증받기 위해 필요한 정보
+  - 이후 '접근 토큰'으로 변경
+- 접근 토큰
+  - 인증 후에 '사용자'가 '서비스 제공자'가 아닌 '소비자'를 통해 보호된 자원에 접근하기 위한 키를 포함한 값
+
+#### 과정
+- '소비자'와 '서비스 제공자' 간에 OAuth 과정 진행
+1. 소비자가 서비스 제공자에게 '요청 토큰'을 요청
+2. 서비스 제공자가 소비자에게 '요청 토큰' 발급
+3. 소비자가 사용자를 서비스 제공자에게 이동시키고, 이 과정에서 사용자 인증 수행(인증, Authentication)
+4. 사용자 인증 후, 서비스 제공자가 사용자를 소비자로 이동
+5. 소비자가 '접근 토큰' 요청
+6. 서비스 제공자가 '접근 토큰' 발급(권한 부여, Authorization)
+7. 소비자는 '접근 토큰'을 사용하여 사용자 정보에 접근 가능
+
+> :arrow_double_up:[Top](#9-security)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#9-security)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+> - [OAuth](https://ko.wikipedia.org/wiki/OAuth)
+
 
 ---
 
