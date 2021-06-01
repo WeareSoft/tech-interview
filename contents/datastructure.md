@@ -102,11 +102,11 @@
   * Key-Value 구조 및 Key에 대한 Hash로 Value 관리하는 것은 동일
   * HashTable
     * 동기
-    * Key값으로 null 미허용
+    * Key, Value값으로 null 미허용
     * 보조 Hash Function과 separating Chaining을 사용해서 비교적 충돌 덜 발생 (Key의 Hash 변형)
   * HashMap
     * 비동기 (멀티 스레드 환경에서 주의)
-    * Key값으로 null 허용
+    * Key, Value값으로 null 허용
 
 * HashTable 성능
 
