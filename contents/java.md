@@ -115,7 +115,8 @@
     * 참조 타입은 값이 저장된 곳의 주소를 저장하는 공간으로 객체의 주소를 저장한다. (Call-By-Value)
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/WeareSoft/tech-interview#7-java)    :information_source:[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
-> - [http://robyncloud.tistory.com/entry/](http://robyncloud.tistory.com/entry/%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-%EA%BC%AD-%EC%9D%B4%ED%95%B4%ED%95%B4%EC%95%BC-%EB%90%98%EB%8A%94%EA%B0%9C%EB%85%90-1%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B0%9D%EC%B2%B4-%EC%B0%B8%EC%A1%B0%EB%B3%80%EC%88%98)
+
+
 > - [https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=roropoly1&logNo=220649338545&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
 ### Wrapper class
