@@ -930,7 +930,7 @@ class FeaturePhone implements Phone {
     * 비동기 처리
     * 시간복잡도: O(1)
 * LinkedHashMap
-    * HaspMap을 상속받으며, Linked List로 저장된다.
+    * HashMap을 상속받으며, Linked List로 저장된다.
     * 입력 순서대로 출력된다.
     * 비동기 처리
     * 시간복잡도: O(n)
