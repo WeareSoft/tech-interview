@@ -48,7 +48,7 @@
 - **DB에 접근하는 단계**
     1. 웹 컨테이너가 실행되면서 DB와 연결된 Connection 객체들을 미리 생성하여 pool에 저장한다.
     2. DB에 요청 시, pool에서 Connection 객체를 가져와 DB에 접근한다.
-    3. 처리가 끝나면 다시 pool에 반환한다.
+    3. 처리가 끝나면 다시 pool에 반환한다.  
 ![](./images/db-img/db-connection-01.jpeg)
 - **Connction이 부족하면?**
     - 모든 요청이 DB에 접근하고 있고 남은 Conncetion이 없다면, 해당 클라이언트는 대기 상태로 전환시키고 Pool에 Connection이 반환되면 대기 상태에 있는 클라이언트에게 순차적으로 제공된다.
