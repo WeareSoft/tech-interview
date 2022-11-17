@@ -238,3 +238,4 @@
 * [150 Java Interview Questions and Answers](https://www.javacodegeeks.com/2014/04/java-interview-questions-and-answers.html#2)
 * [yangshun님의 front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Korean/questions/javascript-questions.md)
 * [ganqqwerty님의 123-Essential-JavaScript-Interview-Questions](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions)
+* [데이터 구조 및 알고리즘 튜토리얼](https://www.scaler.com/topics/data-structures/)
